@@ -1,0 +1,137 @@
+.prepagas {
+  background: #f0f0f0;
+  padding: 56px 0 72px;
+}
+
+.prepagas__inner {
+  width: min(1100px, calc(100% - 64px));
+  margin: 0 auto;
+}
+
+.prepagas__heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 44px;
+}
+
+.prepagas__line {
+  flex: 1;
+  height: 4px;
+  background: #003c77;
+  opacity: 0.15;
+}
+
+.prepagas__title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #1a1a1a;
+  text-transform: uppercase;
+}
+
+.prepagas__banner {
+    position: relative;
+    width: 100%;
+    min-height: 340px;
+    overflow: hidden;
+    background-image: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.5) 0%,
+            rgba(0, 0, 0, 0.5) 100%
+        ),
+        url('../images/coberturas.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.prepagas__bannerInner {
+    width: min(1100px, calc(100% - 64px));
+    margin: 0 auto;
+    min-height: 340px;
+    display: grid;
+    place-items: center;
+    gap: 16px;
+    padding: 42px 24px;
+    text-align: center;
+}
+
+.prepagas__bannerTitle {
+    margin: 0 0 16px;
+    font-size: 34px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.prepagas__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0.85rem 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    background: #003c77;
+    color: #fff;
+    cursor: pointer;
+}
+
+.prepagas__button:hover {
+    background: #ffffff;
+    color: #003c77;
+    border-color: #003c77;
+}
+
+.prepagas__button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+    outline-offset: 6px;
+}
+
+@media (max-width: 992px) {
+    .prepagas__inner {
+        width: min(1100px, calc(100% - 40px));
+    }
+
+    .prepagas__bannerInner {
+        width: min(1100px, calc(100% - 40px));
+    }
+
+    .prepagas__bannerTitle {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .prepagas {
+        padding: 44px 0 56px;
+    }
+
+    .prepagas__inner {
+        width: min(1100px, calc(100% - 32px));
+    }
+
+    .prepagas__bannerInner {
+        width: min(1100px, calc(100% - 32px));
+    }
+
+    .prepagas__title {
+        font-size: 22px;
+    }
+
+    .prepagas__banner {
+        min-height: 280px;
+    }
+
+    .prepagas__bannerInner {
+        min-height: 280px;
+        padding: 34px 18px;
+    }
+
+    .prepagas__bannerTitle {
+        font-size: 24px;
+    }
+}

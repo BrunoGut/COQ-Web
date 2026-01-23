@@ -1,0 +1,138 @@
+.servicios {
+  background: #f0f0f0;
+  padding: 56px 0 72px;
+}
+
+.servicios__inner {
+  width: min(1100px, calc(100% - 64px));
+  margin: 0 auto;
+}
+
+.servicios__heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 44px;
+}
+
+.servicios__line {
+  flex: 1;
+  height: 4px;
+  background: #003c77;
+  opacity: 0.15;
+}
+
+.servicios__title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #1a1a1a;
+  text-transform: uppercase;
+}
+
+.servicios__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 48px 64px;
+  align-items: start;
+}
+
+.servicios__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  text-align: center;
+}
+
+.servicios__link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  border-radius: 14px;
+  padding: 8px 10px;
+}
+
+.servicios__icon {
+  width: 140px;
+  height: 140px;
+  border-radius: 999px;
+  background: #003c77;
+  border: 2px solid #003c77;
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.servicios__icon i {
+  font-size: 56px;
+  line-height: 1;
+}
+
+.servicios__label {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #003c77;
+}
+
+.servicios__link:hover .servicios__icon {
+  background: #ffffff;
+  color: #003c77;
+  transform: translateY(-2px);
+}
+
+.servicios__link:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+  outline-offset: 6px;
+}
+
+@media (max-width: 992px) {
+  .servicios__inner {
+    width: min(1100px, calc(100% - 40px));
+  }
+
+  .servicios__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 42px 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .servicios {
+    padding: 44px 0 56px;
+  }
+
+  .servicios__inner {
+    width: min(1100px, calc(100% - 32px));
+  }
+
+  .servicios__title {
+    font-size: 22px;
+  }
+
+  .servicios__grid {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .servicios__icon {
+    width: 124px;
+    height: 124px;
+  }
+
+  .servicios__icon i {
+    font-size: 50px;
+  }
+
+  .servicios__label {
+    font-size: 20px;
+  }
+}
