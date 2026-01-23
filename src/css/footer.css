@@ -1,0 +1,104 @@
+.footer { overflow-x: hidden; }
+.footer .waves { overflow: hidden; }
+
+
+.footer{
+  position: relative;
+  width: 100%;
+  background: #003c77;
+  padding: 60px 50px 20px; /* más padding arriba para que no tape la ola */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: visible; /* para que se vea la ola hacia arriba */
+}
+
+/* waves arriba del footer */
+.footer .waves{
+  position: absolute;
+  top: -90px;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* cada svg */
+.footer .wave{
+  position: absolute;
+  left: 0;
+  width: 200%;
+  height: 120px;
+  filter: drop-shadow(0px 2px 0px rgba(0,0,0,0.10)); /* ayuda a “marcar” el borde */
+}
+
+/* capas animadas */
+.footer .wave1{
+  top: 0;
+  opacity: 1;
+  animation: waveMove 7s linear infinite;
+}
+.footer .wave2{
+  top: 10px;
+  opacity: 0.5;
+  animation: waveMoveReverse 10s linear infinite;
+}
+
+@keyframes waveMove{
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes waveMoveReverse{
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+/* contenido arriba de las waves */
+.footer .social-icons,
+.footer .menu{
+  position: relative;
+  z-index: 2;
+}
+
+/* tus estilos */
+.footer .social-icons,
+.footer .menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.footer .social-icons li,
+.footer .menu li{
+  list-style: none;
+}
+
+.footer .social-icons li a{
+  font-size: 2em;
+  color: #f0f0f0;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.2s;
+}
+
+.footer .social-icons li a:hover{
+  transform: translateY(-10px);
+}
+
+.footer .menu li a{
+  font-size: 1.2em;
+  color: #f0f0f0;
+  margin: 0 10px;
+  display: inline-block;
+  text-decoration: none;
+  opacity: 0.75;
+  transition: 0.2s;
+}
+
+.footer .menu li a:hover{
+  opacity: 1;
+}

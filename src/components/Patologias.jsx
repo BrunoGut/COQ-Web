@@ -1,68 +1,140 @@
-import '../css/patologias.css'
-import imageSrc from '../images/cornea.jpeg'
+import "../css/patologias.css";
+
+import { useEffect, useState } from "react";
+
+import Carousel from "react-bootstrap/Carousel";
+import ExampleCarouselImage from "./ExampleCarouselImage.jsx";
+
+import catarataImg from "../images/ojo-cataratas.jpeg";
+import glaucomaImg from "../images/ojo-glaucoma.jpeg";
+import retinaImg from "../images/ojo-retina.jpeg";
+import corneaImg from "../images/ojo-cornea.jpeg";
+import pediatriaImg from "../images/ojo-oftalmopediatria.jpeg";
+import esteticaImg from "../images/ojo-estetica.jpeg";	
+
 
 const PATOLOGIAS_ITEMS = [
-	{ label: 'Cataratas', href: '#cataratas', imageSrc: new URL('../images/cataratas.png', import.meta.url).href },
-	{ label: 'Glaucoma', href: '#glaucoma', imageSrc: new URL('../images/glaucoma.jpeg', import.meta.url).href },
-	{ label: 'Retina', href: '#retina', imageSrc: new URL('../images/retina.jpeg', import.meta.url).href },	
-	{ label: 'Cornea', href: '#cornea', imageSrc: new URL('../images/cornea.jpeg', import.meta.url).href },
-    ]
+  {
+    label: "Cataratas",
+    href: "#cataratas",
+    imageSrc: catarataImg,
+    interval: 1000,
+  },
+  {
+    label: "Glaucoma",
+    href: "#glaucoma",
+    imageSrc: glaucomaImg,
+    interval: 500,
+  },
+  {
+    label: "Retina",
+    href: "#retina",
+    imageSrc: retinaImg,
+  },
+  {
+    label: "Cornea",
+    href: "#cornea",
+    imageSrc: corneaImg,
+  },
+  {
+    label: "Oftalmopediatría",
+    href: "#oftalmopediatria",
+    imageSrc: pediatriaImg,
+  },
+  {
+    label: "Estética",
+    href: "#estetica",
+    imageSrc: esteticaImg,
+  },
+];
 
-export default function Patologias() {
-    return(
-		<section className="patologias" id="patologias" aria-label="Patologías">
-			<div className="patologias__inner">
-				<div className="patologias__heading" aria-hidden="true">
-					<span className="patologias__line" />
-					<h2 className="patologias__title">¿QUÉ TRATAMOS?</h2>
-					<span className="patologias__line" />
-				</div>
-
-				<div className="slide-container">
-					<div className='slide-content'>
-						<div className="card-wrapper">
-							<div className="card">
-								<div className="image-content">
-									<span className="overlay"></span>
-
-									<div className="card-image">
-										<img src={imageSrc} alt="Patologias" className="card-img"/>
-									</div>
-								</div>
-								<div className="card-content">
-									<h2 className="name">Patologias</h2>
-									<p className="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta nobis vel molestias in iusto veniam eius praesentium incidunt, quisquam porro doloremque soluta nulla ullam cumque nemo ducimus! Quod, natus possimus?</p>
-									<button className="button">Ver más</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-    )
+function chunkArray(items, chunkSize) {
+  const chunks = [];
+  for (let index = 0; index < items.length; index += chunkSize) {
+    chunks.push(items.slice(index, index + chunkSize));
+  }
+  return chunks;
 }
 
+export default function Patologias() {
+  const [cardsPerSlide, setCardsPerSlide] = useState(3);
 
-/*
-<section className="patologias">
-            <div className="patologias__inner">
-				<div className="patologias__heading" aria-hidden="true">
-					<span className="patologias__line" />
-					<h2 className="patologias__title">¿QUÉ TRATAMOS?</h2>
-					<span className="patologias__line" />
-				</div>
+  useEffect(() => {
+    const mediaMobile = window.matchMedia("(max-width: 576px)");
+    const mediaTablet = window.matchMedia("(max-width: 992px)");
 
-                <div className="patologias__grid" role="list" aria-label="Lista de patologías">
-					{PATOLOGIAS_ITEMS.map((item) => (											//devuelvo un item por cada patología con .map
-						<div key={item.href} className="patologias__item" role="listitem">
-							<a className="patologias__link" href={item.href} aria-label={item.label}>
-								<img className="patologias__cornerImage" src={item.imageSrc} alt="" aria-hidden="true" />
-								<div className="patologias__label">{item.label}</div>
-							</a>
-						</div>
-					))}
-				</div>
-            </div>           
-        </section>
-*/
+    const update = () => {
+      if (mediaMobile.matches) {
+        setCardsPerSlide(1);
+        return;
+      }
+
+      if (mediaTablet.matches) {
+        setCardsPerSlide(2);
+        return;
+      }
+
+      setCardsPerSlide(3);
+    };
+
+    update();
+    mediaMobile.addEventListener?.("change", update);
+    mediaTablet.addEventListener?.("change", update);
+
+    return () => {
+      mediaMobile.removeEventListener?.("change", update);
+      mediaTablet.removeEventListener?.("change", update);
+    };
+  }, []);
+
+  const slides = chunkArray(PATOLOGIAS_ITEMS, cardsPerSlide);
+
+  return (
+    <section className="patologias" id="patologias" aria-label="Patologías">
+      <div className="patologias__inner">
+        <div className="patologias__heading" aria-hidden="true">
+          <span className="patologias__line" />
+          <h2 className="patologias__title">¿QUÉ TRATAMOS?</h2>
+          <span className="patologias__line" />
+        </div>
+
+        <div className="slide-container" aria-label="Patologías destacadas">
+          <div className="slide-content">
+            <Carousel className="patologias__carousel" aria-label="Carrusel de patologías">
+              {slides.map((slideItems, slideIndex) => (
+                <Carousel.Item
+                  key={slideIndex}
+                  interval={slideItems.find((item) => item.interval)?.interval}
+                >
+                  <div className="patologias__carouselGrid" role="group" aria-label={`Patologías ${slideIndex + 1}`}>
+                    {slideItems.map((item) => (
+                      <article key={item.href} className="card">
+                        <div className="card-header" aria-hidden="true" />
+                        <div className="card-image" aria-hidden="true">
+                          <ExampleCarouselImage
+                            className="card-img"
+                            src={item.imageSrc}
+                            alt={item.label}
+                          />
+                        </div>
+                        <div className="card-content">
+                          <h3 className="card-name">{item.label}</h3>
+                          <p className="card-description">
+                            Información y tratamiento de {item.label}.
+                          </p>
+                          <a className="card-button" href={item.href} aria-label={`Ver más sobre ${item.label}`}>
+                            Ver más
+                          </a>
+                        </div>
+                      </article>
+                    ))}
+                  </div>
+                </Carousel.Item>
+              ))}
+            </Carousel>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
