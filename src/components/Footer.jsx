@@ -1,4 +1,5 @@
 import "../css/footer.css";
+import logoCq from "../images/logo-coq-footer-3.png";
 
 export default function Footer() {
   return (
@@ -19,23 +20,70 @@ export default function Footer() {
         </svg>
       </div>
 
-      <ul className="social-icons">
-        <li><a href="#facebook"><i className="bi bi-facebook"></i></a></li>
-        <li><a href="#instagram"><i className="bi bi-instagram"></i></a></li>
-        <li><a href="#linkedin"><i className="bi bi-linkedin"></i></a></li>
-      </ul>
+      <div className="footer-content container">
+        <div className="row gy-4">
+          <div className="col-12 col-lg-4">
+            <div className="footer-brand">
+              <a className="footer__logoLink" href="#">
+                <img className="footer-logo" src={logoCq} alt="COQ" />
+              </a>
+            </div>
+          </div>
 
-      <ul className="menu">
-        <li>
-          <a href="">Inicio</a>
-          <a href="">Nosotros</a>
-          <a href="">Paciente</a>
-          <a href="">Residencia</a>
-          <a href="">Prensa</a>
-          <a href="">Consultas Virtuales</a>
-          <a href="">Turnos Online</a>
-        </li>
-      </ul>
-    </footer>
+          <div className="col-12 col-lg-4">
+            <div className="footer-title">Descubre</div>
+            <ul className="footer-links list-unstyled mb-0">
+              <li>
+                <a href="#">Inicio</a>
+              </li>
+              <li>
+                <a href="#">Nosotros</a>
+              </li>
+              <li>
+                <a href="#">Paciente</a>
+              </li>
+              <li>
+                <a href="#">Residencia</a>
+              </li>
+              <li>
+                <a href="#">Prensa</a>
+              </li>
+              <li>
+                <a href="#">Consultas Virtuales</a>
+              </li>
+              <li>
+                <a href="#">Turnos Online</a>
+              </li>
+            </ul>
+          </div>
+
+          <div className="col-12 col-lg-4">
+            <div className="footer-title">Contacto</div>
+            <a className="footer-contact" href="mailto:contacto@coq.com">
+              contacto@coq.com
+            </a>
+
+            <div className="footer-title mt-3">Redes</div>
+            <div className="footer-social" aria-label="Redes sociales">
+              <a className="social-link" href="#" aria-label="Instagram">
+                <i className="bi bi-instagram" aria-hidden="true" />
+              </a>
+              <a className="social-link" href="#" aria-label="Facebook">
+                <i className="bi bi-facebook" aria-hidden="true" />
+              </a>
+              <a className="social-link" href="#" aria-label="Linkedin">
+                <i className="bi bi-linkedin" aria-hidden="true" />
+              </a>
+              <a className="social-link" href="#" aria-label="YouTube">
+                <i className="bi bi-youtube" aria-hidden="true" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="footer-divider" />
+        <div className="footer-bottom">© 2026 Centro de Ojos Quilmes. Todos los derechos reservados.</div>
+      </div>
+    </footer>  
   );
 }

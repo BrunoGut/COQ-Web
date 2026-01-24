@@ -11,7 +11,7 @@ export default function HeroVideo() {
 
                 <div className='boton-hero'>
                     <button className='boton-guardia' type='button'>
-                        <i className="bi bi-telephone-fill" aria-hidden="true" />
+                        <i className="bi bi-hospital-fill" aria-hidden="true" />
                         <span>GUARDIA 24HS</span>
                     </button>
                     <button className='boton-turno' type='button'>

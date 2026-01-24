@@ -1,4 +1,5 @@
 import "../css/patologias.css";
+import "../css/heroVideo.css";
 
 import { useEffect, useState } from "react";
 
@@ -133,6 +134,17 @@ export default function Patologias() {
               ))}
             </Carousel>
           </div>
+        </div>
+
+        <div className="patologias__actions" aria-label="Acciones">
+          <button className="boton-guardia" type="button">
+            <i className="bi bi-clipboard2-pulse-fill" aria-hidden="true" />
+            <span>Ver todos los tratamientos</span>
+          </button>
+          <button className="boton-turno" type="button">
+            <i className="bi bi-calendar-check-fill" aria-hidden="true" />
+            <span>Solicitar turno</span>
+          </button>
         </div>
       </div>
     </section>

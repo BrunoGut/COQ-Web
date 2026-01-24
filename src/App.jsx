@@ -4,6 +4,7 @@ import Servicios from "./components/Servicios"
 import Prepagas from "./components/Prepagas"
 import Patologias from "./components/Patologias"
 import Footer from "./components/Footer"
+import BotonWhatsApp from "./components/BotonWhatsApp"
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
     <Servicios />
     <Prepagas />
     <Patologias />
+    <BotonWhatsApp />
     <Footer />
    </>
   )

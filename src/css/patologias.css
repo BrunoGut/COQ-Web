@@ -37,7 +37,7 @@
 
 .slide-container{
     width: 100%;
-    padding: 40px 0;
+    padding: 10px 0;
 }
 
 .slide-content{
@@ -71,6 +71,27 @@
     padding: 0 56px 24px;
 }
 
+.patologias__actions{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: min(520px, calc(100% - 64px));
+    margin: 0 auto;
+}
+
+.patologias__actions button{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0.85rem 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    width: 100%;
+}
+
 @media (max-width: 992px){
     .patologias__carouselGrid{
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -94,6 +115,11 @@
         grid-template-columns: minmax(0, 1fr);
         padding-left: 44px;
         padding-right: 44px;
+    }
+
+    .patologias__actions{
+        gap: 10px;
+        width: min(520px, calc(100% - 32px));
     }
 }
 
