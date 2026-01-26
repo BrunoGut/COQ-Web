@@ -1,4 +1,5 @@
 import '../css/servicios.css'
+import SectionHeading from './SectionHeading'
 
 const SERVICIOS_ITEMS = [
 	{ label: 'Guardia', href: '#guardia', icon: 'bi-heart-pulse' },
@@ -13,11 +14,7 @@ export default function Servicios() {
 	return (
 		<section className="servicios" id="servicios" aria-label="Servicios">
 			<div className="servicios__inner">
-				<div className="servicios__heading" aria-hidden="true">
-					<span className="servicios__line" />
-					<h2 className="servicios__title">Servicios</h2>
-					<span className="servicios__line" />
-				</div>
+				<SectionHeading title="Servicios" />
 
 				<div className="servicios__grid" role="list" aria-label="Lista de servicios">
 					{SERVICIOS_ITEMS.map((item) => (											//devuelvo un item por cada servicio con .map

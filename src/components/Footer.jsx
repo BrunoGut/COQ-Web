@@ -24,7 +24,7 @@ export default function Footer() {
         <div className="row gy-4">
           <div className="col-12 col-lg-4">
             <div className="footer-brand">
-              <a className="footer__logoLink" href="#">
+              <a className="footer__logoLink" href="inicio">
                 <img className="footer-logo" src={logoCq} alt="COQ" />
               </a>
             </div>
@@ -37,7 +37,7 @@ export default function Footer() {
                 <a href="#">Inicio</a>
               </li>
               <li>
-                <a href="#">Nosotros</a>
+                <a href="nosotros">Nosotros</a>
               </li>
               <li>
                 <a href="#">Paciente</a>

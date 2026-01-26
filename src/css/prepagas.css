@@ -1,35 +1,11 @@
 .prepagas {
   background: #f0f0f0;
-  padding: 56px 0 72px;
+  padding: 56px 0 20px;
 }
 
 .prepagas__inner {
   width: min(1100px, calc(100% - 64px));
   margin: 0 auto;
-}
-
-.prepagas__heading {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 18px;
-  margin-bottom: 44px;
-}
-
-.prepagas__line {
-  flex: 1;
-  height: 4px;
-  background: #003c77;
-  opacity: 0.15;
-}
-
-.prepagas__title {
-  margin: 0;
-  font-size: 28px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  color: #1a1a1a;
-  text-transform: uppercase;
 }
 
 .prepagas__banner {
@@ -110,16 +86,8 @@
         padding: 44px 0 56px;
     }
 
-    .prepagas__inner {
-        width: min(1100px, calc(100% - 32px));
-    }
-
     .prepagas__bannerInner {
         width: min(1100px, calc(100% - 32px));
-    }
-
-    .prepagas__title {
-        font-size: 22px;
     }
 
     .prepagas__banner {

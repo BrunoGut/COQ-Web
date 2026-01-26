@@ -59,7 +59,7 @@
   transform-origin: center;
 }
 
-@keyframes carrusel-prepagas-scroll {
+@keyframes carrusel-prepagas-scroll { /*traslada el carrusel de prepagas desde 0% a -50% en el eje X */
   0% {
     transform: translateX(0);
   }

@@ -1,23 +1,28 @@
-import Navbar from "./components/Navbar"
-import HeroVideo from "./components/HeroVideo"
-import Servicios from "./components/Servicios"
-import Prepagas from "./components/Prepagas"
-import Patologias from "./components/Patologias"
-import Footer from "./components/Footer"
-import BotonWhatsApp from "./components/BotonWhatsApp"
-
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import BotonWhatsapp from "./components/BotonWhatsapp";
+import { BrowserRouter, Routes, Route} from "react-router-dom"; 
+import Inicio from "./pages/Inicio";
+import Nosotros from "./pages/Nosotros";
 function App() {
   return (
-   <>
-    <Navbar />
-    <HeroVideo />
-    <Servicios />
-    <Prepagas />
-    <Patologias />
-    <BotonWhatsApp />
-    <Footer />
-   </>
-  )
+    <div>
+      <BrowserRouter>
+
+        <Navbar />
+        <BotonWhatsapp />
+        
+         
+         <Routes>
+           <Route path="/" element={<Inicio />} />
+           <Route path="/inicio" element={<Inicio />} />
+          <Route path="/nosotros" element={<Nosotros />} />
+         </Routes>
+
+         <Footer />
+      </BrowserRouter>
+    </div>
+  );
 }
 
-export default App
+export default App;

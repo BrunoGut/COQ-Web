@@ -1,0 +1,71 @@
+.quienesSomos {
+	background: #f0f0f0;
+	padding: 56px 0 72px;
+}
+
+.quienesSomos__inner {
+	width: min(1100px, calc(100% - 64px));
+	margin: 0 auto;
+}
+
+.quienesSomos__grid {
+	display: grid;
+	grid-template-columns: 1.1fr 0.9fr;
+	gap: 56px;
+	align-items: start;
+}
+
+.quienesSomos__text {
+	margin: 0;
+	font-size: 15px;
+	line-height: 1.7;
+	color: rgba(26, 26, 26, 0.7);
+}
+
+.quienesSomos__text + .quienesSomos__text {
+	margin-top: 14px;
+}
+
+.quienesSomos__media {
+	width: 100%;
+	border-radius: 14px;
+	overflow: hidden;
+}
+
+.quienesSomos__image {
+	display: block;
+	width: 100%;
+	height: 100%;
+	max-height: 420px;
+	object-fit: cover;
+}
+
+@media (max-width: 992px) {
+	.quienesSomos__inner {
+		width: min(1100px, calc(100% - 40px));
+	}
+
+	.quienesSomos__grid {
+		grid-template-columns: 1fr;
+		gap: 28px;
+	}
+
+	.quienesSomos__image {
+		max-height: 380px;
+	}
+}
+
+@media (max-width: 576px) {
+	.quienesSomos {
+		padding: 44px 0 56px;
+	}
+
+	.quienesSomos__inner {
+		width: min(1100px, calc(100% - 32px));
+	}
+
+	.quienesSomos__image {
+		max-height: 320px;
+		border-radius: 12px;
+	}
+}

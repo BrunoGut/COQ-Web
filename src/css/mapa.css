@@ -1,0 +1,96 @@
+@import "leaflet/dist/leaflet.css";
+
+.mapa {
+	background-color: #003c77;
+    background-image: linear-gradient(to top, #003c77 0%, #f0f0f0 100%);
+    padding: 56px 0 72px;
+}
+
+.mapa__inner {
+	width: min(1100px, calc(100% - 64px));
+	margin: 0 auto;
+}
+
+.mapa__grid {
+	display: grid;
+	grid-template-columns: 1fr 1.7fr;
+	gap: 56px;
+	align-items: start;
+}
+
+.mapa__block {
+	margin-bottom: 26px;
+}
+
+.mapa__blockTitle {
+	margin: 0 0 14px;
+	font-size: 32px;
+	font-weight: 300;
+	color: #1a1a1a;
+	line-height: 1.15;
+}
+
+.mapa__text {
+	margin: 0 0 8px;
+	font-size: 15px;
+	line-height: 1.5;
+	color: rgba(26, 26, 26, 0.65);
+}
+
+.mapa__leaflet {
+	height: 420px;
+	width: 100%;
+	border-radius: 14px;
+	overflow: hidden;
+}
+
+@media (max-width: 992px) {
+	.mapa__inner {
+		width: min(1100px, calc(100% - 40px));
+	}
+
+	.mapa__grid {
+		grid-template-columns: 1fr;
+		gap: 28px;
+	}
+
+	.mapa__info {
+		text-align: center;
+	}
+
+	.mapa__title {
+		font-size: 44px;
+		margin-bottom: 20px;
+	}
+
+	.mapa__blockTitle {
+		font-size: 28px;
+	}
+}
+
+@media (max-width: 576px) {
+	.mapa {
+		padding: 44px 0 56px;
+	}
+
+	.mapa__inner {
+		width: min(1100px, calc(100% - 32px));
+	}
+
+	.mapa__info {
+		text-align: center;
+	}
+
+	.mapa__title {
+		font-size: 36px;
+	}
+
+	.mapa__blockTitle {
+		font-size: 24px;
+	}
+
+	.mapa__leaflet {
+		height: 360px;
+		border-radius: 12px;
+	}
+}

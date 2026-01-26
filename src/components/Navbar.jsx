@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react'
 import '../css/navbar.css'
 
 const NAV_LINKS = [
-  { label: 'Nosotros', href: '#nosotros' },
+  { label: 'Nosotros', href: 'nosotros' },
   { label: 'Paciente', href: '#paciente' },
   { label: 'Residencia', href: '#residencia' },
   { label: 'Prensa', href: '#prensa' },
@@ -46,7 +46,7 @@ export default function Navbar() {
     >
       <div className="container-fluid px-3 px-lg-4 py-1">
         <div className="navbar__logoWrap">
-          <a className="navbar-brand navbar__logoLink" href="#">
+          <a className="navbar-brand navbar__logoLink" href="inicio">
             <img className="navbar__logo" src={logoCoq} alt="COQ" />
           </a>
         </div>

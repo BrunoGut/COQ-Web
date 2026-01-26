@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 
 import Carousel from "react-bootstrap/Carousel";
 import ExampleCarouselImage from "./ExampleCarouselImage.jsx";
+import SectionHeading from "./SectionHeading.jsx";
 
 import catarataImg from "../images/ojo-cataratas.jpeg";
 import glaucomaImg from "../images/ojo-glaucoma.jpeg";
@@ -99,11 +100,7 @@ export default function Patologias() {
   return (
     <section className="patologias" id="patologias" aria-label="Patologías">
       <div className="patologias__inner">
-        <div className="patologias__heading" aria-hidden="true">
-          <span className="patologias__line" />
-          <h2 className="patologias__title">¿QUÉ TRATAMOS?</h2>
-          <span className="patologias__line" />
-        </div>
+        <SectionHeading title="¿QUÉ TRATAMOS?" />
 
         <div className="slide-container" aria-label="Patologías destacadas">
           <div className="slide-content">
