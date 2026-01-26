@@ -1,4 +1,5 @@
 import '../css/prepagas.css'
+import CarruselPrepagas from './CarruselPrepagas'
 
 export default function Prepagas() {
   return (
@@ -19,6 +20,8 @@ export default function Prepagas() {
           </button>
         </div>
       </div>
+
+      <CarruselPrepagas />
     </section>
   );
 }

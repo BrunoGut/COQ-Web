@@ -211,7 +211,7 @@
     max-width: 32ch;
     display: -webkit-box;
     line-clamp: inherit;
-    -webkit-line-clamp: 1;
+    -webkit-line-clamp: 6;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }

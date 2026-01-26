@@ -19,33 +19,39 @@ const PATOLOGIAS_ITEMS = [
     label: "Cataratas",
     href: "#cataratas",
     imageSrc: catarataImg,
+    descripcion: "Las cataratas son la opacidad o nubosidad del cristalino, el lente natural transparente dentro del ojo, que impide el paso claro de la luz hacia la retina. Esto puede causar visión borrosa, deslumbramiento y dificultad para ver de noche.",
     interval: 1000,
   },
   {
     label: "Glaucoma",
     href: "#glaucoma",
     imageSrc: glaucomaImg,
+    descripcion:"El glaucoma es una enfermedad del nervio óptico ocasionada por el aumento de la presión ocular. Si no se trata, puede provocar pérdida de la visión periférica y, en casos avanzados, ceguera. El glaucoma es una de las principales causas de ceguera irreversible en el mundo.",
     interval: 500,
   },
   {
     label: "Retina",
     href: "#retina",
     imageSrc: retinaImg,
+    descripcion:"La retina es el tejido sensible a la luz que recubre la parte posterior del ojo. Los rayos de luz se enfocan en la retina a través de la córnea, la pupila y el cristalino. La retina convierte los rayos de luz en impulsos eléctricos que viajan a través del nervio óptico hacia el cerebro, donde se interpretan como las imágenes que vemos. Tener una retina saludable e intacta es clave para tener una visión clara.",
   },
   {
     label: "Cornea",
     href: "#cornea",
     imageSrc: corneaImg,
+    descripcion:"La córnea es la capa exterior, transparente y con forma de cúpula situada en la parte frontal del ojo, cubriendo el iris y la pupila. La córnea ayuda a enfocar la luz que entra en el ojo y protege las estructuras internas del ojo contra el polvo, los gérmenes y otras partículas extrañas.",
   },
   {
     label: "Oftalmopediatría",
     href: "#oftalmopediatria",
     imageSrc: pediatriaImg,
+    descripcion:"La oftalmopediatría es la subespecialidad de la oftalmología dedicada al diagnóstico, tratamiento y seguimiento de las enfermedades oculares y alteraciones de la visión en bebés, niños y adolescentes. Incluye el manejo de problemas como la ambliopía (ojo vago), estrabismo (desalineación ocular), errores refractivos y enfermedades congénitas o adquiridas de los ojos en la infancia.",
   },
   {
     label: "Estética",
     href: "#estetica",
     imageSrc: esteticaImg,
+    descripcion:"La estética ocular se refiere a los tratamientos y procedimientos destinados a mejorar la apariencia de los ojos y sus alrededores, incluyendo el rejuvenecimiento de los párpados, eliminación de bolsas y ojeras, y corrección de imperfecciones estéticas.",
   },
 ];
 
@@ -121,7 +127,7 @@ export default function Patologias() {
                         <div className="card-content">
                           <h3 className="card-name">{item.label}</h3>
                           <p className="card-description">
-                            Información y tratamiento de {item.label}.
+                            {item.descripcion || "Descripción no disponible."}
                           </p>
                           <a className="card-button" href={item.href} aria-label={`Ver más sobre ${item.label}`}>
                             Ver más

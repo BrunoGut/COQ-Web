@@ -1,0 +1,99 @@
+.carrusel-prepagas {
+  background: #f0f0f0;
+}
+
+.carrusel-prepagas__inner {
+  width: 100%;
+  margin: 0;
+  padding: 10px 0 6px;
+}
+
+.carrusel-prepagas__viewport {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+}
+
+.carrusel-prepagas__track {
+  --carrusel-prepagas-duration: 20s;
+
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0;
+  width: max-content;
+
+  animation: carrusel-prepagas-scroll var(--carrusel-prepagas-duration) linear infinite;
+}
+
+.carrusel-prepagas__group {
+  flex: 0 0 auto;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 26px;
+  padding: 16px 22px;
+}
+
+.carrusel-prepagas__item {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  min-width: 140px;
+}
+
+.carrusel-prepagas__img {
+  height: 44px;
+  width: auto;
+  max-width: 160px;
+  object-fit: contain;
+  filter: grayscale(10%);
+  opacity: 0.95;
+}
+
+/* hope.png tiene mucho espacio/escala interna: lo compensamos */
+.carrusel-prepagas__img[data-logo="hope"] {
+  transform: scale(2);
+  transform-origin: center;
+}
+
+@keyframes carrusel-prepagas-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carrusel-prepagas__track {
+    animation: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .carrusel-prepagas__track {
+    --carrusel-prepagas-duration: 20s;
+  }
+
+  .carrusel-prepagas__group {
+    gap: 18px;
+    padding: 14px 16px;
+  }
+
+  .carrusel-prepagas__item {
+    min-width: 120px;
+  }
+
+  .carrusel-prepagas__img {
+    height: 38px;
+    max-width: 140px;
+  }
+
+  .carrusel-prepagas__img[data-logo="hope"] {
+    transform: scale(2);
+  }
+}
