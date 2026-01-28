@@ -235,7 +235,6 @@
 
 .tratamientos__accordionItem.is-open .tratamientos__accordionIcon{
     transform: rotate(180deg);
-    background: rgba(0, 60, 119, 0.05);
 }
 
 .tratamientos__accordionPanel{

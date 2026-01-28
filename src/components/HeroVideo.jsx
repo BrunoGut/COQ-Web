@@ -4,6 +4,7 @@ import '../css/heroVideo.css';
 import Servicios from './Servicios';
 import Prepagas from './Prepagas';
 import Patologias from './Patologias';
+import { Link } from 'react-router-dom';
 
 export default function HeroVideo() {
     return (
@@ -14,14 +15,20 @@ export default function HeroVideo() {
                 </video>
 
                 <div className='boton-hero'>
-                    <button className='boton-guardia' type='button'>
-                        <i className="bi bi-hospital-fill" aria-hidden="true" />
-                        <span>GUARDIA</span>
-                    </button>
-                    <button className='boton-turno' type='button'>
-                        <i className="bi bi-calendar-check-fill" aria-hidden="true" />
-                        <span>SOLICITA TU TURNO</span>
-                    </button>
+                    <Link to="/guardia">
+                        <button className='boton-guardia' type='button'>
+                            <i className="bi bi-hospital-fill" aria-hidden="true" />
+                            <span>GUARDIA</span>
+                        </button>
+                    </Link>
+                    
+                    <a href="https://wa.me/1165132161" target="_blank" rel="noopener noreferrer">
+                        <button className='boton-turno' type='button'>
+                            <i className="bi bi-calendar-check-fill" aria-hidden="true" />
+                            <span>SOLICITA TU TURNO</span>
+                        </button>
+                    </a>
+
                 </div>
             </div>
         </>

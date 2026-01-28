@@ -1,6 +1,7 @@
 import logoCoq from '../images/logo-coq.png'
 import { useEffect, useRef, useState } from 'react'
 import '../css/navbar.css'
+import { Link } from 'react-router-dom'
 
 const NAV_LINKS = [
   { label: 'Nosotros', href: '/nosotros' },
@@ -46,9 +47,9 @@ export default function Navbar() {
     >
       <div className="container-fluid px-3 px-lg-4 py-1">
         <div className="navbar__logoWrap">
-          <a className="navbar-brand navbar__logoLink" href="/">
+          <Link className="navbar-brand navbar__logoLink" to="/">
             <img className="navbar__logo" src={logoCoq} alt="COQ" />
-          </a>
+          </Link>
         </div>
 
         <button
@@ -69,13 +70,13 @@ export default function Navbar() {
           <ul className="navbar-nav mb-2 mb-lg-0" aria-label="Secciones">
             {NAV_LINKS.map((link) => (
               <li key={link.href} className="nav-item navbar__item">
-                <a
+                <Link
                   className="nav-link navbar__link"
-                  href={link.href}
+                  to={link.href}
                   onClick={() => setIsOpen(false)}
                 >
                   {link.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

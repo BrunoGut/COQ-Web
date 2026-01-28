@@ -105,10 +105,10 @@ export default function Patologias() {
             <i className="bi bi-clipboard2-pulse-fill" aria-hidden="true" />
             <span>Ver todos los tratamientos</span>
           </Link>
-          <button className="boton-turno" type="button">
-            <i className="bi bi-calendar-check-fill" aria-hidden="true" />
-            <span>Solicitar turno</span>
-          </button>
+          <a className="boton-turno" href="https://wa.me/1165132161" target="_blank" rel="noopener noreferrer">
+              <i className="bi bi-calendar-check-fill" aria-hidden="true" />
+              <span>Solicitar turno</span>
+          </a>
         </div>
       </div>
     </section>

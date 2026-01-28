@@ -43,7 +43,7 @@ const PATOLOGIAS = [
             <br />
             Lesiones en los ojos, tales como traumatismos ó infecciones graves.
             <br />
-            Enfermedades Generales, tales como la Diabetes."
+            Enfermedades Generales, tales como la Diabetes.
           </p>
         ),
       },

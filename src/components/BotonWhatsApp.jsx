@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../css/botonWhatsapp.css";
 
 export default function BotonWhatsApp() {
@@ -21,10 +22,10 @@ export default function BotonWhatsApp() {
         </div>
 
         <div className="guardia-flotante">
-          <a className="boton-guardia-flotante" href="#guardia">
+          <Link className="boton-guardia-flotante" to="/guardia">
             <i className="bi bi-hospital" aria-hidden="true" />
             <span className="boton-flotante-texto">Guardia</span>
-          </a>
+          </Link>
         </div>
 
         <div className="volver-inicio">
