@@ -31,7 +31,7 @@ const UBICACIONES = [
   },
 ]
 
-const DEFAULT_COORDS = UBICACIONES[0].coords
+const DEFAULT_COORDS = UBICACIONES[0].coords //coordenadas por defecto (Humberto Primo 298)
 
 export default function Mapa({ lat = DEFAULT_COORDS.lat, lng = DEFAULT_COORDS.lng }) {
   return (
@@ -41,7 +41,7 @@ export default function Mapa({ lat = DEFAULT_COORDS.lat, lng = DEFAULT_COORDS.ln
 
         <div className="mapa__grid">
           <div className="mapa__info">
-            {UBICACIONES.map((u) => (
+            {UBICACIONES.map((u) => ( // Iterar sobre las ubicaciones para mostrar la info
               <div key={u.key} className="mapa__block">
                 <h3 className="mapa__blockTitle">{u.titulo}</h3>
                 <p className="mapa__text">{u.direccion}</p>
@@ -53,7 +53,7 @@ export default function Mapa({ lat = DEFAULT_COORDS.lat, lng = DEFAULT_COORDS.ln
           <MapContainer className="mapa__leaflet" center={[lat, lng]} zoom={15}>
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
             {UBICACIONES.map((u) => (
-              <Marker key={u.key} position={[u.coords.lat, u.coords.lng]}>
+              <Marker key={u.key} position={[u.coords.lat, u.coords.lng]}>  {/* Agregar marcadores para cada ubicación */}
                 <Popup>{u.titulo}</Popup>
               </Marker>
             ))}

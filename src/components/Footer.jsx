@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../css/footer.css";
 import logoCq from "../images/logo-coq-footer-3.png";
 
@@ -24,9 +25,9 @@ export default function Footer() {
         <div className="row gy-4">
           <div className="col-12 col-lg-4">
             <div className="footer-brand">
-              <a className="footer__logoLink" href="inicio">
+              <Link className="footer__logoLink" to="/">
                 <img className="footer-logo" src={logoCq} alt="COQ" />
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -34,25 +35,25 @@ export default function Footer() {
             <div className="footer-title">Descubre</div>
             <ul className="footer-links list-unstyled mb-0">
               <li>
-                <a href="#">Inicio</a>
+                <Link to="/">Inicio</Link>
               </li>
               <li>
-                <a href="nosotros">Nosotros</a>
+                <Link to="/nosotros">Nosotros</Link>
               </li>
               <li>
-                <a href="#">Paciente</a>
+                <Link to="/paciente">Paciente</Link>
               </li>
               <li>
-                <a href="#">Residencia</a>
+                <Link to="/residencia">Residencia</Link>
               </li>
               <li>
-                <a href="#">Prensa</a>
+                <Link to="/prensa">Prensa</Link>
               </li>
               <li>
-                <a href="#">Consultas Virtuales</a>
+                <Link to="/consultas-virtuales">Consultas Virtuales</Link>
               </li>
               <li>
-                <a href="#">Turnos Online</a>
+                <Link to="/turnos-online">Turnos Online</Link>
               </li>
             </ul>
           </div>
