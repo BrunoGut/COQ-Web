@@ -13,23 +13,29 @@
     width: 90%;
     max-width: 600px;
     max-height: 90vh;
-    overflow: auto;
+    overflow: hidden;
     background-color: #f0f0f0;
     border-radius: 8px;
     padding: 3em 2.5em;
     display: grid;
     gap: 1em;
+    grid-template-rows: auto minmax(0, 1fr);
+}
+
+.container__modal--wide{
+    max-width: 1100px;
+    padding: 24px 20px;
+    border-radius: 18px;
 }
 
 .modal__close{
-    position: absolute;
-    top: 12px;
-    right: 12px;
     width: 44px;
     height: 44px;
+    justify-content: center;
     border-radius: 50%;
     display: grid;
     place-items: center;
+    justify-self: end;
     border: none;
     background-color: #003c77;
     color: #f0f0f0;
@@ -37,7 +43,279 @@
     transition: background-color 0.3s, color 0.3s;
 }
 
-modal__close i{
+.modal__close i{
     font-size: 1.8rem;
     line-height: 1;
+}
+
+.modal__body{
+    min-height: 0;
+    overflow: auto;
+}
+
+/* Layout tipo Tratamientos dentro del modal de Guardia */
+.guardiaModal__layout{
+    display: grid;
+    grid-template-columns: 320px minmax(0, 1fr);
+    gap: 22px;
+    align-items: start;
+}
+
+.guardiaModal__sidebar{
+    background: #ffffff;
+    border-radius: 0 18px 18px 18px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+    padding: 12px;
+    max-height: calc(90vh - 120px);
+    overflow: auto;
+}
+
+.guardiaModal__sidebarToggle{
+    display: none;
+}
+
+.guardiaModal__sidebarContent{
+    display: block;
+}
+
+.guardiaModal__list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 10px;
+}
+
+.guardiaModal__listItem{
+    margin: 0;
+}
+
+.guardiaModal__listButton{
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+    align-items: center;
+    padding: 12px;
+    border-radius: 14px;
+    border: 2px solid rgba(0, 60, 119, 0.18);
+    background: #ffffff;
+    cursor: pointer;
+    text-align: left;
+    transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.guardiaModal__listButton:hover{
+    transform: translateY(-1px);
+    border-color: rgba(0, 60, 119, 0.35);
+}
+
+.guardiaModal__listButton.is-active{
+    border-color: #003c77;
+    background: rgba(0, 60, 119, 0.05);
+}
+
+.guardiaModal__listButton:focus-visible{
+    outline: 4px auto -webkit-focus-ring-color;
+    outline-offset: 6px;
+}
+
+.guardiaModal__listLabel{
+    color: #003c77;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: none;
+    letter-spacing: 0.2px;
+    line-height: 1.2;
+}
+
+.guardiaModal__detail{
+    background: transparent;
+}
+
+.guardiaModal__detailTop{
+    background: #ffffff;
+    border-radius: 0 18px 18px 18px;
+    overflow: hidden;
+    border: 2px solid rgba(0, 60, 119, 0.12);
+}
+
+.guardiaModal__detailHeader{
+    padding: 18px 22px 22px;
+}
+
+.modal .guardiaModal__detailTitle{
+    margin: 0 0 10px;
+    color: #003c77;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.guardiaModal__detailText{
+    margin-top: 25px;
+    color: #1a1a1a;
+    line-height: 1.6;
+    font-size: 15px;
+    text-align: center;
+}
+
+.guardiaModal__detailText p{
+    margin: 0;
+}
+
+.guardiaModal__accordions{
+    margin-top: 14px;
+    display: grid;
+    gap: 10px;
+}
+
+.guardiaModal__accordionItem{
+    background: #ffffff;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 2px solid rgba(0, 60, 119, 0.12);
+}
+
+.guardiaModal__accordionButton{
+    width: 100%;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    color: #003c77;
+}
+
+.guardiaModal__accordionButton:focus-visible{
+    outline: 4px auto -webkit-focus-ring-color;
+    outline-offset: 6px;
+}
+
+.guardiaModal__accordionTitle{
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.guardiaModal__accordionIcon{
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    transition: transform 220ms ease, background 220ms ease;
+}
+
+.guardiaModal__accordionIcon i{
+    font-size: 18px;
+    line-height: 1;
+}
+
+.guardiaModal__accordionItem.is-open .guardiaModal__accordionIcon{
+    transform: rotate(180deg);
+}
+
+.guardiaModal__accordionPanel{
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 260ms ease;
+}
+
+.guardiaModal__accordionItem.is-open .guardiaModal__accordionPanel{
+    grid-template-rows: 1fr;
+}
+
+.guardiaModal__accordionPanelInner{
+    overflow: hidden;
+}
+
+.guardiaModal__accordionBody{
+    padding: 0 16px 14px;
+    color: #1a1a1a;
+    text-align: start;
+}
+
+.guardiaModal__accordionBody p{
+    margin: 10px 0 0;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+@media (max-width: 991.98px){
+    .guardiaModal__layout{
+        grid-template-columns: 1fr;
+    }
+
+    .guardiaModal__sidebar{
+        max-height: unset;
+    }
+
+    .guardiaModal__sidebarToggle{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 12px 12px;
+        border-radius: 14px;
+        border: 2px solid rgba(0, 60, 119, 0.18);
+        background: #ffffff;
+        cursor: pointer;
+        color: #003c77;
+        text-align: left;
+        transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+    }
+
+    .guardiaModal__sidebarToggle:hover{
+        transform: translateY(-1px);
+        border-color: rgba(0, 60, 119, 0.35);
+    }
+
+    .guardiaModal__sidebarToggle:focus-visible{
+        outline: 4px auto -webkit-focus-ring-color;
+        outline-offset: 6px;
+    }
+
+    .guardiaModal__sidebarToggleText{
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.2px;
+        line-height: 1.2;
+    }
+
+    .guardiaModal__sidebarToggleIcon{
+        flex: 0 0 auto;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        transition: transform 220ms ease;
+    }
+
+    .guardiaModal__sidebarToggleIcon i{
+        font-size: 18px;
+        line-height: 1;
+    }
+
+    .guardiaModal__sidebarContent{
+        display: none;
+        margin-top: 10px;
+    }
+
+    .guardiaModal__sidebar.is-open .guardiaModal__sidebarContent{
+        display: block;
+    }
+
+    .guardiaModal__sidebar.is-open .guardiaModal__sidebarToggleIcon{
+        transform: rotate(180deg);
+    }
 }

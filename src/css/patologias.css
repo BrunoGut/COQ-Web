@@ -132,6 +132,21 @@
     width: 100%;
 }
 
+.patologias__carouselGrid .card{
+    height: 495px;
+    display: flex;
+    flex-direction: column;
+}
+
+.patologias__carouselGrid .card .card-content{
+    flex: 1 1 auto;
+    min-height: 0;
+}
+
+.patologias__carouselGrid .card .card-button{
+    margin-top: auto;
+}
+
 .card-wrapper{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));

@@ -13,6 +13,7 @@ const GUARDIA = [
         7. Celulitis orbital. <br />
       </p>
     ),
+    sections: [],
   },
   {
     id: 2,
@@ -23,7 +24,7 @@ const GUARDIA = [
         alguien más tiene una lesión relacionada con el ojo.
       </p>
     ),
-    seccion1: [
+    sections: [
       {
         titulo: "CUERPO EXTRAÑO EN EL OJO O EL PÁRPADO",
         texto: (
@@ -56,16 +57,18 @@ const GUARDIA = [
           </p>
         ),
       },
-    ],
-    seccion2: [
       {
         titulo: "CUERPO EXTRAÑO CLAVADO O INCRUSTADO EN EL OJO",
         texto: (
           <p>
-            1. Deje el objeto en el mismo sitio, sin tratar de retirarlo ni tocarlo, ni aplicar presión alguna. <br />
+            1. Deje el objeto en el mismo sitio, sin tratar de retirarlo ni
+            tocarlo, ni aplicar presión alguna. <br />
             2. Calme y déle seguridad a la persona. <br />
             3. Lávese las manos. <br />
-            4. Vende ambos ojos. Si el objeto es grande, coloque una taza o un cono de papel sobreel ojo lesionado y péguelo con cinta. Cubra el ojo ileso con gasa o un trozo de telalimpio. Si el objeto es pequeño, cubra ambos ojos con un trozo de tela limpio o unagasa estéril.
+            4. Vende ambos ojos. Si el objeto es grande, coloque una taza o un
+            cono de papel sobreel ojo lesionado y péguelo con cinta. Cubra el
+            ojo ileso con gasa o un trozo de telalimpio. Si el objeto es pequeño,
+            cubra ambos ojos con un trozo de tela limpio o unagasa estéril.
           </p>
         ),
       },

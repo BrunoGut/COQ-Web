@@ -5,7 +5,7 @@
     padding: 25px 0 40px;
 }
 
-.guardia_inner{
+.guardia__inner{
     width: min(1100px, calc(100% - 64px));
     margin: 0 auto;
 }
@@ -82,5 +82,31 @@
 .info__div p{
     font-size: 20px;
     padding-top: 5px;
+}
+
+/* Botón reutilizado en Guardia (evita depender de patologias.css) */
+.card-button{
+    border: 2px solid transparent;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    padding: 0.85rem 1.1rem;
+    background: #003c77;
+    border-radius: 12px;
+    margin-top: 12px;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.2px;
+}
+
+.card-button:hover{
+    background: #ffffff;
+    color: #003c77;
+    border-color: #003c77;
 }
 
