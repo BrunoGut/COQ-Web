@@ -1,6 +1,8 @@
 import '../css/prepagas.css'
 import CarruselPrepagas from './CarruselPrepagas'
 import SectionHeading from './SectionHeading';
+import BannerComponent from './BannerComponent';
+import coberturasImg from '../images/coberturas.jpg';
 
 export default function Prepagas() {
   return (
@@ -9,14 +11,16 @@ export default function Prepagas() {
         <SectionHeading title="Prepagas"/>
       </div>
 
-      <div className="prepagas__banner" aria-label="Coberturas médicas">
-        <div className="prepagas__bannerInner">
-          <h3 className="prepagas__bannerTitle">Coberturas médicas</h3>
-          <button className="prepagas__button" type="button">
-            Saber más
-          </button>
-        </div>
-      </div>
+      <BannerComponent
+        className="prepagas__banner"
+        title="Coberturas médicas"
+        urlImg={coberturasImg}
+        ariaLabel="Coberturas médicas"
+      >
+        <button className="prepagas__button" type="button">
+          Saber más
+        </button>
+      </BannerComponent>
 
       <CarruselPrepagas />
     </section>

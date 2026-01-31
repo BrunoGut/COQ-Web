@@ -1,5 +1,5 @@
 .estudios{
-    background-color: #003c77;
+        background-color: #003c77;
     background-image: linear-gradient(to top, #003c77 0%, #f0f0f0 100%);
     padding: 56px 0 72px;
 }
@@ -10,34 +10,8 @@
 }
 
 .estudios__banner{
-  position: relative;
-  width: 100%;
-  min-height: 340px;
-  overflow: hidden;
-  background-size: cover;
-  background-position: center;
-  background-image: linear-gradient(
-         180deg,
-         rgba(0, 0, 0, 0.5) 0%,
-         rgba(0, 0, 0, 0.5) 100%
-     ),
-     url('../images/estudios/estudios-banner.jpg');
+  /* estilos base del banner en bannerComponent.css */
   margin-bottom: 50px;
-}
-
-.estudios__bannerInner{
-  width: min(1100px, calc(100% - 64px));
-  margin: 0 auto;
-  min-height: 340px;
-  display: grid;
-  place-items: center;
-  gap: 16px;
-  padding: 42px 24px;
-  text-align: center;
-}
-
-.estudios__bannerInner h3{
-  color: #f0f0f0;
 }
 
 .estudios .card-wrapper{

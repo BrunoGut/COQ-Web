@@ -10,58 +10,8 @@
     margin: 0 auto;
 }
 
-.guardia__banner, .causas__banner{
-    position: relative;
-    width: 100%;
-    min-height: 340px;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-}
-
-.guardia__banner{
-    background-image: linear-gradient(
-            180deg,
-            rgba(0, 0, 0, 0.5) 0%,
-            rgba(0, 0, 0, 0.5) 100%
-        ),
-        url('../images/guardia/guardia.jpeg');
-}
-
 .causas__banner{
-    background-image: linear-gradient(
-            180deg,
-            rgba(0, 0, 0, 0.5) 0%,
-            rgba(0, 0, 0, 0.5) 100%
-        ),
-        url('../images/guardia/imagen2.jpg');
     margin-bottom: 50px;
-}
-
-.guardia__bannerInner, .causas__bannerInner{
-    width: min(1100px, calc(100% - 64px));
-    margin: 0 auto;
-    min-height: 340px;
-    display: grid;
-    place-items: center;
-    gap: 16px;
-    padding: 42px 24px;
-    text-align: center;
-}
-
-.guardia__bannerInner h3, .causas__bannerInner h3{
-    color: #f0f0f0;
-}
-
-.guardia__bannerTitle, .causas__bannerTitle{
-    margin: 0 0 16px;
-    font-size: 34px;
-    font-weight: 600;
-    color: #1a1a1a;
-}
-
-.guardia__bannerInner p, .causas__bannerInner p{
-    color: #1a1a1a;
 }
 
 .info__grid{

@@ -3,6 +3,9 @@ import SectionHeading from "./SectionHeading";
 import Modal from "./Modal";
 import "../css/guardiaComponent.css";
 import GUARDIA from "./data/GuardiaArray";
+import BannerComponent from "./BannerComponent";
+import guardiaImg from "../images/guardia/guardia.jpeg";
+import causasImg from "../images/guardia/imagen2.jpg";
 
 export default function GuardiaComponent() {
   const firstId = GUARDIA[0]?.id ?? null; // Obtener el ID del primer elemento
@@ -35,11 +38,12 @@ export default function GuardiaComponent() {
         <SectionHeading title="SERVICIOS" />
       </div>
 
-      <div className="guardia__banner" aria-label="Atención de guardia">
-        <div className="guardia__bannerInner">
-          <h3 className="guardia__bannerTitle">Atención de guardia</h3>
-        </div>
-      </div>
+      <BannerComponent
+        className="guardia__banner"
+        title="Atención de guardia"
+        urlImg={guardiaImg}
+        ariaLabel="Atención de guardia"
+      />
 
       <div className="info__grid">
         <div className="info__div">
@@ -61,112 +65,113 @@ export default function GuardiaComponent() {
         </div>
       </div>
 
-      <div className="causas__banner" aria-label="Causas de consulta">
-        <div className="causas__bannerInner">
-          <h3 className="causas__bannerTitle">Posibles causas</h3>
+      <BannerComponent
+        className="causas__banner"
+        title="Posibles causas"
+        urlImg={causasImg}
+        ariaLabel="Causas de consulta"
+      >
+        <button type="button" className="card-button" onClick={openModal}> {/*evento de abrir el modal al hacer click*/}
+          Saber más
+        </button>
+      </BannerComponent>
 
-          <button type="button" className="card-button" onClick={openModal}> {/*evento de abrir el modal al hacer click*/}
-            Saber más
-          </button>
-
-          <Modal
-            isOpen={isModalOpen}
-            closeModal={() => setIsModalOpen(false)} //cambio el estado para cerrar el modal
-            containerClassName="container__modal--wide"
+      <Modal
+        isOpen={isModalOpen}
+        closeModal={() => setIsModalOpen(false)} //cambio el estado para cerrar el modal
+        containerClassName="container__modal--wide"
+      >
+        <div className="guardiaModal__layout" aria-label="Detalle de guardia">
+          {/* Sidebar */}
+          <aside
+            className={`guardiaModal__sidebar${isSidebarOpen ? " is-open" : ""}`}
+            aria-label="Lista de causas"
           >
-            <div className="guardiaModal__layout" aria-label="Detalle de guardia">
-              {/* Sidebar */}
-              <aside
-                className={`guardiaModal__sidebar${isSidebarOpen ? " is-open" : ""}`}
-                aria-label="Lista de causas"
-              >
-                <button
-                  type="button"
-                  className="guardiaModal__sidebarToggle"
-                  onClick={() => setIsSidebarOpen((prev) => !prev)}
-                  aria-expanded={isSidebarOpen}
-                  aria-controls="guardiaModalList"
-                >
-                  <span className="guardiaModal__sidebarToggleText">Lista de causas</span>
-                  <span className="guardiaModal__sidebarToggleIcon" aria-hidden="true">
-                    <i className="bi bi-chevron-down" />
-                  </span>
-                </button>
+            <button
+              type="button"
+              className="guardiaModal__sidebarToggle"
+              onClick={() => setIsSidebarOpen((prev) => !prev)}
+              aria-expanded={isSidebarOpen}
+              aria-controls="guardiaModalList"
+            >
+              <span className="guardiaModal__sidebarToggleText">Lista de causas</span>
+              <span className="guardiaModal__sidebarToggleIcon" aria-hidden="true">
+                <i className="bi bi-chevron-down" />
+              </span>
+            </button>
 
-                <div id="guardiaModalList" className="guardiaModal__sidebarContent">
-                  <ul className="guardiaModal__list" role="list">
-                    {GUARDIA.map((item) => { // Recorro el array de guardia para crear la lista
-                      const active = item.id === selectedId; // Verifico si el ítem es el seleccionado
+            <div id="guardiaModalList" className="guardiaModal__sidebarContent">
+              <ul className="guardiaModal__list" role="list">
+                {GUARDIA.map((item) => { // Recorro el array de guardia para crear la lista
+                  const active = item.id === selectedId; // Verifico si el ítem es el seleccionado
+                  return (
+                    <li key={item.id} className="guardiaModal__listItem">
+                      <button
+                        type="button"
+                        className={`guardiaModal__listButton${active ? " is-active" : ""}`} // Agrego clase si es el ítem activo
+                        onClick={() => selectItem(item.id)} // Evento para seleccionar el ítem
+                        aria-pressed={active} // Atributo aria para accesibilidad
+                      >
+                        <span className="guardiaModal__listLabel">{item.title}</span> {/* Título del ítem */}
+                      </button>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          </aside>
+
+          {/* Detail */}
+          <div aria-label="Contenido">
+            {!selectedItem ? ( // Si no hay ítem seleccionado, muestro un mensaje
+              <p>No hay información para mostrar.</p>
+            ) : (
+              <article className="guardiaModal__detail">
+                <header className="guardiaModal__detailHeader">
+                  <h3 className="guardiaModal__detailTitle">{selectedItem.title}</h3>
+                  <div className="guardiaModal__detailText">{selectedItem.descripcion}</div>
+                </header>
+
+                {!!sections.length && ( // Si hay secciones, las muestro en acordeones
+                  <div className="guardiaModal__accordions" aria-label="Secciones">
+                    {sections.map((sec, i) => { // Recorro las secciones para crear los acordeones
+                      const isOpen = openSec === i; // Verifico si la sección está abierta
+                      const panelId = `guardia-sec-${selectedItem.id}-${i}`; // ID único para el panel de la sección
                       return (
-                        <li key={item.id} className="guardiaModal__listItem">
+                        <section
+                          key={panelId}
+                          className={`guardiaModal__accordionItem${isOpen ? " is-open" : ""}`}
+                        >
                           <button
                             type="button"
-                            className={`guardiaModal__listButton${active ? " is-active" : ""}`} // Agrego clase si es el ítem activo
-                            onClick={() => selectItem(item.id)} // Evento para seleccionar el ítem
-                            aria-pressed={active} // Atributo aria para accesibilidad
+                            className="guardiaModal__accordionButton"
+                            onClick={() => toggleSec(i)} // Evento para abrir/cerrar la sección
+                            aria-expanded={isOpen}
+                            aria-controls={panelId}
                           >
-                            <span className="guardiaModal__listLabel">{item.title}</span> {/* Título del ítem */}
+                            <span className="guardiaModal__accordionTitle">
+                              {sec.titulo || `Sección ${i + 1}`}
+                            </span>
+                            <span className="guardiaModal__accordionIcon" aria-hidden="true">
+                              <i className="bi bi-chevron-down" />
+                            </span>
                           </button>
-                        </li>
+
+                          <div id={panelId} className="guardiaModal__accordionPanel">
+                            <div className="guardiaModal__accordionPanelInner">
+                              <div className="guardiaModal__accordionBody">{sec.texto}</div>
+                            </div>
+                          </div>
+                        </section>
                       );
                     })}
-                  </ul>
-                </div>
-              </aside>
-
-              {/* Detail */}
-              <div aria-label="Contenido">
-                {!selectedItem ? ( // Si no hay ítem seleccionado, muestro un mensaje
-                  <p>No hay información para mostrar.</p>
-                ) : (
-                  <article className="guardiaModal__detail">
-                    <header className="guardiaModal__detailHeader">
-                      <h3 className="guardiaModal__detailTitle">{selectedItem.title}</h3>
-                      <div className="guardiaModal__detailText">{selectedItem.descripcion}</div>
-                    </header>
-
-                    {!!sections.length && ( // Si hay secciones, las muestro en acordeones
-                      <div className="guardiaModal__accordions" aria-label="Secciones">
-                        {sections.map((sec, i) => { // Recorro las secciones para crear los acordeones
-                          const isOpen = openSec === i; // Verifico si la sección está abierta
-                          const panelId = `guardia-sec-${selectedItem.id}-${i}`; // ID único para el panel de la sección
-                          return (
-                            <section
-                              key={panelId}
-                              className={`guardiaModal__accordionItem${isOpen ? " is-open" : ""}`}
-                            >
-                              <button
-                                type="button"
-                                className="guardiaModal__accordionButton"
-                                onClick={() => toggleSec(i)} // Evento para abrir/cerrar la sección
-                                aria-expanded={isOpen}
-                                aria-controls={panelId}
-                              >
-                                <span className="guardiaModal__accordionTitle">
-                                  {sec.titulo || `Sección ${i + 1}`} 
-                                </span>
-                                <span className="guardiaModal__accordionIcon" aria-hidden="true">
-                                  <i className="bi bi-chevron-down" />
-                                </span>
-                              </button>
-
-                              <div id={panelId} className="guardiaModal__accordionPanel">
-                                <div className="guardiaModal__accordionPanelInner">
-                                  <div className="guardiaModal__accordionBody">{sec.texto}</div>
-                                </div>
-                              </div>
-                            </section>
-                          );
-                        })}
-                      </div>
-                    )}
-                  </article>
+                  </div>
                 )}
-              </div>
-            </div>
-          </Modal>
+              </article>
+            )}
+          </div>
         </div>
-      </div>
+      </Modal>
     </section>
   );
 }

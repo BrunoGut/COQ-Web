@@ -9,36 +9,7 @@
 }
 
 .prepagas__banner {
-    position: relative;
-    width: 100%;
-    min-height: 340px;
-    overflow: hidden;
-    background-image: linear-gradient(
-            180deg,
-            rgba(0, 0, 0, 0.5) 0%,
-            rgba(0, 0, 0, 0.5) 100%
-        ),
-        url('../images/coberturas.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-.prepagas__bannerInner {
-    width: min(1100px, calc(100% - 64px));
-    margin: 0 auto;
-    min-height: 340px;
-    display: grid;
-    place-items: center;
-    gap: 16px;
-    padding: 42px 24px;
-    text-align: center;
-}
-
-.prepagas__bannerTitle {
-    margin: 0 0 16px;
-    font-size: 34px;
-    font-weight: 600;
-    color: #ffffff;
+    /* estilos base del banner en bannerComponent.css */
 }
 
 .prepagas__button {
@@ -71,35 +42,10 @@
     .prepagas__inner {
         width: min(1100px, calc(100% - 40px));
     }
-
-    .prepagas__bannerInner {
-        width: min(1100px, calc(100% - 40px));
-    }
-
-    .prepagas__bannerTitle {
-        font-size: 30px;
-    }
 }
 
 @media (max-width: 576px) {
     .prepagas {
         padding: 44px 0 56px;
-    }
-
-    .prepagas__bannerInner {
-        width: min(1100px, calc(100% - 32px));
-    }
-
-    .prepagas__banner {
-        min-height: 280px;
-    }
-
-    .prepagas__bannerInner {
-        min-height: 280px;
-        padding: 34px 18px;
-    }
-
-    .prepagas__bannerTitle {
-        font-size: 24px;
     }
 }

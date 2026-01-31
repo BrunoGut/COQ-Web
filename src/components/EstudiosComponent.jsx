@@ -4,6 +4,8 @@ import SectionHeading from "./SectionHeading";
 import Modal from "./Modal";
 import "../css/estudiosComponent.css";
 import "../css/patologias.css";
+import BannerComponent from "./BannerComponent";
+import estudiosBannerImg from "../images/estudios/estudios-banner.jpg";
 
 export default function Estudios() {
     const firstId = ESTUDIOS_ARRAY[0]?.id ?? null;
@@ -35,11 +37,12 @@ export default function Estudios() {
                 <SectionHeading title="Estudios" />
             </div>
 
-            <div className="estudios__banner" aria-label="Estudios">
-                <div className="estudios__bannerInner">
-                    <h3 className="estudios_bannerTitle">Nuestros estudios</h3>
-                </div>
-            </div>
+            <BannerComponent
+                className="estudios__banner"
+                title="Nuestros estudios"
+                urlImg={estudiosBannerImg}
+                ariaLabel="Estudios"
+            />
 
             <div className="estudios__inner">
                 <div className="card-wrapper estudios__grid" role="list" aria-label="Lista de estudios">
