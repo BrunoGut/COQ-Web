@@ -56,6 +56,55 @@
     overflow-x: hidden;
 }
 
+/* Modal simple para Cirugías */
+.cirugiaModal__content{
+    display: grid;
+    gap: 12px;
+    align-content: start;
+}
+
+.modal .cirugiaModal__title{
+    margin: 0;
+    color: #003c77;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.modal .cirugiaModal__name{
+    margin: 0;
+    color: #1a1a1a;
+    line-height: 1.6;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.modal .cirugiaModal__content > a{
+    justify-self: center;
+    text-decoration: none;
+}
+
+/* Reutiliza .boton-cirugia sin romper el layout del banner */
+.modal .boton-cirugia{
+    position: static;
+    left: auto;
+    bottom: auto;
+    transform: none;
+    margin: 6px auto 0;
+    padding: 0.85rem 1.1rem;
+    border-radius: 12px;
+    border: 2px solid transparent;
+}
+
+.modal .boton-cirugia:focus-visible{
+    outline: 4px auto -webkit-focus-ring-color;
+    outline-offset: 6px;
+}
+
 /* Layout tipo Tratamientos dentro del modal de Guardia */
 .guardiaModal__layout{
     display: grid;
