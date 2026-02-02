@@ -14,11 +14,11 @@ export default function Estudios() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-    const selectedItem = ESTUDIOS_ARRAY.find((x) => x.id === selectedId) ?? null;
+    const selectedItem = ESTUDIOS_ARRAY.find((x) => x.id === selectedId) ?? null; //buscar el item seleccionado
 
     const selectItem = (id) => {
         setSelectedId(id);
-        setIsSidebarOpen(false);
+        setIsSidebarOpen(false); //cerrar sidebar al seleccionar un item
     };
 
     const openModal = (id) => {

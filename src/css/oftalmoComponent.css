@@ -1,0 +1,172 @@
+.oftalmo{
+    background-color: #003c77;
+    background-image: linear-gradient(to top, #003c77 0%, #f0f0f0 65%);
+    padding: 56px 0 82px;
+}
+
+.info__img {
+    display: flex;
+    gap: 32px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 40px 40px 40px;
+}
+
+.info__text__oftalmo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.info__text__oftalmo p{
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: start;
+    margin: 10px 10px 10px 10px;
+}
+
+.info__img img{
+    width: 600px;
+    max-width: 100%;
+    border-radius: 16px;
+    object-fit: contain;
+    padding: 10px 10px 10px 10px;
+}
+
+.info__div {
+    margin: 10px 0 30px 0;
+}
+
+.info__div p {
+    font-size: 25px;
+    font-weight: bold;
+}
+.div__list {
+    display: flex;
+    justify-content: center;
+}
+
+.info__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: disc;
+    list-style-position: inside;
+    text-align: start;
+    font-size: 20px;
+}
+
+.info__div__secundario {
+    margin: 30px 0 0 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.info__div__secundario .titulo {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #003c77;
+    text-decoration: underline;
+}
+
+.info__div__secundario .texto{
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: start;
+    padding: 0 50px;
+    font-weight: 500;
+}
+
+.oftalmo__acordions{
+    margin: 35px auto 0;
+    width: 100%;
+    max-width: 700px;
+    padding: 0 16px;
+    box-sizing: border-box;
+    display: grid;
+    gap: 10px;
+}
+
+.oftalmo__accordionItem{
+    background: #ffffff;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 2px solid rgba(0, 60, 119, 0.12);
+}
+
+
+.oftalmo__accordionButton{
+    width: 100%;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    color: #003c77;
+}
+
+.oftalmo__accordionButton:focus-visible{
+    outline: 4px auto -webkit-focus-ring-color;
+    outline-offset: 6px;
+}
+
+.oftalmo__accordionTitle{
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.oftalmo__accordionIcon{
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    transition: transform 220ms ease, background 220ms ease;
+}
+
+.oftalmo__accordionIcon i{
+    font-size: 18px;
+    line-height: 1;
+}
+
+.oftalmo__accordionItem.is-open .oftalmo__accordionIcon{
+    transform: rotate(180deg);
+}
+
+.oftalmo__accordionPanel{
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 260ms ease;
+}
+
+.oftalmo__accordionItem.is-open .oftalmo__accordionPanel{
+    grid-template-rows: 1fr;
+}
+
+.oftalmo__accordionPanelInner{
+    overflow: hidden;
+}
+
+.oftalmo__accordionBody{
+    padding: 0 16px 14px;
+    color: #1a1a1a;
+}
+
+@media (max-width: 900px) {
+    .info__img {
+        flex-direction: column;
+    }
+
+    .info__img img{
+        padding: 10px;
+    }
+}

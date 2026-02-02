@@ -10,9 +10,7 @@ import Guardia from "./pages/Guardia";
 import Estudios from "./pages/Estudios";
 import Cirugias from "./pages/Cirugias";
 import Turnos from "./pages/Turnos";
-
-
-
+import Oftalmopediatria from "./pages/Oftalmopediatria";
 
 function App() {
   return (
@@ -31,6 +29,7 @@ function App() {
            <Route path="/estudios" element={<Estudios />}></Route>
            <Route path="/cirugias" element={<Cirugias />}></Route>
            <Route path="/turnos" element={<Turnos />}></Route>
+           <Route path="/oftalmopediatria" element={<Oftalmopediatria />}></Route>
          </Routes>
 
          <Footer />
