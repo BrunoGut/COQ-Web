@@ -9,6 +9,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import Guardia from "./pages/Guardia";
 import Estudios from "./pages/Estudios";
 import Cirugias from "./pages/Cirugias";
+import Turnos from "./pages/Turnos";
 
 
 
@@ -29,6 +30,7 @@ function App() {
            <Route path="/guardia" element={<Guardia />}></Route>
            <Route path="/estudios" element={<Estudios />}></Route>
            <Route path="/cirugias" element={<Cirugias />}></Route>
+           <Route path="/turnos" element={<Turnos />}></Route>
          </Routes>
 
          <Footer />

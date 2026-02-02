@@ -1,0 +1,54 @@
+import React from "react";
+import SectionHeading from "./SectionHeading";
+import BannerComponent from "./BannerComponent";
+import turnosImg from "../images/turnos/turnos.png";
+import "../css/turnosComponent.css";
+
+function TurnosComponent() {
+  return (
+    <section className="turnos">
+      <div className="turnos_inner">
+        <SectionHeading title="TURNOS ONLINE" />
+      </div>
+
+      <BannerComponent
+        className="turnos__banner"
+        title="Solicitá tu turno online"
+        urlImg={turnosImg}
+        ariaLabel="Turnos online"
+      >
+        <a
+          href="https://wa.me/1165132161"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button className="boton-turnos" type="button">
+            <i className="bi bi-calendar-check-fill" aria-hidden="true" />
+            <span>CLICK AQUÍ</span>
+          </button>
+        </a>
+      </BannerComponent>
+
+      <div className="info__grid">
+        <div className="info__div">
+          <h2 className="info__text">
+            Encontrá toda la información para agendar tu consulta medica, estudio o cirugía
+          </h2>
+          <p>Enviá un mensaje de WhastApp al (011) 6513-2161 haciendo <a className="info__link" href="https://wa.me/1165132161" target="_blank" rel="noopener noreferrer">click aquí</a>, <br /> indicando tu nombre completo, DNI, motivo de la consulta y fecha y horario preferido.</p>
+        </div>
+      </div>
+
+      <div className="info__grid">
+        <div className="info__div">
+          <h2 className="info__text">
+            Horarios de atención
+          </h2>
+          <p>Lunes a viernes de 08:00 a 19:30hs. <br />
+          Sabados de 08:00 a 12:00hs.</p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default TurnosComponent;

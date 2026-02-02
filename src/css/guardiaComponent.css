@@ -23,6 +23,12 @@
     align-items: center;
 }
 
+.info__grid h2{
+    font-size: 40px;
+    font-weight: 700;
+    color: #003c77;
+}
+
 .info__div{
     justify-content: center;
     text-align: center;

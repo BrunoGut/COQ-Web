@@ -66,7 +66,7 @@ function CirugiasComponent() {
                 <button className="boton-cirugia" type='button'>
                 <i className="bi bi-calendar-check-fill" aria-hidden="true" />
                 <span>SOLICITA TU TURNO</span>
-            </button>
+                </button>
             </a>
         </BannerComponent>
         <div className="cirugias__search" role="search">

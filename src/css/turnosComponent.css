@@ -1,0 +1,81 @@
+.turnos {
+    background-color: #003c77;
+    background-image: linear-gradient(to top, #003c77 0%, #f0f0f0 15%);
+    padding: 56px 0 82px;
+}
+
+.boton-turnos{
+    position: absolute;
+    left: 50%;
+    bottom: 24px;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+}
+
+.boton-turnos button{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0.85rem 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    border-radius: 12px;
+    border: 2px solid transparent;
+}
+
+.boton-turnos{
+    background: #003c77;
+    color: #fff;
+    font-weight: 700;
+}
+
+.boton-turnos:hover{
+    background: #ffffff;
+    color: #003c77;
+    border-color: #003c77;
+    font-weight: 700;
+} 
+
+.boton-turnos i{
+    font-size: 1.1rem;
+    line-height: 1;  
+}
+
+.info__grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-top: 32px;
+    justify-content: center;
+    align-items: center;
+}
+
+.info__grid h2{
+    font-size: 40px;
+    font-weight: 700;
+    color: #003c77;
+}
+
+.info__div{
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.info__div p{
+    font-size: 20px;
+    padding-top: 5px;
+}
+
+.info__link {
+    text-decoration: none;
+    color: #003c77;
+}
+
+.info__link:hover {
+    text-decoration: underline;
+}
