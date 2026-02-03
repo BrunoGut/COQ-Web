@@ -7,6 +7,18 @@
     align-items: center;
     padding: 16px;
     overflow-x: hidden; /*evita scroll horizontal en celulares*/
+
+    opacity: 0;
+    transition: opacity 180ms ease;
+}
+
+.modal.is-open{
+    opacity: 1;
+}
+
+.modal.is-closing{
+    opacity: 0;
+    pointer-events: none;
 }
 
 .container__modal{
@@ -22,6 +34,27 @@
     display: grid;
     gap: 1em;
     grid-template-rows: auto minmax(0, 1fr);
+
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+    transition: transform 180ms ease, opacity 180ms ease;
+}
+
+.modal.is-open .container__modal{
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.modal.is-closing .container__modal{
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+}
+
+@media (prefers-reduced-motion: reduce){
+    .modal,
+    .container__modal{
+        transition: none;
+    }
 }
 
 .container__modal--wide{
@@ -185,6 +218,28 @@
     background: transparent;
 }
 
+/* Animación al cambiar de item dentro del modal (lista izquierda) */
+.guardiaModal__detail--animated{
+    animation: modalDetailIn 220ms ease both;
+}
+
+@keyframes modalDetailIn{
+    from{
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce){
+    .guardiaModal__detail--animated{
+        animation: none;
+    }
+}
+
 .guardiaModal__detailTop{
     background: #ffffff;
     border-radius: 0 18px 18px 18px;
@@ -309,6 +364,8 @@
 
     .guardiaModal__sidebar{
         max-height: unset;
+        overflow: hidden;
+        padding: 10px;
     }
 
     .guardiaModal__sidebarToggle{
@@ -360,15 +417,31 @@
     }
 
     .guardiaModal__sidebarContent{
-        display: none;
-        margin-top: 10px;
+        display: block;
+        margin-top: 0;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        pointer-events: none;
+        transition: max-height 240ms ease, opacity 180ms ease, margin-top 240ms ease;
     }
 
     .guardiaModal__sidebar.is-open .guardiaModal__sidebarContent{
-        display: block;
+        margin-top: 10px;
+        max-height: 360px;
+        opacity: 1;
+        overflow: auto;
+        pointer-events: auto;
     }
 
     .guardiaModal__sidebar.is-open .guardiaModal__sidebarToggleIcon{
         transform: rotate(180deg);
+    }
+
+    @media (prefers-reduced-motion: reduce){
+        .guardiaModal__sidebarContent,
+        .guardiaModal__sidebarToggleIcon{
+            transition: none;
+        }
     }
 }

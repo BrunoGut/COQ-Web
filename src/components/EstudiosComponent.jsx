@@ -165,7 +165,7 @@ export default function Estudios() {
                             {!selectedItem ? (
                                 <p>No hay información para mostrar.</p>
                             ) : (
-                                <article className="guardiaModal__detail">
+                                <article key={selectedItem.id} className="guardiaModal__detail guardiaModal__detail--animated">
                                     <header className="guardiaModal__detailHeader">
                                         <h3 className="guardiaModal__detailTitle">{selectedItem.title}</h3>
                                         <div className="guardiaModal__detailText">{selectedItem.descripcion}</div>

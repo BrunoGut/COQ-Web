@@ -29,22 +29,22 @@ function TurnosComponent() {
         </a>
       </BannerComponent>
 
-      <div className="info__grid">
-        <div className="info__div">
-          <h2 className="info__text">
+      <div className="info__grid__turnos">
+        <div className="info__div__turnos">
+          <h2 className="info__text__turnos">
             Encontrá toda la información para agendar tu consulta medica, estudio o cirugía
           </h2>
-          <p>Enviá un mensaje de WhastApp al (011) 6513-2161 haciendo <a className="info__link" href="https://wa.me/1165132161" target="_blank" rel="noopener noreferrer">click aquí</a>, <br /> indicando tu nombre completo, DNI, motivo de la consulta y fecha y horario preferido.</p>
+          <p>Enviá un mensaje de WhastApp al <span className="destacado__subrayado">(011) 6513-2161</span> haciendo <a className="info__link" href="https://wa.me/1165132161" target="_blank" rel="noopener noreferrer">click aquí</a>, <br /> indicando tu <span className="destacado__subrayado">nombre completo, DNI, motivo de la consulta y fecha y horario preferido.</span></p>
         </div>
       </div>
 
-      <div className="info__grid">
-        <div className="info__div">
-          <h2 className="info__text">
+      <div className="info__grid__turnos">
+        <div className="info__div__turnos">
+          <h2 className="info__text__turnos">
             Horarios de atención
           </h2>
-          <p>Lunes a viernes de 08:00 a 19:30hs. <br />
-          Sabados de 08:00 a 12:00hs.</p>
+          <p>Lunes a viernes de <strong>08:00 a 19:30hs.</strong> <br />
+          Sabados de <strong>08:00 a 12:00hs.</strong></p>
         </div>
       </div>
     </section>

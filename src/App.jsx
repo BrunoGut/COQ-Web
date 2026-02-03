@@ -11,6 +11,7 @@ import Estudios from "./pages/Estudios";
 import Cirugias from "./pages/Cirugias";
 import Turnos from "./pages/Turnos";
 import Oftalmopediatria from "./pages/Oftalmopediatria";
+import EsteticaComponent from "./components/EsteticaComponent";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
            <Route path="/cirugias" element={<Cirugias />}></Route>
            <Route path="/turnos" element={<Turnos />}></Route>
            <Route path="/oftalmopediatria" element={<Oftalmopediatria />}></Route>
+           <Route path="/estetica" element={<EsteticaComponent />}></Route>
          </Routes>
 
          <Footer />

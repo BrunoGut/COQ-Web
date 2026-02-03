@@ -35,7 +35,7 @@ export default function GuardiaComponent() {
   return (
     <section className="guardia">
       <div className="guardia__inner">
-        <SectionHeading title="SERVICIOS" />
+        <SectionHeading title="GUARDIA" />
       </div>
 
       <BannerComponent
@@ -126,7 +126,7 @@ export default function GuardiaComponent() {
             {!selectedItem ? ( // Si no hay ítem seleccionado, muestro un mensaje
               <p>No hay información para mostrar.</p>
             ) : (
-              <article className="guardiaModal__detail">
+              <article key={selectedItem.id} className="guardiaModal__detail guardiaModal__detail--animated">
                 <header className="guardiaModal__detailHeader">
                   <h3 className="guardiaModal__detailTitle">{selectedItem.title}</h3>
                   <div className="guardiaModal__detailText">{selectedItem.descripcion}</div>
