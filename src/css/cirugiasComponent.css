@@ -1,5 +1,6 @@
 .cirugias {
-	background-color: #f0f0f0;
+	background-color: #003c77;
+	background-image: linear-gradient(to top, #003c77 0%, #f0f0f0 5%);
     padding: 56px 0 82px;
 }
 
@@ -46,7 +47,7 @@
 
 .cirugias__search {
 	width: min(1100px, 92%);
-	margin: 0 auto 28px;
+	margin: 30px auto 28px;
 	display: flex;
 	align-items: center;
 	gap: 14px;

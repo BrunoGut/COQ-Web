@@ -50,10 +50,37 @@
 .info__list {
     margin: 0;
     padding: 0;
-    list-style-type: disc;
-    list-style-position: inside;
+    list-style: none;
     text-align: start;
     font-size: 20px;
+}
+
+.info__list li{
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 4px 0;
+}
+
+.info__list li i{
+    flex: 0 0 auto;
+    font-size: 20px;
+    line-height: 1;
+    margin-top: 3px;
+    color: #003c77;
+    font-weight: 900;
+    transition: transform 0.5s ease;
+    display: inline-block;
+    -webkit-text-stroke: 0.6px currentColor;
+    text-shadow:
+        0.3px 0 currentColor,
+        -0.3px 0 currentColor,
+        0 0.3px currentColor,
+        0 -0.3px currentColor;
+}
+
+.info__list li:hover i{
+    transform: rotate(180deg);
 }
 
 .info__div__secundario {
@@ -83,7 +110,7 @@
 .oftalmo__acordions{
     margin: 35px auto 0;
     width: 100%;
-    max-width: 700px;
+    max-width: 1300px;
     padding: 0 16px;
     box-sizing: border-box;
     display: grid;
@@ -94,7 +121,15 @@
     background: #ffffff;
     border-radius: 14px;
     overflow: hidden;
-    border: 2px solid rgba(0, 60, 119, 0.12);
+    border: 2px solid #f0f0f0;
+    border-left: 15px solid #f0f0f0;
+    transition: all 0.4s ease;
+}
+
+.oftalmo__accordionItem:hover{
+    background: #f0f0f0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
 }
 
 
@@ -152,6 +187,12 @@
     grid-template-rows: 1fr;
 }
 
+.oftalmo__accordionItem.is-open{
+    border-color: #003c77;
+    background: #f0f0f0;
+    transform: scale(1.05);
+}
+
 .oftalmo__accordionPanelInner{
     overflow: hidden;
 }
@@ -159,6 +200,16 @@
 .oftalmo__accordionBody{
     padding: 0 16px 14px;
     color: #1a1a1a;
+}
+
+.destacado__azul {
+    color: #003c77;
+    font-weight: bold;
+}
+
+.destacado__subrayado {
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 @media (max-width: 900px) {

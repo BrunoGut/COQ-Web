@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useDeferredValue, useEffect, useState } from "react";
 import ESTUDIOS_ARRAY from "./data/EstudiosArray";
 import SectionHeading from "./SectionHeading";
 import Modal from "./Modal";
@@ -7,6 +7,8 @@ import "../css/patologias.css";
 import BannerComponent from "./BannerComponent";
 import estudiosBannerImg from "../images/estudios/estudios-banner.jpg";
 
+const normalize = (value) => value.trim().toLowerCase();
+
 export default function Estudios() {
     const firstId = ESTUDIOS_ARRAY[0]?.id ?? null;
 
@@ -14,7 +16,29 @@ export default function Estudios() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
+    const [search, setSearch] = useState("");
+    const deferredSearch = useDeferredValue(search);
+    const [query, setQuery] = useState("");
+    const [isFading, setIsFading] = useState(false);
+
     const selectedItem = ESTUDIOS_ARRAY.find((x) => x.id === selectedId) ?? null; //buscar el item seleccionado
+
+    useEffect(() => {
+        const nextQuery = normalize(deferredSearch);
+        if (nextQuery === query) return;
+
+        setIsFading(true);
+        const timeoutId = setTimeout(() => {
+            setQuery(nextQuery);
+            setIsFading(false);
+        }, 100);
+
+        return () => clearTimeout(timeoutId);
+    }, [deferredSearch, query]);
+
+    const estudiosFiltrados = query
+        ? ESTUDIOS_ARRAY.filter((item) => normalize(item.title ?? "").includes(query))
+        : ESTUDIOS_ARRAY;
 
     const selectItem = (id) => {
         setSelectedId(id);
@@ -45,8 +69,24 @@ export default function Estudios() {
             />
 
             <div className="estudios__inner">
-                <div className="card-wrapper estudios__grid" role="list" aria-label="Lista de estudios">
-                    {ESTUDIOS_ARRAY.map((item) => (
+                <div className="estudios__search" role="search">
+                    <span className="estudios__searchIcon" aria-hidden="true">Q</span>
+                    <input
+                        className="estudios__searchInput"
+                        type="text"
+                        value={search}
+                        onChange={(e) => setSearch(e.target.value)}
+                        placeholder="Buscar en el listado"
+                        aria-label="Buscar estudios"
+                    />
+                </div>
+
+                <div
+                    className={`card-wrapper estudios__grid${isFading ? " estudios__grid--fading" : ""}`}
+                    role="list"
+                    aria-label="Lista de estudios"
+                >
+                    {estudiosFiltrados.map((item) => (
                         <article key={item.id} className="card" role="listitem">
                             <div className="card-header" aria-hidden="true" />
 

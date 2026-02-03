@@ -23,26 +23,25 @@ function OftalmoComponent() {
       <div className="info__img">
         <div className="info__text__oftalmo">
           <p>
-            Los primeros años de la vida son fundamentales para el desarrollo de
+            Los primeros años de la vida son <strong>fundamentales</strong> para el desarrollo de
             la visión. <br />
-            Es por esto que el cuidado oftalmológico de los niños es tan
+            Es por esto que el <strong>cuidado oftalmológico de los niños</strong> es tan
             importante. <br />
           </p>
           <p>
-            El ojo en el niño es inmaduro y está en constante crecimiento hasta
+            El ojo en el niño es inmaduro y está en <strong>constante crecimiento</strong> hasta
             los 7 u 8 años. <br />
             La visión en la primera infancia es menor y alcanza una agudeza
-            visual de 10/10 hacia los 5 años de edad. <br />
+            visual de 10/10 hacia los <strong>5 años de edad</strong>. <br />
           </p>
           <p>
-            Cualquier anomalía ocular no diagnosticada precozmente, puede
-            detener el desarrollo de la visión y dejar defectos que persistirán
-            durante toda la vida. <br />
+            Cualquier anomalía ocular <strong>no diagnosticada precozmente</strong>, puede
+            <strong> detener el desarrollo de la visión y dejar defectos que persistirán durante toda la vida.</strong>
+             <br />
           </p>
           <p>
-            El Centro de Ojos Quilmes cuenta con profesionales altamente
-            especializados en Oftalmología Pediátrica y con una sofisticada
-            tecnología capaz de detectar y tratar cualquier enfermedad ocular
+            El <span className="destacado__azul">Centro de Ojos Quilmes</span> cuenta con profesionales altamente
+            especializados en <span className="destacado__subrayado">Oftalmología Pediátrica</span> y con una sofisticada <strong>tecnología</strong> capaz de detectar y tratar cualquier enfermedad ocular
             infantil.
           </p>
         </div>
@@ -55,12 +54,30 @@ function OftalmoComponent() {
           <p>Se deben realizar controles y fondo de ojos:</p>
           <div className="div__list">
             <ul className="info__list">
-              <li>Al Nacer</li>
-              <li>A los 6 meses</li>
-              <li>Al año</li>
-              <li>A los 3 años</li>
-              <li>A los 5 años al ingreso escolar</li>
-              <li>Y posteriormente cada 2 años</li>
+              <li>
+                <i className="bi bi-chevron-right" aria-hidden="true"></i>
+                <span>Al Nacer</span>
+              </li>
+              <li>
+                <i className="bi bi-chevron-right" aria-hidden="true"></i>
+                <span>A los 6 meses</span>
+              </li>
+              <li>
+                <i className="bi bi-chevron-right" aria-hidden="true"></i>
+                <span>Al año</span>
+              </li>
+              <li>
+                <i className="bi bi-chevron-right" aria-hidden="true"></i>
+                <span>A los 3 años</span>
+              </li>
+              <li>
+                <i className="bi bi-chevron-right" aria-hidden="true"></i>
+                <span>A los 5 años al ingreso escolar</span>
+              </li>
+              <li>
+                <i className="bi bi-chevron-right" aria-hidden="true"></i>
+                <span>Y posteriormente cada 2 años</span>
+              </li>
             </ul>
           </div>
         </div>

@@ -48,20 +48,20 @@ export default function GuardiaComponent() {
       <div className="info__grid">
         <div className="info__div">
           <h2 className="info__text">Servicio de guardia para urgencias del paciente</h2>
-          <p>Teléfono de contacto: (011) 4255-3120</p>
+          <p>Teléfono de contacto: <span className="texto__subrayado">(011) 4255-3120</span></p>
         </div>
 
         <div className="info__div">
           <h2 className="info__text">Horarios:</h2>
           <p>
-            Lunes a viernes de 8:00 a 20:00 hs. Sabados de 8:00 a 18:00 hs.
-            Domingos y feriados de 10:00 a 13:00 hs.
+            Lunes a viernes de <strong>8:00 a 20:00 hs.</strong> Sabados de <strong>8:00 a 18:00 hs.</strong>
+            Domingos y feriados de <strong>10:00 a 13:00 hs.</strong>
           </p>
         </div>
 
         <div className="info__div">
           <h2 className="info__text">¿Donde estamos?</h2>
-          <p>Humberto Primo 298, Quilmes, Buenos Aires, Argentina.</p>
+          <p><span className="texto__subrayado">Humberto Primo 298, Quilmes, Buenos Aires, Argentina.</span></p>
         </div>
       </div>
 
