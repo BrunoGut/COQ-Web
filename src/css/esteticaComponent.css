@@ -102,6 +102,15 @@
 .estetica__sidebarContent {
   display: block;
 }
+.estetica__sidebarContent .estetica__empty {
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
 .estetica__list {
   list-style: none;
   padding: 0;

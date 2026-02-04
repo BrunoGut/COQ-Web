@@ -7,14 +7,29 @@ import PATOLOGIAS from './data/PatologiasArray';
 export default function Tratamientos() {
   const [searchParams] = useSearchParams();
 
+  const MOBILE_BREAKPOINT = 992;
+
   const [patologiaSeleccionadaId, setPatologiaSeleccionadaId] = useState(
     PATOLOGIAS[0]?.id ?? null
   );
+
+  const [isSidebarOpen, setIsSidebarOpen] = useState(window.innerWidth >= MOBILE_BREAKPOINT);
 
   const [seccionAbiertaIndex, setSeccionAbiertaIndex] = useState(-1);
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  }, []);
+
+  useEffect(() => {
+    const onResize = () => {
+      if (window.innerWidth >= MOBILE_BREAKPOINT) {
+        setIsSidebarOpen(true);
+      }
+    };
+
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
   }, []);
 
   useEffect(() => {
@@ -88,59 +103,58 @@ export default function Tratamientos() {
         <SectionHeading className="tratamientos__heading" title="TRATAMIENTOS" />
 
         <div className="tratamientos__layout" aria-label="Listado y detalle de tratamientos">
-          <div className="tratamientos__mobileSelect" aria-label="Selector de tratamientos">
-            <label className="tratamientos__mobileSelectLabel" htmlFor="tratamientos-select">
-              Seleccioná un tratamiento
-            </label>
-            <select
-              id="tratamientos-select"
-              className="tratamientos__mobileSelectControl"
-              value={patologiaSeleccionadaId ?? ""}
-              onChange={(event) => {
-                const parsed = Number.parseInt(event.target.value, 10);
-                if (!Number.isFinite(parsed)) return;
-                setPatologiaSeleccionadaId(parsed);
-                setSeccionAbiertaIndex(-1);
-              }}
+          <aside
+            className={`tratamientos__sidebar${isSidebarOpen ? " is-open" : ""}`}
+            aria-label="Lista de tratamientos"
+          >
+            <button
+              type="button"
+              className="tratamientos__sidebarToggle"
+              onClick={() => setIsSidebarOpen((prev) => !prev)}
+              aria-expanded={isSidebarOpen}
+              aria-controls="tratamientosList"
             >
-              {PATOLOGIAS.map((patologia) => (
-                <option key={patologia.id} value={patologia.id}>
-                  {patologia.label}
-                </option>
-              ))}
-            </select>
-          </div>
+              <span className="tratamientos__sidebarToggleText">Lista de tratamientos</span>
+              <span className="tratamientos__sidebarToggleIcon" aria-hidden="true">
+                <i className="bi bi-chevron-down" />
+              </span>
+            </button>
 
-          <aside className="tratamientos__sidebar" aria-label="Lista de tratamientos">
-            <ul className="tratamientos__list" role="list">
-              {PATOLOGIAS.map((patologia) => {
-                const isActive = patologia.id === patologiaSeleccionadaId;
+            <div id="tratamientosList" className="tratamientos__sidebarContent">
+              <ul className="tratamientos__list" role="list">
+                {PATOLOGIAS.map((patologia) => {
+                  const isActive = patologia.id === patologiaSeleccionadaId;
 
-                return (
-                  <li key={patologia.id} className="tratamientos__listItem" role="listitem">
-                    <button
-                      type="button"
-                      className={`tratamientos__listButton${isActive ? " is-active" : ""}`}
-                      onClick={() => {
-                        setPatologiaSeleccionadaId(patologia.id);
-                        setSeccionAbiertaIndex(-1);
-                      }}
-                      aria-pressed={isActive}
-                    >
-                      <span className="tratamientos__thumb" aria-hidden="true">
-                        <img
-                          className="tratamientos__thumbImg"
-                          src={patologia.imageSrc}
-                          alt=""
-                          loading="lazy"
-                        />
-                      </span>
-                      <span className="tratamientos__listLabel">{patologia.label}</span>
-                    </button>
-                  </li>
-                );
-              })}
-            </ul>
+                  return (
+                    <li key={patologia.id} className="tratamientos__listItem" role="listitem">
+                      <button
+                        type="button"
+                        className={`tratamientos__listButton${isActive ? " is-active" : ""}`}
+                        onClick={() => {
+                          setPatologiaSeleccionadaId(patologia.id);
+                          setSeccionAbiertaIndex(-1);
+
+                          if (window.innerWidth < MOBILE_BREAKPOINT) {
+                            setIsSidebarOpen(false);
+                          }
+                        }}
+                        aria-pressed={isActive}
+                      >
+                        <span className="tratamientos__thumb" aria-hidden="true">
+                          <img
+                            className="tratamientos__thumbImg"
+                            src={patologia.imageSrc}
+                            alt=""
+                            loading="lazy"
+                          />
+                        </span>
+                        <span className="tratamientos__listLabel">{patologia.label}</span>
+                      </button>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
           </aside>
 
           <div className="tratamientos__content" aria-label="Detalle del tratamiento">

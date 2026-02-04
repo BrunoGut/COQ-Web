@@ -16,16 +16,23 @@ function EsteticaComponent() {
     item.titulo.toLowerCase().includes(search.toLowerCase())
   );
 
+  const trimmedSearch = search.trim();
+  const hasResults = esteticaFiltrados.length > 0;
+  const MAX_SEARCH_CHARS = 15;
+  const searchPreview =
+    trimmedSearch.length > MAX_SEARCH_CHARS
+      ? `${trimmedSearch.slice(0, MAX_SEARCH_CHARS)}…`
+      : trimmedSearch;
+
   // Item seleccionado
   const selectedItem = ESTETICA.find(item => item.id === selectedId);
 
 useEffect(() => {
-  const hasText = search.trim().length > 0;
-  const hasResults = esteticaFiltrados.length > 0;
+  const hasText = trimmedSearch.length > 0;
 
-  // Si no hay coincidencias, cerrar SIEMPRE (desktop y mobile)
+  // Si no hay coincidencias, mantener visible el sidebar para mostrar el mensaje
   if (!hasResults) {
-    setIsSidebarOpen(false);
+    setIsSidebarOpen(true);
     return;
   }
 
@@ -41,7 +48,7 @@ useEffect(() => {
   } else {
     setIsSidebarOpen(false);
   }
-}, [search, esteticaFiltrados]);
+}, [trimmedSearch, hasResults]);
 
   return (
     <section className="estetica">
@@ -87,27 +94,35 @@ useEffect(() => {
               </button>
 
               <div id="esteticaList" className="estetica__sidebarContent">
-                <ul className="estetica__list">
-                  {esteticaFiltrados.map((item) => (
-                    <li key={item.id}>
-                      <button
-                        type="button"
-                        className={
-                          item.id === selectedId
-                            ? "estetica__listButton is-active"
-                            : "estetica__listButton"
-                        }
-                        onClick={() => {
-                          setSelectedId(item.id);
-                          setIsSidebarOpen(false);
-                        }}
-                        aria-pressed={item.id === selectedId}
-                      >
-                        {item.titulo}
-                      </button>
-                    </li>
-                  ))}
-                </ul>
+                {hasResults ? (
+                  <ul className="estetica__list">
+                    {esteticaFiltrados.map((item) => (
+                      <li key={item.id}>
+                        <button
+                          type="button"
+                          className={
+                            item.id === selectedId
+                              ? "estetica__listButton is-active"
+                              : "estetica__listButton"
+                          }
+                          onClick={() => {
+                            setSelectedId(item.id);
+                            setIsSidebarOpen(false);
+                          }}
+                          aria-pressed={item.id === selectedId}
+                        >
+                          {item.titulo}
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  trimmedSearch.length > 0 && (
+                    <p className="estetica__empty">
+                      No hay coincidencias para “{searchPreview}”.
+                    </p>
+                  )
+                )}
               </div>
             </aside>
 
