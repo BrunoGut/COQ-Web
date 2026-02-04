@@ -116,7 +116,13 @@
 	}
 }
 
-@media (max-width: 560px) {
+@media (max-width: 600px) {
+	.cirugias {
+		background-color: #003c77;
+		background-image: linear-gradient(to top, #003c77 0%, #f0f0f0 3.5%);
+		padding: 56px 0 100px;
+	}
+
 	.cirugias__grid {
 		grid-template-columns: 1fr;
 	}
