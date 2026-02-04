@@ -1,13 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SectionHeading from "./SectionHeading";
 import "../css/esteticaComponent.css";
-import esteticaImg from "../images/ojo-estetica.jpeg";
+import esteticaImg from "../images/estetica/estetica1.jpg";
 import ESTETICA from "./data/EsteticaArray";
+import BannerComponent from "./BannerComponent";
 
 function EsteticaComponent() {
   const [search, setSearch] = useState("");
   const [selectedId, setSelectedId] = useState(ESTETICA[0].id);
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  //const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(window.innerWidth > 768);
 
   // Filtrado simple
   const esteticaFiltrados = ESTETICA.filter(item =>
@@ -17,20 +19,44 @@ function EsteticaComponent() {
   // Item seleccionado
   const selectedItem = ESTETICA.find(item => item.id === selectedId);
 
+useEffect(() => {
+  const hasText = search.trim().length > 0;
+  const hasResults = esteticaFiltrados.length > 0;
+
+  // Si no hay coincidencias, cerrar SIEMPRE (desktop y mobile)
+  if (!hasResults) {
+    setIsSidebarOpen(false);
+    return;
+  }
+
+  // Si hay texto (y hay resultados), abrir
+  if (hasText) {
+    setIsSidebarOpen(true);
+    return;
+  }
+
+  // Si no hay texto, en desktop lo dejamos abierto (vista normal)
+  if (window.innerWidth > 768) {
+    setIsSidebarOpen(true);
+  } else {
+    setIsSidebarOpen(false);
+  }
+}, [search, esteticaFiltrados]);
+
   return (
     <section className="estetica">
       <div className="estetica__inner">
         <SectionHeading title="ESTÉTICA" />
+      </div>
 
-        <div className="info__img__estetica">
-          <div className="info__title__estetica">
-            <h2>
-              INFORMACION SOBRE ESTÉTICA <br /> PARA EL PACIENTE
-            </h2>
-          </div>
-          <img src={esteticaImg} alt="Estética" />
-        </div>
+      <BannerComponent
+        className="estetica__banner"
+        title="Información sobre nuestros procedimientos estéticos"
+        urlImg={esteticaImg}
+        ariaLabel="Estetica"
+      />
 
+      <div className="estetica__inner">
         <div className="estetica__content">
           {/* BUSCADOR */}
           <div className="estetica__search">

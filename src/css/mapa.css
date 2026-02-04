@@ -68,7 +68,7 @@
 	}
 }
 
-@media (max-width: 576px) {
+@media (max-width: 600px) {
 	.mapa {
 		padding: 44px 0 56px;
 	}
@@ -85,8 +85,12 @@
 		font-size: 36px;
 	}
 
+	.mapa__blockTitle{
+		font-size: 28px;
+	}
+
 	.mapa__blockTitle {
-		font-size: 24px;
+		font-size: 28px;
 	}
 
 	.mapa__leaflet {

@@ -55,9 +55,13 @@
 	}
 }
 
-@media (max-width: 576px) {
+@media (max-width: 600px) {
 	.quienesSomos {
 		padding: 44px 0 56px;
+	}
+
+	.quienesSomos__text{
+		font-size: 16px;
 	}
 
 	.quienesSomos__inner {
