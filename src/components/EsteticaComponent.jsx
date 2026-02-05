@@ -1,20 +1,37 @@
-import { useEffect, useState } from "react";
+import { useDeferredValue, useEffect, useState } from "react";
 import SectionHeading from "./SectionHeading";
 import "../css/esteticaComponent.css";
 import esteticaImg from "../images/estetica/estetica1.jpg";
 import ESTETICA from "./data/EsteticaArray";
 import BannerComponent from "./BannerComponent";
 
+const normalize = (value) => value.trim().toLowerCase();
+
 function EsteticaComponent() {
   const [search, setSearch] = useState("");
+  const deferredSearch = useDeferredValue(search);
+  const [query, setQuery] = useState("");
+  const [isFading, setIsFading] = useState(false);
   const [selectedId, setSelectedId] = useState(ESTETICA[0].id);
   //const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(window.innerWidth > 768);
 
-  // Filtrado simple
-  const esteticaFiltrados = ESTETICA.filter(item =>
-    item.titulo.toLowerCase().includes(search.toLowerCase())
-  );
+  useEffect(() => {
+    const nextQuery = normalize(deferredSearch);
+    if (nextQuery === query) return;
+
+    setIsFading(true);
+    const timeoutId = setTimeout(() => {
+      setQuery(nextQuery);
+      setIsFading(false);
+    }, 100);
+
+    return () => clearTimeout(timeoutId);
+  }, [deferredSearch, query]);
+
+  const esteticaFiltrados = query
+    ? ESTETICA.filter((item) => normalize(item.titulo ?? "").includes(query))
+    : ESTETICA;
 
   const trimmedSearch = search.trim();
   const hasResults = esteticaFiltrados.length > 0;
@@ -77,7 +94,7 @@ useEffect(() => {
             />
           </div>
 
-          <div className="estetica__layout">
+          <div className={`estetica__layout${isFading ? " estetica__layout--fading" : ""}`}>
             {/* LISTA */}
             <aside className={`estetica__sidebar${isSidebarOpen ? " is-open" : ""}`}>
               <button

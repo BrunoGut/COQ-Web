@@ -1,0 +1,178 @@
+.coberturas {
+    background-color: #003c77;
+	background-image: linear-gradient(to top, #003c77 0%, #f0f0f0 5%);
+    padding: 56px 0 82px;
+}
+
+.boton-coberturas{
+    position: absolute;
+    left: 50%;
+    bottom: 24px;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+}
+
+.boton-coberturas button{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0.85rem 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    border-radius: 12px;
+    border: 2px solid transparent;
+}
+
+.boton-coberturas{
+    background: #003c77;
+    color: #fff;
+    font-weight: 700;
+}
+
+.boton-coberturas:hover{
+    background: #ffffff;
+    color: #003c77;
+    border-color: #003c77;
+    font-weight: 700;
+} 
+
+.boton-coberturas i{
+    font-size: 1.1rem;
+    line-height: 1;  
+}
+
+.coberturas__search {
+	width: min(1100px, 92%);
+	margin: 30px auto 28px;
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	background: #f3f4f6;
+	border-radius: 6px;
+	padding: 14px 16px;
+}
+
+.coberturas__searchIcon {
+	font-size: 18px;
+	font-weight: 700;
+	opacity: 0.7;
+	user-select: none;
+}
+
+.coberturas__searchInput {
+	flex: 1;
+	border: none;
+	outline: none;
+	background: transparent;
+	font-size: 16px;
+	padding: 10px 8px;
+}
+
+.coberturas__grid {
+	width: min(1100px, 92%);
+	margin: 0 auto;
+	list-style: none;
+	padding: 0;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	column-gap: 28px;
+	row-gap: 26px;
+	opacity: 1;
+	transition: opacity 160ms ease;
+}
+
+.coberturas__grid--fading {
+	opacity: 0;
+	pointer-events: none;
+}
+
+.coberturas__item {
+	text-transform: uppercase;
+	font-weight: 600;
+    color: #4e4e4e;
+	letter-spacing: 0.02em;
+	padding-bottom: 12px;
+	border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+    border-top: 2px solid transparent;
+    padding-top: 12px;
+    transition: all 0.2s ease;
+}
+
+.coberturas__item:hover{
+    color: #003c77;
+    border-bottom-color: #003c77;
+    border-top-color: #003c77;
+    cursor: pointer;
+    text-shadow: 0 0 0 currentColor, 0.5px 0 0 currentColor;
+}
+
+/* Modal simple para Coberturas (mismo look que Cirugías) */
+.coberturasModal__content{
+    display: grid;
+    gap: 12px;
+    align-content: start;
+}
+
+.modal .coberturasModal__title{
+    margin: 0;
+    color: #003c77;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.modal .coberturasModal__name{
+    margin: 0;
+    color: #1a1a1a;
+    line-height: 1.6;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.modal .coberturasModal__content > a{
+    justify-self: center;
+    text-decoration: none;
+}
+
+/* Reutiliza .boton-coberturas sin romper el layout del banner */
+.modal .boton-coberturas{
+    position: static;
+    left: auto;
+    bottom: auto;
+    transform: none;
+    margin: 6px auto 0;
+    padding: 0.85rem 1.1rem;
+    border-radius: 12px;
+    border: 2px solid transparent;
+}
+
+.modal .boton-coberturas:focus-visible{
+    outline: 4px auto -webkit-focus-ring-color;
+    outline-offset: 6px;
+}
+
+@media (max-width: 992px) {
+	.coberturas__grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 600px) {
+	.coberturas {
+		background-color: #003c77;
+		background-image: linear-gradient(to top, #003c77 0%, #f0f0f0 3.5%);
+		padding: 56px 0 100px;
+	}
+
+	.coberturas__grid {
+		grid-template-columns: 1fr;
+	}
+}

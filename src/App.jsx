@@ -11,7 +11,8 @@ import Estudios from "./pages/Estudios";
 import Cirugias from "./pages/Cirugias";
 import Turnos from "./pages/Turnos";
 import Oftalmopediatria from "./pages/Oftalmopediatria";
-import EsteticaComponent from "./components/EsteticaComponent";
+import Estetica from "./pages/Estetica";
+import Coberturas from "./pages/Coberturas";
 
 function App() {
   return (
@@ -31,7 +32,8 @@ function App() {
            <Route path="/cirugias" element={<Cirugias />}></Route>
            <Route path="/turnos" element={<Turnos />}></Route>
            <Route path="/oftalmopediatria" element={<Oftalmopediatria />}></Route>
-           <Route path="/estetica" element={<EsteticaComponent />}></Route>
+           <Route path="/estetica" element={<Estetica />}></Route>
+           <Route path="/coberturas" element={<Coberturas />}></Route>
          </Routes>
 
          <Footer />

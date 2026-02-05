@@ -6,11 +6,11 @@ import BannerComponent from './BannerComponent'
 import cirugiasBannerImg from '../images/cirugias/cirugia.jpg'
 import Modal from './Modal'
 
-const normalize = (value) => value.trim().toLowerCase()
+const normalize = (value) => value.trim().toLowerCase() // Normaliza el texto para búsquedas
 
 function CirugiasComponent() {
     const [search, setSearch] = useState('')
-    const deferredSearch = useDeferredValue(search)
+    const deferredSearch = useDeferredValue(search) //retarda el valor de búsqueda para optimizar el rendimiento
     const [query, setQuery] = useState('')
     const [isFading, setIsFading] = useState(false)
     const [isModalOpen, setIsModalOpen] = useState(false)
