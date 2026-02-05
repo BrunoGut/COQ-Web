@@ -1,0 +1,69 @@
+
+.planta{
+    background-color: #003c77;
+	background-image: linear-gradient(to top, #003c77 0%, #f0f0f0 10%);
+    padding: 56px 0 90px;
+}
+
+/* Lista (mismo layout que Coberturas) */
+.planta__ul{
+	width: min(1100px, 92%);
+	margin: 0 auto;
+	list-style: none;
+	padding: 0;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	column-gap: 28px;
+	row-gap: 26px;
+}
+
+.planta__item{
+	font-weight: 600;
+    color: #4e4e4e;
+	letter-spacing: 0.02em;
+	padding-bottom: 12px;
+	border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+    border-top: 2px solid transparent;
+    padding-top: 12px;
+    transition: all 0.2s ease;
+}
+
+.planta__item:hover{
+    color: #003c77;
+    border-bottom-color: #003c77;
+    border-top-color: #003c77;
+    cursor: pointer;
+    text-shadow: 0 0 0 currentColor, 0.5px 0 0 currentColor;
+}
+
+.planta__nombre{
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.planta__especialidad{
+    margin: 6px 0 0;
+    font-size: 14px;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+@media (max-width: 992px) {
+	.planta__ul{
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 600px) {
+	.planta{
+		background-color: #003c77;
+		background-image: linear-gradient(to top, #003c77 0%, #f0f0f0 3.5%);
+		padding: 56px 0 100px;
+	}
+
+	.planta__ul{
+		grid-template-columns: 1fr;
+	}
+}
