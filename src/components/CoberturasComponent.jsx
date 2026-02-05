@@ -49,7 +49,7 @@ function CoberturasComponent() {
   };
 
   return (
-    <section className="coberturas">
+    <section className="coberturas" id="cobertura-medica">
       <div className="coberturas__inner">
         <SectionHeading title="Coberturas" />
       </div>

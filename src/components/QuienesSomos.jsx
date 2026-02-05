@@ -4,7 +4,7 @@ import quienesSomosImg from '../images/quienes-somos.png'
 
 export default function QuienesSomos() {
   return (
-    <section className="quienesSomos" aria-label="Quiénes somos">
+    <section className="quienesSomos" id="quienes-somos" aria-label="Quiénes somos">
       <div className="quienesSomos__inner">
         <SectionHeading title="¿Quiénes somos?" />
 

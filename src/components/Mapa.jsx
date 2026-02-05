@@ -35,7 +35,7 @@ const DEFAULT_COORDS = UBICACIONES[0].coords //coordenadas por defecto (Humberto
 
 export default function Mapa({ lat = DEFAULT_COORDS.lat, lng = DEFAULT_COORDS.lng }) {
   return (
-    <section className="mapa" aria-label="Ubicación">
+    <section className="mapa" id="donde-estamos" aria-label="Ubicación">
       <div className="mapa__inner">
         <SectionHeading title="¿DÓNDE ESTAMOS?" />
 

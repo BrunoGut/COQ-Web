@@ -4,6 +4,7 @@ import BotonWhatsapp from "./components/BotonWhatsapp";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom"; 
 import Inicio from "./pages/Inicio";
 import Nosotros from "./pages/Nosotros";
+import Paciente from "./pages/Paciente";
 import PacienteQueTratamos from "./pages/PacienteQueTratamos";
 import ScrollToTop from "./components/ScrollToTop";
 import Guardia from "./pages/Guardia";
@@ -27,6 +28,7 @@ function App() {
          <Routes>
            <Route path="/" element={<Inicio />} />
            <Route path="/nosotros" element={<Nosotros />} />
+           <Route path="/paciente" element={<Paciente />}></Route>
            <Route path="/paciente/que-tratamos" element={<PacienteQueTratamos />}></Route>
            <Route path="/guardia" element={<Guardia />}></Route>
            <Route path="/estudios" element={<Estudios />}></Route>

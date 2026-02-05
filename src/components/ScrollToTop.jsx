@@ -11,11 +11,22 @@ function ScrollToTop() {
       window.history.scrollRestoration = "manual";
     }
 
-    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
-    requestAnimationFrame(() => {
+    // Si hay un hash en la URL, hacer scroll a ese elemento
+    if (location.hash) {
+      setTimeout(() => {
+        const element = document.querySelector(location.hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 100);
+    } else {
+      // Si no hay hash, scroll al inicio
       window.scrollTo({ top: 0, left: 0, behavior: "auto" });
-    });
-  }, [location.pathname, location.search]);
+      requestAnimationFrame(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+      });
+    }
+  }, [location.pathname, location.search, location.hash]);
 
   return null;
 }

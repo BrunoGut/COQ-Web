@@ -4,8 +4,24 @@ import '../css/navbar.css'
 import { Link } from 'react-router-dom'
 
 const NAV_LINKS = [
-  { label: 'Nosotros', href: '/nosotros' },
-  { label: 'Paciente', href: '/paciente' },
+  { 
+    label: 'Nosotros', 
+    href: '/nosotros',
+    submenu: [
+      { label: 'Quienes somos', href: '/nosotros#quienes-somos' },
+      { label: 'Donde estamos', href: '/nosotros#donde-estamos' }
+    ]
+  },
+  { 
+    label: 'Paciente', 
+    href: '/paciente',
+    submenu: [
+      { label: '¿Qué tratamos?', href: '/paciente#que-tratamos' },
+      { label: 'Staff médico', href: '/staff-medico' },
+      { label: 'Servicios', href: '/paciente#servicios' },
+      { label: 'Cobertura médica', href: '/paciente#cobertura-medica' }
+    ]
+  },
   { label: 'Residencia', href: '/residencia' },
   { label: 'Prensa', href: '/prensa' },
   { label: 'Consultas Virtuales', href: '/consultas-virtuales' },
@@ -14,6 +30,7 @@ const NAV_LINKS = [
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
+  const [activeDropdown, setActiveDropdown] = useState(null)
   const navRef = useRef(null)
 
   useEffect(() => {
@@ -69,7 +86,12 @@ export default function Navbar() {
         >
           <ul className="navbar-nav mb-2 mb-lg-0" aria-label="Secciones">
             {NAV_LINKS.map((link) => (
-              <li key={link.href} className="nav-item navbar__item">
+              <li 
+                key={link.href} 
+                className="nav-item navbar__item"
+                onMouseEnter={() => link.submenu && setActiveDropdown(link.label)}
+                onMouseLeave={() => setActiveDropdown(null)}
+              >
                 <Link
                   className="nav-link navbar__link"
                   to={link.href}
@@ -77,6 +99,22 @@ export default function Navbar() {
                 >
                   {link.label}
                 </Link>
+                
+                {link.submenu && activeDropdown === link.label && (
+                  <ul className="dropdown-menu show">
+                    {link.submenu.map((sublink) => (
+                      <li key={sublink.href}>
+                        <Link
+                          className="dropdown-item"
+                          to={sublink.href}
+                          onClick={() => setIsOpen(false)}
+                        >
+                          {sublink.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </li>
             ))}
           </ul>

@@ -98,7 +98,7 @@ export default function Tratamientos() {
   };
 
   return(
-    <section className="tratamientos" id="tratamientos" aria-label="Tratamientos">
+    <section className="tratamientos" id="que-tratamos" aria-label="Tratamientos">
       <div className="tratamientos__inner">
         <SectionHeading className="tratamientos__heading" title="TRATAMIENTOS" />
 
