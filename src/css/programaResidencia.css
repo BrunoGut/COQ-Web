@@ -155,3 +155,86 @@
     border-radius: inherit;
     overflow: hidden;
 }
+
+/* ─── Tablet ─── */
+@media (max-width: 992px) {
+    .info__div__programa {
+        margin-left: 30px;
+    }
+
+    .info__text__programa {
+        font-size: 30px;
+    }
+
+    .info__div__programa p {
+        font-size: 17px;
+    }
+
+    .info__programa__list {
+        font-size: 17px;
+    }
+
+    .mapa__img {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin: 20px 10px;
+    }
+
+    .img__programa,
+    .mapa__programa {
+        height: 340px;
+    }
+}
+
+/* ─── Mobile ─── */
+@media (max-width: 600px) {
+    .programaResidencia {
+        background-image: linear-gradient(to top, #003c77 0%, #f0f0f0 8%);
+        padding: 10px 0 100px;
+    }
+
+    .info__grid__programa {
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .info__div__programa {
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-bottom: 18px;
+    }
+
+    .info__text__programa {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .info__div__programa p {
+        font-size: 16px;
+        line-height: 1.55;
+    }
+
+    .info__programa__list {
+        font-size: 16px;
+    }
+
+    .info__programa__list li i {
+        font-size: 16px;
+    }
+
+    .mapa__img {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin: 16px 0;
+    }
+
+    .img__programa {
+        height: 260px;
+        border-radius: 0 18px 18px 18px;
+    }
+
+    .mapa__programa {
+        height: 280px;
+        border-radius: 0 18px 18px 18px;
+    }
+}
