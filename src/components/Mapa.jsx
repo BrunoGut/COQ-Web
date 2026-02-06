@@ -50,14 +50,16 @@ export default function Mapa({ lat = DEFAULT_COORDS.lat, lng = DEFAULT_COORDS.ln
             ))}
           </div>
 
-          <MapContainer className="mapa__leaflet" center={[lat, lng]} zoom={15}>
-            <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-            {UBICACIONES.map((u) => (
-              <Marker key={u.key} position={[u.coords.lat, u.coords.lng]}>  {/* Agregar marcadores para cada ubicación */}
-                <Popup>{u.titulo}</Popup>
-              </Marker>
-            ))}
-          </MapContainer>
+          <div className="mapa__frame">
+            <MapContainer className="mapa__leaflet" center={[lat, lng]} zoom={15}>
+              <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+              {UBICACIONES.map((u) => (
+                <Marker key={u.key} position={[u.coords.lat, u.coords.lng]}>  {/* Agregar marcadores para cada ubicación */}
+                  <Popup>{u.titulo}</Popup>
+                </Marker>
+              ))}
+            </MapContainer>
+          </div>
         </div>
       </div>
     </section>

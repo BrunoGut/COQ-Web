@@ -15,6 +15,7 @@ import Oftalmopediatria from "./pages/Oftalmopediatria";
 import Estetica from "./pages/Estetica";
 import Coberturas from "./pages/Coberturas";
 import StaffMedico from "./pages/StaffMedico.jsx";
+import Residencia from "./pages/Residencia.jsx";
 
 function App() {
   return (
@@ -33,11 +34,12 @@ function App() {
            <Route path="/guardia" element={<Guardia />}></Route>
            <Route path="/estudios" element={<Estudios />}></Route>
            <Route path="/cirugias" element={<Cirugias />}></Route>
-           <Route path="/turnos" element={<Turnos />}></Route>
+           <Route path="/turnos-online" element={<Turnos />}></Route>
            <Route path="/oftalmopediatria" element={<Oftalmopediatria />}></Route>
            <Route path="/estetica" element={<Estetica />}></Route>
            <Route path="/coberturas" element={<Coberturas />}></Route>
            <Route path="/staff-medico" element={<StaffMedico   />}></Route>
+           <Route path="/residencia" element={<Residencia />}></Route>
          </Routes>
 
          <Footer />

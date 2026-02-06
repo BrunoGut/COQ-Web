@@ -6,7 +6,7 @@ const SERVICIOS_ITEMS = [
 	{ label: 'Guardia', href: '/guardia', icon: 'bi-heart-pulse' },
 	{ label: 'Estudios', href: '/estudios', icon: 'bi-binoculars' },
 	{ label: 'Cirugías', href: '/cirugias', icon: 'bi-scissors' },
-	{ label: 'Turnos', href: '/turnos', icon: 'bi-calendar-check' },
+	{ label: 'Turnos', href: '/turnos-online', icon: 'bi-calendar-check' },
 	{ label: 'Oftalmopediatría', href: '/oftalmopediatria', icon: 'bi-emoji-smile' },
 	{ label: 'Estética', href: '/estetica', icon: 'bi-eye' },
 ]

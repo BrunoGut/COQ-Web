@@ -50,7 +50,7 @@ function OftalmoComponent() {
 
       <div className="info__grid">
         <div className="info__div">
-          <h2 className="info__text__oftalmo">¿Cuándo hacer los controles?</h2>
+          <h2 className="info__text__oftalmo__h2">¿Cuándo hacer los controles?</h2>
           <p>Se deben realizar controles y fondo de ojos:</p>
           <div className="div__list">
             <ul className="info__list">
