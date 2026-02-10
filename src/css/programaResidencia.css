@@ -1,11 +1,10 @@
 .programaResidencia{
-    background-color: #003c77;
-    background-image: linear-gradient(to top, #003c77 0%, #f0f0f0 15%);
-    padding: 56px 0 82px;
+    background-color: #f0f0f0;
+    padding: 56px 0 0;
 }
 
-.programaResidencia__banner{
-    margin: 0 0 40px 0;
+.programaResidencia__inner{
+    margin-top: 30px;
 }
 
 .info__grid__programa{

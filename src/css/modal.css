@@ -1,447 +1,395 @@
-.modal{
-    position: fixed;
-    inset: 0;
-    background-color: #111111bd;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 16px;
-    overflow-x: hidden; /*evita scroll horizontal en celulares*/
-
-    opacity: 0;
-    transition: opacity 180ms ease;
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: #111111bd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  overflow-x: hidden; /*evita scroll horizontal en celulares*/
+  opacity: 0;
+  transition: opacity 180ms ease;
 }
-
-.modal.is-open{
+.modal.is-open {
+  opacity: 1;
+}
+.modal.is-closing {
+  opacity: 0;
+  pointer-events: none;
+}
+.container__modal {
+  position: relative;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 3em 2.5em;
+  box-sizing: border-box;
+  display: grid;
+  gap: 1em;
+  grid-template-rows: auto minmax(0, 1fr);
+  opacity: 0;
+  transform: translateY(8px) scale(0.98);
+  transition:
+    transform 180ms ease,
+    opacity 180ms ease;
+}
+.modal.is-open .container__modal {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+.modal.is-closing .container__modal {
+  opacity: 0;
+  transform: translateY(8px) scale(0.98);
+}
+@media (prefers-reduced-motion: reduce) {
+  .modal,
+  .container__modal {
+    transition: none;
+  }
+}
+.container__modal--wide {
+  max-width: 1100px;
+  padding: 24px 20px;
+  border-radius: 18px;
+}
+.modal__close {
+  width: 44px;
+  height: 44px;
+  justify-content: center;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  justify-self: end;
+  border: none;
+  background-color: #003c77;
+  color: #f0f0f0;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+.modal__close i {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+.modal__body {
+  min-height: 0;
+  overflow: auto;
+  overflow-x: hidden;
+} /* Modal simple para Cirugías */
+.cirugiaModal__content {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+}
+.modal .cirugiaModal__title {
+  margin: 0;
+  color: #003c77;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.modal .cirugiaModal__name {
+  margin: 0;
+  color: #1a1a1a;
+  line-height: 1.6;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.modal .cirugiaModal__content > a {
+  justify-self: center;
+  text-decoration: none;
+} /* Reutiliza .boton-cirugia sin romper el layout del banner */
+.modal .boton-cirugia {
+  position: static;
+  left: auto;
+  bottom: auto;
+  transform: none;
+  margin: 6px auto 0;
+  padding: 0.85rem 1.1rem;
+  border-radius: 12px;
+  border: 2px solid transparent;
+}
+.modal .boton-cirugia:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+  outline-offset: 6px;
+} /* Layout tipo Tratamientos dentro del modal de Guardia */
+.guardiaModal__layout {
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 22px;
+  align-items: start;
+}
+.guardiaModal__sidebar {
+  background: #ffffff;
+  border-radius: 0 18px 18px 18px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+  padding: 12px;
+  max-height: calc(90vh - 120px);
+  overflow: auto;
+}
+.guardiaModal__sidebarToggle {
+  display: none;
+}
+.guardiaModal__sidebarContent {
+  display: block;
+}
+.guardiaModal__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+.guardiaModal__listItem {
+  margin: 0;
+}
+.guardiaModal__listButton {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+  border-radius: 14px;
+  border: 2px solid rgba(0, 60, 119, 0.18);
+  background: #ffffff;
+  cursor: pointer;
+  text-align: left;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease;
+}
+.guardiaModal__listButton:hover {
+  transform: translateY(-1px);
+  border-color: rgba(0, 60, 119, 0.35);
+}
+.guardiaModal__listButton.is-active {
+  border-color: #003c77;
+  background: rgba(0, 60, 119, 0.05);
+}
+.guardiaModal__listButton:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+  outline-offset: 6px;
+}
+.guardiaModal__listLabel {
+  color: #003c77;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: 0.2px;
+  line-height: 1.2;
+}
+.guardiaModal__detail {
+  background: transparent;
+} /* Animación al cambiar de item dentro del modal (lista izquierda) */
+.guardiaModal__detail--animated {
+  animation: modalDetailIn 220ms ease both;
+}
+@keyframes modalDetailIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
     opacity: 1;
+    transform: translateY(0);
+  }
 }
-
-.modal.is-closing{
-    opacity: 0;
-    pointer-events: none;
+@media (prefers-reduced-motion: reduce) {
+  .guardiaModal__detail--animated {
+    animation: none;
+  }
 }
-
-.container__modal{
-    position: relative;
-    width: 90%;
-    max-width: 600px;
-    max-height: 90vh;
+.guardiaModal__detailTop {
+  background: #ffffff;
+  border-radius: 0 18px 18px 18px;
+  overflow: hidden;
+  border: 2px solid rgba(0, 60, 119, 0.12);
+}
+.guardiaModal__detailHeader {
+  padding: 18px 22px 22px;
+}
+.modal .guardiaModal__detailTitle {
+  margin: 0 0 10px;
+  color: #003c77;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+.guardiaModal__detailText {
+  margin-top: 25px;
+  color: #1a1a1a;
+  line-height: 1.6;
+  font-size: 15px;
+  text-align: center;
+}
+.guardiaModal__detailText p {
+  margin: 0;
+}
+.guardiaModal__accordions {
+  margin-top: 14px;
+  display: grid;
+  gap: 10px;
+}
+.guardiaModal__accordionItem {
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 2px solid rgba(0, 60, 119, 0.12);
+}
+.guardiaModal__accordionButton {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  color: #003c77;
+}
+.guardiaModal__accordionButton:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+  outline-offset: 6px;
+}
+.guardiaModal__accordionTitle {
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  text-align: left;
+}
+.guardiaModal__accordionIcon {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  transition:
+    transform 220ms ease,
+    background 220ms ease;
+}
+.guardiaModal__accordionIcon i {
+  font-size: 18px;
+  line-height: 1;
+}
+.guardiaModal__accordionItem.is-open .guardiaModal__accordionIcon {
+  transform: rotate(180deg);
+}
+.guardiaModal__accordionPanel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 260ms ease;
+}
+.guardiaModal__accordionItem.is-open .guardiaModal__accordionPanel {
+  grid-template-rows: 1fr;
+}
+.guardiaModal__accordionPanelInner {
+  overflow: hidden;
+}
+.guardiaModal__accordionBody {
+  padding: 0 16px 14px;
+  color: #1a1a1a;
+  text-align: start;
+}
+.guardiaModal__accordionBody p {
+  margin: 10px 0 0;
+  line-height: 1.6;
+  font-size: 15px;
+}
+@media (max-width: 991.98px) {
+  .guardiaModal__layout {
+    grid-template-columns: 1fr;
+  }
+  .guardiaModal__sidebar {
+    max-height: unset;
     overflow: hidden;
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    padding: 3em 2.5em;
-    box-sizing: border-box;
-    display: grid;
-    gap: 1em;
-    grid-template-rows: auto minmax(0, 1fr);
-
-    opacity: 0;
-    transform: translateY(8px) scale(0.98);
-    transition: transform 180ms ease, opacity 180ms ease;
-}
-
-.modal.is-open .container__modal{
-    opacity: 1;
-    transform: translateY(0) scale(1);
-}
-
-.modal.is-closing .container__modal{
-    opacity: 0;
-    transform: translateY(8px) scale(0.98);
-}
-
-@media (prefers-reduced-motion: reduce){
-    .modal,
-    .container__modal{
-        transition: none;
-    }
-}
-
-.container__modal--wide{
-    max-width: 1100px;
-    padding: 24px 20px;
-    border-radius: 18px;
-}
-
-.modal__close{
-    width: 44px;
-    height: 44px;
-    justify-content: center;
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-    justify-self: end;
-    border: none;
-    background-color: #003c77;
-    color: #f0f0f0;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.modal__close i{
-    font-size: 1.8rem;
-    line-height: 1;
-}
-
-.modal__body{
-    min-height: 0;
-    overflow: auto;
-    overflow-x: hidden;
-}
-
-/* Modal simple para Cirugías */
-.cirugiaModal__content{
-    display: grid;
-    gap: 12px;
-    align-content: start;
-}
-
-.modal .cirugiaModal__title{
-    margin: 0;
-    color: #003c77;
-    font-size: 20px;
-    font-weight: 600;
-    letter-spacing: 0.6px;
-    text-transform: uppercase;
-    text-align: center;
-}
-
-.modal .cirugiaModal__name{
-    margin: 0;
-    color: #1a1a1a;
-    line-height: 1.6;
-    font-size: 16px;
-    text-align: center;
-    font-weight: 600;
-    overflow-wrap: anywhere;
-}
-
-.modal .cirugiaModal__content > a{
-    justify-self: center;
-    text-decoration: none;
-}
-
-/* Reutiliza .boton-cirugia sin romper el layout del banner */
-.modal .boton-cirugia{
-    position: static;
-    left: auto;
-    bottom: auto;
-    transform: none;
-    margin: 6px auto 0;
-    padding: 0.85rem 1.1rem;
-    border-radius: 12px;
-    border: 2px solid transparent;
-}
-
-.modal .boton-cirugia:focus-visible{
-    outline: 4px auto -webkit-focus-ring-color;
-    outline-offset: 6px;
-}
-
-/* Layout tipo Tratamientos dentro del modal de Guardia */
-.guardiaModal__layout{
-    display: grid;
-    grid-template-columns: 320px minmax(0, 1fr);
-    gap: 22px;
-    align-items: start;
-}
-
-.guardiaModal__sidebar{
-    background: #ffffff;
-    border-radius: 0 18px 18px 18px;
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
-    padding: 12px;
-    max-height: calc(90vh - 120px);
-    overflow: auto;
-}
-
-.guardiaModal__sidebarToggle{
-    display: none;
-}
-
-.guardiaModal__sidebarContent{
-    display: block;
-}
-
-.guardiaModal__list{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    gap: 10px;
-}
-
-.guardiaModal__listItem{
-    margin: 0;
-}
-
-.guardiaModal__listButton{
+    padding: 10px;
+  }
+  .guardiaModal__sidebarToggle {
     width: 100%;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: 12px;
+    display: flex;
     align-items: center;
-    padding: 12px;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 12px;
     border-radius: 14px;
     border: 2px solid rgba(0, 60, 119, 0.18);
     background: #ffffff;
     cursor: pointer;
+    color: #003c77;
     text-align: left;
-    transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
-}
-
-.guardiaModal__listButton:hover{
+    transition:
+      transform 180ms ease,
+      border-color 180ms ease,
+      background 180ms ease;
+  }
+  .guardiaModal__sidebarToggle:hover {
     transform: translateY(-1px);
     border-color: rgba(0, 60, 119, 0.35);
-}
-
-.guardiaModal__listButton.is-active{
-    border-color: #003c77;
-    background: rgba(0, 60, 119, 0.05);
-}
-
-.guardiaModal__listButton:focus-visible{
+  }
+  .guardiaModal__sidebarToggle:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
     outline-offset: 6px;
-}
-
-.guardiaModal__listLabel{
-    color: #003c77;
+  }
+  .guardiaModal__sidebarToggleText {
     font-size: 14px;
     font-weight: 700;
-    text-transform: none;
     letter-spacing: 0.2px;
     line-height: 1.2;
-}
-
-.guardiaModal__detail{
-    background: transparent;
-}
-
-/* Animación al cambiar de item dentro del modal (lista izquierda) */
-.guardiaModal__detail--animated{
-    animation: modalDetailIn 220ms ease both;
-}
-
-@keyframes modalDetailIn{
-    from{
-        opacity: 0;
-        transform: translateY(8px);
-    }
-    to{
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@media (prefers-reduced-motion: reduce){
-    .guardiaModal__detail--animated{
-        animation: none;
-    }
-}
-
-.guardiaModal__detailTop{
-    background: #ffffff;
-    border-radius: 0 18px 18px 18px;
-    overflow: hidden;
-    border: 2px solid rgba(0, 60, 119, 0.12);
-}
-
-.guardiaModal__detailHeader{
-    padding: 18px 22px 22px;
-}
-
-.modal .guardiaModal__detailTitle{
-    margin: 0 0 10px;
-    color: #003c77;
-    font-size: 22px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    text-align: center;
-    overflow-wrap: anywhere;
-}
-
-.guardiaModal__detailText{
-    margin-top: 25px;
-    color: #1a1a1a;
-    line-height: 1.6;
-    font-size: 15px;
-    text-align: center;
-}
-
-.guardiaModal__detailText p{
-    margin: 0;
-}
-
-.guardiaModal__accordions{
-    margin-top: 14px;
-    display: grid;
-    gap: 10px;
-}
-
-.guardiaModal__accordionItem{
-    background: #ffffff;
-    border-radius: 14px;
-    overflow: hidden;
-    border: 2px solid rgba(0, 60, 119, 0.12);
-}
-
-.guardiaModal__accordionButton{
-    width: 100%;
-    border: 0;
-    background: transparent;
-    cursor: pointer;
-    padding: 14px 16px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 14px;
-    color: #003c77;
-}
-
-.guardiaModal__accordionButton:focus-visible{
-    outline: 4px auto -webkit-focus-ring-color;
-    outline-offset: 6px;
-}
-
-.guardiaModal__accordionTitle{
-    font-weight: 700;
-    letter-spacing: 0.4px;
-    text-transform: uppercase;
-    text-align: left;
-}
-
-.guardiaModal__accordionIcon{
+  }
+  .guardiaModal__sidebarToggleIcon {
     flex: 0 0 auto;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     width: 34px;
     height: 34px;
-    transition: transform 220ms ease, background 220ms ease;
-}
-
-.guardiaModal__accordionIcon i{
+    transition: transform 220ms ease;
+  }
+  .guardiaModal__sidebarToggleIcon i {
     font-size: 18px;
     line-height: 1;
-}
-
-.guardiaModal__accordionItem.is-open .guardiaModal__accordionIcon{
-    transform: rotate(180deg);
-}
-
-.guardiaModal__accordionPanel{
-    display: grid;
-    grid-template-rows: 0fr;
-    transition: grid-template-rows 260ms ease;
-}
-
-.guardiaModal__accordionItem.is-open .guardiaModal__accordionPanel{
-    grid-template-rows: 1fr;
-}
-
-.guardiaModal__accordionPanelInner{
+  }
+  .guardiaModal__sidebarContent {
+    display: block;
+    margin-top: 0;
+    max-height: 0;
+    opacity: 0;
     overflow: hidden;
-}
-
-.guardiaModal__accordionBody{
-    padding: 0 16px 14px;
-    color: #1a1a1a;
-    text-align: start;
-}
-
-.guardiaModal__accordionBody p{
-    margin: 10px 0 0;
-    line-height: 1.6;
-    font-size: 15px;
-}
-
-@media (max-width: 991.98px){
-    .guardiaModal__layout{
-        grid-template-columns: 1fr;
+    pointer-events: none;
+    transition:
+      max-height 240ms ease,
+      opacity 180ms ease,
+      margin-top 240ms ease;
+  }
+  .guardiaModal__sidebar.is-open .guardiaModal__sidebarContent {
+    margin-top: 10px;
+    max-height: 360px;
+    opacity: 1;
+    overflow: auto;
+    pointer-events: auto;
+  }
+  .guardiaModal__sidebar.is-open .guardiaModal__sidebarToggleIcon {
+    transform: rotate(180deg);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .guardiaModal__sidebarContent,
+    .guardiaModal__sidebarToggleIcon {
+      transition: none;
     }
-
-    .guardiaModal__sidebar{
-        max-height: unset;
-        overflow: hidden;
-        padding: 10px;
-    }
-
-    .guardiaModal__sidebarToggle{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 12px;
-        padding: 12px 12px;
-        border-radius: 14px;
-        border: 2px solid rgba(0, 60, 119, 0.18);
-        background: #ffffff;
-        cursor: pointer;
-        color: #003c77;
-        text-align: left;
-        transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
-    }
-
-    .guardiaModal__sidebarToggle:hover{
-        transform: translateY(-1px);
-        border-color: rgba(0, 60, 119, 0.35);
-    }
-
-    .guardiaModal__sidebarToggle:focus-visible{
-        outline: 4px auto -webkit-focus-ring-color;
-        outline-offset: 6px;
-    }
-
-    .guardiaModal__sidebarToggleText{
-        font-size: 14px;
-        font-weight: 700;
-        letter-spacing: 0.2px;
-        line-height: 1.2;
-    }
-
-    .guardiaModal__sidebarToggleIcon{
-        flex: 0 0 auto;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 34px;
-        height: 34px;
-        transition: transform 220ms ease;
-    }
-
-    .guardiaModal__sidebarToggleIcon i{
-        font-size: 18px;
-        line-height: 1;
-    }
-
-    .guardiaModal__sidebarContent{
-        display: block;
-        margin-top: 0;
-        max-height: 0;
-        opacity: 0;
-        overflow: hidden;
-        pointer-events: none;
-        transition: max-height 240ms ease, opacity 180ms ease, margin-top 240ms ease;
-    }
-
-    .guardiaModal__sidebar.is-open .guardiaModal__sidebarContent{
-        margin-top: 10px;
-        max-height: 360px;
-        opacity: 1;
-        overflow: auto;
-        pointer-events: auto;
-    }
-
-    .guardiaModal__sidebar.is-open .guardiaModal__sidebarToggleIcon{
-        transform: rotate(180deg);
-    }
-
-    @media (prefers-reduced-motion: reduce){
-        .guardiaModal__sidebarContent,
-        .guardiaModal__sidebarToggleIcon{
-            transition: none;
-        }
-    }
+  }
 }
