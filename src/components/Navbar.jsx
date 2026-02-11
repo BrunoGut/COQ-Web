@@ -14,15 +14,21 @@ const NAV_LINKS = [
   },
   { 
     label: 'Paciente', 
-    href: '/paciente',
+    href: '#',
     submenu: [
-      { label: '¿Qué tratamos?', href: '/paciente#que-tratamos' },
+      { label: '¿Qué tratamos?', href: '/que-tratamos' },
       { label: 'Staff médico', href: '/staff-medico' },
-      { label: 'Servicios', href: '/paciente#servicios' },
-      { label: 'Cobertura médica', href: '/paciente#cobertura-medica' }
+      { label: 'Servicios', href: '/#servicios' },
+      { label: 'Cobertura médica', href: '/coberturas' }
     ]
   },
-  { label: 'Residencia', href: '/residencia' },
+  { label: 'Residencia', 
+    href: '/residencia',
+    submenu: [
+      { label: 'Programa de residencia', href: '/residencia#programa-residencia' },
+      { label: 'Ingreso a residencia', href: '/residencia#ingreso-residencia' },
+    ]
+  },
   { label: 'Prensa', href: '/prensa' },
   { label: 'Consultas Virtuales', href: '/consultas-virtuales' },
   { label: 'Turnos Online', href: '/turnos-online' },
@@ -37,6 +43,7 @@ export default function Navbar() {
   const navRef = useRef(null)
   const [navHeight, setNavHeight] = useState(0)
   const closeTimer = useRef(null)
+  const itemRefs = useRef({})
 
   const openDropdown = (label) => {
     clearTimeout(closeTimer.current)
@@ -45,6 +52,13 @@ export default function Navbar() {
 
   const scheduleClose = () => {
     closeTimer.current = setTimeout(() => setActiveDropdown(null), 120)
+  }
+
+  const getItemLeft = (label) => {
+    const el = itemRefs.current[label]
+    if (!el) return 0
+    const rect = el.getBoundingClientRect()
+    return rect.left + rect.width / 2
   }
 
   const handleMouseEnter = (link) => {
@@ -123,7 +137,8 @@ export default function Navbar() {
           <ul className="navbar-nav mb-2 mb-lg-0" aria-label="Secciones">
             {NAV_LINKS.map((link) => (
               <li 
-                key={link.href} 
+                key={link.href}
+                ref={(el) => { if (link.submenu) itemRefs.current[link.label] = el }}
                 className={`nav-item navbar__item${link.submenu ? ' navbar__item--hasSub' : ''}`}
                 onMouseEnter={() => handleMouseEnter(link)}
                 onMouseLeave={handleMouseLeave}
@@ -156,55 +171,20 @@ export default function Navbar() {
                       `dropdown-menu navbar__dropdown${activeDropdown === link.label ? ' is-open' : ''}`
                     }
                     aria-hidden={activeDropdown !== link.label}
-                    style={{ top: navHeight + 'px' }}
+                    style={{ top: navHeight + 'px', left: getItemLeft(link.label) + 'px' }}
                     onMouseEnter={() => isDesktop() && openDropdown(link.label)}
                     onMouseLeave={() => isDesktop() && scheduleClose()}
                   >
-                    {(() => {
-                      const mid = Math.ceil(link.submenu.length / 2)
-                      const colA = link.submenu.slice(0, mid)
-                      const colB = link.submenu.slice(mid)
-
-                      return (
-                        <div className="navbar__dropdownGrid">
-                          <div className="navbar__dropdownLeft">
-                            <div className="navbar__dropdownHeading">{link.label}</div>
-                          </div>
-
-                          <div className="navbar__dropdownRight">
-                            <div className="navbar__dropdownCols">
-                              <div className="navbar__dropdownCol">
-                                {colA.map((sublink) => (
-                                  <Link
-                                    key={sublink.href}
-                                    className="dropdown-item navbar__dropdownItem"
-                                    to={sublink.href}
-                                    onClick={() => { setActiveDropdown(null); setIsOpen(false) }}
-                                  >
-                                    {sublink.label}
-                                  </Link>
-                                ))}
-                              </div>
-
-                              {colB.length > 0 && (
-                                <div className="navbar__dropdownCol">
-                                  {colB.map((sublink) => (
-                                    <Link
-                                      key={sublink.href}
-                                      className="dropdown-item navbar__dropdownItem"
-                                      to={sublink.href}
-                                      onClick={() => { setActiveDropdown(null); setIsOpen(false) }}
-                                    >
-                                      {sublink.label}
-                                    </Link>
-                                  ))}
-                                </div>
-                              )}
-                            </div>
-                          </div>
-                        </div>
-                      )
-                    })()}
+                    {link.submenu.map((sublink) => (
+                      <Link
+                        key={sublink.href}
+                        className="dropdown-item navbar__dropdownItem"
+                        to={sublink.href}
+                        onClick={() => { setActiveDropdown(null); setIsOpen(false) }}
+                      >
+                        {sublink.label}
+                      </Link>
+                    ))}
                   </div>
                 )}
               </li>

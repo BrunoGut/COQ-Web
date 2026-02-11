@@ -54,6 +54,16 @@
   max-width: 1100px;
   padding: 24px 20px;
   border-radius: 18px;
+  max-height: 85vh;
+}
+
+.container__modal--wide .modal__body {
+  overflow: hidden;
+}
+
+.container__modal--wide video {
+  max-height: 70vh;
+  width: 100%;
 }
 .modal__close {
   width: 44px;

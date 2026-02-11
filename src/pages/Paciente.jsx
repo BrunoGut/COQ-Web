@@ -5,9 +5,13 @@ import CoberturasComponent from "../components/CoberturasComponent";
 export default function Paciente() {
     return (
         <>
+        {/*
             <Tratamientos />
             <Servicios />
             <CoberturasComponent />
+
+        */}
         </>
     );
 }
+

@@ -4,7 +4,6 @@ import BotonWhatsapp from "./components/BotonWhatsapp";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom"; 
 import Inicio from "./pages/Inicio";
 import Nosotros from "./pages/Nosotros";
-import Paciente from "./pages/Paciente";
 import PacienteQueTratamos from "./pages/PacienteQueTratamos";
 import ScrollToTop from "./components/ScrollToTop";
 import Guardia from "./pages/Guardia";
@@ -16,6 +15,9 @@ import Estetica from "./pages/Estetica";
 import Coberturas from "./pages/Coberturas";
 import StaffMedico from "./pages/StaffMedico.jsx";
 import Residencia from "./pages/Residencia.jsx";
+import Prensa from "./pages/Prensa.jsx";
+import QueTratamos from "./pages/QueTratamos";
+import Servicios from "./pages/Servicios";
 
 function App() {
   return (
@@ -29,7 +31,9 @@ function App() {
          <Routes>
            <Route path="/" element={<Inicio />} />
            <Route path="/nosotros" element={<Nosotros />} />
-           <Route path="/paciente" element={<Paciente />}></Route>
+           <Route path="/que-tratamos" element={<QueTratamos />} />
+           <Route path="/servicios" element={<Servicios />} />
+           {/* <Route path="/paciente" element={<Paciente />}></Route> */}
            <Route path="/paciente/que-tratamos" element={<PacienteQueTratamos />}></Route>
            <Route path="/guardia" element={<Guardia />}></Route>
            <Route path="/estudios" element={<Estudios />}></Route>
@@ -40,6 +44,7 @@ function App() {
            <Route path="/coberturas" element={<Coberturas />}></Route>
            <Route path="/staff-medico" element={<StaffMedico   />}></Route>
            <Route path="/residencia" element={<Residencia />}></Route>
+           <Route path="/prensa" element={<Prensa />}></Route>
          </Routes>
 
          <Footer />
