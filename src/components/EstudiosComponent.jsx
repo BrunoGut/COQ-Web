@@ -110,6 +110,8 @@ export default function Estudios() {
                   src={item.imagen}
                   alt={item.title || "Imagen del estudio"}
                   className="card-img-estudios"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
 

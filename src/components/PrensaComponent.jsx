@@ -60,7 +60,7 @@ function PrensaComponent() {
                         style={{ cursor: "pointer" }}
                       >
                         <div className="prensa__cardImg">
-                          <img src={item.imageSrc} alt={item.titulo} />
+                          <img src={item.imageSrc} alt={item.titulo} loading="lazy" decoding="async" />
                           <span className="prensa__cardBadge">
                             {item.kind === "video" ? "Video" : "Artículo"}
                           </span>
@@ -87,7 +87,7 @@ function PrensaComponent() {
           containerClassName="container__modal--wide"
         >
           {videoSrc && (
-            <video controls style={{ width: "100%", borderRadius: "12px" }}>
+            <video controls preload="metadata" playsInline style={{ width: "100%", borderRadius: "12px" }}>
               <source src={videoSrc} type="video/mp4" />
             </video>
           )}

@@ -45,7 +45,7 @@ function OftalmoComponent() {
             infantil.
           </p>
         </div>
-        <img src={oftalmoImg2} alt="Oftalmopediatría" />
+        <img src={oftalmoImg2} alt="Oftalmopediatría" fetchPriority="high" />
       </div>
 
       <div className="info__grid">

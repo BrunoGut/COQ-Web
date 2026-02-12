@@ -10,7 +10,7 @@ export default function HeroVideo() {
     return (
         <>
             <div className="hero-wrap">
-                <video muted autoPlay loop playsInline className="hero-video">
+                <video muted autoPlay loop playsInline preload="auto" className="hero-video" fetchpriority="high">
                     <source src={videoHero2} type="video/mp4" />
                 </video>
 

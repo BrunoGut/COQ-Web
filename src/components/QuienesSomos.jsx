@@ -27,7 +27,7 @@ export default function QuienesSomos() {
               className="quienesSomos__image"
               src={quienesSomosImg}
               alt="Quiénes somos"
-              loading="lazy"
+              fetchPriority="high"
             /> 
             </div>
           </div>

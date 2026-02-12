@@ -16,7 +16,7 @@ function DirectoresMedicos() {
             <div className="card-header"></div>
 
             <div className="card-image">
-              <img src={director.imagen} alt={`DR. ${director.nombre}`} />
+              <img src={director.imagen} alt={`DR. ${director.nombre}`} fetchPriority="high" decoding="async" />
             </div>
 
             <div className="card-content">

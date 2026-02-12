@@ -92,7 +92,7 @@ export default function Tratamientos() {
 
     return (
       <div className="tratamientos__sectionImageWrap">
-        <img className="tratamientos__sectionImage" src={imagen.src} alt={imagen.alt ?? ""} loading="lazy" />
+        <img className="tratamientos__sectionImage" src={imagen.src} alt={imagen.alt ?? ""} loading="lazy" decoding="async" />
       </div>
     );
   };
