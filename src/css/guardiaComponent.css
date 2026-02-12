@@ -45,7 +45,6 @@
 .guardia .texto__subrayado{
     text-decoration: underline;
     font-weight: 600;
-    cursor: pointer;
 }
 
 .guardia .texto__subrayado:hover{

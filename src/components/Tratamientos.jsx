@@ -160,7 +160,8 @@ export default function Tratamientos() {
           <div className="tratamientos__content" aria-label="Detalle del tratamiento">
             {patologiaSeleccionada && (
               <article
-                className="tratamientos__detail"
+                key={patologiaSeleccionada.id}
+                className="tratamientos__detail tratamientos__detail--animated"
                 aria-label={`Detalle de ${patologiaSeleccionada.titulo}`}
               >
                 <div className="tratamientos__detailTop">

@@ -58,7 +58,7 @@
 }
 
 .container__modal--wide .modal__body {
-  overflow: hidden;
+  overflow: auto;
 }
 
 .container__modal--wide video {
@@ -200,6 +200,8 @@
 }
 .guardiaModal__detail {
   background: transparent;
+  max-height: calc(85vh - 120px);
+  overflow-y: auto;
 } /* Animación al cambiar de item dentro del modal (lista izquierda) */
 .guardiaModal__detail--animated {
   animation: modalDetailIn 220ms ease both;

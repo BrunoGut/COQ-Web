@@ -124,7 +124,7 @@ function IngresoResidenciaComponent() {
                     <h2>INSCRIPCIÓN AL EXAMEN 2026</h2>
                     <ul>
                         <li>
-                            Enviar un mail a <span className="destacado_azul">residencia@centrodeojosquilmes.com.ar</span>
+                            Enviar un mail a <a href="mailto:residencia@centrodeojosquilmes.com.ar" className="destacado_azul">residencia@centrodeojosquilmes.com.ar</a>
                         </li>
                         <li>
                             <span className="destacado_negro_2">Asunto:</span> Inscripción al examen de residencia 2026.

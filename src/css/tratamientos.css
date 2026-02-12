@@ -1,17 +1,17 @@
 .tratamientos{
     background-color: #003c77;
-    background-image: linear-gradient(to bottom, #003c77 0%, #f0f0f0 100%);
+    background-image: linear-gradient(to top, #003c77 0%, #f0f0f0 70%);
     padding: 56px 0 72px;
 }
 
 
 /* Color del SectionHeading SOLO en Tratamientos */
 .sectionHeading.tratamientos__heading .sectionHeading__title{
-    color: #f0f0f0;
+    color: #1a1a1a;
 }
 
 .sectionHeading.tratamientos__heading .sectionHeading__line{
-    background-color: #f0f0f0;
+    background-color: #1a1a1a;
 }
 
 .tratamientos__inner{
@@ -116,6 +116,28 @@
     background: transparent;
 }
 
+/* Animación al cambiar de tratamiento en el sidebar */
+.tratamientos__detail--animated {
+    animation: tratamientosDetailIn 220ms ease both;
+}
+
+@keyframes tratamientosDetailIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tratamientos__detail--animated {
+        animation: none;
+    }
+}
+
 .tratamientos__detailTop{
     background: #ffffff;
     border-radius: 0 18px 18px 18px;
@@ -167,7 +189,22 @@
     background: #ffffff;
     border-radius: 14px;
     overflow: hidden;
-    border: 2px solid rgba(0, 60, 119, 0.12);
+    border: 2px solid #f0f0f0;
+    border-left: 15px solid #f0f0f0;
+    transition: all 0.4s ease;
+}
+
+.tratamientos__accordionItem:hover{
+    background: #f0f0f0 ;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+}
+
+.tratamientos__accordionItem.is-open{
+    border-color: #003c77;
+    background: #f0f0f0;
+    transform: scale(1.02);
+    border: 2px solid #003c77;
 }
 
 

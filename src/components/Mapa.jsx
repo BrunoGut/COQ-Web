@@ -6,6 +6,7 @@ import markerShadow from 'leaflet/dist/images/marker-shadow.png'
 
 import '../css/mapa.css'
 import SectionHeading from './SectionHeading'
+import { BiColor } from 'react-icons/bi'
 
 // Fix: Leaflet marker icons no se ven bien en Vite/React sin setear URLs.
 delete L.Icon.Default.prototype._getIconUrl
@@ -29,6 +30,12 @@ const UBICACIONES = [
     direccion: 'Alvear 764, Quilmes, Buenos Aires, Argentina',
     coords: { lat: -34.7236182, lng: -58.2534434 },
   },
+  {
+    key: 'consultorios',
+    titulo: 'Consultorios Mitre',
+    direccion: 'Mitre 803, Quilmes, Buenos Aires, Argentina',
+    coords: { lat: -34.723958326538046, lng: -58.25217090378334 }, 
+  },
 ]
 
 const DEFAULT_COORDS = UBICACIONES[0].coords //coordenadas por defecto (Humberto Primo 298)
@@ -51,7 +58,7 @@ export default function Mapa({ lat = DEFAULT_COORDS.lat, lng = DEFAULT_COORDS.ln
           </div>
 
           <div className="mapa__frame">
-            <MapContainer className="mapa__leaflet" center={[lat, lng]} zoom={15}>
+            <MapContainer className="mapa__leaflet" center={[lat, lng]} zoom={17}>
               <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
               {UBICACIONES.map((u) => (
                 <Marker key={u.key} position={[u.coords.lat, u.coords.lng]}>  {/* Agregar marcadores para cada ubicación */}

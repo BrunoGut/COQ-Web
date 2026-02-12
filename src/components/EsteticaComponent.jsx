@@ -78,7 +78,18 @@ useEffect(() => {
         title="Información sobre nuestros procedimientos estéticos"
         urlImg={esteticaImg}
         ariaLabel="Estetica"
-      />
+      >
+        <a
+          href="https://wa.me/1165132161"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button className="boton-cirugia" type="button">
+            <i className="bi bi-calendar-check-fill" aria-hidden="true" />
+            <span>SOLICITA TU TURNO</span>
+          </button>
+        </a>
+      </BannerComponent>
 
       <div className="estetica__inner">
         <div className="estetica__content">

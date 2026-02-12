@@ -2,7 +2,7 @@
 
 .mapa {
 	background-color: #003c77;
-    background-image: linear-gradient(to top, #003c77 0%, #f0f0f0 100%);
+    background-image: linear-gradient(to top, #003c77 0%, #f0f0f0 15%);
     padding: 56px 0 72px;
 }
 
@@ -25,15 +25,15 @@
 .mapa__blockTitle {
 	margin: 0 0 14px;
 	font-size: 32px;
-	font-weight: 300;
+	font-weight: 400;
 	color: #1a1a1a;
 	line-height: 1.15;
 }
 
 .mapa__text {
 	margin: 0 0 8px;
-	font-size: 15px;
-	line-height: 1.5;
+	font-size: 18px;
+	line-height: 1.6	;
 	color: rgba(26, 26, 26, 0.65);
 }
 

@@ -60,22 +60,22 @@ export default function Footer() {
 
           <div className="col-12 col-lg-4">
             <div className="footer-title">Contacto</div>
-            <a className="footer-contact" href="mailto:contacto@coq.com">
-              contacto@coq.com
+            <a className="footer-contact" href="mailto:info@centrodeojosquilmes.com.ar">
+              info@centrodeojosquilmes.com.ar
             </a>
 
             <div className="footer-title mt-3">Redes</div>
             <div className="footer-social" aria-label="Redes sociales">
-              <a className="social-link" href="#" aria-label="Instagram">
+              <a className="social-link" href="https://www.instagram.com/centrodeojosquilmes/" aria-label="Instagram">
                 <i className="bi bi-instagram" aria-hidden="true" />
               </a>
-              <a className="social-link" href="#" aria-label="Facebook">
+              <a className="social-link" href="https://www.facebook.com/centrodeojos.quilmes/" aria-label="Facebook">
                 <i className="bi bi-facebook" aria-hidden="true" />
               </a>
-              <a className="social-link" href="#" aria-label="Linkedin">
+              <a className="social-link" href="https://www.linkedin.com/company/centro-de-ojos-quilmes/" aria-label="Linkedin">
                 <i className="bi bi-linkedin" aria-hidden="true" />
               </a>
-              <a className="social-link" href="#" aria-label="YouTube">
+              <a className="social-link" href="https://www.youtube.com/@centrodeojosquilmes586" aria-label="YouTube">
                 <i className="bi bi-youtube" aria-hidden="true" />
               </a>
             </div>

@@ -211,7 +211,7 @@
     border-color: #003c77;
     background: #f0f0f0;
     transform: scale(1.05);
-    border: 2px solid #003c77   ;
+    border: 2px solid #003c77;
 }
 
 .oftalmo__accordionPanelInner{
@@ -221,6 +221,10 @@
 .oftalmo__accordionBody{
     padding: 0 16px 14px;
     color: #1a1a1a;
+}
+
+.oftalmo .turnos__banner .banner__inner {
+    align-content: center;
 }
 
 .destacado__azul {

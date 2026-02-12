@@ -88,7 +88,18 @@ function OftalmoComponent() {
         title="¿Qué problemas visuales pueden tener los niños?"
         urlImg={oftalmoImg1}
         ariaLabel="Turnos online"
-      />
+      >
+        <a
+          href="https://wa.me/1165132161"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button className="boton-cirugia" type="button">
+            <i className="bi bi-calendar-check-fill" aria-hidden="true" />
+            <span>SOLICITA TU TURNO</span>
+          </button>
+        </a>
+      </BannerComponent>
 
       <div className="oftalmo__acordions">
         {OFTALMO.map((item) => {
