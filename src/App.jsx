@@ -18,6 +18,7 @@ import Residencia from "./pages/Residencia.jsx";
 import Prensa from "./pages/Prensa.jsx";
 import QueTratamos from "./pages/QueTratamos";
 import Servicios from "./pages/Servicios";
+import Contacto from "./pages/Contacto";
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
            <Route path="/staff-medico" element={<StaffMedico   />}></Route>
            <Route path="/residencia" element={<Residencia />}></Route>
            <Route path="/prensa" element={<Prensa />}></Route>
+           <Route path="/contacto" element={<Contacto />}></Route>
          </Routes>
 
          <Footer />

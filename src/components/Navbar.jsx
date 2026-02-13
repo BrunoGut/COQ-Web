@@ -30,7 +30,7 @@ const NAV_LINKS = [
     ]
   },
   { label: 'Prensa', href: '/prensa' },
-  { label: 'Consultas Virtuales', href: '/consultas-virtuales' },
+  { label: 'Contacto', href: '/contacto' },
   { label: 'Turnos Online', href: '/turnos-online' },
 ]
 
