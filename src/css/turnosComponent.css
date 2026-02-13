@@ -1,7 +1,6 @@
 .turnos {
-    background-color: #003c77;
-    background-image: linear-gradient(to top, #003c77 0%, #f0f0f0 15%);
-    padding: 56px 0 82px;
+    background-color: #f0f0f0;
+    padding: 56px 0 32px;
 }
 
 .boton-turnos{

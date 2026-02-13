@@ -66,6 +66,26 @@
 	text-decoration: underline;
 }
 
+.info__grid__contacto{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-top: 32px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.info__text__contacto__h2{
+    color: #003c77;
+    gap: 16px;    
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
 .formulario form {
 	width: min(620px, calc(100% - 64px));
 	margin: 0 auto;
@@ -85,7 +105,7 @@
 .formulario input,
 .formulario textarea {
 	width: 100%;
-	padding: 14px 18px;
+	padding: 14px 44px 14px 18px;
 	font-size: 16px;
 	font-family: 'Nunito', sans-serif;
 	color: #1a1a1a;
@@ -153,12 +173,14 @@
 .formulario__fieldIcon {
 	position: absolute;
 	right: 14px;
-	top: 50%;
-	transform: translateY(-50%);
+	top: 0;
+	height: 48px;
+	display: flex;
+	align-items: center;
 	font-size: 18px;
 	pointer-events: none;
 	opacity: 0;
-	transition: opacity 0.3s ease, transform 0.3s ease;
+	transition: opacity 0.3s ease;
 }
 
 /* Error state */
@@ -190,8 +212,8 @@
 
 /* Textarea icon at top */
 .formulario__field:has(textarea) .formulario__fieldIcon {
-	top: 18px;
-	transform: none;
+	top: 0;
+	height: 48px;
 }
 
 .formulario__fieldMsg {
@@ -218,9 +240,9 @@
 }
 
 @keyframes iconPop {
-	0% { opacity: 0; transform: translateY(-50%) scale(0.5); }
-	60% { transform: translateY(-50%) scale(1.2); }
-	100% { opacity: 1; transform: translateY(-50%) scale(1); }
+	0% { opacity: 0; transform: scale(0.5); }
+	60% { transform: scale(1.2); }
+	100% { opacity: 1; transform: scale(1); }
 }
 
 /* ── Toast ── */
