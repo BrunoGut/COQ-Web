@@ -105,6 +105,9 @@
   }
 
   .servicios__label {
-    font-size: 20px;
+    font-size: clamp(14px, 4vw, 20px);
+    letter-spacing: 0.5px;
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
 }

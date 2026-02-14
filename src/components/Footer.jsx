@@ -50,7 +50,7 @@ export default function Footer() {
                 <Link to="/prensa">Prensa</Link>
               </li>
               <li>
-                <Link to="/consultas-virtuales">Consultas Virtuales</Link>
+                <Link to="/contacto">Contacto</Link>
               </li>
               <li>
                 <Link to="/turnos-online">Turnos Online</Link>

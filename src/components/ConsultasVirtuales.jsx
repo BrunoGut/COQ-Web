@@ -16,14 +16,16 @@ function ConsultasVirtuales() {
             urlImg={consultasImg}
             ariaLabel="Consultas virtuales"
         >
-            <button className="prepagas__button" onClick={() => setIsModalOpen(true)}>CLICK ACÁ</button>
+            <button className="prepagas__button" onClick={() => setIsModalOpen(true)}>CLICK AQUÍ
+              <i className='icono bi bi-file-earmark-medical-fill' aria-hidden="true"></i>
+            </button>
         </BannerComponent>
 
         <Modal isOpen={isModalOpen} closeModal={() => setIsModalOpen(false)}>
-            <h2>¿Sabías que puedes realizar consultas virtuales?</h2>
-            <p>A través de WhatsApp, coordinamos una atención personalizada para resolver tus dudas y evaluar tu caso. <br />
-            Importante: No siempre puede resolverse de manera virtual. Dependiendo del tipo de evaluación necesaria, podríamos sugerir una consulta presencial para garantizar el mejor cuidado de tu salud visual. <br />
-            ¡Escribinos ahora haciendo click acá y te ayudamos a coordinar tu consulta!
+            <h2 className='h2-modal-consul'>¿Sabías que puedes realizar consultas virtuales?</h2>
+            <p>A través de <span className="destacado_verde">WhatsApp</span>, coordinamos una atención personalizada para resolver tus dudas y evaluar tu caso. <br />
+            <span className="destacado_negro_2_subrayado">Importante:</span> <span className="destacado_negro">No siempre puede resolverse de manera virtual</span>. Dependiendo del tipo de evaluación necesaria, podríamos sugerir una consulta presencial para garantizar el mejor cuidado de tu salud visual. <br />
+            ¡Escribinos ahora haciendo <a  className="info_link" href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">click acá</a> y te ayudamos a coordinar tu consulta!
             </p>
         </Modal>
     </section>

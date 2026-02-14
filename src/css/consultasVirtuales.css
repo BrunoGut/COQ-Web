@@ -3,3 +3,23 @@
     background-image: linear-gradient(to top, #003c77 0%, #f0f0f0 100%);
     padding: 0 0 82px;
 }
+
+.h2-modal-consul {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #003c77;
+    text-align: center;
+    justify-content: center;
+}
+
+.destacado_verde{
+    color: #28a745;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.destacado_negro_2_subrayado{
+    color: #000000;
+    font-weight: 700;
+    text-decoration: underline;
+}

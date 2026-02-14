@@ -154,6 +154,10 @@
     padding: 0.5rem 0;
   }
 
+  .navbar__logoWrap {
+    margin: 5px 0 10px 0;
+  }
+
   .navbar--coq #coqNavbar.collapse {
     display: block;
     overflow: hidden;
