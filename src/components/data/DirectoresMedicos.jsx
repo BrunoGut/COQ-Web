@@ -13,56 +13,56 @@ const DIRECTORES_MEDICOS = [
         nombre: "DANIEL PERRONE",
         imagen: danielPerroneImg,
         descripcion: "Médico Oftalmólogo Especialista Jerarquizado en Catarata, Cirugía Refractiva y Transplante de Córnea.",
-        linkedin: "#"
+        linkedin: "https://www.linkedin.com/company/centro-de-ojos-quilmes/"
     },
     {
         id: 2,
         imagen: gastonGomezCarideImg,
         nombre: "GASTÓN GOMEZ CARIDE",
         descripcion: "Médico Oftalmólogo Especialista en Retina y Vitreo.",
-        linkedin: "#"
+        linkedin: "https://www.linkedin.com/company/centro-de-ojos-quilmes/"
     },
     {
         id: 3,
         imagen: gerardoValvecchiaImg,
         nombre: "GERARDO VALVECCHIA",
         descripcion: "Médico Oftalmólogo Especialista en Catarata, Alta Miopía y Transplante de Córnea.",
-        linkedin: "#"
+        linkedin: "https://www.linkedin.com/in/gerardo-valvecchia-6536a088/"
     },
     {
         id: 4,
         imagen: lucianoDanielPerroneImg,
         nombre: "LUCIANO DANIEL PERRONE",
         descripcion: "Medico Oftalmólogo Especialista en Catarata, Cornea y Cirugía Refractiva",
-        linkedin: "#"
+        linkedin: "https://www.linkedin.com/in/dr-luciano-d-perrone-78236b16b/"
     },
     {
         id: 5,
         imagen: robertoAlbertazziImg,
         nombre: "ROBERTO ALBERTAZZI",
         descripcion: "Médico Oftalmólogo Especialista Jerarquizado en Cirugía Refractiva, Catarata y Queratono",
-        linkedin: "#"
+        linkedin: "https://www.linkedin.com/company/centro-de-ojos-quilmes/"
     },
     {
         id: 6,
         imagen: celinaLogiocoImg,
         nombre: "CELINA LOGIOCO",
         descripcion: "Médica Oftalmologa Especialista en Glaucoma, Maculopatía y Retinopatía Diabética.",
-        linkedin: "#"
+        linkedin: "https://www.linkedin.com/company/centro-de-ojos-quilmes/"
     },
     {
         id: 7,
         imagen: mercedesDaSilvaImg,
         nombre: "MERCEDES DA SILVA",
         descripcion: "Médica Oftalmóloga - Especialista en Plástica ocular y Vías Lagrimales",
-        linkedin: "#"
+        linkedin: "https://www.linkedin.com/in/maria-mercedes-da-silva-47328b1a/"
     },
     {
         id: 8,
         imagen: virginiaZanutighImg,
         nombre: "VIRGINIA E. ZANUTIGH",
         descripcion: "Doctora en Medicina - Médica Especialista Jerarquizada y Consultora en Glaucoma. Presidente y Miembro Titular de la Asociación Argentina de Glaucoma.",
-        linkedin: "#"
+        linkedin: "https://www.linkedin.com/in/dra-zanutigh-virginia-36468334/"
     }
 ]
 

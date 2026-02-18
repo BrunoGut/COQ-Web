@@ -12,7 +12,7 @@ export default function BotonWhatsApp() {
         <div className="wsp">
           <a
             className="boton-wsp"
-            href="https://wa.me/1165132161"
+            href="https://wa.me/541138721437"
             target="_blank"
             rel="noopener noreferrer"
           >

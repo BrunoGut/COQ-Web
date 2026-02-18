@@ -1,5 +1,5 @@
 .programaResidencia{
-    background-color: #f0f0f0;
+    background-image: linear-gradient(to top, #003c77 0%, #f0f0f0 25%);
     padding: 56px 0 0;
 }
 
@@ -187,8 +187,8 @@
 /* ─── Mobile ─── */
 @media (max-width: 600px) {
     .programaResidencia {
-        background-image: linear-gradient(to top, #003c77 0%, #f0f0f0 8%);
-        padding: 10px 0 100px;
+        background-image: linear-gradient(to top, #003c77 0%, #f0f0f0 28%);
+        padding: 10px 0 0;
     }
 
     .info__grid__programa {

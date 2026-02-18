@@ -54,10 +54,10 @@ export default function Footer() {
                 <div className="footer-title">Nosotros</div>
                 <ul className="footer-links list-unstyled mb-0">
                   <li>
-                    <Link to="quienes-somos">Quiénes somos</Link>
+                    <Link to="/nosotros#quienes-somos">Quiénes somos</Link>
                   </li>
                   <li>
-                    <Link to="donde-estamos">Dónde estamos</Link>
+                    <Link to="/nosotros#donde-estamos">Dónde estamos</Link>
                   </li>
                 </ul>
               </div>

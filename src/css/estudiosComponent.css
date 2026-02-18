@@ -1,7 +1,11 @@
 .estudios{
     background-color: #003c77;
     background-image: linear-gradient(to top, #003c77 0%, #f0f0f0 10%);
-    padding: 56px 0 72px;
+    padding: 0 0 72px;
+}
+
+.estudios__banner{
+  margin-bottom: 40px;
 }
 
 .estudios__inner {

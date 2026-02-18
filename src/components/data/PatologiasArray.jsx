@@ -1,12 +1,12 @@
-import catarataImg from "../../images/ojo-cataratas.jpeg";
-import glaucomaImg from "../../images/ojo-glaucoma.jpeg";
-import retinaImg from "../../images/ojo-retina.jpeg";
-import transplanteCorneaImg from "../../images/ojo-cornea.jpeg";
-import oftalmopediatriaImg from "../../images/ojo-oftalmopediatria.jpeg";
-import esteticaImg from "../../images/ojo-estetica.jpeg";
+import catarataImg from "../../images/patologias/ojo-cataratas.jpeg";
+import glaucomaImg from "../../images/patologias/ojo-glaucoma.jpeg";
+import retinaImg from "../../images/patologias/ojo-retina.jpeg";
+import transplanteCorneaImg from "../../images/patologias/ojo-cornea.jpeg";
+import oftalmopediatriaImg from "../../images/patologias/ojo-oftalmopediatria.jpeg";
+import esteticaImg from "../../images/patologias/ojo-estetica.jpeg";
 
-import catarataImg2 from "../../images/cataratas/imagen1.jpg";
-import lentesIntraocularesImg from "../../images/cataratas/lentes-intraoculares.jpg";
+import catarataImg2 from "../../images/patologias/cataratas/imagen1.jpg";
+import lentesIntraocularesImg from "../../images/patologias/cataratas/lentes-intraoculares.jpg";
 
 //
 

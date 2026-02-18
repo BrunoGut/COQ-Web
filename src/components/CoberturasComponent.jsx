@@ -50,16 +50,16 @@ function CoberturasComponent() {
 
   return (
     <section className="coberturas" id="cobertura-medica">
-      <div className="coberturas__inner">
-        <SectionHeading title="Coberturas" />
-      </div>
-
       <BannerComponent
         className="coberturas__banner"
         title="Busca todas las coberturas con las que trabajamos"
         urlImg={coberturasBannerImg}
         ariaLabel="Coberturas"
       />
+      
+      <div className="coberturas__inner">
+        <SectionHeading title="Coberturas" />
+      </div>
 
       <div className="coberturas__search" role="search">
         <span className="coberturas__searchIcon" aria-hidden="true">

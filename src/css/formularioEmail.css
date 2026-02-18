@@ -73,7 +73,6 @@
     margin-top: 32px;
     justify-content: center;
     align-items: center;
-    margin-top: 70px;
     margin-bottom: 20px;
     padding: 0 10px;
 }
@@ -324,7 +323,7 @@
 
 @media (max-width: 600px) {
 	.formulario {
-		padding: 44px 0 56px;
+		padding: 44px 0 76px;
 	}
 
 	.contacto__grid {

@@ -16,7 +16,7 @@ function OftalmoComponent() {
 
   return (
     <section className="oftalmo">
-      <div className="oftalmo_inner">
+      <div className="oftalmo__inner">
         <SectionHeading title="OFTALMOPEDIATRÍA" />
       </div>
 
@@ -90,7 +90,7 @@ function OftalmoComponent() {
         ariaLabel="Turnos online"
       >
         <a
-          href="https://wa.me/1165132161"
+          href="https://wa.me/541138721437"
           target="_blank"
           rel="noopener noreferrer"
         >

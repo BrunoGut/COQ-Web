@@ -52,23 +52,24 @@ function CirugiasComponent() {
     
   return (
     <section className="cirugias">
-        <div className="cirugias__inner">
-            <SectionHeading title="Cirugías" />
-        </div>
-
         <BannerComponent
             className="cirugias__banner"
             title="Busca todas nuestras cirugías"
             urlImg={cirugiasBannerImg}
             ariaLabel="Cirugías"
         >
-            <a href="https://wa.me/1165132161" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/541138721437" target="_blank" rel="noopener noreferrer">
                 <button className="boton-cirugia" type='button'>
                 <i className="bi bi-calendar-check-fill" aria-hidden="true" />
                 <span>SOLICITA TU TURNO</span>
                 </button>
             </a>
         </BannerComponent>
+
+        <div className="cirugias__inner">
+            <SectionHeading title="Cirugías" />
+        </div>
+        
         <div className="cirugias__search" role="search">
             <span className="cirugias__searchIcon" aria-hidden="true">Q</span>
             <input
@@ -101,7 +102,7 @@ function CirugiasComponent() {
             <div className="cirugiaModal__content">
                 <h2 className="cirugiaModal__title">Solicitar turno para esta cirugía</h2>
                 <p className="cirugiaModal__name">{selectedCirugia?.title}</p>
-                <a href="https://wa.me/1165132161" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/541138721437" target="_blank" rel="noopener noreferrer">
                 <button className="boton-cirugia" type='button'>
                 <i className="bi bi-calendar-check-fill" aria-hidden="true" />
                 <span>CLICK ACÁ</span>

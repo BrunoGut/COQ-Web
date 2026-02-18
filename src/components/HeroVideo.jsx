@@ -1,16 +1,38 @@
-import videoHero from '../videos/videoHero.mp4';
-import videoHero2 from '../videos/videoHero-full-screen.mp4';
+import videoHero2 from '../videos/videoHero-full-screen-render2.mp4';
+import heroPoster from '../images/banner-video.png';
 import '../css/heroVideo.css';
-import Servicios from './Servicios';
-import Prepagas from './Prepagas';
-import Patologias from './Patologias';
 import { Link } from 'react-router-dom';
+import { useCallback, useState } from 'react';
 
 export default function HeroVideo() {
+    const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+
+    const handleVideoLoaded = useCallback(() => {
+        setIsVideoLoaded(true);
+    }, []);
+
     return (
         <>
-            <div className="hero-wrap">
-                <video muted autoPlay loop playsInline preload="auto" className="hero-video" fetchpriority="high">
+            <div className={`hero-wrap ${isVideoLoaded ? 'is-loaded' : 'is-loading'}`}>
+                <img
+                    className="hero-poster"
+                    src={heroPoster}
+                    alt=""
+                    aria-hidden="true"
+                    decoding="async"
+                    fetchpriority="high"
+                />
+
+                <video
+                    muted
+                    autoPlay
+                    loop
+                    playsInline
+                    preload="metadata"
+                    className="hero-video"
+                    poster={heroPoster}
+                    onLoadedData={handleVideoLoaded}
+                >
                     <source src={videoHero2} type="video/mp4" />
                 </video>
 
@@ -22,7 +44,7 @@ export default function HeroVideo() {
                         </button>
                     </Link>
                     
-                    <a href="https://wa.me/1165132161" target="_blank" rel="noopener noreferrer">
+                    <a href="https://wa.me/541138721437" target="_blank" rel="noopener noreferrer">
                         <button className='boton-turno' type='button'>
                             <i className="bi bi-calendar-check-fill" aria-hidden="true" />
                             <span>SOLICITA TU TURNO</span>

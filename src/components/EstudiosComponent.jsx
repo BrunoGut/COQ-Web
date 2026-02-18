@@ -59,10 +59,6 @@ export default function Estudios() {
 
   return (
     <section className="estudios" aria-label="Estudios">
-      <div className="estudios__inner">
-        <SectionHeading title="Estudios" />
-      </div>
-
       <BannerComponent
         className="estudios__banner"
         title="Nuestros estudios"
@@ -70,7 +66,7 @@ export default function Estudios() {
         ariaLabel="Estudios"
       >
         <a
-          href="https://wa.me/1165132161"
+          href="https://wa.me/541138721437"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -80,6 +76,10 @@ export default function Estudios() {
           </button>
         </a>
       </BannerComponent>
+
+      <div className="estudios__inner">
+        <SectionHeading title="Estudios" />
+      </div>
 
       <div className="estudios__inner">
         <div className="estudios__search" role="search">

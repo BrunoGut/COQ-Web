@@ -69,18 +69,14 @@ useEffect(() => {
 
   return (
     <section className="estetica">
-      <div className="estetica__inner">
-        <SectionHeading title="ESTÉTICA" />
-      </div>
-
-      <BannerComponent
+        <BannerComponent
         className="estetica__banner"
         title="Información sobre nuestros procedimientos estéticos"
         urlImg={esteticaImg}
         ariaLabel="Estetica"
       >
         <a
-          href="https://wa.me/1165132161"
+          href="https://wa.me/541138721437"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -90,6 +86,10 @@ useEffect(() => {
           </button>
         </a>
       </BannerComponent>
+
+      <div className="estetica__inner">
+        <SectionHeading title="ESTÉTICA" />
+      </div>
 
       <div className="estetica__inner">
         <div className="estetica__content">

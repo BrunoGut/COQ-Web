@@ -4,6 +4,11 @@
     padding: 56px 0 82px;
 }
 
+.oftalmo__inner {
+    width: min(1100px, calc(100% - 64px));
+    margin: 0 auto;
+}
+
 .info__img {
     display: flex;
     gap: 32px;
@@ -238,6 +243,10 @@
 }
 
 @media (max-width: 900px) {
+    .oftalmo__inner {
+        width: min(1100px, calc(100% - 40px));
+    }
+
     .info__img {
         flex-direction: column;
     }
@@ -246,6 +255,10 @@
 @media screen and (max-width: 600px){
     .oftalmo{
         padding: 25px 0 40px;
+    }
+
+    .oftalmo__inner {
+        width: min(1100px, calc(100% - 40px));
     }
 
     .info__img{

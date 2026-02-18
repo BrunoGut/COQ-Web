@@ -34,16 +34,16 @@ export default function GuardiaComponent() {
 
   return (
     <section className="guardia">
-      <div className="guardia__inner">
-        <SectionHeading title="GUARDIA" />
-      </div>
-
       <BannerComponent
         className="guardia__banner"
         title="Atención de guardia"
         urlImg={guardiaImg}
         ariaLabel="Atención de guardia"
       />
+      
+      <div className="guardia__inner">
+        <SectionHeading title="GUARDIA" />
+      </div>
 
       <div className="info__grid">
         <div className="info__div">

@@ -7,10 +7,6 @@ import "../css/turnosComponent.css";
 function TurnosComponent() {
   return (
     <section className="turnos">
-      <div className="turnos_inner">
-        <SectionHeading title="TURNOS ONLINE" />
-      </div>
-
       <BannerComponent
         className="turnos__banner"
         title="Solicitá tu turno online"
@@ -18,7 +14,7 @@ function TurnosComponent() {
         ariaLabel="Turnos online"
       >
         <a
-          href="https://wa.me/1165132161"
+          href="https://wa.me/541138721437"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -29,12 +25,16 @@ function TurnosComponent() {
         </a>
       </BannerComponent>
 
+      <div className="turnos__inner">
+        <SectionHeading title="TURNOS ONLINE" />
+      </div>
+
       <div className="info__grid__turnos">
         <div className="info__div__turnos">
           <h2 className="info__text__turnos">
             Encontrá toda la información para agendar tu consulta medica, estudio o cirugía
           </h2>
-          <p>Enviá un mensaje de WhastApp al <span className="destacado__subrayado">(011) 6513-2161</span> haciendo <a className="info__link" href="https://wa.me/1165132161" target="_blank" rel="noopener noreferrer">click aquí</a>, <br /> indicando tu <span className="destacado__subrayado">nombre completo, DNI, obra social, motivo de la consulta y fecha y horario preferido.</span></p>
+          <p>Enviá un mensaje de WhastApp al <span className="destacado__subrayado">(011) 6513-2161</span> haciendo <a className="info__link" href="https://wa.me/541138721437" target="_blank" rel="noopener noreferrer">click aquí</a>, <br /> indicando tu <span className="destacado__subrayado">nombre completo, DNI, obra social, motivo de la consulta y fecha y horario preferido.</span></p>
         </div>
       </div>
 

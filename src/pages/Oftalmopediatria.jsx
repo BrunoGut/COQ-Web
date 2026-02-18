@@ -3,9 +3,9 @@ import OftalmoComponent from '../components/OftalmoComponent'
 
 function Oftalmopediatria() {
   return (
-    <>
-        <OftalmoComponent />
-    </>
+    <div>
+      <OftalmoComponent />
+    </div>
   )
 }
 
