@@ -32,7 +32,7 @@ function ProgramaResidencia({
   lng = UBICACION[0].coords.lng,
 }) {
   return (
-    <section className="programaResidencia">
+    <section className="programaResidencia" id="programaResidencia">
       <BannerComponent
         className="programaResidencia__banner"
         title="Toda la información sobre nuestro programa de Residencia"

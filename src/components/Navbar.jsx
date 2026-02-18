@@ -1,49 +1,38 @@
 import logoCoq from '../images/logo-coq.png'
 import { useEffect, useRef, useState } from 'react'
 import '../css/navbar.css'
-import { Link } from 'react-router-dom'
-
-const NAV_LINKS = [
-  { 
-    label: 'Nosotros', 
-    href: '/nosotros',
-    submenu: [
-      { label: 'Quienes somos', href: '/nosotros#quienes-somos' },
-      { label: 'Donde estamos', href: '/nosotros#donde-estamos' }
-    ]
-  },
-  { 
-    label: 'Paciente', 
-    href: '#',
-    submenu: [
-      { label: '¿Qué tratamos?', href: '/que-tratamos' },
-      { label: 'Staff médico', href: '/staff-medico' },
-      { label: 'Servicios', href: '/#servicios' },
-      { label: 'Cobertura médica', href: '/coberturas' }
-    ]
-  },
-  { label: 'Residencia', 
-    href: '/residencia',
-    submenu: [
-      { label: 'Programa de residencia', href: '/residencia#programa-residencia' },
-      { label: 'Ingreso a residencia', href: '/residencia#ingreso-residencia' },
-    ]
-  },
-  { label: 'Prensa', href: '/prensa' },
-  { label: 'Contacto', href: '/contacto' },
-  { label: 'Turnos Online', href: '/turnos-online' },
-]
+import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { NAV_LINKS } from '../constants/navLinks'
 
 // Breakpoint de Bootstrap lg (992px) — por encima es desktop
 const isDesktop = () => window.matchMedia('(min-width: 992px)').matches
 
 export default function Navbar() {
+  const navigate = useNavigate()
+  const location = useLocation()
+
   const [isOpen, setIsOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState(null)
   const navRef = useRef(null)
   const [navHeight, setNavHeight] = useState(0)
   const closeTimer = useRef(null)
   const itemRefs = useRef({})
+
+  const handleLogoClick = (event) => {
+    event.preventDefault()
+    setActiveDropdown(null)
+    setIsOpen(false)
+
+    if (location.pathname !== '/') {
+      navigate('/')
+    }
+
+    if (typeof window !== 'undefined') {
+      requestAnimationFrame(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+      })
+    }
+  }
 
   const openDropdown = (label) => {
     clearTimeout(closeTimer.current)
@@ -114,7 +103,7 @@ export default function Navbar() {
     >
       <div className="container-fluid px-3 px-lg-4 py-1">
         <div className="navbar__logoWrap">
-          <Link className="navbar-brand navbar__logoLink" to="/">
+          <Link className="navbar-brand navbar__logoLink" to="/" onClick={handleLogoClick}>
             <img className="navbar__logo" src={logoCoq} alt="COQ" />
           </Link>
         </div>

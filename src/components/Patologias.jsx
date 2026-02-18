@@ -15,7 +15,7 @@ import PATOLOGIAS from './data/PatologiasArray';
 
 function chunkArray(items, chunkSize) {
   const chunks = [];
-  for (let index = 0; index < items.length; index += chunkSize) {
+  for (let index = 0; index < 6; index += chunkSize) {
     chunks.push(items.slice(index, index + chunkSize));
   }
   return chunks;
