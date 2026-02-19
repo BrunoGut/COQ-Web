@@ -92,7 +92,8 @@ export default function Tratamientos() {
 
     return (
       <div className="tratamientos__sectionImageWrap">
-        <img className="tratamientos__sectionImage" src={imagen.src} alt={imagen.alt ?? ""} loading="lazy" decoding="async" />
+        <img className="tratamientos__sectionImage" src={imagen.src} alt={imagen.alt ?? ""} //loading="lazy" decoding="async" 
+        />
       </div>
     );
   };
@@ -145,7 +146,6 @@ export default function Tratamientos() {
                             className="tratamientos__thumbImg"
                             src={patologia.imageSrc}
                             alt=""
-                            loading="lazy"
                           />
                         </span>
                         <span className="tratamientos__listLabel">{patologia.label}</span>
@@ -170,7 +170,6 @@ export default function Tratamientos() {
                       className="tratamientos__detailImage"
                       src={patologiaSeleccionada.imageSrc}
                       alt=""
-                      loading="lazy"
                     />
                   </div>
 

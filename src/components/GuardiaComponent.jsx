@@ -1,10 +1,8 @@
 import { useState } from "react";
-import SectionHeading from "./SectionHeading";
 import Modal from "./Modal";
 import "../css/guardiaComponent.css";
 import GUARDIA from "./data/GuardiaArray";
 import BannerComponent from "./BannerComponent";
-import guardiaImg from "../images/guardia/guardia.jpeg";
 import causasImg from "../images/guardia/imagen2.jpg";
 
 export default function GuardiaComponent() {
@@ -34,17 +32,6 @@ export default function GuardiaComponent() {
 
   return (
     <section className="guardia">
-      <BannerComponent
-        className="guardia__banner"
-        title="Atención de guardia"
-        urlImg={guardiaImg}
-        ariaLabel="Atención de guardia"
-      />
-      
-      <div className="guardia__inner">
-        <SectionHeading title="GUARDIA" />
-      </div>
-
       <div className="info__grid">
         <div className="info__div">
           <h2 className="info__text">Servicio de guardia para urgencias del paciente</h2>

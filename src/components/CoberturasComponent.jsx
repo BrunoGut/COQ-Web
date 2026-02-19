@@ -1,9 +1,6 @@
 import React, { useEffect, useState, useDeferredValue } from "react";
 import COBERTURAS from "./data/CoberturasArray";
 import "../css/coberturasComponent.css";
-import SectionHeading from "./SectionHeading";
-import BannerComponent from "./BannerComponent";
-import coberturasBannerImg from "../images/coberturas.jpg";
 const normalize = (value) => value.trim().toLowerCase(); // Normaliza el texto para búsquedas
 
 function CoberturasComponent() {
@@ -50,17 +47,6 @@ function CoberturasComponent() {
 
   return (
     <section className="coberturas" id="cobertura-medica">
-      <BannerComponent
-        className="coberturas__banner"
-        title="Busca todas las coberturas con las que trabajamos"
-        urlImg={coberturasBannerImg}
-        ariaLabel="Coberturas"
-      />
-      
-      <div className="coberturas__inner">
-        <SectionHeading title="Coberturas" />
-      </div>
-
       <div className="coberturas__search" role="search">
         <span className="coberturas__searchIcon" aria-hidden="true">
           Q

@@ -1,9 +1,6 @@
 import React, { useDeferredValue, useEffect, useState } from 'react'
 import CIRUGIAS from './data/CirugiasArray'
 import '../css/cirugiasComponent.css'
-import SectionHeading from './SectionHeading'
-import BannerComponent from './BannerComponent'
-import cirugiasBannerImg from '../images/cirugias/cirugia.jpg'
 import Modal from './Modal'
 
 const normalize = (value) => value.trim().toLowerCase() // Normaliza el texto para búsquedas
@@ -51,25 +48,7 @@ function CirugiasComponent() {
     }
     
   return (
-    <section className="cirugias">
-        <BannerComponent
-            className="cirugias__banner"
-            title="Busca todas nuestras cirugías"
-            urlImg={cirugiasBannerImg}
-            ariaLabel="Cirugías"
-        >
-            <a href="https://wa.me/541138721437" target="_blank" rel="noopener noreferrer">
-                <button className="boton-cirugia" type='button'>
-                <i className="bi bi-calendar-check-fill" aria-hidden="true" />
-                <span>SOLICITA TU TURNO</span>
-                </button>
-            </a>
-        </BannerComponent>
-
-        <div className="cirugias__inner">
-            <SectionHeading title="Cirugías" />
-        </div>
-        
+    <section className="cirugias">        
         <div className="cirugias__search" role="search">
             <span className="cirugias__searchIcon" aria-hidden="true">Q</span>
             <input

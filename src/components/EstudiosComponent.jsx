@@ -1,11 +1,8 @@
 import { useDeferredValue, useEffect, useState } from "react";
 import ESTUDIOS_ARRAY from "./data/EstudiosArray";
-import SectionHeading from "./SectionHeading";
 import Modal from "./Modal";
 import "../css/estudiosComponent.css";
 import "../css/patologias.css";
-import BannerComponent from "./BannerComponent";
-import estudiosBannerImg from "../images/estudios/estudios-banner.jpg";
 
 const normalize = (value) => value.trim().toLowerCase();
 
@@ -59,28 +56,7 @@ export default function Estudios() {
 
   return (
     <section className="estudios" aria-label="Estudios">
-      <BannerComponent
-        className="estudios__banner"
-        title="Nuestros estudios"
-        urlImg={estudiosBannerImg}
-        ariaLabel="Estudios"
-      >
-        <a
-          href="https://wa.me/541138721437"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button className="boton-cirugia" type="button">
-            <i className="bi bi-calendar-check-fill" aria-hidden="true" />
-            <span>SOLICITA TU TURNO</span>
-          </button>
-        </a>
-      </BannerComponent>
-
-      <div className="estudios__inner">
-        <SectionHeading title="Estudios" />
-      </div>
-
+      
       <div className="estudios__inner">
         <div className="estudios__search" role="search">
           <span className="estudios__searchIcon" aria-hidden="true">
@@ -110,8 +86,7 @@ export default function Estudios() {
                   src={item.imagen}
                   alt={item.title || "Imagen del estudio"}
                   className="card-img-estudios"
-                  loading="lazy"
-                  decoding="async"
+                  fetchPriority="high"
                 />
               </div>
 

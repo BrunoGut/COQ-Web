@@ -2,9 +2,6 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import "../css/formularioEmail.css";
-import BannerComponent from "./BannerComponent";
-import contactoImg from "../images/contacto/contacto.png";
-import SectionHeading from "./SectionHeading";
 
 function FormularioEmail() {
   const {
@@ -74,17 +71,6 @@ function FormularioEmail() {
           </button>
         </div>
       )}
-
-      <BannerComponent
-        className="formulario__banner"
-        title="Recibí nuestra información de contacto"
-        urlImg={contactoImg}
-        ariaLabel="Formulario de contacto"
-      />
-
-      <div className="formulario__inner">
-        <SectionHeading title="CONTACTO" />
-      </div>
 
       <div className="contacto__grid">
         <div className="contacto__item">

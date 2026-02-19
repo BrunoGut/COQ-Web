@@ -60,7 +60,8 @@ function PrensaComponent() {
                         style={{ cursor: "pointer" }}
                       >
                         <div className="prensa__cardImg">
-                          <img src={item.imageSrc} alt={item.titulo} loading="lazy" decoding="async" />
+                          <img src={item.imageSrc} alt={item.titulo} //loading="lazy" decoding="async" 
+                          />
                           <span className="prensa__cardBadge">
                             {item.kind === "video" ? "Video" : "Artículo"}
                           </span>

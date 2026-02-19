@@ -1,9 +1,7 @@
 import { useDeferredValue, useEffect, useState } from "react";
 import SectionHeading from "./SectionHeading";
 import "../css/esteticaComponent.css";
-import esteticaImg from "../images/estetica/estetica1.jpg";
 import ESTETICA from "./data/EsteticaArray";
-import BannerComponent from "./BannerComponent";
 
 const normalize = (value) => value.trim().toLowerCase();
 
@@ -69,27 +67,7 @@ useEffect(() => {
 
   return (
     <section className="estetica">
-        <BannerComponent
-        className="estetica__banner"
-        title="Información sobre nuestros procedimientos estéticos"
-        urlImg={esteticaImg}
-        ariaLabel="Estetica"
-      >
-        <a
-          href="https://wa.me/541138721437"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button className="boton-cirugia" type="button">
-            <i className="bi bi-calendar-check-fill" aria-hidden="true" />
-            <span>SOLICITA TU TURNO</span>
-          </button>
-        </a>
-      </BannerComponent>
-
-      <div className="estetica__inner">
-        <SectionHeading title="ESTÉTICA" />
-      </div>
+        
 
       <div className="estetica__inner">
         <div className="estetica__content">
