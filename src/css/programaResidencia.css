@@ -1,6 +1,6 @@
 .programaResidencia{
     background-image: linear-gradient(to top, #003c77 0%, #f0f0f0 25%);
-    padding: 56px 0 0;
+    padding: 0;
 }
 
 .programaResidencia__inner{
@@ -188,7 +188,6 @@
 @media (max-width: 600px) {
     .programaResidencia {
         background-image: linear-gradient(to top, #003c77 0%, #f0f0f0 28%);
-        padding: 10px 0 0;
     }
 
     .info__grid__programa {
