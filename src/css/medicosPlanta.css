@@ -1,7 +1,7 @@
 
 .planta{
     background-color: #003c77;
-	background-image: linear-gradient(to top, #003c77 0%, #f0f0f0 10%);
+	background-image: linear-gradient(to bottom, #003c77 0%, #f0f0f0 2.5%, #f0f0f0 90%, #003c77 100%);
     padding: 56px 0 90px;
 }
 
@@ -59,7 +59,7 @@
 @media (max-width: 600px) {
 	.planta{
 		background-color: #003c77;
-		background-image: linear-gradient(to top, #003c77 0%, #f0f0f0 3.5%);
+		background-image: linear-gradient(to bottom, #003c77 0%, #f0f0f0 1%, #f0f0f0 96%, #003c77 100%);
 		padding: 56px 0 100px;
 	}
 

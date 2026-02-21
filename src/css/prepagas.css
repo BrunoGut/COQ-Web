@@ -1,6 +1,6 @@
 .prepagas {
   background: #f0f0f0;
-  padding: 56px 0 20px;
+  padding: 0
 }
 
 .prepagas__inner {
@@ -48,6 +48,6 @@
 
 @media (max-width: 576px) {
     .prepagas {
-        padding: 44px 0 56px;
+        margin-bottom: 30px;
     }
 }

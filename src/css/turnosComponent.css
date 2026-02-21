@@ -57,9 +57,23 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 32px;
-    margin-top: 32px;
+    margin-top: 10px;
     justify-content: center;
     align-items: center;
+    padding: 0 20px;
+}
+
+.info__div__turnos p{
+    overflow-wrap: normal;
+    word-break: normal;
+    text-align: center;
+}
+
+.turnos__telefono{
+    white-space: nowrap;
+    display: inline-block;
+    overflow-wrap: normal;
+    word-break: normal;
 }
 
 .info__grid__turnos h2{
@@ -72,6 +86,9 @@
     justify-content: center;
     text-align: center;
     margin-bottom: 30px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .info__div__turnos p{
@@ -99,5 +116,25 @@
     }
     .info__div__turnos p{
         font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .info__grid__turnos h2{
+        font-size: 34px;
+    }
+
+    .info__div__turnos p{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .info__grid__turnos h2{
+        font-size: 24px;
+    }
+
+    .turnos__telefono{
+        font-size: 0.95em;
     }
 }

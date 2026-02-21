@@ -83,7 +83,7 @@
 
 @media (max-width: 576px) {
   .servicios {
-    padding: 44px 0 56px;
+    padding: 44px 0 44px;
   }
 
   .servicios__inner {
