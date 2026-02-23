@@ -1,12 +1,75 @@
 import "../css/modal.css";
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 
 const ANIM_MS = 180; // ponelo igual que tu CSS exagerado
+
+let bodyScrollLockCount = 0;
+let bodyScrollLockSnapshot = null;
+
+function lockBodyScroll() {
+  if (typeof window === "undefined") return;
+
+  const body = document.body;
+  const docEl = document.documentElement;
+
+  if (bodyScrollLockCount === 0) {
+    const scrollbarWidth = window.innerWidth - docEl.clientWidth;
+
+    bodyScrollLockSnapshot = {
+      style: {
+        overflow: body.style.overflow,
+        docOverflow: docEl.style.overflow,
+        paddingRight: body.style.paddingRight,
+      },
+    };
+
+    docEl.style.overflow = "hidden";
+    body.style.overflow = "hidden";
+
+    if (scrollbarWidth > 0) {
+      body.style.paddingRight = `${scrollbarWidth}px`;
+    }
+  }
+
+  bodyScrollLockCount += 1;
+}
+
+function unlockBodyScroll() {
+  if (typeof window === "undefined") return;
+  if (bodyScrollLockCount === 0) return;
+
+  bodyScrollLockCount -= 1;
+  if (bodyScrollLockCount > 0) return;
+
+  const body = document.body;
+  const docEl = document.documentElement;
+
+  const snapshot = bodyScrollLockSnapshot;
+
+  if (snapshot?.style) {
+    body.style.overflow = snapshot.style.overflow;
+    docEl.style.overflow = snapshot.style.docOverflow;
+    body.style.paddingRight = snapshot.style.paddingRight;
+  } else {
+    body.style.overflow = "";
+    docEl.style.overflow = "";
+    body.style.paddingRight = "";
+  }
+
+  bodyScrollLockSnapshot = null;
+}
 
 export default function Modal({ isOpen, closeModal, children, containerClassName }) {
   const [shouldRender, setShouldRender] = useState(isOpen);
   const [isClosing, setIsClosing] = useState(false);
   const [isOpening, setIsOpening] = useState(false);
+
+  useLayoutEffect(() => {
+    if (!shouldRender) return;
+
+    lockBodyScroll();
+    return () => unlockBodyScroll();
+  }, [shouldRender]);
 
   useEffect(() => {
     if (isOpen) {
