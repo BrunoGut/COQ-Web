@@ -35,14 +35,17 @@ export default function GuardiaComponent() {
       <div className="info__grid">
         <div className="info__div">
           <h2 className="info__text">Servicio de guardia para urgencias del paciente</h2>
-          <p>Teléfono de contacto: <span className="texto__subrayado">(011) 4255-3120</span></p>
+          <p>Teléfono de contacto: <span className="texto__subrayado">11 2206-2650</span></p>
+          <p>
+            O enviar un mensaje a nuestro WhatsApp haciendo <a href="https://wa.me/541138721437" target="_blank" rel="noopener noreferrer" className="info__link">clic aquí</a>.
+          </p>
         </div>
 
         <div className="info__div">
           <h2 className="info__text">Horarios:</h2>
           <p>
-            Lunes a viernes de <strong>8:00 a 20:00 hs.</strong> Sabados de <strong>8:00 a 18:00 hs.</strong>
-            Domingos y feriados de <strong>10:00 a 13:00 hs.</strong>
+            Lunes a viernes de <strong>8:00 a 19:30 hs.</strong> Sabados de <strong>8:00 a 17:30 hs.</strong>
+            Domingos y feriados de <strong>10:00 a 12:30 hs.</strong>
           </p>
         </div>
 

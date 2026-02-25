@@ -37,11 +37,14 @@ const ESTUDIOS_ARRAY = [
     },
     {
         id: 4,
-        title: "Potencial Evocado / Electrorretinograma",
-        imagen: imageUrl("erg.jpg"),
+        title: "Daytona",
+        imagen: imageUrl("daytona.avif"),
         descripcion: (
             <p>
-                Permite evaluar la función visual desde la retina hasta la corteza cerebral, midiendo las respuestas eléctricas generadas por los estímulos visuales. Es útil en el diagnóstico y seguimiento de diversas enfermedades oculares y neurológicas que afectan la visión.
+                El Daytona es un retinógrafo de última generación, el cual produce una imágen retiniana de 200º de alta resolución en menos de medio segundo. <br />
+                Esta tecnología de imágenes de campo ultra amplio, rápida, sencilla y fácil de usar, fue diseñada para la evaluación de ojos sanos y ha demostrado mejorar el flujo de trabajo y la participación del paciente, mejorando la toma de decisiones clínicas. <br />
+                La evaluación de la retina periférica es fundamental para el manejo óptimo del paciente. Las imágenes optomap son ideales para exámenes periféricos. <br />
+                Estudios publicados que comparan el campo de la visión y la utilidad clínica de varios sistemas de imágenes de campo amplio, confirman que optomap captura el campo de visión clínicamente más amplio y la mayor cantidad de patologías retinianas.
             </p>
         )
     },
@@ -90,17 +93,6 @@ const ESTUDIOS_ARRAY = [
     },
     {
         id: 9,
-        title: "Analizador de Respuesta Ocular (ORA)",
-        imagen: imageUrl("ora.jpg"),
-        descripcion: (
-            <p>
-                El Analizador de Respuesta Ocular (ORA) significa para la clínica diaria un gran avance en el tratamiento y seguimiento del glaucoma, al tomar medidas de presión intraocular relacionando parámetros hasta ahora no considerados. También nos permite evaluar con mayor precisión la patología corneal (como el queratocono) y especialmente es útil en pacientes candidatos a cirugía refractiva para evitar complicaciones postoperatorias como la ectasia corneal. <br />
-                Disponer del ORA nos permite medir determinados parámetros como la histéresis corneal (CH), la presión intraocular compensada (OIPC) y el factor de resistencia corneal (CRF), que nos ayudan a conocer las propiedades biomecánicas de la córnea de forma medible y repetible.
-            </p>
-        )
-    },
-    {
-        id: 10,
         title: "Pentacam",
         imagen: imageUrl("pentacam.jpg"),
         descripcion: (
@@ -116,7 +108,7 @@ const ESTUDIOS_ARRAY = [
         )
     },
     {
-        id: 11,
+        id: 10,
         title: "Refractometría Pediátrica",
         imagen: imageUrl("refracpedi.jpg"),
         descripcion: (
@@ -127,7 +119,7 @@ const ESTUDIOS_ARRAY = [
         )
     },
     {
-        id: 12,
+        id: 11,
         title: "Retinografia",
         imagen: imageUrl("retinografia.jpg"),
         descripcion: (
@@ -147,7 +139,7 @@ const ESTUDIOS_ARRAY = [
         )
     },
     {
-        id: 13,
+        id: 12,
         title: "Topografía corneal",
         imagen: imageUrl("tomey.jpg"),
         descripcion: (
@@ -158,7 +150,7 @@ const ESTUDIOS_ARRAY = [
         )
     },
     {
-        id: 14,
+        id: 13,
         title: "Tonometría",
         imagen: imageUrl("tonometro.jpg"),
         descripcion: (
@@ -169,7 +161,7 @@ const ESTUDIOS_ARRAY = [
         )
     },
     {
-        id: 15,
+        id: 14,
         title: "UBM",
         imagen: imageUrl("ubm.jpg"),
         descripcion: (

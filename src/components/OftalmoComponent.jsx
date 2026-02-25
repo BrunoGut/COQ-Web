@@ -95,7 +95,7 @@ function OftalmoComponent() {
           rel="noopener noreferrer"
         >
           <button className="boton-cirugia" type="button">
-            <i className="bi bi-calendar-check-fill" aria-hidden="true" />
+            <i className="bi bi-whatsapp" aria-hidden="true" />
             <span>SOLICITA TU TURNO</span>
           </button>
         </a>

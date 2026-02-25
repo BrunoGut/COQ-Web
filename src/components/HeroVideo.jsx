@@ -46,7 +46,7 @@ export default function HeroVideo() {
                     
                     <a href="https://wa.me/541138721437" target="_blank" rel="noopener noreferrer">
                         <button className='boton-turno' type='button'>
-                            <i className="bi bi-calendar-check-fill" aria-hidden="true" />
+                            <i className="bi bi-whatsapp fill" aria-hidden="true" />
                             <span>SOLICITA TU TURNO</span>
                         </button>
                     </a>

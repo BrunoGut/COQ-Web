@@ -21,121 +21,113 @@ const COBERTURAS = [
     },
     {
         id: 6,
-        title: "ASOCIACION ESPAÑOLA DE SOCORROS MUTUOS"
-    },
-    {
-        id: 7,
         title: "BRISTOL MEDICINE"
     },
     {
-        id: 8,
+        id: 7,
         title: "CASA"
     },
     {
-        id: 9,
+        id: 8,
         title: "CEMIC"
     },
     {
-        id: 10,
+        id: 9,
         title: "COMEI"
     },
     {
-        id: 11,
+        id: 10,
         title: "EMPLEADOS ESCRIBANOS PCIA. BS. AS."
     },
     {
-        id: 12,
+        id: 11,
         title: "ESCRIBANOS PCIA. BS. AS."
     },
     {
-        id: 13,
+        id: 12,
         title: "GALENO"
     },
     {
-        id: 14,
+        id: 13,
         title: "HOSPITAL BRITANICO"
     },
     {
-        id: 15,
+        id: 14,
         title: "IOMA"
     },
     {
-        id: 16,
-        title: "IOSFA"
-    },
-    {
-        id: 17,
+        id: 15,
         title: "JERARQUICO SALUD"
     },
     {
-        id: 18,
+        id: 16,
         title: "LUIS PASTEUR"
     },
     {
-        id: 19,
+        id: 17,
         title: "MEDICUS"
     },
     {
-        id: 20,
+        id: 18,
         title: "MEDIFE"
     },
     {
-        id: 21,
+        id: 19,
         title: "OMINT"
     },
     {
-        id: 22,
+        id: 20,
         title: "OPDEA"
     },
     {
-        id: 23,
+        id: 21,
         title: "OSDE BINARIO"
     },
     {
-        id: 24,
+        id: 22,
         title: "OSDIPP"
     },{
-        id: 25,
+        id: 23,
         title: "OSFALTyF"
     },
     {
-        id: 26,
+        id: 24,
         title: "OSMECON LOMAS"
     },
     {
-        id: 27,
+        id: 25,
         title: "OSOCNA Comisarios Navales"
     },
     {
-        id: 28,
+        id: 26,
         title: "OSPTV Personal de TV"
     },
     {
-        id: 29,
+        id: 27,
         title: "PATRONES DE CABOTAJE DE RIO"
     },
     {
-        id: 30,
+        id: 28,
         title: "PODER JUDICIAL"
     },
     {
-        id: 31,
+        id: 29,
         title: "PROGRAMAS MEDICOS"
     },
     {
-        id: 32,
+        id: 30,
         title: "SADAIC"
     },
     {
-        id: 33,
+        id: 31,
         title: "SU SALUD"
     },
     {
-        id: 34,
+        id: 32,
         title: "UNION PERSONAL"
     },
     {
-        id: 35,
+        id: 33,
         title: "WILLIAMS HOPE"
     }
 ]

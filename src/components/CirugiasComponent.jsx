@@ -83,7 +83,7 @@ function CirugiasComponent() {
                 <p className="cirugiaModal__name">{selectedCirugia?.title}</p>
                 <a href="https://wa.me/541138721437" target="_blank" rel="noopener noreferrer">
                 <button className="boton-cirugia" type='button'>
-                <i className="bi bi-calendar-check-fill" aria-hidden="true" />
+                <i className="bi bi-whatsapp" aria-hidden="true" />
                 <span>CLICK ACÁ</span>
             </button>
             </a>

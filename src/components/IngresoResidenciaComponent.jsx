@@ -22,14 +22,16 @@ function IngresoResidenciaComponent() {
             Apertura inscripción a residencia 2026
           </h3>
           <p>
-            La residencia del Centro de Ojos Quilmes cuenta con 4 (cuatro)
+            {/*La residencia del Centro de Ojos Quilmes cuenta con 4 (cuatro)
             vacantes, 1 (Una) es otorgada a través de la Universidad de Buenos
             Aires y las otras 3 (Tres) restantes a través del Colegio Médico de
             la Provincia de Bs As. <br />
             Si queres conocer nuestra residencia y las instalaciones podes
             coordinar una rotación enviando un mail a{" "}
             <span className="destacado_negro">Mariana De Muro</span>{" "}
-            <span className="destacado_azul">mdemuro@fibertel.com.ar</span>
+            <span className="destacado_azul">mdemuro@fibertel.com.ar</span>*/}
+            <span className="destacado_negro">La inscripción para el examen de residencia 2026 no se encuentra abierta por el momento. <br />
+            Revise periódicamente esta sección para conocer las fechas de apertura de inscripción, cronograma y requisitos para el examen de residencia 2026.</span>
           </p>
         </div>
 
@@ -87,7 +89,10 @@ function IngresoResidenciaComponent() {
 
           <h4>Cronograma</h4>
           <div className="div__ingreso__list">
-            <ul className="info__ingreso__list">
+            <p>
+              <span className="destacado_negro">El cronograma para el examen de residencia 2026 se publicará próximamente.</span> <br />
+            </p>
+            {/*<ul className="info__ingreso__list">
               <li>
                 <i className="bi bi-chevron-right" aria-hidden="true"></i>
                 <span>
@@ -113,9 +118,9 @@ function IngresoResidenciaComponent() {
                 </span>
               </li>
             </ul>
-                <div className="div__boton">
+                <div className="div__boton">*/}
                 {/*abrir modal al tocar boton*/}
-                <button className="boton-guardia"
+                {/*<button className="boton-guardia"
                 type="button"
                 onClick={openModal}
                 >Inscripción</button>
@@ -137,10 +142,10 @@ function IngresoResidenciaComponent() {
                         </li> 
                     </ul>    
                 </Modal> 
-            </div>          
+            </div>*/}          
           </div>     
         </div>
-        <div className="info__div__ingreso">
+        {/*<div className="info__div__ingreso">
           <h3 className="info__text__ingreso">
             Ingreso a través de la UBA
           </h3>
@@ -175,8 +180,8 @@ function IngresoResidenciaComponent() {
                 </a> 
             </div>          
           </div>
-        </div>
-        <div className="info__div__ingreso">
+        </div>*/}
+        {/*<div className="info__div__ingreso">
           <h3 className="info__text__ingreso">
             Cronograma examen único (EU)
           </h3>
@@ -188,7 +193,7 @@ function IngresoResidenciaComponent() {
           <div className="div__boton">
             <a href="https://www.argentina.gob.ar/salud/residencias/ingreso/examen-unico"><button className="boton-guardia">Información</button></a>
           </div>
-        </div>
+        </div>*/}
       </div>
     </section>
   );

@@ -19,7 +19,7 @@ function TurnosComponent() {
           rel="noopener noreferrer"
         >
           <button className="boton-turnos" type="button">
-            <i className="bi bi-calendar-check-fill" aria-hidden="true" />
+            <i className="bi bi-whatsapp" aria-hidden="true" />
             <span>CLICK AQUÍ</span>
           </button>
         </a>
@@ -34,7 +34,7 @@ function TurnosComponent() {
           <h2 className="info__text__turnos">
             Encontrá toda la información para agendar tu consulta medica, estudio o cirugía
           </h2>
-          <p>Enviá un mensaje de WhastApp al <span className="destacado__subrayado turnos__telefono">(011) 6513-2161</span> haciendo <a className="info__link" href="https://wa.me/541138721437" target="_blank" rel="noopener noreferrer">click aquí</a>, <br /> indicando tu <span className="destacado__subrayado">nombre completo, DNI, obra social, motivo de la consulta y fecha y horario preferido.</span></p>
+          <p>Enviá un mensaje de WhastApp al <span className="destacado__subrayado turnos__telefono">(+54) 11 3872-1437</span> haciendo <a className="info__link" href="https://wa.me/541138721437" target="_blank" rel="noopener noreferrer">click aquí</a>, <br /> indicando tu <span className="destacado__subrayado">nombre completo, DNI, obra social, motivo de la consulta y fecha y horario preferido.</span></p>
         </div>
       </div>
 

@@ -106,7 +106,7 @@ export default function Patologias() {
             <span>Ver todos los tratamientos</span>
           </Link>
           <a className="boton-turno" href="https://wa.me/5411387214371" target="_blank" rel="noopener noreferrer">
-              <i className="bi bi-calendar-check-fill" aria-hidden="true" />
+              <i className="bi bi-whatsapp" aria-hidden="true" />
               <span>Solicitar turno</span>
           </a>
         </div>

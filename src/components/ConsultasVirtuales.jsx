@@ -17,8 +17,8 @@ function ConsultasVirtuales() {
         ariaLabel="Consultas virtuales"
       >
         <button className="boton-turnos" onClick={() => setIsModalOpen(true)}>
-          <i className="bi bi-file-earmark-medical-fill" aria-hidden="true" />
           <span>CLICK AQUÍ</span>
+          <i className="bi bi-camera-video-fill" aria-hidden="true" />
         </button>
       </BannerComponent>
 

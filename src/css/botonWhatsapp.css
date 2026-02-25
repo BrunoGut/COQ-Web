@@ -46,7 +46,7 @@
     gap: 10px;
 }
 
-.bi-whatsapp{
+.boton-wsp .bi-whatsapp{
     color: #ffffff;
     font-size: 20px;
     display: block;
@@ -67,6 +67,60 @@
 .boton-wsp:hover .boton-flotante-texto{
     opacity: 1;
     max-width: 220px;
+}
+
+.telefono-flotante{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.boton-telefono-flotante{
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: #003c77;
+    border: 1px solid #ffffff;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    overflow: hidden;
+    transition: width 0.25s ease, border-radius 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+    text-decoration: none;
+}
+
+.boton-telefono-flotante:hover,
+.boton-telefono-flotante:focus,
+.boton-telefono-flotante:visited,
+.boton-telefono-flotante:active{
+    text-decoration: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.boton-telefono-flotante:hover,
+.boton-telefono-flotante:focus{
+    background-color: #007bff;
+    border-color: #000000;
+    width: 160px;
+    border-radius: 999px;
+    justify-content: center;
+    padding: 0 18px;
+    gap: 10px;
+}
+
+.boton-telefono-flotante:hover .boton-flotante-texto,
+.boton-telefono-flotante:focus .boton-flotante-texto{
+    opacity: 1;
+    max-width: 220px;
+}
+
+.boton-telefono-flotante .bi-telephone{
+    color: #ffffff;
+    font-size: 20px;
+    display: block;
+    line-height: 1;
 }
 
 .boton-guardia-flotante{
@@ -109,7 +163,7 @@
     max-width: 220px;
 }
 
-.bi-hospital{
+.boton-guardia-flotante .bi-hospital{
     color: #ffffff;
     font-size: 20px;
     display: block;
@@ -129,7 +183,7 @@
     border-color: #000000;
 }
 
-.bi-arrow-up{
+.boton-volver-inicio .bi-arrow-up{
     color: #ffffff;
     font-size: 20px;
 }
