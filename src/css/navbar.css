@@ -14,6 +14,12 @@
     top: 0;
     left: 0;
   }
+
+  /* Centra los links sin usar transform (para no romper dropdown fixed) */
+  .navbar--coq #coqNavbar .navbar-nav {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .navbar__logoWrap {
@@ -65,6 +71,38 @@
 
 .navbar__link:hover::after {
   transform: scaleX(1);
+}
+
+/* Redes (discreto, solo desktop) */
+.navbar__social {
+  align-items: center;
+  gap: 0.65rem;
+  margin: 5px 40px 10px 0px;
+  opacity: 0.6;
+}
+
+.navbar__socialLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  color: #555;
+  text-decoration: none;
+  transition: color 180ms ease, background-color 180ms ease, opacity 180ms ease;
+}
+
+.navbar__socialLink i {
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+.navbar__socialLink:hover,
+.navbar__socialLink:focus-visible {
+  color: #003c77;
+  background-color: rgba(0, 0, 0, 0.04);
+  opacity: 1;
 }
 
 /* Dropdown (desktop) */

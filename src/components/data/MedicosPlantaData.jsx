@@ -1,17 +1,17 @@
 const MEDICOS_PLANTA = [
     {
         id: 1,
+        nombre: "VALVECCHIA FLORENCIA",
+        especialidad: "SUPERFICIE OCULAR E INFECTOLOGIA"
+    },
+    {
+        id: 2,
         nombre: "CASTRO TOMAS",
         especialidad: "CLINICA OFTALMOLOGICA"
     },
     {
-        id: 2,
-        nombre: "COLANTONI ANDRES",
-        especialidad: "CLINICA OFTALMOLOGICA Y RETINA"
-    },
-    {
         id: 3,
-        nombre: "PERRONE FRANCO",
+        nombre: "COLANTONI ANDRES",
         especialidad: "CLINICA OFTALMOLOGICA"
     },
     {
@@ -32,7 +32,7 @@ const MEDICOS_PLANTA = [
     {
         id: 7,
         nombre: "VIGO RODOLFO",
-        especialidad: "UVEÍTIS"
+        especialidad: "OCULOPLASTÍA Y ÓRBITA"
     },
     {
         id: 8,
@@ -61,13 +61,13 @@ const MEDICOS_PLANTA = [
     },
     {
         id: 13,
-        nombre: "PASSARELLI FLORENCIA",
-        especialidad: "CLINICA OFTALMOLOGICA"
+        nombre: "GRECO LOURDES",
+        especialidad: "CLINICA OFTALMOLOGICA Y SUPERFICIE OCULAR"
     },
     {
         id: 14,
         nombre: "PODESTA NOELIA",
-        especialidad: "CLINICA OFTALMOLOGICA"
+        especialidad: "CLINICA OFTALMOLOGICA Y GLAUCOMA"
     },
     {
         id: 15,
@@ -81,9 +81,9 @@ const MEDICOS_PLANTA = [
     },
     {
         id: 17,
-        nombre: "VALVECCHIA FLORENCIA",
-        especialidad: "SUPERFICIE OCULAR E INFECTOLOGIA"
-    },
+        nombre: "JULIO MOLINA",
+        especialidad: "CLINICA OFTALMOLOGICA"
+    }
 ]
 
 export default MEDICOS_PLANTA;

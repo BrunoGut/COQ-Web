@@ -5,7 +5,7 @@ import SectionHeading from './SectionHeading'
 const SERVICIOS_ITEMS = [
 	{ label: 'Guardia', href: '/guardia', icon: 'bi-heart-pulse' },
 	{ label: 'Estudios', href: '/estudios', icon: 'bi-binoculars' },
-	{ label: 'Cirugías', href: '/cirugias', icon: 'bi-scissors' },
+	{ label: 'Cirugías', href: '/cirugias', icon: 'bi-bandaid' },
 	{ label: 'Turnos', href: '/turnos-online', icon: 'bi-whatsapp' },
 	{ label: 'Oftalmopediatría', href: '/oftalmopediatria', icon: 'bi-emoji-smile' },
 	{ label: 'Estética', href: '/estetica', icon: 'bi-eye' },

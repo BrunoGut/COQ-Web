@@ -24,6 +24,12 @@ import laserImg from "../../images/patologias/laser.jpeg";
 import queratoconoImg from "../../images/patologias/queratocono.jpeg";
 import marfanImg from "../../images/patologias/marfan.jpeg";
 
+//
+
+import ojoSecoImg2 from "../../images/patologias/ojoSeco/ojo-seco2.jfif";
+import ojoSeco3Img from "../../images/patologias/ojoSeco/ojo-seco3.jfif";
+import ojoSeco4Img from "../../images/patologias/ojoSeco/ojo-seco4.jfif";
+import ojoSeco5Img from "../../images/patologias/ojoSeco/ojo-seco5.jfif";
 
 
 const PATOLOGIAS = [
@@ -1347,7 +1353,7 @@ const PATOLOGIAS = [
     ),
     seccion1: [
       {
-        titulo: "¿Qué papel juegan las lágrimas?:",
+        titulo: "¿Qué papel juegan las lágrimas?",
         texto: (
           <p>
             Normalmente, el cuerpo produce dos tipos de lágrimas: <br />
@@ -1359,7 +1365,7 @@ const PATOLOGIAS = [
     ],
     seccion2: [
       {
-        titulo: "Tratamiento quirúrgico en la Disfunción de Glándulas de Meibomio:",
+        titulo: "Tratamiento quirúrgico en la Disfunción de Glándulas de Meibomio",
         texto: (
           <p>
             La disfunción de las glándulas de Meibomio es la principal causa de síndrome de ojo seco a nivel mundial, generando un sindrome de  ojo seco evaporativo. La irritación ocular que genera esta patología se caracteriza por la sensación de arenilla “cuerpo extraño” asociado a lagrimeo ocasional que aparece en ambientes secos o con los  cambios de temperatura. <br />
@@ -1368,18 +1374,100 @@ const PATOLOGIAS = [
             Hace tiempo que en nuestra Institución, el  Centro de Ojos Quilmes, al tratamiento médico de la disfunción glandular lo complementamos con el quirúrgico. Consiste en  una técnica NO HOMOLOGABLE con las que actualmente se realizan para ojo seco ya que actúa directamente sobre las glándulas de Meibomio. El objetivo es la desobstrucción de las glándulas de Meibomio las cuales se encuentran inflamadas y con contenido graso en su interior, en aquellos pacientes que presentan disfunción de las glándulas de Meibomio.
           </p>
         ),
+        imagen: ojoSeco2Img
       },
     ],
     seccion3: [
       {
-        titulo: "Tratamiento:",
+        titulo: "Tratamiento del ojo seco acuoso",
         texto: (
           <p>
-            Introducción de  cánula de Skin de 1mm y 2 mm en cada una de las glándulas con posterior instilacion de antibióticos ( eritromicina). <br />
-            El procedimiento se realiza con una sedación superficial, para evitar las molestias que puede ocasionar y para visualizar mejor las glándulas, luego se procede a la canalización del ductus, utilizando una cánula especial (cánula de Maskin) evitando realizar falsas vías y reduciendo la inflamación por exceso de manipulación, culminando con la inyección de antibiótico intraglandular (eritromicina) para ayudar a restablecer su funcionalismo. <br />
-            La técnica es bien tolerada por el paciente y los resultados obtenidos son muy buenos, consiguiendo una mejora de los síntomas, en mayor o menor grado, en todos los pacientes. Consideramos que la clave del éxito está en identificar correctamente a los pacientes donde está indicado este tipo de tratamiento. En estos casos, la correcta aplicación de la técnica se muestra muy segura y altamente eficaz.
+            El ojo seco acuoso se caracteriza por una disminución en la producción de la fracción acuosa lagrimal, generalmente por disfunción de la glándula lagrimal. Puede ser idiopático, relacionado con la edad o secundario a enfermedades como el Síndrome de Sjögren. <br />
+            El abordaje debe ser individualizado y progresivo, según la severidad y el mecanismo predominante. <br />
+            1- Lágrimas artificiales <br />
+            2- Gel o ungüento nocturno <br />
+            3- Control de la inflamación <br />
+            4- Conservación lagrimal <br />
+            5- Tapones lagrimales (plug) <br />
+            6- Oclusión térmica permanente en casos seleccionados <br />
+            <span className="destacado_negro_2_subrayado">Terapias avanzadas:</span> <br />
+            Suero autologo y plasma rico en plaquetas (PRP) <br />
+            - Contiene factores de crecimiento <br />
+            - Contiene factores de crecimiento <br />
+            - Indicado en casos severos o con queratitis persistente
           </p>
         ),
+        imagen: ojoSeco3Img
+      },
+    ],
+    seccion4: [
+      {
+        titulo: "Ojo seco evaporativo y  Demodex",
+        texto: (
+          <p>
+            El ojo seco evaporativo se asocia con mayor frecuencia a disfunción de las glándulas de Meibomio . Sin embargo, dentro del enfoque diagnóstico integral, es fundamental considerar la posible participación de infestación por Demodex como factor contribuyente o perpetuador del cuadro inflamatorio palpebral. <br />
+            Los ácaros del género Demodex —principalmente Demodex folliculorum y Demodex brevis— pueden inducir: <br />
+            - Inflamación crónica del borde palpebral <br />
+            - Obstrucción de los orificios meibomianos <br />
+            - Alteración cualitativa de la secreción lipídica <br />
+            - Inestabilidad de la película lagrimal <br />
+            - Incremento de la evaporación <br />
+            En este contexto, la presencia de blefaritis por Demodex puede actuar como un factor etiopatogénico secundario en el ojo seco evaporativo, agravando la disfunción lipídica. <br />
+            Durante el examen en lámpara de hendidura se debe evaluar: <br />
+            - Presencia de collarettes o escamas cilíndricas en la base de las pestañas (hallazgo altamente sugestivo) <br />
+            - Hiperemia del borde palpebral <br />
+            - Telangiectasias <br />
+            - Secreción meibomiana espesa o turbia <br />
+            - Obstrucción de orificios glandulares <br />
+            Ante la sospecha clínica, puede realizarse epilación selectiva para confirmación microscópica, aunque en la práctica el diagnóstico suele ser clínico.
+          </p>
+        ),
+        imagen: ojoSeco4Img
+      },
+    ],
+    seccion5: [
+      {
+        titulo: "Tratamiento: Expresión de glándulas de Meibomio con exfoliación palpebral",
+        texto: (
+          <p>
+            En muchos casos de ojo seco evaporativo, las glándulas de Meibomio están: <br />
+            - Tapadas <br />
+            - Inflamadas <br />
+            - Produciendo una grasa espesa o de mala calidad <br />
+            Esto hace que la lágrima se evapore más rápido. <br />
+            Glándulas ubicadas en los párpados que producen la capa grasa de la lágrima, la que evita que se evapore. <br />
+            Cuando se tapan, la grasa no sale correctamente y aparece: <br />
+            - Ardor <br />
+            - Sensación de arenilla <br />
+            - Visión borrosa intermitente <br />
+            - Ojos rojos <br />
+            ¿En qué consiste el tratamiento? <br />
+            1- Exfoliación del borde palpebral <br />
+            Se realiza una limpieza profunda del borde del párpado para: <br />
+            - Eliminar bacterias <br />
+            - Remover biofilm <br />
+            - Quitar células muertas <br />
+            - Destapar los orificios glandulares <br />
+            Se realiza con dispositivos específicos (microexfoliación) <br />
+  
+            2-Expresión de glándulas de Meibomio <br />
+  
+            Luego se ejerce una presión controlada sobre los párpados para: <br />
+            - Vaciar el contenido espeso <br />
+            - Desobstruir las glándulas <br />
+            - Mejorar la calidad de la secreción lipídica <br />
+            - Es un procedimiento breve. <br />
+            - Puede generar una leve molestia, pero es bien tolerado. <br />
+            ¿Qué beneficios tiene? <br />
+            - Mejora la calidad de la lágrima <br />
+            - Disminuye la evaporación <br />
+            - Reduce inflamación <br />
+            - Alivia síntomas de ojo seco <br />
+            - Mejora la estabilidad visual <br />
+            - En muchos pacientes se nota mejoría en pocos días. <br />
+          </p>
+        ),
+        imagen: ojoSeco5Img
       },
     ],
   },

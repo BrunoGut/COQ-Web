@@ -179,6 +179,45 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
+
+          <div className="navbar__social d-none d-lg-flex" aria-label="Redes sociales">
+            <a
+              className="navbar__socialLink"
+              href="https://www.instagram.com/centrodeojosquilmes/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Instagram"
+            >
+              <i className="bi bi-instagram" aria-hidden="true" />
+            </a>
+            <a
+              className="navbar__socialLink"
+              href="https://www.facebook.com/centrodeojos.quilmes/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Facebook"
+            >
+              <i className="bi bi-facebook" aria-hidden="true" />
+            </a>
+            <a
+              className="navbar__socialLink"
+              href="https://www.linkedin.com/company/centro-de-ojos-quilmes/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Linkedin"
+            >
+              <i className="bi bi-linkedin" aria-hidden="true" />
+            </a>
+            <a
+              className="navbar__socialLink"
+              href="https://www.youtube.com/@centrodeojosquilmes586"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="YouTube"
+            >
+              <i className="bi bi-youtube" aria-hidden="true" />
+            </a>
+          </div>
         </div>
       </div>
     </nav>

@@ -77,7 +77,7 @@ function CirugiasComponent() {
             ))}
         </ul>
 
-        <Modal isOpen={isModalOpen} closeModal={closeModal}>
+        {/*<Modal isOpen={isModalOpen} closeModal={closeModal}>
             <div className="cirugiaModal__content">
                 <h2 className="cirugiaModal__title">Solicitar turno para esta cirugía</h2>
                 <p className="cirugiaModal__name">{selectedCirugia?.title}</p>
@@ -88,7 +88,7 @@ function CirugiasComponent() {
             </button>
             </a>
             </div>
-        </Modal>
+        </Modal>*/}
     </section>
   )
 }
