@@ -26,7 +26,7 @@ import marfanImg from "../../images/patologias/marfan.jpeg";
 
 //
 
-import ojoSecoImg2 from "../../images/patologias/ojoSeco/ojo-seco2.jfif";
+import ojoSeco2Img from "../../images/patologias/ojoSeco/ojo-seco2.jfif";
 import ojoSeco3Img from "../../images/patologias/ojoSeco/ojo-seco3.jfif";
 import ojoSeco4Img from "../../images/patologias/ojoSeco/ojo-seco4.jfif";
 import ojoSeco5Img from "../../images/patologias/ojoSeco/ojo-seco5.jfif";

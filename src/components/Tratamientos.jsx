@@ -66,7 +66,16 @@ export default function Tratamientos() {
 
     return sectionKeys
       .flatMap((key) => patologiaSeleccionada[key])
-      .filter((sec) => sec && (sec.titulo || sec.texto || sec.imagen));
+      .filter(
+        (sec) =>
+          sec &&
+          (sec.titulo ||
+            sec.texto ||
+            sec.imagen ||
+            sec.imageSrc ||
+            sec.imagenSrc ||
+            sec.image)
+      );
   }, [patologiaSeleccionada]);
 
   const toggleSeccion = (index) => {
@@ -87,12 +96,37 @@ export default function Tratamientos() {
   };
 
   const renderImagenSeccion = (seccion) => {
-    const imagen = seccion?.imagen;
-    if (!imagen?.src) return null;
+    const rawImagen =
+      seccion?.imagen ?? seccion?.imageSrc ?? seccion?.imagenSrc ?? seccion?.image;
+
+    const normalized = (() => {
+      if (!rawImagen) return null;
+
+      if (typeof rawImagen === "string") {
+        return { src: rawImagen, alt: seccion?.titulo ?? "" };
+      }
+
+      if (typeof rawImagen === "object") {
+        if (typeof rawImagen.src === "string") {
+          return {
+            src: rawImagen.src,
+            alt: rawImagen.alt ?? seccion?.titulo ?? "",
+          };
+        }
+      }
+
+      return null;
+    })();
+
+    if (!normalized?.src) return null;
 
     return (
       <div className="tratamientos__sectionImageWrap">
-        <img className="tratamientos__sectionImage" src={imagen.src} alt={imagen.alt ?? ""} //loading="lazy" decoding="async" 
+        <img
+          className="tratamientos__sectionImage"
+          src={normalized.src}
+          alt={normalized.alt ?? ""}
+          //loading="lazy" decoding="async" 
         />
       </div>
     );
