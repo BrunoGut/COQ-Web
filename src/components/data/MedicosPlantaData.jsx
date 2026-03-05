@@ -83,6 +83,11 @@ const MEDICOS_PLANTA = [
         id: 17,
         nombre: "JULIO MOLINA",
         especialidad: "CLINICA OFTALMOLOGICA"
+    },
+    {
+        id: 18,
+        nombre: "LUCAS AGUIRRE",
+        especialidad: "CLINICA OFTALMOLOGICA"
     }
 ]
 

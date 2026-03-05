@@ -19,7 +19,7 @@ function IngresoResidenciaComponent() {
       <div className="info__grid__ingreso">
         <div className="info__div__ingreso">
           <h3 className="info__text__ingreso">
-            Apertura inscripción a residencia 2026
+            Inscripción a residencia 2026 CERRADA
           </h3>
           <p>
             {/*La residencia del Centro de Ojos Quilmes cuenta con 4 (cuatro)
@@ -30,12 +30,13 @@ function IngresoResidenciaComponent() {
             coordinar una rotación enviando un mail a{" "}
             <span className="destacado_negro">Mariana De Muro</span>{" "}
             <span className="destacado_azul">mdemuro@fibertel.com.ar</span>*/}
-            <span className="destacado_negro">La inscripción para el examen de residencia 2026 no se encuentra abierta por el momento. <br />
-            Revise periódicamente esta sección para conocer las fechas de apertura de inscripción, cronograma y requisitos para el examen de residencia 2026.</span>
+            {/*<span className="destacado_negro">La inscripción para el examen de residencia 2026 no se encuentra abierta por el momento. <br />
+            Revise periódicamente esta sección para conocer las fechas de apertura de inscripción, cronograma y requisitos para el examen de residencia 2026.</span>*/}
+            <span className="destacado_negro">Para mas información, enviar un mail a <a href="mailto:residencia@centrodeojosquilmes.com.ar"><span className="destacado_azul">residencia@centrodeojosquilmes.com.ar</span></a></span>
           </p>
         </div>
 
-        <div className="info__div__ingreso">
+        {/*<div className="info__div__ingreso">
           <h3 className="info__text__ingreso">
             Ingreso a través del Colegio Médico de la Pcia. de Bs. As.
           </h3>
@@ -85,13 +86,13 @@ function IngresoResidenciaComponent() {
                 </span>
               </li>
             </ul>            
-          </div>
+          </div>*/}
 
-          <h4>Cronograma</h4>
+          {/*<h4>Cronograma</h4>
           <div className="div__ingreso__list">
             <p>
               <span className="destacado_negro">El cronograma para el examen de residencia 2026 se publicará próximamente.</span> <br />
-            </p>
+            </p>*/}
             {/*<ul className="info__ingreso__list">
               <li>
                 <i className="bi bi-chevron-right" aria-hidden="true"></i>
@@ -142,9 +143,9 @@ function IngresoResidenciaComponent() {
                         </li> 
                     </ul>    
                 </Modal> 
-            </div>*/}          
+            </div>         
           </div>     
-        </div>
+        </div>*/} 
         {/*<div className="info__div__ingreso">
           <h3 className="info__text__ingreso">
             Ingreso a través de la UBA

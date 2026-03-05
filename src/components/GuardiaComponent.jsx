@@ -45,7 +45,7 @@ export default function GuardiaComponent() {
           <h2 className="info__text">Horarios:</h2>
           <p>
             Lunes a viernes de <strong>8:00 a 19:30 hs.</strong> Sabados de <strong>8:00 a 17:30 hs.</strong>
-            Domingos y feriados de <strong>10:00 a 12:30 hs.</strong>
+            Domingos y feriados de <strong>10:00 a 13:00 hs.</strong>
           </p>
         </div>
 
