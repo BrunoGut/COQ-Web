@@ -21,13 +21,13 @@ src/
 
 ## Instalación y Desarrollo
 
-# Instalar dependencias
+- Instalar dependencias
 npm install
 
-# Ejecutar en modo desarrollo
+- Ejecutar en modo desarrollo
 npm run dev
 
-# Construir para producción
+- Construir para producción
 npm run build
 
 ## Secciones principales
