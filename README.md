@@ -10,14 +10,22 @@ Sitio web institucional para el Centro de Ojos Quilmes, clínica oftalmológica 
 - EmailJS para formulario de contacto
 
 ## Estructura del Proyecto
-
-src/
-├── components/          # Componentes reutilizables
-├── pages/              # Páginas de la aplicación
-├── css/                # Estilos CSS
-├── images/             # Recursos de imágenes
-├── constants/          # Datos y configuraciones
-└── main.jsx           # Punto de entrada
+```text
+COQ-Web/
+├── public/                 # Archivos públicos (favicon, redirects, etc.)
+├── src/
+│   ├── components/         # Componentes reutilizables de UI
+│   │   └── data/           # Datos estáticos para componentes/secciones
+│   ├── pages/              # Páginas enrutadas del sitio
+│   ├── css/                # Estilos por sección/componente
+│   ├── images/             # Imágenes del sitio
+│   ├── videos/             # Videos del sitio
+│   ├── App.jsx             # Configuración principal de rutas/layout
+│   └── main.jsx            # Punto de entrada de React
+├── index.html              # HTML base
+├── package.json            # Dependencias y scripts
+└── vite.config.js          # Configuración de Vite
+```
 
 ## Instalación y Desarrollo
 
