@@ -69,7 +69,7 @@ const DIRECTORES_MEDICOS = [
         id: 9,
         imagen: francoPerroneImg,
         nombre: "DR. FRANCO PERRONE",
-        descripcion: "Médico Oftalmólogo Especialista en Córnea.",
+        descripcion: "Médico Oftalmólogo Especialista en cirugía de Catarata y Córnea.",
         linkedin: "https://www.linkedin.com/company/centro-de-ojos-quilmes/"
     }
 ]

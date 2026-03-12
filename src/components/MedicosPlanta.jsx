@@ -7,7 +7,7 @@ function MedicosPlanta() {
   return (
     <section className="planta">
         <div className="planta__inner">
-            <SectionHeading title="MÉDICOS DE PLANTA" />
+            <SectionHeading title="STAFF MÉDICO" />
         </div>
 
         <ul className="planta__ul">
