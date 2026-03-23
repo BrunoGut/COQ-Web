@@ -21,7 +21,6 @@ const UBICACIONES = [
     key: 'consultas',
     titulo: 'Consultas, Estudios y Guardia',
     direccion: 'Humberto Primo 298, Quilmes, Buenos Aires, Argentina',
-    telefono: '(54.11) 5277-9745',
     coords: { lat: -34.7234476, lng: -58.2539529 },
   },
   {

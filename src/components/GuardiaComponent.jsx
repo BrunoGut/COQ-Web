@@ -33,24 +33,24 @@ export default function GuardiaComponent() {
   return (
     <section className="guardia">
       <div className="info__grid">
-        <div className="info__div">
+        {/*<div className="info__div">
           <h2 className="info__text">Servicio de guardia para urgencias del paciente</h2>
           <p>Teléfono de contacto: <span className="texto__subrayado">11 2206-2650</span></p>
           <p>
             O enviar un mensaje a nuestro WhatsApp haciendo <a href="https://wa.me/541138721437" target="_blank" rel="noopener noreferrer" className="info__link">clic aquí</a>.
           </p>
-        </div>
+        </div>*/}
 
         <div className="info__div">
-          <h2 className="info__text">Horarios:</h2>
+          <h2 className="info__text">Horarios</h2>
           <p>
-            Lunes a viernes de <strong>8:00 a 19:30 hs.</strong> Sabados de <strong>8:00 a 17:30 hs.</strong>
-            Domingos y feriados de <strong>10:00 a 13:00 hs.</strong>
+            Lunes a viernes de <strong>8:00 a 19:30h</strong> <br />Sábados de <strong>8:00 a 17:30h</strong> <br />
+            Domingos y feriados de <strong>10:00 a 13:00h</strong>
           </p>
         </div>
 
         <div className="info__div">
-          <h2 className="info__text">¿Donde estamos?</h2>
+          <h2 className="info__text">¿Dónde estamos?</h2>
           <p><span className="texto__subrayado">Humberto Primo 298, Quilmes, Buenos Aires, Argentina.</span></p>
         </div>
       </div>

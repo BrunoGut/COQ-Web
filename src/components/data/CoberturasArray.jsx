@@ -124,10 +124,14 @@ const COBERTURAS = [
     },
     {
         id: 32,
-        title: "UNION PERSONAL"
+        title: "SWISS MEDICAL"
     },
     {
         id: 33,
+        title: "UNION PERSONAL"
+    },
+    {
+        id: 34,
         title: "WILLIAMS HOPE"
     }
 ]

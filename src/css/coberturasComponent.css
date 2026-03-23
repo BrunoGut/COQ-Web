@@ -102,6 +102,7 @@
 
 .coberturas__item {
 	text-transform: uppercase;
+    font-size: 19px;
 	font-weight: 600;
     color: #4e4e4e;
 	letter-spacing: 0.02em;
@@ -116,7 +117,7 @@
     color: #003c77;
     border-bottom-color: #003c77;
     border-top-color: #003c77;
-    cursor: pointer;
+    cursor: default;
     text-shadow: 0 0 0 currentColor, 0.5px 0 0 currentColor;
 }
 

@@ -115,7 +115,7 @@
     color: #003c77;
     border-bottom-color: #003c77;
     border-top-color: #003c77;
-    cursor: pointer;
+    cursor: default;
     text-shadow: 0 0 0 currentColor, 0.5px 0 0 currentColor;
 }
 

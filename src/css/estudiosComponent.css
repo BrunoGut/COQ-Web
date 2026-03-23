@@ -44,6 +44,28 @@
   padding: 10px 8px;
 }
 
+.estudios .card-name {
+  margin: 10px 0 6px;
+  font-size: 21px;
+  font-weight: 600;
+  color: #003c77;
+  text-transform: uppercase;
+}
+
+.estudios .card-description {
+    margin: 0;
+    font-size: 16px;
+    color: #1a1a1a;
+    text-align: center;
+    line-height: 1.5;
+    max-width: 32ch;
+    display: -webkit-box;
+    line-clamp: inherit;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
 .estudios .card-wrapper{
   margin-top: 44px;
 }
