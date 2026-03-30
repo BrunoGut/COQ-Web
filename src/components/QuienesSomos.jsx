@@ -6,7 +6,7 @@ export default function QuienesSomos() {
   return (
     <section className="quienesSomos" id="quienes-somos" aria-label="Quiénes somos">
       <div className="quienesSomos__inner">
-        <SectionHeading title="¿Quiénes somos?" />
+
 
         <div className="quienesSomos__grid">
           <div>

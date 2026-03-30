@@ -1,6 +1,6 @@
 .patologias{
-    background: #f0f0f0;
-    padding: 0;
+    background: #b9b9b9;
+    padding: 40px 0;
 }
 
 .patologias__inner{
@@ -165,9 +165,8 @@
     border-radius: 0 25px 25px 25px;
     background-color: #f0f0f0;
     overflow: hidden;
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
     border: 4px solid transparent;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .card:hover{

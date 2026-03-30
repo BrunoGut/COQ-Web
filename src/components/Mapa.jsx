@@ -43,7 +43,7 @@ export default function Mapa({ lat = DEFAULT_COORDS.lat, lng = DEFAULT_COORDS.ln
   return (
     <section className="mapa" id="donde-estamos" aria-label="Ubicación">
       <div className="mapa__inner">
-        <SectionHeading title="¿DÓNDE ESTAMOS?" />
+
 
         <div className="mapa__grid">
           <div className="mapa__info">
