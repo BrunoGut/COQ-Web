@@ -1,8 +1,6 @@
 .guardia{
-    background: #003c77;
-    background-image: linear-gradient(to top, #003c77 0%, #f0f0f0 50%);
-
-    padding: 0 0 50px;
+    background: #f0f0f0;
+    padding: 0;
 }
 
 .guardia__banner{
@@ -16,6 +14,44 @@
 
 .guardia .causas__banner{
     margin-bottom: 50px;
+}
+
+.guardia__grid{
+    display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+	width: min(980px, calc(100% - 64px));
+	margin: 0 auto 90px;
+	padding: 36px 0;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	align-items: start;
+}
+
+.guardia__item{
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	gap: 6px;
+    transition: transform 0.2s ease;
+	height: 100%;
+}
+
+.guardia__item:hover{
+    transform: scale(1.05);
+}
+
+.guardia-button-vacio{
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.guardia_text{
+    font-size: 16px;
+    color: rgba(18, 18, 18, 0.65);
+    font-weight: 600;
 }
 
 .guardia .info__grid{

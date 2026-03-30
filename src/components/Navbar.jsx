@@ -65,7 +65,10 @@ export default function Navbar() {
 
   useEffect(() => {
     const measure = () => {
-      if (navRef.current) setNavHeight(navRef.current.offsetHeight)
+      if (navRef.current) {
+        // Para position fixed, solo necesitamos la altura de la navbar
+        setNavHeight(navRef.current.offsetHeight)
+      }
     }
     measure()
     window.addEventListener('resize', measure)
@@ -101,6 +104,46 @@ export default function Navbar() {
       aria-label="Navegación principal"
       data-bs-theme="light"
     >
+      <div className="sub-navbar">
+<div className="sub-navbar__social">
+          <a
+            className="sub-navbar__socialLink"
+            href="https://www.instagram.com/centrodeojosquilmes/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Instagram"
+          >
+            <i className="bi bi-instagram" aria-hidden="true" />
+          </a>
+          <a
+            className="sub-navbar__socialLink"
+            href="https://www.facebook.com/centrodeojos.quilmes/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Facebook"
+          >
+            <i className="bi bi-facebook" aria-hidden="true" />
+          </a>
+          <a
+            className="sub-navbar__socialLink"
+            href="https://www.linkedin.com/company/centro-de-ojos-quilmes/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Linkedin"
+          >
+            <i className="bi bi-linkedin" aria-hidden="true" />
+          </a>
+          <a
+            className="sub-navbar__socialLink"
+            href="https://www.youtube.com/@centrodeojosquilmes586"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="YouTube"
+          >
+            <i className="bi bi-youtube" aria-hidden="true" />
+          </a>
+        </div>
+      </div>
       <div className="container-fluid px-3 px-lg-4 py-1">
         <div className="navbar__logoWrap">
           <Link className="navbar-brand navbar__logoLink" to="/" onClick={handleLogoClick}>
@@ -160,7 +203,7 @@ export default function Navbar() {
                       `dropdown-menu navbar__dropdown${activeDropdown === link.label ? ' is-open' : ''}`
                     }
                     aria-hidden={activeDropdown !== link.label}
-                    style={{ top: navHeight + 'px', left: getItemLeft(link.label) + 'px' }}
+                    style={{ top: (navHeight + (isDesktop() ? 48 : 0)) + 'px', left: getItemLeft(link.label) + 'px' }}
                     onMouseEnter={() => isDesktop() && openDropdown(link.label)}
                     onMouseLeave={() => isDesktop() && scheduleClose()}
                   >
@@ -179,45 +222,6 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-
-          <div className="navbar__social d-none d-lg-flex" aria-label="Redes sociales">
-            <a
-              className="navbar__socialLink"
-              href="https://www.instagram.com/centrodeojosquilmes/"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Instagram"
-            >
-              <i className="bi bi-instagram" aria-hidden="true" />
-            </a>
-            <a
-              className="navbar__socialLink"
-              href="https://www.facebook.com/centrodeojos.quilmes/"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Facebook"
-            >
-              <i className="bi bi-facebook" aria-hidden="true" />
-            </a>
-            <a
-              className="navbar__socialLink"
-              href="https://www.linkedin.com/company/centro-de-ojos-quilmes/"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Linkedin"
-            >
-              <i className="bi bi-linkedin" aria-hidden="true" />
-            </a>
-            <a
-              className="navbar__socialLink"
-              href="https://www.youtube.com/@centrodeojosquilmes586"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="YouTube"
-            >
-              <i className="bi bi-youtube" aria-hidden="true" />
-            </a>
-          </div>
         </div>
       </div>
     </nav>

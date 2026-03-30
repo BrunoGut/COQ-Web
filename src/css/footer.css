@@ -1,13 +1,8 @@
-.footer { overflow-x: hidden; }
-.footer .waves { overflow: hidden; }
-
-
 .footer{
   position: relative;
   background: #003c77;
-  padding: 90px 0 24px; /* más padding arriba para que no tape la ola */
+  padding: 60px 0 24px;
   color: #f0f0f0;
-  overflow: visible; /* para que se vea la ola hacia arriba */
 }
 
 .footer-content{
@@ -75,48 +70,6 @@
   text-align: center;
   font-size: 0.9rem;
   opacity: 0.85;
-}
-
-/* waves arriba del footer */
-.footer .waves{
-  position: absolute;
-  top: -90px;
-  left: 0;
-  width: 100%;
-  height: 120px;
-  pointer-events: none;
-  z-index: 1;
-}
-
-/* cada svg */
-.footer .wave{
-  position: absolute;
-  left: 0;
-  width: 200%;
-  height: 120px;
-  filter: drop-shadow(0px 2px 0px rgba(0,0,0,0.10)); /* ayuda a “marcar” el borde */
-}
-
-/* capas animadas */
-.footer .wave1{
-  top: 0;
-  opacity: 1;
-  animation: waveMove 7s linear infinite;
-}
-.footer .wave2{
-  top: 10px;
-  opacity: 0.5;
-  animation: waveMoveReverse 10s linear infinite;
-}
-
-@keyframes waveMove{
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-@keyframes waveMoveReverse{
-  0%   { transform: translateX(-50%); }
-  100% { transform: translateX(0); }
 }
 
 .footer-links li{

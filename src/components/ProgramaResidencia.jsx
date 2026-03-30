@@ -87,7 +87,7 @@ function ProgramaResidencia({
                   <span className="destacado_negro_2">
                     Número de vacantes:{" "}
                   </span>
-                  4 (Cuatro) 2 por la UBA / 2 por Colegio Medico de la Pcia. Bs.
+                  3 (Tres) 2 por la UBA / 1 por Colegio Médico de la Pcia. Bs.
                   As.
                 </span>
               </li>

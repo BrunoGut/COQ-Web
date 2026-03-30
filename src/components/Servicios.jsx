@@ -15,7 +15,6 @@ export default function Servicios() {
 	return (
 		<section className="servicios" id="servicios" aria-label="Servicios">
 			<div className="servicios__inner">
-				<SectionHeading title="Servicios" />
 
 				<div className="servicios__grid" role="list" aria-label="Lista de servicios">
 					{SERVICIOS_ITEMS.map((item) => (											//devuelvo un item por cada servicio con .map

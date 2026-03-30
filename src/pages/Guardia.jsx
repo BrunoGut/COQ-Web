@@ -14,11 +14,6 @@ export default function Guardia() {
         urlImg={guardiaImg}
         ariaLabel="Atención de guardia"
       />
-
-      <div className="guardia__inner">
-        <SectionHeading title="GUARDIA" />
-      </div>
-
       <GuardiaComponent />
     </>
   );

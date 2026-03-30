@@ -57,8 +57,6 @@ export default function Patologias() {
   return (
     <section className="patologias" id="patologias" aria-label="Patologías">
       <div className="patologias__inner">
-        <SectionHeading title="¿QUÉ TRATAMOS?" />
-
         <div className="slide-container" aria-label="Patologías destacadas">
           <div className="slide-content">
             <Carousel className="patologias__carousel" aria-label="Carrusel de patologías">

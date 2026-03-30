@@ -1,5 +1,5 @@
 .programaResidencia{
-    background-image: linear-gradient(to top, #003c77 0%, #f0f0f0 25%);
+    background: #f0f0f0;
     padding: 0;
 }
 
@@ -113,7 +113,7 @@
 }
 
 .img__programa{
-    width: 100%;
+    width: 90%;
     height: 400px;
     background-image: url(../images/residencia/centro.jpg);
     background-size: cover;
@@ -132,7 +132,7 @@
 }
 
 .mapa__programa{
-    width: 100%;
+    width: 90%;
     height: 400px;
     box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
     border-radius: 0 25px 25px 25px;

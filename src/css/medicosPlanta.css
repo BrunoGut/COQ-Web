@@ -1,8 +1,7 @@
 
 .planta{
-    background-color: #003c77;
-	background-image: linear-gradient(to bottom, #003c77 0%, #f0f0f0 2.5%, #f0f0f0 90%, #003c77 100%);
-    padding: 56px 0 90px;
+    background: #f0f0f0;
+    padding: 0;
 }
 
 .planta__inner{

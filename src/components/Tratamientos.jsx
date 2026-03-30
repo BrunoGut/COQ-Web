@@ -135,8 +135,6 @@ export default function Tratamientos() {
   return(
     <section className="tratamientos" id="que-tratamos" aria-label="Tratamientos">
       <div className="tratamientos__inner">
-        <SectionHeading className="tratamientos__heading" title="TRATAMIENTOS" />
-
         <div className="tratamientos__layout" aria-label="Listado y detalle de tratamientos">
           <aside
             className={`tratamientos__sidebar${isSidebarOpen ? " is-open" : ""}`}

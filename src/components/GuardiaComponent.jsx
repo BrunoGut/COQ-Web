@@ -2,8 +2,6 @@ import { useState } from "react";
 import Modal from "./Modal";
 import "../css/guardiaComponent.css";
 import GUARDIA from "./data/GuardiaArray";
-import BannerComponent from "./BannerComponent";
-import causasImg from "../images/guardia/imagen2.jpg";
 
 export default function GuardiaComponent() {
   const firstId = GUARDIA[0]?.id ?? null; // Obtener el ID del primer elemento
@@ -32,15 +30,7 @@ export default function GuardiaComponent() {
 
   return (
     <section className="guardia">
-      <div className="info__grid">
-        {/*<div className="info__div">
-          <h2 className="info__text">Servicio de guardia para urgencias del paciente</h2>
-          <p>Teléfono de contacto: <span className="texto__subrayado">11 2206-2650</span></p>
-          <p>
-            O enviar un mensaje a nuestro WhatsApp haciendo <a href="https://wa.me/541138721437" target="_blank" rel="noopener noreferrer" className="info__link">clic aquí</a>.
-          </p>
-        </div>*/}
-
+      {/*<div className="info__grid">
         <div className="info__div">
           <h2 className="info__text">Horarios</h2>
           <p>
@@ -53,18 +43,29 @@ export default function GuardiaComponent() {
           <h2 className="info__text">¿Dónde estamos?</h2>
           <p><span className="texto__subrayado">Humberto Primo 298, Quilmes, Buenos Aires, Argentina.</span></p>
         </div>
-      </div>
-
-      <BannerComponent
-        className="causas__banner"
-        title="Posibles causas"
-        urlImg={causasImg}
-        ariaLabel="Causas de consulta"
-      >
-        <button type="button" className="card-button" onClick={openModal}> {/*evento de abrir el modal al hacer click*/}
-          Saber más
+      </div>*/}
+      <div className="guardia__grid">
+        <div className="guardia__item">
+          <i className="bi bi-clock contacto__icon" aria-hidden="true" />
+          <h3 className="contacto__label">Horarios</h3>
+          <p className="guardia_text">
+            Lunes a viernes de <span className="destacado_negro">8:00 a 19:30h</span> <br />Sábados de <span className="destacado_negro">8:00 a 17:30h</span> <br />
+            Domingos y feriados de <span className="destacado_negro">10:00 a 13:00h</span>
+          </p>
+        </div>
+        <div className="guardia__item">
+          <i className="bi bi-geo-alt contacto__icon" aria-hidden="true" />
+          <h3 className="contacto__label">¿Dónde estamos?</h3>
+          <p className="guardia_text">Humberto Primo 298, Quilmes, Buenos Aires, Argentina.</p>
+        </div>
+        <button type="button" className="guardia-button-vacio" onClick={openModal}> {/*evento de abrir el modal al hacer click*/}
+          <div className="guardia__item">
+          <i className="bi bi-clipboard2-pulse contacto__icon" aria-hidden="true" />
+          <h3 className="contacto__label">Posibles causas</h3>
+          <p className="guardia_text">Conocé las posibles causas de los síntomas visuales más comunes.</p>
+        </div>
         </button>
-      </BannerComponent>
+      </div>
 
       <Modal
         isOpen={isModalOpen}

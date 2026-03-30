@@ -1,9 +1,8 @@
 @import "leaflet/dist/leaflet.css";
 
 .mapa {
-	background-color: #003c77;
-    background-image: linear-gradient(to top, #003c77 0%, #f0f0f0 15%);
-    padding: 56px 0 72px;
+	background: #f0f0f0;
+    padding: 0;
 }
 
 .mapa__inner {
