@@ -1,0 +1,88 @@
+.reseñas__section {
+  padding: 60px 20px;
+  background-color: #f5f5f5;
+}
+
+.reseñas__titulo {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.reseñas__contenedor {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.reseñas__contenedor.fade-in {
+  opacity: 1;
+}
+
+.reseñas__contenedor.fade-out {
+  opacity: 0;
+}
+
+.reseña__card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 350px;
+  min-height: 350px;
+}
+
+.reseña__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.reseña__comillas {
+  font-size: 2.5rem;
+  color: #003c77;
+  line-height: 1;
+}
+
+.reseña__comentario {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  line-clamp: 8;
+  -webkit-box-orient: vertical;
+}
+
+.reseña__nombre {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .reseñas__contenedor {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .reseñas__titulo {
+    font-size: 1.5rem;
+  }
+  
+  .reseña__card {
+    padding: 20px;
+  }
+}

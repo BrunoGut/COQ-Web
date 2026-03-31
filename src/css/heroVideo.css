@@ -1,7 +1,48 @@
-.hero-wrap {
-    position: relative;
+.hero-container {
+    display: flex;
     height: 100vh;
     max-height: 700px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-content-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #E6E8EB;
+    padding: 40px;
+}
+
+.hero-text-wrapper {
+    max-width: 500px;
+    width: 100%;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #2c2c2c;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+.hero-content-right {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.hero-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
 }
 
@@ -34,15 +75,11 @@
 }
 
 .boton-hero{
-    position: absolute;
-    left: 50%;
-    bottom: 24px;
-    transform: translateX(-50%);
     display: flex;
-    gap: 12px;
-    align-items: center;
-    justify-content: center;
-    width: min(900px, calc(100% - 32px));
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    width: 100%;
 }
 
 .boton-hero button{
@@ -57,10 +94,11 @@
     border: 2px solid transparent;
 }
 
-.boton-guardia{
+.boton-hero .boton-guardia{
     background: #003c77;
     color: #fff;
     border-color: #ffffff;
+    border-radius: 50px;
 }
 
 .boton-guardia:hover{
@@ -86,14 +124,53 @@
     line-height: 1;
 }
 
-@media (max-width: 576px) {
-    .boton-hero{
+@media (max-width: 991px) {
+    .hero-container {
         flex-direction: column;
-        bottom: 16px;
-        gap: 10px;
+        max-height: none;
+        height: auto;
+    }
+
+    .hero-content-left {
+        min-height: 400px;
+        padding: 60px 20px;
+    }
+
+    .hero-content-right {
+        min-height: 400px;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-content-left {
+        padding: 40px 20px;
+        min-height: 350px;
+        text-align: center;
+    }
+
+    .boton-hero {
+        align-items: center;
     }
 
     .boton-hero button{
-        width: 100%;
+        padding: 0.85rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .servicios__carousel .carousel-control-prev-icon, .servicios__carousel .carousel-control-next-icon{
+        width: 20px;
+        height: 20px;
+    }
+
+    .servicios__card{
+        max-width: 90%;
     }
 }

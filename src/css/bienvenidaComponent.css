@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+.bienvenida__section {
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.bienvenida__texto {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.bienvenida__titulo {
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: 700;
+  margin: 0;
+}
+
+.bienvenida__cards {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.bienvenida__card {
+  background: #8D9EC1;
+  border-radius: 30px;
+  padding: 2.5rem 2rem;
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+  height: 390px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  color: #ffffff;
+}
+
+.bienvenida__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.bienvenida__card-icon {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.bienvenida__card-icon i {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.bienvenida__card-titulo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  margin-top: 2.5rem;
+  color: #ffffff;
+  line-height: 1.1;
+}
+
+.bienvenida__card-descripcion {
+  font-size: 1rem;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 400;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .bienvenida__cards {
+    gap: 1.5rem;
+  }
+  
+  .bienvenida__card {
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .bienvenida__section {
+    padding: 3rem 1.5rem;
+  }
+
+  .bienvenida__titulo {
+    font-size: 2rem;
+  }
+
+  .bienvenida__cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bienvenida__card {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .bienvenida__titulo {
+    font-size: 1.75rem;
+  }
+
+  .bienvenida__card {
+    padding: 2rem 1.5rem;
+  }
+
+  .bienvenida__card-titulo {
+    font-size: 1.3rem;
+  }
+
+  .bienvenida__card-descripcion {
+    font-size: 0.95rem;
+  }
+}

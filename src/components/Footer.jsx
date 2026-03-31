@@ -47,7 +47,7 @@ export default function Footer() {
               </div>
 
               <div className="col-12 col-sm-6 col-lg-3">
-                <div className="footer-title">Atención al paciente</div>
+                <div className="footer-title">Atención <br />al paciente</div>
                 <ul className="footer-links list-unstyled mb-0">
                   <li>
                     <Link to="/que-tratamos">Qué tratamos</Link>
@@ -121,8 +121,8 @@ export default function Footer() {
         </div>
 
         <div className="footer-divider" />
-        <div className="footer-bottom">© 2026 Centro de Ojos Quilmes. Todos los derechos reservados.</div>
       </div>
+      <div className="footer-bottom">© 2026 Centro de Ojos Quilmes. Todos los derechos reservados.</div>
     </footer>  
   );
 }

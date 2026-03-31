@@ -7,17 +7,7 @@ import { Link } from 'react-router-dom';
 
 export default function Prepagas() {
   return (
-    <section className="prepagas" id="prepagas" aria-label="Prepagas">
-      <BannerComponent
-        className="prepagas__banner"
-        title="Coberturas médicas"
-        urlImg={coberturasImg}
-        ariaLabel="Coberturas médicas"
-      >
-        <Link className="prepagas__button" to="/coberturas">Saber más</Link>
-      </BannerComponent>
-
       <CarruselPrepagas />
-    </section>
+
   );
 }
