@@ -97,8 +97,7 @@
 .boton-hero .boton-guardia{
     background: #003c77;
     color: #fff;
-    border-color: #ffffff;
-    border-radius: 50px;
+    border-color: none;    border-radius: 50px;
 }
 
 .boton-guardia:hover{

@@ -146,6 +146,22 @@ export default function Navbar() {
                 )}
               </li>
             ))}
+
+            {/* Contacto y Turnos (solo mobile) */}
+            <li className="nav-item navbar__item navbar__mobileOnly">
+              <div className="navbar__itemRow">
+                <Link className="nav-link navbar__link" to="/contacto" onClick={() => setIsOpen(false)}>
+                  Contacto
+                </Link>
+              </div>
+            </li>
+            <li className="nav-item navbar__item navbar__mobileOnly">
+              <div className="navbar__itemRow">
+                <Link className="nav-link navbar__link" to="/turnos-online" onClick={() => setIsOpen(false)}>
+                  Turnos Online
+                </Link>
+              </div>
+            </li>
           </ul>
 
           {/* CTAs — derecha */}
