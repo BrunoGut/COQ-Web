@@ -3,6 +3,7 @@ import heroPoster from "../images/banner-video.png";
 import "../css/heroVideo.css";
 import { Link } from "react-router-dom";
 import { useCallback, useState } from "react";
+import bannerHome from "../images/bannerHome.jpeg";
 
 export default function HeroVideo() {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
@@ -16,15 +17,7 @@ export default function HeroVideo() {
       <div className="hero-container">
         <div className="hero-content-left">
           <div className="hero-text-wrapper">
-            <h1 className="hero-title">Estamos <br /> para cuidar <br /> tu visión</h1>
             <div className="boton-hero">
-              {/*<Link to="/guardia">
-                <button className="boton-guardia" type="button">
-                  <i className="bi bi-hospital-fill" aria-hidden="true" />
-                  <span>GUARDIA</span>
-                </button>
-              </Link>*/}
-
               <a
                 href="https://wa.me/541138721437"
                 target="_blank"

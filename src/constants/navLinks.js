@@ -12,7 +12,7 @@ export const NAV_LINKS = [
     ],
   },
   {
-    label: 'Paciente',
+    label: 'Servicios',
     href: '#',
     submenu: [
       { label: '¿Qué tratamos?',  href: '/que-tratamos' },
