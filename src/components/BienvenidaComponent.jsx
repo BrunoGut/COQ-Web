@@ -5,36 +5,30 @@ function BienvenidaComponent() {
   return (
     <section className="bienvenida__section">
         <div className="bienvenida__texto">
-          <h2 className="bienvenida__titulo">¡Bienvenidos al Centro de Ojos Quilmes!</h2>
+          <h3 className="bienvenida__titulo">Bienvenidos al <br /> Centro de Ojos Quilmes</h3>
         </div>
         <div className="bienvenida__cards">
             <div className="bienvenida__card">
-              <div className="bienvenida__card-icon">
-                <i className="bi bi-star-fill" />
-              </div>
               <h3 className="bienvenida__card-titulo">Cuerpo médico <br /> de excelencia</h3>
+              <hr className="bienvenida__card-linea" />
               <p className="bienvenida__card-descripcion">
-                Un equipo de especialistas referentes en cada área de la oftalmología, dedicados a brindar diagnósticos precisos con el respaldo de una trayectoria confortable.
+                Un <span className='destacado-gris'>equipo de especialistas referentes en cada área de la oftalmología</span>, dedicados a brindar diagnósticos precisos con el respaldo de una trayectoria confortable.
               </p>
             </div>
 
             <div className="bienvenida__card">
-              <div className="bienvenida__card-icon">
-                <i className="bi bi-robot" />
-              </div>
-              <h3 className="bienvenida__card-titulo">Precisión y vanguardia</h3>
+              <h3 className="bienvenida__card-titulo">Precisión <br /> y vanguardia</h3>
+              <hr className="bienvenida__card-linea" />
               <p className="bienvenida__card-descripcion">
-                Equipamiento de última generación para procedimientos de alta complejidad. Innovación constante para garantizar resultados óptimos en tu salud visual.
+                <span className="destacado-gris">Equipamiento de última generación</span> para procedimientos de alta complejidad. Innovación constante para garantizar resultados óptimos en tu salud visual.
               </p>
             </div>
 
             <div className="bienvenida__card">
-              <div className="bienvenida__card-icon">
-                <i className="bi bi-eye-fill" />
-              </div>
               <h3 className="bienvenida__card-titulo">Atención personalizada</h3>
+              <hr className="bienvenida__card-linea" />
               <p className="bienvenida__card-descripcion">
-                Entendemos que cada mirada es única. Ofrecemos una atención humana y cercana, adaptada a las necesidades específicas de cada uno de nuestros pacientes.
+                Entendemos que cada mirada es única. <span className="destacado-gris">Brindamos una atención humana y cercana</span>, adaptada a las necesidades específicas de cada uno de nuestros pacientes.
               </p>
             </div>
         </div>
