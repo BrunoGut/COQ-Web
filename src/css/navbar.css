@@ -1,6 +1,6 @@
 /* ── Navbar principal ─────────────────────────────────────── */
 .navbar--coq {
-  background: #f0f0f0;
+  background: #ffffff;
   margin: 0;
   z-index: 1000;
   width: 100%;
@@ -240,8 +240,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   background: #003c77;
   color: #ffffff;

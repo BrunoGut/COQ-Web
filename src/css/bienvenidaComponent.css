@@ -91,6 +91,53 @@
   font-weight: 600;
 }
 
+.bienvenida__banner{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../images/banner-bienvenida.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 600px;
+  overflow: hidden;
+}
+
+.bienvenida__overlay{
+  position: absolute;
+  inset: 0;
+  background: rgba(36, 66, 102, 0.45);
+}
+
+.bienvenida__contenido{
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.bienvenida__subtitulo{
+  font-size: 1.rem;
+  width: 100%;
+  color: #ffffff;
+  font-weight: 300;
+  margin: 0 0 16px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.bienvenida__descripcion{
+  font-size: 3.3rem;
+  line-height: 1.1;
+  color: #ffffff;
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: 1.4px;
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
   .bienvenida__cards {

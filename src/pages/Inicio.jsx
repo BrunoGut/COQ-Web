@@ -12,12 +12,12 @@ export default function Inicio() {
       <HeroVideo />
       {/*<Servicios />*/}
       <BienvenidaComponent />
-      <BannerComponent 
+      {/*<BannerComponent 
         className='turnos__banner'
         title={<>Trayectoria al servicio<br />de tus ojos</>}
         urlImg={bannerSecundarioImg}
         ariaLabel="Banner secundario"
-      />
+      />*/}
       <Servicios />
       <CarruselPrepagas />
       <ReseñasComponent />
