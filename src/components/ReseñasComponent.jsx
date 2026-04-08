@@ -30,17 +30,22 @@ function ReseñasComponent() {
 
   return (
     <section className="reseñas__section">
-      <h2 className="reseñas__titulo">El respaldo de nuestra comunidad</h2>
-      <div className={`reseñas__contenedor ${fadeIn ? 'fade-in' : 'fade-out'}`}>
-        {reseñasActuales.map((reseña) => (
-          <div key={reseña.id} className="reseña__card">
-            <div className="reseña__comillas">
-              <i className="bi bi-quote"></i>
+      <div className="reseñas__wrapper">
+        <div className="reseñas__header">
+          <h2 className="reseñas__titulo">Lo que dice nuestra comunidad</h2>
+          <p className="reseñas__subtitulo">Reseñas Google</p>
+        </div>
+        <div className={`reseñas__contenedor ${fadeIn ? 'fade-in' : 'fade-out'}`}>
+          {reseñasActuales.map((reseña, index) => (
+            <div key={reseña.id} className={`reseña__card reseña__card--${index + 1}`}>
+              <div className="reseña__comillas">
+                <i className="bi bi-quote"></i>
+              </div>
+              <p className="reseña__comentario">{reseña.comentario}</p>
+              <p className="reseña__nombre">{reseña.nombre}</p>
             </div>
-            <p className="reseña__comentario">{reseña.comentario}</p>
-            <p className="reseña__nombre">{reseña.nombre}</p>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
