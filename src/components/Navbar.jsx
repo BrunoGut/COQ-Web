@@ -60,7 +60,7 @@ export default function Navbar() {
     const el = itemRefs.current[label]
     if (!el) return 0
     const r = el.getBoundingClientRect()
-    return r.left + r.width / 2
+    return r.left
   }
 
   useEffect(() => {

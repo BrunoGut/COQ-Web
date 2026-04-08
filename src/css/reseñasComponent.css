@@ -11,8 +11,15 @@
 }
 
 .reseñas__header {
-  flex: 0 0 400px;
-  margin-left: 40px;
+  flex: 0 0 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reseñas__header__contenido {
+  text-align: start;
 }
 
 .reseñas__titulo {
@@ -32,9 +39,19 @@
 .reseñas__contenedor {
   flex: 1;
   display: flex;
-  position: relative;
-  height: 450px;
+  align-items: center;
+  justify-content: center;
   transition: opacity 0.5s ease-in-out;
+}
+
+.reseñas__cards-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .reseñas__contenedor.fade-in {
@@ -49,33 +66,32 @@
   background-color: #f0f0f0;
   border-radius: 30px;
   padding: 40px 35px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
   gap: 20px;
   position: absolute;
   width: 320px;
-  min-height: 280px;
-  max-height: 350px;
+  min-height: 350px;
+  max-height: 400px;
 }
 
 .reseña__card--1 {
   top: 0;
-  right: 64%;
-  z-index: 3;
+  right: 56%;
+  z-index: 2;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.16);
 }
 
 .reseña__card--2 {
   top: 50px;
-  right: 32%;
-  z-index: 2;
+  right: 12%;
+  z-index: 1;
 }
 
 .reseña__card--3 {
-  top: 100px;
-  right: 0;
-  z-index: 1;
+  display: none !important;
 }
 
 .reseña__card:hover {
@@ -84,9 +100,12 @@
 }
 
 .reseña__comillas {
-  font-size: 2.5rem;
-  color: #003c77;
   line-height: 1;
+}
+
+.reseña__comillas img {
+  width: 40px;
+  height: auto;
 }
 
 .reseña__comentario {
@@ -147,6 +166,7 @@
   }
   
   .reseña__card--3 {
+    display: none;
     top: 360px;
     left: 50%;
     transform: translateX(-50%);

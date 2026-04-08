@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../css/reseñasComponent.css';
 import RESEÑAS from './data/ReseñasArray';
+import quotesImg from '../images/reseñas/quotes.png';
 
 function ReseñasComponent() {
   const [reseñasActuales, setReseñasActuales] = useState([]);
@@ -8,7 +9,7 @@ function ReseñasComponent() {
 
   const obtenerReseñasAleatorias = () => {
     const reseñasMezcladas = [...RESEÑAS].sort(() => Math.random() - 0.5);
-    return reseñasMezcladas.slice(0, 3);
+    return reseñasMezcladas.slice(0, 2);
   };
 
   useEffect(() => {
@@ -32,19 +33,23 @@ function ReseñasComponent() {
     <section className="reseñas__section">
       <div className="reseñas__wrapper">
         <div className="reseñas__header">
-          <h2 className="reseñas__titulo">Lo que dice nuestra comunidad</h2>
-          <p className="reseñas__subtitulo">Reseñas Google</p>
+          <div className="reseñas__header__contenido">
+            <h2 className="reseñas__titulo">Lo que dice <br /> nuestra <br /> comunidad</h2>
+            <p className="reseñas__subtitulo">Reseñas Google</p>
+          </div>
         </div>
         <div className={`reseñas__contenedor ${fadeIn ? 'fade-in' : 'fade-out'}`}>
-          {reseñasActuales.map((reseña, index) => (
-            <div key={reseña.id} className={`reseña__card reseña__card--${index + 1}`}>
-              <div className="reseña__comillas">
-                <i className="bi bi-quote"></i>
+          <div className="reseñas__cards-wrapper">
+            {reseñasActuales.map((reseña, index) => (
+              <div key={reseña.id} className={`reseña__card reseña__card--${index + 1}`}>
+                <div className="reseña__comillas">
+                  <img src={quotesImg} alt="Comillas" />
+                </div>
+                <p className="reseña__comentario">{reseña.comentario}</p>
+                <p className="reseña__nombre">{reseña.nombre}</p>
               </div>
-              <p className="reseña__comentario">{reseña.comentario}</p>
-              <p className="reseña__nombre">{reseña.nombre}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
