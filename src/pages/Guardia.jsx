@@ -8,12 +8,6 @@ import "../css/guardiaComponent.css";
 export default function Guardia() {
   return (
     <>
-      <BannerComponent
-        className="guardia__banner"
-        title="Atención de guardia"
-        urlImg={guardiaImg}
-        ariaLabel="Atención de guardia"
-      />
       <GuardiaComponent />
     </>
   );

@@ -5,7 +5,6 @@ export default function Nosotros() {
     return (
         <>
             <QuienesSomos />
-            <Mapa />
         </>
     );
 }

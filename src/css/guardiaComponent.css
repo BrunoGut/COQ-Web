@@ -1,143 +1,169 @@
-.guardia{
-    background: #f0f0f0;
+.guardia {
+    background: #f9f9f9;
     padding: 0;
 }
 
-.guardia__banner{
-    margin-bottom: 40px;
-}
-
-.guardia__inner{
-    width: min(1100px, calc(100% - 64px));
-    margin: 0 auto;
-}
-
-.guardia .causas__banner{
-    margin-bottom: 50px;
-}
-
-.guardia__grid{
-    display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 20px;
-	width: min(980px, calc(100% - 64px));
-	margin: 0 auto 90px;
-	padding: 36px 0;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-	align-items: start;
-}
-
-.guardia__item{
+.guardia__banner {
+    background: #929cb2;
+    width: 100%;
+    height: 400px;
     display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-	gap: 6px;
-    transition: transform 0.2s ease;
-	height: 100%;
-}
-
-.guardia__item:hover{
-    transform: scale(1.05);
-}
-
-.guardia-button-vacio{
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-}
-
-.guardia_text{
-    font-size: 16px;
-    color: rgba(18, 18, 18, 0.65);
-    font-weight: 600;
-}
-
-.guardia .info__grid{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 32px;
-    justify-content: center;
     align-items: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-.guardia .info__grid h2{
-    font-size: 40px;
-    font-weight: 700;
-    color: #003c77;
-}
-
-.guardia .info__div{
     justify-content: center;
+}
+
+.guardia__contenido {
     text-align: center;
 }
 
-.guardia .info__div p{
-    font-size: 20px;
-    padding-top: 5px;
-}
-
-.guardia .texto__subrayado{
-    text-decoration: underline;
+.guardia__banner-titulo {
+    font-size: 40px;
     font-weight: 600;
-}
-
-.guardia .texto__subrayado:hover{
-    color: #003c77;
-    transition: color 0.3s;
-}
-
-/* Botón reutilizado en Guardia (evita depender de patologias.css) */
-.card-button{
-    border: 2px solid transparent;
-    font-size: 16px;
-    font-weight: 700;
     color: #fff;
-    padding: 0.85rem 1.1rem;
-    background: #003c77;
-    border-radius: 12px;
-    margin-top: 12px;
-    gap: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    display: inline-flex;
+    margin: 0 0 8px;
+}
+
+.guardia__banner-subtitulo {
+    font-size: 20px;
+    font-weight: 300;
+    color: #fff;
+    margin: 0;
+}
+
+/* ── Info / Horarios ── */
+.guardia__info {
+    background: #fff;
+    padding: 48px 24px 40px;
+    text-align: center;
+}
+
+.guardia__horarios-titulo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 65px;
+    letter-spacing: 0.01em;
+}
+
+.guardia__horarios {
+    display: flex;
     align-items: center;
-    justify-content: center;
-    letter-spacing: 0.2px;
+    justify-content: space-evenly;
+    gap: 0;
+    width: 100%;
+    margin: 0 auto 65px;
 }
 
-.card-button:hover{
-    background: #ffffff;
-    color: #003c77;
-    border-color: #003c77;
+.guardia__horario-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 0 48px;
+    flex: 1;
 }
 
-@media screen and (max-width: 600px){
-    .guardia .info__grid{
+.guardia__horario-item:hover{
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+}
+
+.guardia__horario-dia {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.guardia__horario-hora {
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: #555;
+}
+
+.guardia__horario-divider {
+    width: 1px;
+    height: 56px;
+    background: #ccc;
+    flex-shrink: 0;
+}
+
+.guardia__aviso {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.7;
+    text-align: center;
+}
+
+/* ── Mapa simple ── */
+@import "leaflet/dist/leaflet.css";
+
+.guardia__mapa-section {
+    background: #fff;
+    padding: 40px 24px 48px;
+}
+
+.guardia__mapa-card {
+    width: 100%;
+    max-width: 1300px;
+    height: 450px;
+    margin: 0 auto;
+    background: #e8e8e8;
+    border-radius: 16px;
+    padding: 28px;
+}
+
+.guardia__mapa-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 24px;
+    align-items: center;
+    text-align: center;
+}
+
+.guardia__mapa-titulo {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 10px;
+}
+
+.guardia__mapa-direccion {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.guardia__mapa-frame {
+    width: 100%;
+    height: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    margin: 20px 0;
+}
+
+.guardia__mapa-leaflet {
+    width: 100%;
+    height: 100%;
+}
+
+/* responsive */
+@media (max-width: 600px) {
+    .guardia__horarios {
+        flex-direction: column;
         gap: 20px;
-        margin-top: 60px;
-        margin-bottom: 60px;
     }
 
-    .guardia .info__grid h2{
-        font-size: 28px;
+    .guardia__horario-divider {
+        width: 44px;
+        height: 1px;
     }
 
-    .guardia .info__div p{
-        font-size: 16px;
-    }
-
-    .guardia .texto__subrayado{
-        font-size: 16px;
-    }
-
-    .guardia .card-button{
-        font-size: 14px;
-        padding: 0.75rem 1rem;
+    .guardia__horario-item {
+        padding: 0;
     }
 }
-

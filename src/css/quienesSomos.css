@@ -1,102 +1,221 @@
-.quienesSomos {
-	background: #f0f0f0;
-	padding: 56px 0 72px;
+/* ── Banner ── */
+.qs__banner {
+    background: #929cb2;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-.quienesSomos__inner {
-	width: min(1100px, calc(100% - 64px));
-	margin: 0 auto;
+.qs__banner-contenido {
+    text-align: center;
 }
 
-.quienesSomos__grid {
-	display: grid;
-	grid-template-columns: 1.1fr 0.9fr;
-	gap: 56px;
-	align-items: stretch;
+.qs__banner-titulo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 8px;
 }
 
-.quienesSomos__media{
-	display: grid;
-	grid-template-columns: 1fr;
+.qs__banner-subtitulo {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #fff;
+    margin: 0;
+}
+
+/* ── Contenido ── */
+.qs__info {
+    background: #fff;
+    padding: 56px 24px 48px;
+}
+
+.qs__inner {
 	width: 100%;
-	gap: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
 }
 
-.quienesSomos__img{
-	width: 100%;
+/* ── Bloques de texto ── */
+.qs__bloque {
+    margin-bottom: 40px;
 }
 
-.quienesSomos__text {
-	margin: 0;
-	font-size: 18px;
-	line-height: 1.6;
-	color: rgba(26, 26, 26, 0.7);
-	margin: 10px;
+.qs__bloque-titulo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 16px;
 }
 
-.quienesSomos__text + .quienesSomos__text {
-	margin-top: 14px;
+.qs__bloque-texto {
+    font-size: 0.95rem;
+    color: rgba(26, 26, 26, 0.7);
+    line-height: 1.7;
+    margin: 0;
 }
 
-.quienesSomos__media {
-	width: 100%;
-	box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
-	border-radius: 0 25px 25px 25px;
-	border: 4px solid transparent;
-	overflow: hidden;
-	transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+/* ── Estadísticas ── */
+.qs__stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin-top: 8px;
 }
 
-.quienesSomos__media:hover{
-	transform: scale(1.02);
-	border-color: #003c77;
+.qs__stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    flex: 1;
 }
 
-.quienesSomos__image {
-	display: block;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
-
-.destacado_azul_qs{
+.qs__stat:hover .qs__stat-numero, .qs__stat:hover .qs__stat-label {
 	color: #003c77;
-	font-weight: 600;
+	transition: color 0.3s ease;
 }
 
-.destacado_negro_qs{
-	color: #000000;
-	font-weight: 600;
+.qs__stat-numero {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #1a1a1a;
 }
 
-.destacado_negro_qs_cursiva{
-	color: #000000;
-	font-weight: 600;
-	font-style: italic;
+.qs__stat-label {
+    font-size: 0.95rem;
+    color: rgba(26, 26, 26, 0.65);
 }
 
-@media (max-width: 992px) {
-	.quienesSomos__inner {
-		width: min(1100px, calc(100% - 40px));
-	}
 
-	.quienesSomos__grid {
-		grid-template-columns: 1fr;
-		gap: 28px;
-	}
-
+.qs__stat-divider {
+    width: 1px;
+    height: 60px;
+    background: #ccc;
+    flex-shrink: 0;
+    margin: 0 24px;
 }
 
+/* ── Link ── */
+.qs__link {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 0.9rem;
+    color: #003c77;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.qs__link:hover {
+    border-color: #003c77;
+}
+
+/* ── Tarjeta de mapa ── */
+@import "leaflet/dist/leaflet.css";
+
+.qs__mapa-section {
+    background: #fff;
+    padding: 40px 24px 48px;
+}
+
+.qs__mapa-card {
+    width: 100%;
+    max-width: 1300px;
+    height: 450px;
+    margin: 0 auto;
+    background: #e8e8e8;
+    border-radius: 16px;
+    padding: 28px;
+}
+
+.qs__mapa-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 24px;
+    align-items: center;
+    text-align: center;
+}
+.qs__mapa-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: stretch;
+    text-align: start;
+}
+.qs__mapa-titulo {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 50px;
+}
+
+.qs__mapa-block {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 14px;
+}
+
+.qs__mapa-block:last-child {
+    margin-bottom: 0;
+}
+
+.qs__mapa-subtitulo {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.qs__mapa-direccion {
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.qs__mapa-frame {
+    width: 100%;
+    height: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    margin: 20px 0;
+}
+
+.qs__mapa-leaflet {
+    width: 100%;
+    height: 100%;
+}
+
+/* ── Responsive ── */
 @media (max-width: 600px) {
-	.quienesSomos {
-		padding: 44px 0 56px;
-	}
+    .qs__inner {
+        max-width: 100%;
+    }
 
-	.quienesSomos__text{
-		font-size: 16px;
-	}
+    .qs__stats {
+        flex-direction: column;
+        gap: 24px;
+    }
 
-	.quienesSomos__inner {
-		width: min(1100px, calc(100% - 32px));
-	}
+    .qs__stat-divider {
+        width: 60px;
+        height: 1px;
+        margin: 0;
+    }
+
+    .qs__mapa-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .qs__mapa-frame {
+        height: 200px;
+    }
 }
+
