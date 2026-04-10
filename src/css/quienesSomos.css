@@ -1,3 +1,5 @@
+@import "leaflet/dist/leaflet.css";
+
 /* ── Banner ── */
 .qs__banner {
     background: #929cb2;
@@ -30,7 +32,8 @@
 /* ── Contenido ── */
 .qs__info {
     background: #fff;
-    padding: 56px 24px 48px;
+    padding: 56px 24px 40px;
+    overflow: hidden;
 }
 
 .qs__inner {
@@ -66,6 +69,7 @@
     justify-content: center;
     gap: 0;
     margin-top: 8px;
+    margin-bottom: 55px;
 }
 
 .qs__stat {
@@ -117,11 +121,11 @@
 }
 
 /* ── Tarjeta de mapa ── */
-@import "leaflet/dist/leaflet.css";
 
 .qs__mapa-section {
     background: #fff;
-    padding: 40px 24px 48px;
+    padding: 0 24px 48px;
+    scroll-margin-top: 150px;
 }
 
 .qs__mapa-card {
@@ -146,7 +150,7 @@
     flex-direction: column;
     justify-content: center;
     align-self: stretch;
-    text-align: start;
+    text-align: center;
 }
 .qs__mapa-titulo {
     font-size: 20px;
@@ -188,9 +192,10 @@
     margin: 20px 0;
 }
 
-.qs__mapa-leaflet {
+.qs__mapa-leaflet,
+.qs__mapa-leaflet .leaflet-container {
     width: 100%;
-    height: 100%;
+    height: 350px;
 }
 
 /* ── Responsive ── */

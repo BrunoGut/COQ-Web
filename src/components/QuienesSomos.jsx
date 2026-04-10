@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
-import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
+import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet'
+import { useEffect } from 'react'
 import L from 'leaflet'
 import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png'
 import markerIcon from 'leaflet/dist/images/marker-icon.png'
@@ -18,6 +19,12 @@ const UBICACIONES = [
   { key: 'microcirugia', titulo: 'Microcirugía y Láser',          direccion: 'Alvear 764, Quilmes.',         coords: { lat: -34.7236182,          lng: -58.2534434 } },
   { key: 'consultorios', titulo: 'Consultorios Mitre',            direccion: 'Mitre 803, Quilmes.',          coords: { lat: -34.723958326538046,  lng: -58.25217090378334 } },
 ]
+
+function MapResizer() {
+  const map = useMap()
+  useEffect(() => { setTimeout(() => map.invalidateSize(), 300) }, [map])
+  return null
+}
 
 export default function QuienesSomos() {
   return (
@@ -92,7 +99,7 @@ export default function QuienesSomos() {
       </section>
 
       {/* Tarjeta de mapa */}
-      <section className="qs__mapa-section">
+      <section className="qs__mapa-section" id="donde-estamos">
         <div className="qs__mapa-card">
           <div className="qs__mapa-grid">
             <div className="qs__mapa-info">
@@ -109,7 +116,9 @@ export default function QuienesSomos() {
                 className="qs__mapa-leaflet"
                 center={[UBICACIONES[0].coords.lat, UBICACIONES[0].coords.lng]}
                 zoom={17}
+                style={{ height: '350px', width: '100%' }}
               >
+                <MapResizer />
                 <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
                 {UBICACIONES.map((u) => (
                   <Marker key={u.key} position={[u.coords.lat, u.coords.lng]}>
