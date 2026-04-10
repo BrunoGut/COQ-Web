@@ -11,7 +11,7 @@ import francoPerroneImg from "../../images/staffMedico/franco-perrone.png";
 const DIRECTORES_MEDICOS = [
     {
         id: 1,
-        nombre: "DR. DANIEL PERRONE",
+        nombre: "Dr. Daniel Perrone",
         imagen: danielPerroneImg,
         descripcion: "Médico Oftalmólogo Especialista jerarquizado en Catarata, Cirugía Refractiva y Transplante de Córnea.",
         linkedin: "https://www.linkedin.com/company/centro-de-ojos-quilmes/"
@@ -19,57 +19,57 @@ const DIRECTORES_MEDICOS = [
     {
         id: 2,
         imagen: gastonGomezCarideImg,
-        nombre: "DR. GASTÓN GOMEZ CARIDE",
+        nombre: "Dr. Gastón Gomez Caride",
         descripcion: "Médico Oftalmólogo Especialista jerarquizado en Retina y Vitreo.",
         linkedin: "https://www.linkedin.com/company/centro-de-ojos-quilmes/"
     },
     {
         id: 3,
         imagen: gerardoValvecchiaImg,
-        nombre: "DR. GERARDO VALVECCHIA",
+        nombre: "Dr. Gerardo Valvecchia",
         descripcion: "Médico Oftalmólogo Especialista jerarquizado en Catarata, Alta Miopía y Transplante de Córnea.",
         linkedin: "https://www.linkedin.com/in/gerardo-valvecchia-6536a088/"
     },
     {
         id: 4,
         imagen: lucianoDanielPerroneImg,
-        nombre: "DR. LUCIANO DANIEL PERRONE",
-        descripcion: "Medico Oftalmólogo Especialista jerarquizado en Catarata, Cornea y Cirugía Refractiva",
+        nombre: "Dr. Luciano Daniel Perrone",
+        descripcion: "Médico Oftalmólogo Especialista jerarquizado en Catarata, Córnea y Cirugía Refractiva.",
         linkedin: "https://www.linkedin.com/in/dr-luciano-d-perrone-78236b16b/"
     },
     {
         id: 5,
         imagen: robertoAlbertazziImg,
-        nombre: "DR. ROBERTO ALBERTAZZI",
-        descripcion: "Médico Oftalmólogo Especialista jerarquizado en Cirugía Refractiva, Catarata y Queratono",
+        nombre: "Dr. Roberto Albertazzi",
+        descripcion: "Médico Oftalmólogo Especialista jerarquizado en Cirugía Refractiva, Catarata y Queratocono.",
         linkedin: "https://www.linkedin.com/company/centro-de-ojos-quilmes/"
     },
     {
         id: 6,
         imagen: celinaLogiocoImg,
-        nombre: "DRA. CELINA LOGIOCO",
-        descripcion: "Médica Oftalmologa Especialista jerarquizadaen Glaucoma, Maculopatía y Retinopatía Diabética.",
+        nombre: "Dra. Celina Logioco",
+        descripcion: "Médica Oftalmóloga Especialista jerarquizada en Glaucoma, Maculopatía y Retinopatía Diabética.",
         linkedin: "https://www.linkedin.com/company/centro-de-ojos-quilmes/"
     },
     {
         id: 7,
         imagen: mercedesDaSilvaImg,
-        nombre: "DRA. MERCEDES DA SILVA",
-        descripcion: "Médica Oftalmóloga Especialista jerarquizada en Plástica ocular y Vías Lagrimales",
+        nombre: "Dra. Mercedes Da Silva",
+        descripcion: "Médica Oftalmóloga Especialista jerarquizada en Plástica Ocular y Vías Lagrimales.",
         linkedin: "https://www.linkedin.com/in/maria-mercedes-da-silva-47328b1a/"
     },
     {
         id: 8,
         imagen: virginiaZanutighImg,
-        nombre: "DRA. VIRGINIA E. ZANUTIGH",
-        descripcion: "Médica Oftalmologa Especialista jerarquizada y Consultora en Glaucoma. Presidente y Miembro Titular de la Asociación Argentina de Glaucoma.",
+        nombre: "Dra. Virginia E. Zanutigh",
+        descripcion: "Médica Oftalmóloga Especialista jerarquizada y Consultora en Glaucoma. Presidente y Miembro Titular de la Asociación Argentina de Glaucoma.",
         linkedin: "https://www.linkedin.com/in/dra-zanutigh-virginia-36468334/"
     },
     {
         id: 9,
         imagen: francoPerroneImg,
-        nombre: "DR. FRANCO PERRONE",
-        descripcion: "Médico Oftalmólogo Especialista jerarquizado en cirugía de Catarata y Córnea.",
+        nombre: "Dr. Franco Perrone",
+        descripcion: "Médico Oftalmólogo Especialista jerarquizado en Cirugía de Catarata y Córnea.",
         linkedin: "https://www.linkedin.com/company/centro-de-ojos-quilmes/"
     }
 ]
