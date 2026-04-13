@@ -31,7 +31,13 @@
 .directoresMedicos {
     background: #ffffff;
     width: 100%;
-    padding: 48px 0 72px;
+}
+
+.directores__horarios-titulo{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    letter-spacing: 0.01em;
 }
 
 .directoresMedicos__cards{
@@ -53,20 +59,13 @@
     height: 400px;
     box-sizing: border-box;
     border-radius: 25px;
-    background-color: #e3e6eb;
     overflow: hidden;
-    transition: none !important
+    transition: none !important;
+    background-color: #e3e6eb;
 }
 
 .directoresMedicos .card:hover{
     transform: none !important;
-    border: none !important;
-    
-}
-
-.directoresMedicos .card-header{
-    height: 130px;
-    background-color: #003c77;
 }
 
 .directoresMedicos .card-image{
@@ -108,10 +107,9 @@
 
 .directoresMedicos .card-name{
     margin: 10px 0 6px;
-    font-size: 21px;
+    font-size: 19px;
     font-weight: 600;
-    color: #003c77;
-    text-transform: uppercase;
+    color: #363636;
 }
 
 .directoresMedicos .card-description{
@@ -130,6 +128,7 @@
 
 .directoresMedicos .card-description p{
     margin: 0;
+    font-size: 14px;
 }
 
 .directoresMedicos .card-button{
@@ -201,6 +200,7 @@
 .directoresMedicos__cards .card .card-button{
     margin-top: auto;
 }
+
 
 @media (max-width: 992px){
     .directoresMedicos__cards{

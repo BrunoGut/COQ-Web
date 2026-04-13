@@ -18,7 +18,7 @@ function DirectoresMedicos() {
       <section className="directoresMedicos">
 
       <div className="guardia__info">
-        <h3 className="guardia__horarios-titulo">Directores médicos</h3>
+        <h3 className="directores__horarios-titulo">Directores médicos</h3>
       </div>
 
       <div className="directoresMedicos__cards">
