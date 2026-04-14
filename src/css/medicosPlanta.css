@@ -1,7 +1,7 @@
 
 .planta{
-    background: #f0f0f0;
-    padding: 0;
+    background: #ffffff;
+	padding: 0 0 50px;
 }
 
 .planta__inner{
@@ -32,26 +32,26 @@
     transition: all 0.2s ease;
 }
 
-.planta__item:hover{
+/*{.planta__item:hover{
     color: #003c77;
     border-bottom-color: #003c77;
     border-top-color: #003c77;
     cursor: default;
     text-shadow: 0 0 0 currentColor, 0.5px 0 0 currentColor;
-}
+}*/
 
 .planta__nombre{
     margin: 0;
     font-size: 19px;
-    font-weight: 700;
-    text-transform: uppercase;
+    font-weight: 600;
+	color: #363636;
 }
 
 .planta__especialidad{
     margin: 6px 0 0;
-    font-size: 15px;
+    font-size: 14px;
+	font-weight: 400;
     line-height: 1.4;
-    text-transform: uppercase;
 }
 
 @media (max-width: 992px) {

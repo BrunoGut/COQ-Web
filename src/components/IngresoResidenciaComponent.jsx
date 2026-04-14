@@ -1,202 +1,74 @@
-import React, { useState } from "react";
-import SectionHeading from "./SectionHeading";
 import "../css/ingresoResidenciaComponent.css";
-import Modal from "./Modal";
 
 function IngresoResidenciaComponent() {
-
-    const [isModalOpen, setIsModalOpen] = useState(false);
-
-    const openModal = () => setIsModalOpen(true);
-    const closeModal = () => setIsModalOpen(false);
-
   return (
-    <section className="ingresoResidencia" id="ingreso-residencia">
-      <div className="ingreso__residencia__inner">
-        <SectionHeading title="INGRESO A RESIDENCIA" />
-      </div>
-
-      <div className="info__grid__ingreso">
-        <div className="info__div__ingreso">
-          <h3 className="info__text__ingreso">
-            Inscripción a residencia 2026 CERRADA
-          </h3>
-          <p>
-            {/*La residencia del Centro de Ojos Quilmes cuenta con 4 (cuatro)
-            vacantes, 1 (Una) es otorgada a través de la Universidad de Buenos
-            Aires y las otras 3 (Tres) restantes a través del Colegio Médico de
-            la Provincia de Bs As. <br />
-            Si queres conocer nuestra residencia y las instalaciones podes
-            coordinar una rotación enviando un mail a{" "}
-            <span className="destacado_negro">Mariana De Muro</span>{" "}
-            <span className="destacado_azul">mdemuro@fibertel.com.ar</span>*/}
-            {/*<span className="destacado_negro">La inscripción para el examen de residencia 2026 no se encuentra abierta por el momento. <br />
-            Revise periódicamente esta sección para conocer las fechas de apertura de inscripción, cronograma y requisitos para el examen de residencia 2026.</span>*/}
-            <span className="destacado_negro">Para mas información, enviar un mail a <a href="mailto:residencia@centrodeojosquilmes.com.ar"><span className="destacado_azul">residencia@centrodeojosquilmes.com.ar</span></a></span>
-          </p>
+    <>
+      <section className="ingresoResidencia__banner" aria-label="Ingreso 2026">
+        <div className="ingresoResidencia__banner-contenido">
+          <h2 className="ingresoResidencia__banner-titulo">Ingreso <br /> 2026</h2>
         </div>
+      </section>
 
-        {/*<div className="info__div__ingreso">
-          <h3 className="info__text__ingreso">
-            Ingreso a través del Colegio Médico de la Pcia. de Bs. As.
-          </h3>
-          <h4>Profesionales Nacionales</h4>
-          <div className="div__ingreso__list">
-            <ul className="info__ingreso__list">
-              <li>
-                <i className="bi bi-chevron-right" aria-hidden="true"></i>
-                <span>
-                  <span className="destacado_negro">DNI</span>
-                </span>
-              </li>
-              <li>
-                <i className="bi bi-chevron-right" aria-hidden="true"></i>
-                <span>
-                  <span className="destacado_negro">Título o certificado de Título en trámite</span>
-                </span>
-              </li>
-              <li>
-                <i className="bi bi-chevron-right" aria-hidden="true"></i>
-                <span>
-                  <span className="destacado_negro">Matricula Nacional Habilitante o constancia de matrícula en trámite</span>
-                </span>
-              </li>
-            </ul>
-          </div>
+      <section className="ingresoResidencia__contenido" aria-labelledby="ingreso-uba">
+        <div className="ingresoResidencia__container">
+          <article className="ingresoResidencia__bloque">
+            <h3 className="ingresoResidencia__titulo" id="ingreso-uba">Ingreso UBA</h3>
 
-          <h4>Profesionales Extranjeros</h4>
-          <div className="div__ingreso__list">
-            <ul className="info__ingreso__list">
-              <li>
-                <i className="bi bi-chevron-right" aria-hidden="true"></i>
-                <span>
-                  <span className="destacado_negro">DNI vigente emitido por autoridad argentina.(no se admitirán extranjeros con DNI vencido o en trámite por el tiempo que demanda su normalización)</span>
-                </span>
-              </li>
-              <li>
-                <i className="bi bi-chevron-right" aria-hidden="true"></i>
-                <span>
-                  <span className="destacado_negro">Tener realizada la revalida o convalida de título expedida por autoridad competente</span>
-                </span>
-              </li>
-              <li>
-                <i className="bi bi-chevron-right" aria-hidden="true"></i>
-                <span>
-                  <span className="destacado_negro">Matricula Nacional Habilitante o constancia de matrícula en trámite</span>
-                </span>
-              </li>
-            </ul>            
-          </div>*/}
+            <p className="ingresoResidencia__descripcion">
+              Para participar del Concurso de Residencias 2026, los aspirantes <br />
+              deberán rendir el examen del GCBA y seleccionar el Concurso UBA <br />
+              al momento de la inscripción.
+            </p>
 
-          {/*<h4>Cronograma</h4>
-          <div className="div__ingreso__list">
-            <p>
-              <span className="destacado_negro">El cronograma para el examen de residencia 2026 se publicará próximamente.</span> <br />
-            </p>*/}
-            {/*<ul className="info__ingreso__list">
-              <li>
-                <i className="bi bi-chevron-right" aria-hidden="true"></i>
-                <span>
-                  <span className="destacado_negro">Cierre de Inscripción 4  de julio de 2025</span>
-                </span>
-              </li>
-              <li>
-                <i className="bi bi-chevron-right" aria-hidden="true"></i>
-                <span>
-                  <span className="destacado_negro">Examen  a confirmar (14 al 18 de julio de 2026)</span>
-                </span>
-              </li>
-              <li>
-                <i className="bi bi-chevron-right" aria-hidden="true"></i>
-                <span>
-                  <span className="destacado_negro">Entrevistas a confirmar</span>
-                </span>
-              </li>
-              <li>
-                <i className="bi bi-chevron-right" aria-hidden="true"></i>
-                <span>
-                  <span className="destacado_negro">Inicio de Residencia  1 de Septiembre de 2026</span>
-                </span>
-              </li>
-            </ul>
-                <div className="div__boton">*/}
-                {/*abrir modal al tocar boton*/}
-                {/*<button className="boton-guardia"
-                type="button"
-                onClick={openModal}
-                >Inscripción</button>
+            <div className="ingresoResidencia__fechas" aria-label="Fechas de ingreso UBA">
+              <div className="ingresoResidencia__fecha-item">
+                <h4 className="ingresoResidencia__fecha-titulo">Cierre de Inscripción</h4>
+                <p className="ingresoResidencia__fecha-texto">24 abril 2026</p>
+              </div>
 
-                <Modal isOpen={isModalOpen} closeModal={closeModal}>
-                    <h2>INSCRIPCIÓN AL EXAMEN 2026</h2>
-                    <ul>
-                        <li>
-                            Enviar un mail a <a href="mailto:residencia@centrodeojosquilmes.com.ar" className="destacado_azul">residencia@centrodeojosquilmes.com.ar</a>
-                        </li>
-                        <li>
-                            <span className="destacado_negro_2">Asunto:</span> Inscripción al examen de residencia 2026.
-                        </li> 
-                        <li>
-                            <span className="destacado_negro_2">Cuerpo del mensaje:</span> nombre, apellido, DNI y teléfono de contacto.
-                        </li>
-                        <li>
-                            Adjuntar CV completo(<span className="destacado_negro">formato .doc .docx o .pdf</span>), Copia de DNI(<span className="destacado_negro">formato jpg o pdf</span>), y Matricula Nacional ( en el caso de Argentinos se puede adjuntar constancia de tramite)
-                        </li> 
-                    </ul>    
-                </Modal> 
-            </div>         
-          </div>     
-        </div>*/} 
-        {/*<div className="info__div__ingreso">
-          <h3 className="info__text__ingreso">
-            Ingreso a través de la UBA
-          </h3>
-          <p>
-            <span className="destacado_negro_2">La inscripción es desde la página de la UBA.</span>
-          </p>
-          <h4>Cronograma</h4>
-          <div className="div__ingreso__list">
-            <ul className="info__ingreso__list">
-              <li>
-                <i className="bi bi-chevron-right" aria-hidden="true"></i>
-                <span>
-                  <span className="destacado_negro">Inscripción del 21 de Abril 2025 al 9 de Mayo de 2025</span>
-                </span>
-              </li>
-              <li>
-                <i className="bi bi-chevron-right" aria-hidden="true"></i>
-                <span>
-                  <span className="destacado_negro">Examen  2 de Julio de 2025 en forma PRESCENCIAL (EXAMEN UNICO)</span>
-                </span>
-              </li>
-              <li>
-                <i className="bi bi-chevron-right" aria-hidden="true"></i>
-                <span>
-                  <span className="destacado_negro">Inicio de Residencia  1 de Septiembre de 2024</span>
-                </span>
-              </li>
-            </ul>
-                <div className="div__boton">
-                <a href="https://inscripcion.fmed.uba.ar/cgi-bin/residencias/infoBasicas.py">
-                <button className="boton-guardia">Información</button>
-                </a> 
-            </div>          
-          </div>
-        </div>*/}
-        {/*<div className="info__div__ingreso">
-          <h3 className="info__text__ingreso">
-            Cronograma examen único (EU)
-          </h3>
-          <p>
-            <span className="destacado_negro">Enviar mail a</span> <span className="destacado_azul">residencia@centrodeojosquilmes.com.ar</span> <br />
-            <span className="destacado_negro_2">Asunto:</span> <span className="destacado_negro">Ingreso por UBA.</span> <br />
-            <span className="destacado_negro">Adjuntar el CV (en .pdf, .doc o .docx)</span>
-          </p>
-          <div className="div__boton">
-            <a href="https://www.argentina.gob.ar/salud/residencias/ingreso/examen-unico"><button className="boton-guardia">Información</button></a>
-          </div>
-        </div>*/}
-      </div>
-    </section>
+              <div className="ingresoResidencia__fecha-separador" aria-hidden="true" />
+
+              <div className="ingresoResidencia__fecha-item">
+                <h4 className="ingresoResidencia__fecha-titulo">Inicio de Residencia</h4>
+                <p className="ingresoResidencia__fecha-texto">01 agosto 2026</p>
+              </div>
+            </div>
+
+            <a className="ingresoResidencia__link" href="https://inscripcion.fmed.uba.ar/cgi-bin/residencias/infoBasicas.py">Inscripción UBA</a>
+          </article>
+
+          <article className="ingresoResidencia__bloque ingresoResidencia__bloque--secundario" aria-labelledby="ingreso-cm">
+            <h3 className="ingresoResidencia__titulo" id="ingreso-cm">Ingreso Colegio de Médicos (PBA)</h3>
+
+            <div className="ingresoResidencia__requisitos">
+              <div className="ingresoResidencia__requisito-item">
+                <h4 className="ingresoResidencia__requisito-titulo">Requisitos nacionales</h4>
+                <p className="ingresoResidencia__requisito-texto">
+                  DNI <span>|</span> Título o certificado en trámite <span>|</span> Matrícula nacional
+                </p>
+              </div>
+
+              <div className="ingresoResidencia__requisito-divisor" aria-hidden="true" />
+
+              <div className="ingresoResidencia__requisito-item">
+                <h4 className="ingresoResidencia__requisito-titulo">Requisitos extranjeros</h4>
+                <p className="ingresoResidencia__requisito-texto ingresoResidencia__requisito-texto--ancho">
+                  DNI argentino vigente y con validación <span>|</span> Reválida de título y <br />
+                  Matrícula nacional habilitante (sin excepción)
+                </p>
+              </div>
+            </div>
+
+            <div className="ingresoResidencia__requisito-divisor" aria-hidden="true" />
+
+            <div className="ingresoResidencia__cronograma">
+              <h4 className="ingresoResidencia__requisito-titulo">Cronograma</h4>
+              <p className="ingresoResidencia__requisito-texto">Fechas de examen y entrevistas a confirmar</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </>
   );
 }
 

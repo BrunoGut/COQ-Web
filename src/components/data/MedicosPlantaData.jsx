@@ -1,93 +1,93 @@
 const MEDICOS_PLANTA = [
     {
         id: 1,
-        nombre: "VALVECCHIA FLORENCIA",
-        especialidad: "SUPERFICIE OCULAR E INFECTOLOGIA"
+        nombre: "Valvecchia Florencia",
+        especialidad: "Superficie ocular e infectología"
     },
     {
         id: 2,
-        nombre: "CASTRO TOMAS",
-        especialidad: "CLINICA OFTALMOLOGICA"
+        nombre: "Castro Tomas",
+        especialidad: "Clínica oftalmológica"
     },
     {
         id: 3,
-        nombre: "COLANTONI ANDRES",
-        especialidad: "CLINICA OFTALMOLOGICA"
+        nombre: "Colantoni Andres",
+        especialidad: "Clínica oftalmológica"
     },
     {
         id: 4,
-        nombre: "PRIETO DIAZ FERNANDO",
+        nombre: "Prieto Diaz Fernando",
         especialidad: "ESTRABISMO"
     },
     {
         id: 5,
-        nombre: "RATTI MAXIMILIANO",
-        especialidad: "OFTALMOPEDIATRIA Y ESTRABISMO"
+        nombre: "Ratti Maximiliano",
+        especialidad: "Oftalmopediatría y estrabismo"
     },
     {
         id: 6,
-        nombre: "RUSSIAN JOSE",
-        especialidad: "CLINICA OFTALMOLOGICA"
+        nombre: "Russian Jose",
+        especialidad: "Clínica oftalmológica"
     },
     {
         id: 7,
-        nombre: "VIGO RODOLFO",
-        especialidad: "OCULOPLASTÍA Y ÓRBITA"
+        nombre: "Vigo Rodolfo",
+        especialidad: "Oculoplastía y órbita"
     },
     {
         id: 8,
-        nombre: "BONAMINO ANABELLA",
-        especialidad: "CLINICA OFTALMOLOGICA Y RETINA"
+        nombre: "Bonamino Anabella",
+        especialidad: "Clínica oftalmológica y retina"
     },
     {
         id: 9,
-        nombre: "BONAVITA CONSTANZA",
-        especialidad: "UVEÍTIS"
+        nombre: "Bonavita Constanza",
+        especialidad: "Uveítis"
     },
     {
         id: 10,
-        nombre: "GALETTO LEILA",
-        especialidad: "CLINICA OFTALMOLOGICA Y GLAUCOMA"
+        nombre: "Galetto Leila",
+        especialidad: "Clínica oftalmológica y glaucoma"
     },
     {
         id: 11,
-        nombre: "GROSVARD CLARA",
-        especialidad: "BAJA VISION Y CONTACTOLOGIA"
+        nombre: "Grosvard Clara",
+        especialidad: "Baja visión y contactología"
     },
     {
         id: 12,
-        nombre: "MOLNAR LAURA",
-        especialidad: "CLINICA OFTALMOLOGICA"
+        nombre: "Molnar Laura",
+        especialidad: "Clínica oftalmológica"
     },
     {
         id: 13,
-        nombre: "GRECO LOURDES",
-        especialidad: "CLINICA OFTALMOLOGICA Y SUPERFICIE OCULAR"
+        nombre: "Greco Lourdes",
+        especialidad: "Clínica oftalmológica y superficie ocular"
     },
     {
         id: 14,
-        nombre: "PODESTA NOELIA",
-        especialidad: "CLINICA OFTALMOLOGICA Y GLAUCOMA"
+        nombre: "Podesta Noelia",
+        especialidad: "Clínica oftalmológica y glaucoma"
     },
     {
         id: 15,
-        nombre: "RUSSO NATALIA",
-        especialidad: "OFTALMOPEDIATRIA"
+        nombre: "Russo Natalia",
+        especialidad: "Oftalmopediatría"
     },
     {
         id: 16,
-        nombre: "SCHUSTER MELINA",
-        especialidad: "CLINICA OFTALMOLOGICA"
+        nombre: "Schuster Melina",
+        especialidad: "Clínica oftalmológica"
     },
     {
         id: 17,
-        nombre: "JULIO MOLINA",
-        especialidad: "CLINICA OFTALMOLOGICA"
+        nombre: "Julio Molina",
+        especialidad: "Clínica oftalmológica"
     },
     {
         id: 18,
-        nombre: "LUCAS AGUIRRE",
-        especialidad: "CLINICA OFTALMOLOGICA"
+        nombre: "Lucas Aguirre",
+        especialidad: "Clínica oftalmológica"
     }
 ]
 

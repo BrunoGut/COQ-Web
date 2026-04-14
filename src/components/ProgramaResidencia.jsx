@@ -1,183 +1,132 @@
-import React from "react";
-import BannerComponent from "./BannerComponent";
-import residenciaImg from "../images/residencia/resi1.png";
 import "../css/programaResidencia.css";
-import SectionHeading from "./SectionHeading";
-import centroImg from '../images/residencia/centro.jpg';
-import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
-import L from "leaflet";
-import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
-import markerIcon from "leaflet/dist/images/marker-icon.png";
-import markerShadow from "leaflet/dist/images/marker-shadow.png";
+import caoImg from "../images/residencia/cao_img.png";
 
-delete L.Icon.Default.prototype._getIconUrl;
-L.Icon.Default.mergeOptions({
-  iconRetinaUrl: markerIcon2x,
-  iconUrl: markerIcon,
-  shadowUrl: markerShadow,
-});
 
-const UBICACION = [
-  {
-    key: "consultas",
-    titulo: "Consultas, Estudios y Guardia",
-    direccion: "Humberto Primo 298, Quilmes, Buenos Aires, Argentina",
-    telefono: "(54.11) 5277-9745",
-    coords: { lat: -34.7234476, lng: -58.2539529 },
-  },
-];
-
-function ProgramaResidencia({
-  lat = UBICACION[0].coords.lat,
-  lng = UBICACION[0].coords.lng,
-}) {
+function ProgramaResidencia() {
   return (
-    <section className="programaResidencia" id="programaResidencia">
-      <BannerComponent
-        className="programaResidencia__banner"
-        title="Toda la información sobre nuestro programa de Residencia"
-        urlImg={residenciaImg}
-        ariaLabel="Residencia"
-      />
+    <>
+      <section className="programaResidencia__banner" aria-label="Programa de residencia">
+        <div className="programaResidencia__banner-contenido">
+          <h2 className="programaResidencia__banner-titulo">Programa de Residencia</h2>
+          <h4 className="programaResidencia__banner-subtitulo">Excelencia académica y práctica clínica de alta complejidad</h4>
+        </div>
+      </section>
 
-      <div className="programaResidencia__inner">
-        <SectionHeading title="PROGRAMA DE RESIDENCIA" />
-      </div>
+      <section className="programaResidencia__info" aria-labelledby="programa-residencia-info">
+        <div className="programaResidencia__info-container">
+          <p className="programaResidencia__intro" id="programa-residencia-info">
+            El Programa de Residencia del Centro de Ojos Quilmes es un <strong>pilar fundamental </strong><br />
+            de nuestra institución. Con más de 25 años de trayectoria, ofrecemos una <br /> formación integral
+            basada en la evidencia científica, el rigor clínico y el acceso <br /> temprano a tecnología
+            quirúrgica de última generación.
+          </p>
 
-      <div className="info__grid__programa">
-        <div className="info__div__programa">
-          <h3 className="info__text__programa">Nombre del programa</h3>
-          <p>
-            Residencia en Oftalmología{" "}
-            <span className="destacado_azul">Centro de Ojos Quilmes</span>
-          </p>
-        </div>
-        <div className="info__div__programa">
-          <h3 className="info__text__programa">Tipo de programa</h3>
-          <p>
-            Residencia de 1º nivel – Escuela Superior de Enseñanza Médica del
-            Colegio de Médicos de la Provincia de Buenos Aires (CMPBA)
-          </p>
-        </div>
-        <div className="info__div__programa">
-          <h3 className="info__text__programa">Responsables</h3>
-          <div className="div__programa__list">
-            <ul className="info__programa__list">
-              <li>
-                <i className="bi bi-chevron-right" aria-hidden="true"></i>
-                <span>
-                  <span className="destacado_negro_2">
-                    Dirección general y académica:{" "}
-                  </span>
-                  Dra. Virginia E. Zanutigh
-                </span>
-              </li>
-              <li>
-                <i className="bi bi-chevron-right" aria-hidden="true"></i>
-                <span>
-                  <span className="destacado_negro_2">
-                    Dirección asistencial:{" "}
-                  </span>
-                  Dr. Gerardo C. Valvecchia
-                </span>
-              </li>
-              <li>
-                <i className="bi bi-chevron-right" aria-hidden="true"></i>
-                <span>
-                  <span className="destacado_negro_2">
-                    Número de vacantes:{" "}
-                  </span>
-                  3 (Tres) 2 por la UBA / 1 por Colegio Médico de la Pcia. Bs.
-                  As.
-                </span>
-              </li>
-              <li>
-                <i className="bi bi-chevron-right" aria-hidden="true"></i>
-                <span>
-                  <span className="destacado_negro_2">Duración en años: </span>3
-                  (tres)
-                </span>
-              </li>
-              <li>
-                <i className="bi bi-chevron-right" aria-hidden="true"></i>
-                <span>
-                  <span className="destacado_negro_2">
-                    Carga horaria total:{" "}
-                  </span>
-                  Lunes a viernes 8 horas diarias. Sábados 4 horas.
-                </span>
-              </li>
-              <li>
-                <i className="bi bi-chevron-right" aria-hidden="true"></i>
-                <span>
-                  <span className="destacado_negro_2">
-                    Guardias nocturnas y feriados:{" "}
-                  </span>{" "}
-                  residentes de 1° año 6 por mes, residentes de 2° año 4 por
-                  mes, residente de 3° año 2 por mes.
-                </span>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="info__div__programa">
-          <h3 className="info__text__programa">Información general</h3>
-          <p>
-            El programa de formación de{" "}
-            <span className="destacado_negro">
-              Residencia en Oftalmología Centro de Ojos Quilmes
-            </span>{" "}
-            está avalado y fiscalizado por la{" "}
-            <span className="destacado_negro">
-              Escuela Superior de Enseñanza Médica
-            </span>{" "}
-            del{" "}
-            <span className="destacado_negro">
-              Colegio de Médicos de la Provincia de Buenos Aires
-            </span>{" "}
-            (Colegio de Médicos de la Provincia de Buenos Aires, Distrito II,
-            Nota Nº 1488, 22 octubre 1996). El mismo adhiere a los lineamientos
-            y regulaciones establecidos por la Escuela Superior de Enseñanza
-            Médica del Colegio de Médicos de la Provincia de Buenos Aires, el
-            Consejo Panamericano de Profesores Universitarios de Oftalmología de
-            la Asociación Panamericana de Oftalmología, y a las directivas de
-            Acreditación de Residencias de la Sociedad Argentina de Oftalmología
-            y del Consejo Argentino de Oftalmología.
-          </p>
-        </div>
-        <div className="info__div__programa">
-          <h3 className="info__text__programa">
-            Lugar de realización del programa asistencial y quirurgico
-          </h3>
-          <p>
-            <span className="destacado_azul">Centro de Ojos Quilmes</span>, con sede en <span className="destacado_negro">Humberto Primo 298</span>, esquina
-            Alvear, Quilmes, Buenos Aires.
-          </p>
-          <div className="mapa__img">
-            <div className="img__programa">
-            </div>
-            <div className="mapa__programa">
-              <MapContainer
-                className="programaResidencia__leaflet"
-                center={[lat, lng]}
-                zoom={17}
-              >
-                <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-                {UBICACION.map((u) => (
-                  <Marker key={u.key} position={[u.coords.lat, u.coords.lng]}>
-                    {" "}
-                    {/* Agregar marcadores para cada ubicación */}
-                    <Popup>{u.titulo}</Popup>
-                  </Marker>
-                ))}
-              </MapContainer>
+          <div className="programaResidencia__bloque">
+            <h3 className="programaResidencia__titulo-seccion">Acreditaciones y avales institucionales</h3>
+            <p className="programaResidencia__texto-centro">
+              Nuestro programa de primer nivel opera bajo los más altos estándares <br /> regulatorios. Avalado
+              y fiscalizado por la Escuela Superior de Enseñanza <br /> Médica del Colegio de Médicos de la Provincia de Buenos Aires (Distrito II).
+            </p>
+            <p className="programaResidencia__texto-centro programaResidencia__texto-centro--destacado">
+              Adherimos estrictamente a los lineamientos de formación de:
+            </p>
+
+            <div className="programaResidencia__cao-img" aria-label="Consejo Argentino de Oftalmología">
+              <img src={caoImg} alt="Consejo Argentino de Oftalmología" />
             </div>
           </div>
 
-          <p></p>
+          <div className="programaResidencia__grid">
+            <article className="programaResidencia__columna">
+              <h3 className="programaResidencia__subtitulo-columna">Estructura <br /> del programa</h3>
+
+              <div className="programaResidencia__item">
+                <p className="programaResidencia__descripcion">
+                  Diseñado para una transición progresiva hacia la autonomía profesional.
+                </p>
+              </div>
+
+              <div className="programaResidencia__item">
+                <h4 className="programaResidencia__item-titulo">Dirección General y Académica</h4>
+                <p className="programaResidencia__item-texto">Dra. Virginia Zanutigh</p>
+              </div>
+
+              <div className="programaResidencia__item">
+                <h4 className="programaResidencia__item-titulo">Dirección asistencial</h4>
+                <p className="programaResidencia__item-texto">Dr. Gerardo Valvecchia</p>
+              </div>
+
+              <div className="programaResidencia__item">
+                <h4 className="programaResidencia__item-titulo">Duración</h4>
+                <p className="programaResidencia__item-texto">3 años de formación intensiva</p>
+              </div>
+
+              <div className="programaResidencia__item programaResidencia__item--sin-borde">
+                <h4 className="programaResidencia__item-titulo">Vacantes anuales</h4>
+                <p className="programaResidencia__item-texto">1 plazas vía UBA | 2 plazas vía Colegio de Médicos (PBA)</p>
+                <p className="programaResidencia__item-texto">3 plazas en total</p>
+              </div>
+            </article>
+
+            <article className="programaResidencia__columna">
+              <h3 className="programaResidencia__subtitulo-columna">Régimen <br /> de formación</h3>
+
+              <div className="programaResidencia__item">
+                <p className="programaResidencia__descripcion">
+                  Formación intensiva, práctica y supervisada. Nuestro esquema horario y de guardias está
+                  pensado para maximizar la exposición quirúrgica y clínica, brindando al residente las
+                  herramientas necesarias para liderar la oftalmología del futuro.
+                </p>
+              </div>
+
+              <div className="programaResidencia__item">
+                <h4 className="programaResidencia__item-titulo">Carga horaria</h4>
+                <p className="programaResidencia__item-texto">Lunes a viernes (8h) y sábados (4h)</p>
+              </div>
+
+              <div className="programaResidencia__item programaResidencia__item--sin-borde">
+                <h4 className="programaResidencia__item-titulo">Sistema de Guardias</h4>
+                <p className="programaResidencia__item-texto">1er año: 6 guardias mensuales</p>
+                <p className="programaResidencia__item-texto">2do año: 4 guardias mensuales</p>
+                <p className="programaResidencia__item-texto">3er año: 2 guardias mensuales</p>
+              </div>
+            </article>
+          </div>
+
+          <section className="programaResidencia__motivos" aria-labelledby="programa-residencia-motivos">
+            <h3 className="programaResidencia__motivos-titulo" id="programa-residencia-motivos">
+              ¿Por qué formarse en Centro de Ojos Quilmes?
+            </h3>
+
+            <div className="programaResidencia__motivos-grid">
+              <article className="programaResidencia__motivo-card">
+                <span className="programaResidencia__motivo-numero">01</span>
+                <h4 className="programaResidencia__motivo-titulo">Prestigio académico</h4>
+                <p className="programaResidencia__motivo-texto">
+                  Programa de formación superior con aval de la UBA.
+                </p>
+              </article>
+
+              <article className="programaResidencia__motivo-card">
+                <span className="programaResidencia__motivo-numero">02</span>
+                <h4 className="programaResidencia__motivo-titulo">Tecnología de Vanguardia</h4>
+                <p className="programaResidencia__motivo-texto">
+                  Acceso a equipamiento de última generación.
+                </p>
+              </article>
+
+              <article className="programaResidencia__motivo-card">
+                <span className="programaResidencia__motivo-numero">03</span>
+                <h4 className="programaResidencia__motivo-titulo">Liderazgo profesional</h4>
+                <p className="programaResidencia__motivo-texto">
+                  Aprendizaje directo con especialistas referentes y un enfoque multidisciplinario.
+                </p>
+              </article>
+            </div>
+          </section>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
 
