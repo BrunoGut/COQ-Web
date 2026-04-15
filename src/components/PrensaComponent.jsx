@@ -1,22 +1,49 @@
-import React, { useState, useEffect } from "react";
-import SectionHeading from "./SectionHeading";
+import React, { useMemo, useState } from "react";
 import "../css/prensaComponent.css";
 import Modal from "./Modal";
 import PRENSA from "./data/PrensaArray";
 import Carousel from "react-bootstrap/Carousel";
 
+const ITEMS_PER_SLIDE = 2;
+
+function shuffleItems(items) {
+  const shuffled = [...items];
+
+  for (let i = shuffled.length - 1; i > 0; i -= 1) {
+    const randomIndex = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[randomIndex]] = [shuffled[randomIndex], shuffled[i]];
+  }
+
+  return shuffled;
+}
+
+function chunkItems(items, size) {
+  const chunks = [];
+
+  for (let i = 0; i < items.length; i += size) {
+    chunks.push(items.slice(i, i + size));
+  }
+
+  return chunks;
+}
+
+function getItemDescription(item) {
+  if (item.kind === "video") {
+    return "Mirá el contenido audiovisual destacado del Centro de Ojos Quilmes.";
+  }
+
+  return "Accedé a la cobertura completa y conocé más sobre esta noticia destacada.";
+}
+
 function PrensaComponent() {
   const [index, setIndex] = useState(0);
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const [videoSrc, setVideoSrc] = useState(null);
-  const [cardsPerSlide, setCardsPerSlide] = useState(window.innerWidth <= 768 ? 1 : 2);
-
-  useEffect(() => {
-    const mq = window.matchMedia("(max-width: 768px)");
-    const onChange = (e) => { setCardsPerSlide(e.matches ? 1 : 2); setIndex(0); };
-    mq.addEventListener("change", onChange);
-    return () => mq.removeEventListener("change", onChange);
-  }, []);
+  const slides = useMemo(
+    () => chunkItems(shuffleItems(PRENSA), ITEMS_PER_SLIDE),
+    [],
+  );
+  const hasMultipleSlides = slides.length > 1;
 
   const closeVideo = () => {
     setIsVideoOpen(false);
@@ -27,74 +54,146 @@ function PrensaComponent() {
 
   const handleClick = (item) => {
     if (item.kind === "article") {
-      window.open(item.href, "_blank", "noreferrer");
+      window.open(item.href, "_blank", "noopener,noreferrer");
       return;
     }
+
     if (item.kind === "video") {
       setVideoSrc(item.video);
       setIsVideoOpen(true);
     }
   };
 
-  const slides = [];
-  for (let i = 0; i < PRENSA.length; i += cardsPerSlide) {
-    slides.push(PRENSA.slice(i, i + cardsPerSlide));
-  }
-
   return (
-    <section className="prensa" id="prensa" aria-label="Prensa">
-      <div className="prensa__inner">
-        <SectionHeading title="PRENSA" />
-
-        <div className="slide-container" aria-label="Noticias destacadas">
-          <div className="slide-content">
-            <Carousel activeIndex={index} onSelect={handleSelect} interval={null} className="prensa__carousel">
-              {slides.map((pair, slideIndex) => (
-                <Carousel.Item key={slideIndex}>
-                  <div className="prensa__slideRow">
-                    {pair.map((item) => (
-                      <article
-                        key={item.id}
-                        className="prensa__card"
-                        onClick={() => handleClick(item)}
-                        style={{ cursor: "pointer" }}
-                      >
-                        <div className="prensa__cardImg">
-                          <img src={item.imageSrc} alt={item.titulo} //loading="lazy" decoding="async" 
-                          />
-                          <span className="prensa__cardBadge">
-                            {item.kind === "video" ? "Video" : "Artículo"}
-                          </span>
-                        </div>
-                        <div className="prensa__cardBody">
-                          <h3 className="prensa__cardTitle">{item.titulo}</h3>
-                          <span className="prensa__cardCta">
-                            {item.kind === "video" ? "Ver video →" : "Leer nota →"}
-                          </span>
-                        </div>
-                      </article>
-                    ))}
-                  </div>
-                </Carousel.Item>
-              ))}
-            </Carousel>
-          </div>
+    <>
+      <section className="prensa__banner" aria-label="Prensa">
+        <div className="prensa__banner-contenido">
+          <h2 className="prensa__banner-titulo">Prensa</h2>
         </div>
+      </section>
+      <section className="prensa" id="prensa" aria-label="Prensa">
+        <div className="prensa__inner">
+          <div className="prensa__content">
+            <div className="prensa__news" aria-label="Noticias destacadas">
+              <Carousel
+                activeIndex={index}
+                onSelect={handleSelect}
+                interval={null}
+                className="prensa__carousel"
+                controls={hasMultipleSlides}
+                indicators={hasMultipleSlides}
+                touch={hasMultipleSlides}
+              >
+                {slides.map((group, slideIndex) => (
+                  <Carousel.Item key={slideIndex}>
+                    <div className="prensa__slide">
+                      {group.map((item, itemIndex) => (
+                        <React.Fragment key={item.id}>
+                          <button
+                            type="button"
+                            className="prensa__newsItem"
+                            onClick={() => handleClick(item)}
+                            aria-label={
+                              item.kind === "video"
+                                ? `Abrir video ${item.titulo}`
+                                : `Abrir artículo ${item.titulo}`
+                            }
+                          >
+                            <div className="prensa__newsImage">
+                              <img
+                                src={item.imageSrc}
+                                alt={item.titulo}
+                                loading="lazy"
+                                decoding="async"
+                              />
+                            </div>
 
-        {/* MODAL SOLO VIDEO */}
-        <Modal
-          isOpen={isVideoOpen}
-          closeModal={closeVideo}
-          containerClassName="container__modal--wide"
-        >
-          {videoSrc && (
-            <video controls preload="metadata" playsInline style={{ width: "100%", borderRadius: "12px" }}>
-              <source src={videoSrc} type="video/mp4" />
-            </video>
-          )}
-        </Modal>
-      </div>
-    </section>
+                            <div className="prensa__newsBody">
+                              {/*<span className="prensa__newsType">
+                                {item.kind === "video" ? "Video" : "Artículo"}
+                              </span>*/}
+
+                              <h3 className="prensa__newsTitle">{item.titulo}</h3>
+
+                              <p className="prensa__newsDescription">
+                                {item.descripcion ?? getItemDescription(item)}
+                              </p>
+
+                              <span className="prensa__newsLink">
+                                {item.kind === "video"
+                                  ? "Ver video"
+                                  : "Leer artículo"}
+                                <span aria-hidden="true">↘</span>
+                              </span>
+                            </div>
+                          </button>
+
+                          {itemIndex < group.length - 1 && (
+                            <div className="prensa__divider" aria-hidden="true" />
+                          )}
+                        </React.Fragment>
+                      ))}
+                    </div>
+                  </Carousel.Item>
+                ))}
+              </Carousel>
+            </div>
+
+            <section
+              className="prensa__contact"
+              aria-label="Contacto para medios y prensa"
+            >
+              <div className="prensa__contactGrid">
+                <h3 className="prensa__contactTitle">
+                  Contacto
+                  <br />
+                  para Medios
+                  <br />
+                  y Prensa
+                </h3>
+
+                <div className="prensa__contactBody">
+                  <p>
+                    Para solicitudes de entrevistas, material institucional o
+                    consultas de prensa, por favor contactanos a través de
+                    nuestros canales exclusivos para medios.
+                  </p>
+
+                  <div className="prensa__contactInfo">
+                    <span className="prensa__contactLabel">
+                      Correo electrónico
+                    </span>
+                    <a
+                      className="prensa__contactLink"
+                      href="mailto:prensa@centrodeojosquilmes.com.ar"
+                    >
+                      prensa@centrodeojosquilmes.com.ar
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <Modal
+            isOpen={isVideoOpen}
+            closeModal={closeVideo}
+            containerClassName="container__modal--wide"
+          >
+            {videoSrc && (
+              <video
+                controls
+                preload="metadata"
+                playsInline
+                style={{ width: "100%", borderRadius: "12px" }}
+              >
+                <source src={videoSrc} type="video/mp4" />
+              </video>
+            )}
+          </Modal>
+        </div>
+      </section>
+    </>
   );
 }
 
