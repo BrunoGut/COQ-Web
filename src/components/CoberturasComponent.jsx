@@ -46,39 +46,49 @@ function CoberturasComponent() {
   };
 
   return (
-    <section className="coberturas" id="cobertura-medica">
-      <div className="coberturas__search" role="search">
-        <span className="coberturas__searchIcon" aria-hidden="true">
-          Q
-        </span>
-        <input
-          type="text"
-          className="coberturas__searchInput"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          placeholder="Buscar en el listado"
-          aria-label="Buscar coberturas"
-        />
-      </div>
+    <>
+      <section className="coberturas__banner" aria-label="Coberturas">
+        <div className="coberturas__banner-contenido">
+          <h2 className="coberturas__banner-titulo">Coberturas</h2>
+          <h4 className="coberturas__banner-subtitulo">
+            Descubrí si tu obra social o prepaga tiene convenio con nosotros
+          </h4>
+        </div>
+      </section>
+      <section className="coberturas" id="cobertura-medica">
+        <div className="coberturas__search" role="search">
+          <span className="coberturas__searchIcon" aria-hidden="true">
+            Q
+          </span>
+          <input
+            type="text"
+            className="coberturas__searchInput"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Buscar en el listado"
+            aria-label="Buscar coberturas"
+          />
+        </div>
 
-      <ul
-        className={`coberturas__grid${isFading ? " coberturas__grid--fading" : ""}`}
-      >
-        {coberturasFiltradas.map((item) => (
-          <li
-            className="coberturas__item"
-            key={item.id}
-            role="button"
-            tabIndex={0}
-            aria-haspopup="dialog"
-            onClick={() => openModal(item)}
-            onKeyDown={(event) => handleItemKeyDown(event, item)}
-          >
-            {item.title}
-          </li>
-        ))}
-      </ul>
-    </section>
+        <ul
+          className={`coberturas__grid${isFading ? " coberturas__grid--fading" : ""}`}
+        >
+          {coberturasFiltradas.map((item) => (
+            <li
+              className="coberturas__item"
+              key={item.id}
+              role="button"
+              tabIndex={0}
+              aria-haspopup="dialog"
+              onClick={() => openModal(item)}
+              onKeyDown={(event) => handleItemKeyDown(event, item)}
+            >
+              <h3 className="coberturas__itemTitle">{item.title}</h3>
+            </li>
+          ))}
+        </ul>
+      </section>
+    </>
   );
 }
 

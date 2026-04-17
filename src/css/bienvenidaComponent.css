@@ -7,16 +7,18 @@
 .bienvenida__section {
   padding: 4rem 2rem;
   background-color: #ffffff;
-  max-width: 1400px;
-  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .bienvenida__texto {
   display: flex;
   flex-direction: column;
   align-items: start;
+  width: min(100%, 1160px);
   margin-bottom: 3rem;
-  margin-left: 40px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .bienvenida__titulo {
@@ -29,10 +31,12 @@
 
 .bienvenida__cards {
   display: flex;
+  width: min(100%, 1160px);
   gap: 2rem;
   justify-content: center;
   align-items: stretch;
   flex-wrap: wrap;
+  margin: 0 auto;
 }
 
 .bienvenida__card {
@@ -152,6 +156,11 @@
 @media (max-width: 768px) {
   .bienvenida__section {
     padding: 3rem 1.5rem;
+  }
+
+  .bienvenida__texto,
+  .bienvenida__cards {
+    width: 100%;
   }
 
   .bienvenida__titulo {

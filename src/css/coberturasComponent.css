@@ -1,10 +1,35 @@
+.coberturas__banner{
+    background: #929cb2;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.coberturas__banner-titulo{
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+    margin: 0 0 8px;
+    text-align: center;
+}
+
+.coberturas__banner-subtitulo{
+    font-size: 20px;
+    font-weight: 300;
+    color: #fff;
+    margin: 0;
+    text-align: center;
+}
+
 .coberturas {
-    background: #f0f0f0;
-    padding: 0;
+    background: #ffffff;
+    padding: 30px 0 30px;
 }
 
 .coberturas__banner{
-    margin: 0 0 40px 0;
+    margin: 0;
     padding: 0;
 }
 
@@ -56,7 +81,7 @@
 
 .coberturas__search {
 	width: min(1100px, 92%);
-	margin: 30px auto 28px;
+    margin: 0 auto 28px;
 	display: flex;
 	align-items: center;
 	gap: 14px;
@@ -87,7 +112,7 @@
 	list-style: none;
 	padding: 0;
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 	column-gap: 28px;
 	row-gap: 26px;
 	opacity: 1;
@@ -100,24 +125,23 @@
 }
 
 .coberturas__item {
-	text-transform: uppercase;
-    font-size: 19px;
 	font-weight: 600;
-    color: #4e4e4e;
+	color: #4e4e4e;
 	letter-spacing: 0.02em;
 	padding-bottom: 12px;
 	border-bottom: 2px solid rgba(0, 0, 0, 0.12);
     border-top: 2px solid transparent;
     padding-top: 12px;
-    transition: all 0.2s ease;
+    transition: none;
+    cursor: default;
 }
 
-.coberturas__item:hover{
-    color: #003c77;
-    border-bottom-color: #003c77;
-    border-top-color: #003c77;
-    cursor: default;
-    text-shadow: 0 0 0 currentColor, 0.5px 0 0 currentColor;
+.coberturas__itemTitle {
+    margin: 0;
+    font-size: 19px;
+    font-weight: 600;
+    color: #363636;
+    line-height: 1.4;
 }
 
 /* Modal simple para Coberturas (mismo look que Cirugías) */
@@ -180,14 +204,10 @@
 }
 
 @media (max-width: 600px) {
-    .coberturas__inner {
-        width: min(1100px, calc(100% - 40px));
-    }
-
 	.coberturas {
 		background-color: #003c77;
-		background-image: linear-gradient(to top, #003c77 0%, #f0f0f0 3.5%);
-		padding: 0 0 100px;
+        background-image: linear-gradient(to bottom, #003c77 0%, #f0f0f0 1%, #f0f0f0 96%, #003c77 100%);
+        padding: 56px 0 100px;
 	}
 
 	.coberturas__grid {

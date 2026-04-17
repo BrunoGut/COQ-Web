@@ -21,7 +21,7 @@ const COBERTURAS = [
     },
     {
         id: 6,
-        title: "BRISTOL MEDICINE"
+        title: "Bristol Medicine"
     },
     {
         id: 7,
@@ -37,11 +37,11 @@ const COBERTURAS = [
     },
     {
         id: 10,
-        title: "EMPLEADOS ESCRIBANOS PCIA. BS. AS."
+        title: "Empleados Escribanos Pcia. Bs. As."
     },
     {
         id: 11,
-        title: "ESCRIBANOS PCIA. BS. AS."
+        title: "Escribanos Pcia. Bs. As."
     },
     {
         id: 12,
@@ -49,7 +49,7 @@ const COBERTURAS = [
     },
     {
         id: 13,
-        title: "HOSPITAL BRITANICO"
+        title: "Hospital Británico"
     },
     {
         id: 14,
@@ -57,19 +57,19 @@ const COBERTURAS = [
     },
     {
         id: 15,
-        title: "JERARQUICO SALUD"
+        title: "Jerárquico Salud"
     },
     {
         id: 16,
-        title: "LUIS PASTEUR"
+        title: "Luis Pasteur"
     },
     {
         id: 17,
-        title: "MEDICUS"
+        title: "Medicus"
     },
     {
         id: 18,
-        title: "MEDIFE"
+        title: "Medife"
     },
     {
         id: 19,
@@ -81,7 +81,7 @@ const COBERTURAS = [
     },
     {
         id: 21,
-        title: "OSDE BINARIO"
+        title: "OSDE Binario"
     },
     {
         id: 22,
@@ -92,7 +92,7 @@ const COBERTURAS = [
     },
     {
         id: 24,
-        title: "OSMECON LOMAS"
+        title: "OSMECON Lomas"
     },
     {
         id: 25,
@@ -104,15 +104,15 @@ const COBERTURAS = [
     },
     {
         id: 27,
-        title: "PATRONES DE CABOTAJE DE RIO"
+        title: "Patrones de Cabotaje de Río"
     },
     {
         id: 28,
-        title: "PODER JUDICIAL"
+        title: "Poder Judicial"
     },
     {
         id: 29,
-        title: "PROGRAMAS MEDICOS"
+        title: "Programas Médicos"
     },
     {
         id: 30,
@@ -120,19 +120,19 @@ const COBERTURAS = [
     },
     {
         id: 31,
-        title: "SU SALUD"
+        title: "Su Salud"
     },
     {
         id: 32,
-        title: "SWISS MEDICAL"
+        title: "Swiss Medical"
     },
     {
         id: 33,
-        title: "UNION PERSONAL"
+        title: "Union Personal"
     },
     {
         id: 34,
-        title: "WILLIAMS HOPE"
+        title: "Williams Hope"
     }
 ]
 
