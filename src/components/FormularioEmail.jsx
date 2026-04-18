@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import "../css/formularioEmail.css";
 
-function FormularioEmail() {
+function FormularioEmail({ flechaImg }) {
   const {
     register,
     handleSubmit,
@@ -74,20 +74,10 @@ function FormularioEmail() {
 
       <div className="contacto__grid">
         <div className="contacto__item">
-          <i className="bi bi-envelope contacto__icon" aria-hidden="true" />
-          <h3 className="contacto__label">Mail</h3>
-          <a
-            href="mailto:info@centrodeojosquilmes.com.ar"
-            className="contacto__link"
-          >
-            info@centrodeojosquilmes.com.ar
-          </a>
-        </div>
-        <div className="contacto__item">
           <i className="bi bi-telephone contacto__icon" aria-hidden="true" />
-          <h3 className="contacto__label">Teléfono</h3>
+          <h3 className="contacto__label">Central de turnos</h3>
           <a href="tel:+541122062650" className="contacto__link">
-            11 2206-2650
+            2206 2650
           </a>
         </div>
         <div className="contacto__item">
@@ -102,13 +92,23 @@ function FormularioEmail() {
             +54 11 3872-1437
           </a>
         </div>
+        <div className="contacto__item">
+          <i className="bi bi-envelope contacto__icon" aria-hidden="true" />
+          <h3 className="contacto__label">Correo electrónico</h3>
+          <a
+            href="mailto:info@centrodeojosquilmes.com.ar"
+            className="contacto__link"
+          >
+            info@centrodeojosquilmes.com.ar
+          </a>
+        </div>
       </div>
 
       <div className="info__grid__contacto">
         <div className="info__div">
-            <h2 className="info__text__contacto__h2">¡No te quedes con dudas!</h2>
+            <h2 className="info__text__contacto__h2">Si tenés alguna duda completá el formulario</h2>
             <p>
-                Si tenés alguna consulta o querés solicitar un turno, no dudes en contactarnos. <br /> Estamos para ayudarte a cuidar tu salud visual.
+                Nuestro equipo te responderá a la brevedad para brindarte la atención que necesitás.
             </p>
         </div>
       </div>
@@ -123,7 +123,7 @@ function FormularioEmail() {
                 message: "Debe tener al menos 3 caracteres",
               },
             })}
-            placeholder="Nombre"
+            placeholder="Nombre y apellido"
           />
           <span className="formulario__fieldIcon" aria-hidden="true">
             <i className={`bi ${errors.nombre ? "bi-x-lg" : "bi-check-lg"}`} />
@@ -144,7 +144,7 @@ function FormularioEmail() {
                 message: "Formato de email inválido",
               },
             })}
-            placeholder="Email"
+            placeholder="Correo electrónico"
           />
           <span className="formulario__fieldIcon" aria-hidden="true">
             <i className={`bi ${errors.email ? "bi-x-lg" : "bi-check-lg"}`} />
@@ -172,7 +172,19 @@ function FormularioEmail() {
           )}
         </div>
 
-        <button type="submit">Enviar</button>
+        <button type="submit">
+          <span>Enviar</span>
+          {flechaImg ? (
+            <img
+              className="formulario__submitIcon"
+              src={flechaImg}
+              alt=""
+              aria-hidden="true"
+            />
+          ) : (
+            <i className="bi bi-arrow-up-right" aria-hidden="true" />
+          )}
+        </button>
       </form>
     </section>
   );

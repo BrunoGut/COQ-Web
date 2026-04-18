@@ -1,26 +1,27 @@
 import React from 'react'
 import FormularioEmail from '../components/FormularioEmail'
-import SectionHeading from '../components/SectionHeading'
-import BannerComponent from '../components/BannerComponent'
-import contactoImg from "../images/contacto/contacto.png";
+import flechaImg from '../images/turnos/flecha.png'
 import "../css/formularioEmail.css";
 
 function Contacto() {
   return (
-    <>
-      <BannerComponent
-        className="formulario__banner"
-        title="Recibí nuestra información de contacto"
-        urlImg={contactoImg}
-        ariaLabel="Formulario de contacto"
-      />
+    <main className="contactoPage">
+      <div className="contactoPage__inner">
+        <header className="contactoPage__header">
+          <h1 className="contactoPage__title">
+            <span>Contacto</span>
+            <img
+              className="contactoPage__titleIcon"
+              src={flechaImg}
+              alt=""
+              aria-hidden="true"
+            />
+          </h1>
+        </header>
 
-      <div className="formulario__inner">
-        <SectionHeading title="CONTACTO" />
+        <FormularioEmail flechaImg={flechaImg} />
       </div>
-
-      <FormularioEmail />
-    </>
+    </main>
   )
 }
 
