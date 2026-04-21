@@ -30,6 +30,14 @@
   line-height: 1.2;
 }
 
+.reseñas__titulo-desktop {
+  display: inline;
+}
+
+.reseñas__titulo-mobile {
+  display: none;
+}
+
 .reseñas__subtitulo {
   font-size: 1.1rem;
   color: #666;
@@ -67,7 +75,9 @@
   border-radius: 30px;
   padding: 40px 35px;
 
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -133,38 +143,38 @@
     flex-direction: column;
     gap: 40px;
   }
-  
+
   .reseñas__header {
     flex: none;
     text-align: center;
   }
-  
+
   .reseñas__titulo {
     font-size: 2.5rem;
   }
-  
+
   .reseñas__contenedor {
     height: 600px;
   }
-  
+
   .reseña__card {
     width: 280px;
   }
-  
+
   .reseña__card--1 {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
     right: auto;
   }
-  
+
   .reseña__card--2 {
     top: 180px;
     left: 50%;
     transform: translateX(-50%);
     right: auto;
   }
-  
+
   .reseña__card--3 {
     display: none;
     top: 360px;
@@ -175,16 +185,142 @@
 }
 
 @media (max-width: 768px) {
+  .reseñas__section {
+    padding: 64px 20px;
+  }
+
+  .reseñas__wrapper {
+    gap: 32px;
+  }
+
   .reseñas__titulo {
     font-size: 1.8rem;
   }
-  
+
   .reseñas__subtitulo {
     font-size: 1rem;
   }
-  
+
+  .reseñas__contenedor {
+    width: 100%;
+    height: auto;
+    max-width: 420px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .reseñas__cards-wrapper {
+    width: 320px;
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
   .reseña__card {
-    padding: 25px;
-    width: 260px;
+    position: static;
+    padding: 24px 22px;
+    width: 320px;
+    max-width: 320px;
+    height: 320px;
+    min-height: 320px;
+    max-height: 320px;
+    gap: 16px;
+    overflow: hidden;
+    border-radius: 24px;
+    box-sizing: border-box;
+  }
+
+  .reseña__card--1,
+  .reseña__card--2,
+  .reseña__card--3 {
+    top: auto;
+    right: auto;
+    left: auto;
+    transform: none;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
+  }
+
+  .reseña__card:hover {
+    transform: none;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
+  }
+
+  .reseña__comillas img {
+    width: 30px;
+  }
+
+  .reseña__comentario {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    line-clamp: 8;
+    -webkit-box-orient: vertical;
+  }
+
+  .reseña__nombre {
+    margin-top: auto;
+    padding-top: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .reseñas__section {
+    padding: 56px 16px;
+  }
+
+  .reseñas__contenedor {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .reseñas__titulo {
+    line-height: 1.15;
+  }
+
+  .reseñas__titulo-desktop {
+    display: none;
+  }
+
+  .reseñas__titulo-mobile {
+    display: inline;
+  }
+
+  .reseñas__cards-wrapper {
+    width: 280px;
+    gap: 16px;
+  }
+
+  .reseña__card {
+    width: 280px;
+    max-width: 280px;
+    height: 360px;
+    min-height: 360px;
+    max-height: 360px;
+    padding: 20px 18px;
+  }
+
+  .reseña__card:hover {
+    transform: none;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
+  }
+
+  .reseña__comentario {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    -webkit-line-clamp: 8;
+    line-clamp: 8;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+  }
+
+  .reseña__nombre {
+    font-size: 0.95rem;
   }
 }

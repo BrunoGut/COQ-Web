@@ -34,7 +34,14 @@ function ReseñasComponent() {
       <div className="reseñas__wrapper">
         <div className="reseñas__header">
           <div className="reseñas__header__contenido">
-            <h2 className="reseñas__titulo">Lo que dice <br /> nuestra <br /> comunidad</h2>
+            <h2 className="reseñas__titulo">
+              <span className="reseñas__titulo-desktop">
+                Lo que dice <br /> nuestra <br /> comunidad
+              </span>
+              <span className="reseñas__titulo-mobile">
+                Lo que dice <br /> Nuestra comunidad
+              </span>
+            </h2>
             <p className="reseñas__subtitulo">Reseñas Google</p>
           </div>
         </div>

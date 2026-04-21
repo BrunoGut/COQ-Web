@@ -155,6 +155,10 @@
         font-size: 2rem;
     }
 
+    .hero-content-left{
+        display: none;
+    }
+
     .hero-content-left {
         padding: 40px 20px;
         min-height: 350px;

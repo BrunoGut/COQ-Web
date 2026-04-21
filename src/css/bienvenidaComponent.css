@@ -50,10 +50,6 @@
   color: #ffffff;
 }
 
-.bienvenida__card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
 
 .bienvenida__card-icon {
   position: absolute;
@@ -124,7 +120,7 @@
 }
 
 .bienvenida__subtitulo{
-  font-size: 1.rem;
+  font-size: 1rem;
   width: 100%;
   color: #ffffff;
   font-weight: 300;
@@ -158,9 +154,35 @@
     padding: 3rem 1.5rem;
   }
 
+  .bienvenida__banner {
+    min-height: 360px;
+  }
+
+  .bienvenida__contenido {
+    max-width: 420px;
+    padding: 0 20px;
+  }
+
+  .bienvenida__subtitulo {
+    font-size: 0.95rem;
+    margin-bottom: 14px;
+    letter-spacing: 0.8px;
+  }
+
+  .bienvenida__descripcion {
+    font-size: clamp(1.75rem, 6.5vw, 2.15rem);
+    line-height: 1.15;
+    letter-spacing: 0;
+    text-wrap: balance;
+  }
+
+  .bienvenida__descripcion br {
+    display: none;
+  }
+
   .bienvenida__texto,
   .bienvenida__cards {
-    width: 100%;
+    width: 100%;;
   }
 
   .bienvenida__titulo {
@@ -179,12 +201,46 @@
 }
 
 @media (max-width: 480px) {
+  .bienvenida__banner {
+    min-height: 320px;
+  }
+
+  .bienvenida__card-titulo {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .bienvenida__card-titulo br {
+    display: none;
+  }
+
+  .bienvenida__contenido {
+    max-width: 360px;
+    padding: 0 18px;
+  }
+
+  .bienvenida__subtitulo {
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+  }
+
+  .bienvenida__descripcion {
+    font-size: clamp(1.65rem, 7.4vw, 1.95rem);
+    line-height: 1.18;
+  }
+
   .bienvenida__titulo {
     font-size: 1.75rem;
   }
 
+    .bienvenida__texto{
+    margin-bottom: 20px;
+  }
+
+
   .bienvenida__card {
-    padding: 2rem 1.5rem;
+    padding: 0 1.5rem;
   }
 
   .bienvenida__card-titulo {

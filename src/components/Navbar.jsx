@@ -1,8 +1,10 @@
 import logoCoq from '../images/logo-coq.png'
+import logoBlanco from '../images/logo-blanco.png'
 import { useEffect, useRef, useState } from 'react'
 import '../css/navbar.css'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { NAV_LINKS } from '../constants/navLinks'
+import { NAVBAR_MOBILE_COLORS, NAVBAR_MOBILE_COLOR_DEFAULT } from '../constants/navbarColors'
 
 const isDesktop = () => window.matchMedia('(min-width: 992px)').matches
 
@@ -82,12 +84,20 @@ export default function Navbar() {
     }
   }, [isOpen])
 
+  const mobileBgColor = isOpen ? '#253965' : (NAVBAR_MOBILE_COLORS[location.pathname] ?? NAVBAR_MOBILE_COLOR_DEFAULT)
+
   return (
-    <nav ref={navRef} className="navbar navbar-expand-lg navbar--coq" aria-label="Navegación principal" data-bs-theme="light">
+    <nav
+      ref={navRef}
+      className="navbar navbar-expand-lg navbar--coq"
+      aria-label="Navegación principal"
+      data-bs-theme="light"
+      style={{ '--navbar-mobile-bg': mobileBgColor }}
+    >
       <div className="container-fluid px-3 px-lg-4 py-1 navbar__mainRow">
         <div className="navbar__logoWrap">
           <Link className="navbar-brand navbar__logoLink" to="/" onClick={handleLogoClick}>
-            <img className="navbar__logo" src={logoCoq} alt="COQ" />
+            <img className="navbar__logo" src={isOpen ? logoBlanco : logoCoq} alt="COQ" />
           </Link>
         </div>
 

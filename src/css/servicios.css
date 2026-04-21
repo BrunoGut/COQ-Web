@@ -49,9 +49,18 @@
 }
 
 .servicios__arrow {
-  font-size: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   margin-left: 20px;
   transition: transform 0.3s ease;
+}
+
+.servicios__arrowImg {
+  display: block;
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
 }
 
 .servicios__item:hover .servicios__arrow {
@@ -94,5 +103,13 @@
   .servicios__cardTitle {
     font-size: clamp(18px, 5vw, 22px);
     letter-spacing: 0.3px;
+  }
+
+  .servicios__titulo{
+    font-size: 30px;
+  }
+
+  .servicios__item{
+    font-size: 20px;
   }
 }
