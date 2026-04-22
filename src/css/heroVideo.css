@@ -131,18 +131,16 @@
 
 @media (max-width: 991px) {
     .hero-container {
-        flex-direction: column;
-        max-height: none;
-        height: auto;
+        max-height: 100vh;
+        height: 100vh;
     }
 
     .hero-content-left {
-        min-height: 400px;
-        padding: 60px 20px;
+        display: none;
     }
 
     .hero-content-right {
-        min-height: 400px;
+        flex: 1;
     }
 
     .hero-title {
@@ -153,25 +151,6 @@
 @media (max-width: 576px) {
     .hero-title {
         font-size: 2rem;
-    }
-
-    .hero-content-left{
-        display: none;
-    }
-
-    .hero-content-left {
-        padding: 40px 20px;
-        min-height: 350px;
-        text-align: center;
-    }
-
-    .boton-hero {
-        align-items: center;
-    }
-
-    .boton-hero button{
-        padding: 0.85rem 1.5rem;
-        font-size: 0.9rem;
     }
 
     .servicios__carousel .carousel-control-prev-icon, .servicios__carousel .carousel-control-next-icon{

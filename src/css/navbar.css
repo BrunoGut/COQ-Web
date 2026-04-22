@@ -394,9 +394,19 @@
   .navbar--coq .navbar__dropdownItem {
     display: block;
     padding: 0.85rem 1.25rem !important;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
+    /*border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;*/  
     font-size: 0.9rem;
     color: #ffffff;
+  }
+
+  /*.navbar--coq .navbar__dropdownItem.active {
+    background: #ffffff;
+    color: #253965;
+  }*/
+
+  .navbar--coq .navbar__dropdownItem:hover{
+    background: #ffffff;
+    color: #253965;
   }
 
   .navbar--coq .navbar__dropdownItem:last-child {

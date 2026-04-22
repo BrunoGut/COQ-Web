@@ -138,7 +138,68 @@
   margin-top: 10px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1200px) and (min-width: 1025px) {
+  .reseñas__titulo {
+    font-size: 3rem;
+  }
+
+  .reseña__card {
+    width: 260px;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .reseñas__wrapper {
+    gap: 20px;
+  }
+
+  .reseñas__header {
+    flex: 0 0 42%;
+  }
+
+  .reseñas__titulo {
+    font-size: 2.2rem;
+  }
+
+  .reseñas__subtitulo {
+    font-size: 0.95rem;
+  }
+
+  .reseñas__cards-wrapper {
+    max-width: 100%;
+    height: 380px;
+  }
+
+  .reseña__card {
+    width: 220px;
+    min-height: 280px;
+    max-height: 340px;
+    padding: 28px 22px;
+    gap: 14px;
+  }
+
+  .reseña__card--1 {
+    top: 0;
+    right: 52%;
+  }
+
+  .reseña__card--2 {
+    top: 40px;
+    right: 4%;
+  }
+
+  .reseña__comentario {
+    font-size: 0.88rem;
+    -webkit-line-clamp: 7;
+    line-clamp: 7;
+  }
+
+  .reseña__nombre {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 1200px) and (max-width: 768px) {
   .reseñas__wrapper {
     flex-direction: column;
     gap: 40px;
