@@ -216,6 +216,8 @@
     .programaResidencia__motivos-grid {
         grid-template-columns: 1fr;
         gap: 16px;
+        align-items: center;
+        justify-items: center;
     }
 
     .programaResidencia__motivo-card {
@@ -278,6 +280,11 @@
     .programaResidencia__subtitulo-columna {
         font-size: 26px;
         margin-bottom: 22px;
+    }
+
+    .programaResidencia__motivos-grid{
+        align-items: center;
+        justify-items: center;
     }
 
     .programaResidencia__motivos-titulo {

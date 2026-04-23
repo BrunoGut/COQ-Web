@@ -22,7 +22,13 @@ const UBICACIONES = [
 
 function MapResizer() {
   const map = useMap()
-  useEffect(() => { setTimeout(() => map.invalidateSize(), 300) }, [map])
+  useEffect(() => {
+    setTimeout(() => {
+      map.invalidateSize()
+      const bounds = UBICACIONES.map(u => [u.coords.lat, u.coords.lng])
+      map.fitBounds(bounds, { padding: [30, 30] })
+    }, 300)
+  }, [map])
   return null
 }
 
@@ -102,8 +108,8 @@ export default function QuienesSomos() {
       <section className="qs__mapa-section" id="donde-estamos">
         <div className="qs__mapa-card">
           <div className="qs__mapa-grid">
+            <h3 className="qs__mapa-titulo">Ubicación</h3>
             <div className="qs__mapa-info">
-              <h3 className="qs__mapa-titulo">Ubicación</h3>
               {UBICACIONES.map((u) => (
                 <div key={u.key} className="qs__mapa-block">
                   <span className="qs__mapa-subtitulo">{u.titulo}</span>

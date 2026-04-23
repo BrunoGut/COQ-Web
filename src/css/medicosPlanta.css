@@ -62,12 +62,11 @@
 
 @media (max-width: 600px) {
 	.planta{
-		background-color: #003c77;
-		background-image: linear-gradient(to bottom, #003c77 0%, #f0f0f0 1%, #f0f0f0 96%, #003c77 100%);
-		padding: 56px 0 100px;
+		padding: 0 0 30px;
 	}
 
 	.planta__ul{
 		grid-template-columns: 1fr;
+		text-align: center;
 	}
 }

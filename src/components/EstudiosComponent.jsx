@@ -1,189 +1,142 @@
-import { useDeferredValue, useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import ESTUDIOS_ARRAY from "./data/EstudiosArray";
-import Modal from "./Modal";
+import flechaImg from "../images/patologias/flecha.png";
+import "../css/tratamientos.css";
 import "../css/estudiosComponent.css";
-import "../css/patologias.css";
 
-const normalize = (value) => value.trim().toLowerCase();
+const estudiosOrdenados = [...ESTUDIOS_ARRAY].sort((a, b) =>
+  (a.titulo ?? "").localeCompare(b.titulo ?? "", "es", { sensitivity: "base" })
+);
+
+const MOBILE_BREAKPOINT = 992;
 
 export default function Estudios() {
-  const firstId = ESTUDIOS_ARRAY[0]?.id ?? null;
+  const [estudioSeleccionadoId, setEstudioSeleccionadoId] = useState(
+    () => estudiosOrdenados[0]?.id ?? null
+  );
 
-  const [selectedId, setSelectedId] = useState(firstId);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
-  const [search, setSearch] = useState("");
-  const deferredSearch = useDeferredValue(search);
-  const [query, setQuery] = useState("");
-  const [isFading, setIsFading] = useState(false);
-
-  const selectedItem = ESTUDIOS_ARRAY.find((x) => x.id === selectedId) ?? null; //buscar el item seleccionado
+  const [isSidebarOpen, setIsSidebarOpen] = useState(
+    window.innerWidth >= MOBILE_BREAKPOINT
+  );
 
   useEffect(() => {
-    const nextQuery = normalize(deferredSearch);
-    if (nextQuery === query) return;
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, []);
 
-    setIsFading(true);
-    const timeoutId = setTimeout(() => {
-      setQuery(nextQuery);
-      setIsFading(false);
-    }, 100);
+  useEffect(() => {
+    const onResize = () => {
+      if (window.innerWidth >= MOBILE_BREAKPOINT) {
+        setIsSidebarOpen(true);
+      }
+    };
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
 
-    return () => clearTimeout(timeoutId);
-  }, [deferredSearch, query]);
-
-  const estudiosFiltrados = query
-    ? ESTUDIOS_ARRAY.filter((item) =>
-        normalize(item.title ?? "").includes(query),
-      )
-    : ESTUDIOS_ARRAY;
-
-  const selectItem = (id) => {
-    setSelectedId(id);
-    setIsSidebarOpen(false); //cerrar sidebar al seleccionar un item
-  };
-
-  const openModal = (id) => {
-    if (id != null) {
-      setSelectedId(id);
-    } else if (selectedId == null && firstId != null) {
-      setSelectedId(firstId);
-    }
-    setIsModalOpen(true);
-    setIsSidebarOpen(false);
-  };
+  const estudioSeleccionado = useMemo(
+    () => ESTUDIOS_ARRAY.find((e) => e.id === estudioSeleccionadoId) ?? null,
+    [estudioSeleccionadoId]
+  );
 
   return (
-    <section className="estudios" aria-label="Estudios">
-      
-      <div className="estudios__inner">
-        <div className="estudios__search" role="search">
-          <span className="estudios__searchIcon" aria-hidden="true">
-            Q
-          </span>
-          <input
-            className="estudios__searchInput"
-            type="text"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            placeholder="Buscar en el listado"
-            aria-label="Buscar estudios"
-          />
+    <>
+      <section className="tratamientos__banner" aria-label="Estudios">
+        <div className="tratamientos__banner-contenido">
+          <h2 className="tratamientos__banner-titulo">Estudios</h2>
+          <h4 className="tratamientos__banner-subtitulo">Diagnóstico de precisión para cada paciente</h4>
         </div>
+      </section>
 
-        <div
-          className={`card-wrapper estudios__grid${isFading ? " estudios__grid--fading" : ""}`}
-          role="list"
-          aria-label="Lista de estudios"
-        >
-          {estudiosFiltrados.map((item) => (
-            <article key={item.id} className="card" role="listitem">
-              <div className="card-header" aria-hidden="true" />
-
-              <div className="card-image-estudios">
-                <img
-                  src={item.imagen}
-                  alt={item.title || "Imagen del estudio"}
-                  className="card-img-estudios"
-                  fetchPriority="high"
-                />
-              </div>
-
-              <div className="card-content">
-                <h3 className="card-name">{item.title}</h3>
-                <div className="card-description">
-                  {item.descripcion || "Descripción no disponible."}
-                </div>
-                <button
-                  type="button"
-                  className="card-button"
-                  onClick={() => openModal(item.id)}
-                  aria-label={`Ver más sobre ${item.title}`}
-                >
-                  Ver más
-                </button>
-              </div>
-            </article>
-          ))}
-        </div>
-      </div>
-
-      <Modal
-        isOpen={isModalOpen}
-        closeModal={() => setIsModalOpen(false)}
-        containerClassName="container__modal--wide"
-      >
-        <div className="guardiaModal__layout" aria-label="Detalle de estudios">
-          <aside
-            className={`guardiaModal__sidebar${isSidebarOpen ? " is-open" : ""}`}
-            aria-label="Lista de estudios"
+      <section className="tratamientos" id="estudios" aria-label="Estudios">
+        <div className="tratamientos__inner">
+          <div
+            className="tratamientos__layout"
+            aria-label="Listado y detalle de estudios"
           >
-            <button
-              type="button"
-              className="guardiaModal__sidebarToggle"
-              onClick={() => setIsSidebarOpen((prev) => !prev)}
-              aria-expanded={isSidebarOpen}
-              aria-controls="estudiosModalList"
+            <aside
+              className={`tratamientos__sidebar${isSidebarOpen ? " is-open" : ""}`}
+              aria-label="Lista de estudios"
             >
-              <span className="guardiaModal__sidebarToggleText">
-                Lista de estudios
-              </span>
-              <span
-                className="guardiaModal__sidebarToggleIcon"
-                aria-hidden="true"
+              <button
+                type="button"
+                className="tratamientos__sidebarToggle"
+                onClick={() => setIsSidebarOpen((prev) => !prev)}
+                aria-expanded={isSidebarOpen}
+                aria-controls="estudiosList"
               >
-                <i className="bi bi-chevron-down" />
-              </span>
-            </button>
+                <span className="tratamientos__sidebarToggleText">
+                  {estudioSeleccionado?.titulo ?? "Estudios"}
+                </span>
+                <span className="tratamientos__sidebarToggleIcon" aria-hidden="true">
+                  <i className="bi bi-chevron-down" />
+                </span>
+              </button>
 
-            <div
-              id="estudiosModalList"
-              className="guardiaModal__sidebarContent"
-            >
-              <ul className="guardiaModal__list" role="list">
-                {ESTUDIOS_ARRAY.map((item) => {
-                  const active = item.id === selectedId;
-                  return (
-                    <li key={item.id} className="guardiaModal__listItem">
-                      <button
-                        type="button"
-                        className={`guardiaModal__listButton${active ? " is-active" : ""}`}
-                        onClick={() => selectItem(item.id)}
-                        aria-pressed={active}
-                      >
-                        <span className="guardiaModal__listLabel">
-                          {item.title}
-                        </span>
-                      </button>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-          </aside>
+              <div id="estudiosList" className="tratamientos__sidebarContent">
+                <ul className="tratamientos__list" role="list">
+                  {estudiosOrdenados.map((estudio) => {
+                    const isActive = estudio.id === estudioSeleccionadoId;
+                    return (
+                      <li key={estudio.id} className="tratamientos__listItem" role="listitem">
+                        <button
+                          type="button"
+                          className={`tratamientos__listButton${isActive ? " is-active" : ""}`}
+                          onClick={() => {
+                            setEstudioSeleccionadoId(estudio.id);
+                            if (window.innerWidth < MOBILE_BREAKPOINT) {
+                              setIsSidebarOpen(false);
+                            }
+                          }}
+                          aria-pressed={isActive}
+                        >
+                          <span className="tratamientos__listLabel">{estudio.titulo}</span>
+                          <span className="tratamientos__listArrow" aria-hidden="true">
+                            <img
+                              className="tratamientos__listArrowImg"
+                              src={flechaImg}
+                              alt=""
+                            />
+                          </span>
+                        </button>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            </aside>
 
-          <div aria-label="Contenido">
-            {!selectedItem ? (
-              <p>No hay información para mostrar.</p>
-            ) : (
-              <article
-                key={selectedItem.id}
-                className="guardiaModal__detail guardiaModal__detail--animated"
-              >
-                <header className="guardiaModal__detailHeader">
-                  <h3 className="guardiaModal__detailTitle">
-                    {selectedItem.title}
-                  </h3>
-                  <div className="guardiaModal__detailText">
-                    {selectedItem.descripcion}
+            <div className="tratamientos__content" aria-label="Detalle del estudio">
+              {estudioSeleccionado ? (
+                <article
+                  key={estudioSeleccionado.id}
+                  className="tratamientos__detail tratamientos__detail--animated"
+                  aria-label={`Detalle de ${estudioSeleccionado.titulo}`}
+                >
+                  <div className="tratamientos__detailTop">
+                    <header className="tratamientos__detailHeader">
+                      <h3 className="tratamientos__detailTitle">
+                        {estudioSeleccionado.titulo}
+                      </h3>
+                      <div className="tratamientos__detailDivider" aria-hidden="true" />
+                      <div className="tratamientos__detailText">
+                        {estudioSeleccionado.descripcion || "Descripción no disponible."}
+                      </div>
+                    </header>
                   </div>
-                </header>
-              </article>
-            )}
+                </article>
+              ) : (
+                <div className="tratamientos__placeholder" aria-live="polite">
+                  <p className="tratamientos__placeholderEyebrow">Estudios</p>
+                  <h3 className="tratamientos__placeholderTitle">Seleccioná un estudio</h3>
+                  <p className="tratamientos__placeholderText">
+                    Elegí una opción del listado para ver la descripción del estudio.
+                  </p>
+                </div>
+              )}
+            </div>
           </div>
         </div>
-      </Modal>
-    </section>
+      </section>
+    </>
   );
 }

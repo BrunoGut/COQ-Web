@@ -426,7 +426,11 @@
 
 @media (max-width: 576px){
     .tratamientos__inner{
-        width: min(1220px, calc(100% - 32px));
+        width: 100%;
+    }
+
+    .tratamientos__detail{
+        padding: 0 5px;
     }
 
     .tratamientos__layout{
@@ -483,5 +487,9 @@
 
     .tratamientos__placeholderTitle{
         font-size: 24px;
+    }
+
+    .tratamientos__sidebarToggle:hover{
+        border-color: transparent;
     }
 }

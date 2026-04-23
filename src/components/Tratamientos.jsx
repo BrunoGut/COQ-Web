@@ -198,7 +198,7 @@ export default function Tratamientos() {
                 aria-controls="tratamientosList"
               >
                 <span className="tratamientos__sidebarToggleText">
-                  Especialidades
+                  {patologiaSeleccionada?.label ?? "Especialidades"}
                 </span>
                 <span
                   className="tratamientos__sidebarToggleIcon"

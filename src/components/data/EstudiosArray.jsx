@@ -1,10 +1,7 @@
-const imageUrl = (fileName) => new URL(`../../images/estudios/${fileName}`, import.meta.url).href;
-
 const ESTUDIOS_ARRAY = [
     {
         id: 1,
-        title: " Aberrometría",
-        imagen: imageUrl("aberrometria.jpg"),
+        titulo: "Aberrometría",
         descripcion: (
             <p>
                 Esta técnica diagnóstica realiza una completísima valoración del defecto refractivo de un paciente, incluyendo esas alteraciones llamadas aberraciones de alto orden, que anteriormente se conocían como astigmatismo irregular y no se especificaban. <br />
@@ -16,8 +13,7 @@ const ESTUDIOS_ARRAY = [
     },
     {
         id: 2,
-        title: "Autorefractometría",
-        imagen: imageUrl("autorefrac.jpg"),
+        titulo: "Autorefractometría",
         descripcion: (
             <p>
                 Mide con precisión y en forma automática el vicio de refracción (Miopía, Hipermetropía, Astigmatismo) que poseen sus ojos.
@@ -26,8 +22,7 @@ const ESTUDIOS_ARRAY = [
     },
     {
         id: 3,
-        title: "Campo Visual Computarizado",
-        imagen: imageUrl("cvc.jpg"),
+        titulo: "Campo Visual Computarizado",
         descripcion: (
             <p>
                 El campo visual se define como al espacio en el que un objeto puede ser visto mientras la mirada de la persona estudiada permanece fija hacia un punto situado de frente. <br />
@@ -37,8 +32,7 @@ const ESTUDIOS_ARRAY = [
     },
     {
         id: 4,
-        title: "Daytona",
-        imagen: imageUrl("daytona.avif"),
+        titulo: "Daytona",
         descripcion: (
             <p>
                 El Daytona es un retinógrafo de última generación, el cual produce una imágen retiniana de 200º de alta resolución en menos de medio segundo. <br />
@@ -50,8 +44,7 @@ const ESTUDIOS_ARRAY = [
     },
     {
         id: 5,
-        title: "Interferometría Laser",
-        imagen: imageUrl("iol.jpg"),
+        titulo: "Interferometría Laser",
         descripcion: (
             <p>
                 La interferometría mide el potencial visual, sirve para detectar disminuciones de la agudeza visual por patologías oculares, también para definir expectativas de resultados quirúrgicos.
@@ -60,8 +53,7 @@ const ESTUDIOS_ARRAY = [
     },
     {
         id: 6,
-        title: "Keratograph",
-        imagen: imageUrl("keratograph.jpg"),
+        titulo: "Keratograph",
         descripcion: (
             <p>
                 El Keratograph es un topógrafo corneal que posee una cámara de alta densidad y un sistema de iluminación que permite estudiar la superficie ocular y la dinámica palpebral. El principal uso del Keratograph es diagnosticar el ojo seco y vigilar su tratamiento.
@@ -70,8 +62,7 @@ const ESTUDIOS_ARRAY = [
     },
     {
         id: 7,
-        title: "Microscopía especular",
-        imagen: imageUrl("microesp.jpg"),
+        titulo: "Microscopía especular",
         descripcion: (
             <p>
                 La microscopía especular nos permite realizar el estudio del endotelio corneal. Puesto que la distribución celular es prácticamente uniforme, mediante la microscopía se puede conocer el número, la forma y el tamaño de la población endotelial. <br />La microscopía especular nos da una imagen refleja de la interfase óptica que hay entre el endotelio corneal y el humor acuoso, aunque también puede usarse para obtener imágenes del epitelio y del estroma corneal, así como del cristalino. <br />
@@ -81,8 +72,7 @@ const ESTUDIOS_ARRAY = [
     },
     {
         id: 8,
-        title: "Tomografía de coherencia óptica (OCT)",
-        imagen: imageUrl("oct.jpg"),
+        titulo: "Tomografía de coherencia óptica (OCT)",
         descripcion: (
             <p>
                 La Tomografía de coherencia óptica o comúnmente conocida OCT, es una técnica de diagnóstico, control y seguimiento, que nos permite el estudio de cortes histológicos de la retina en vivo. <br />
@@ -93,8 +83,7 @@ const ESTUDIOS_ARRAY = [
     },
     {
         id: 9,
-        title: "Pentacam",
-        imagen: imageUrl("pentacam.jpg"),
+        titulo: "Pentacam",
         descripcion: (
             <p>
                 Está basado en una cámara de Scheimpflug rotatoria 360º alrededor del ojo, sin contacto, creando una imagen en 3D de la cámara anterior. <br />
@@ -109,8 +98,7 @@ const ESTUDIOS_ARRAY = [
     },
     {
         id: 10,
-        title: "Refractometría Pediátrica",
-        imagen: imageUrl("refracpedi.jpg"),
+        titulo: "Refractometría Pediátrica",
         descripcion: (
             <p>
                 La refractometría pediátrica se realiza en  infantes, niños y pacientes que no colaboran se miden ambos ojos simultáneamente a un metro de distancia en un segundo.  El propósito de una medición con el autorrefractor pediátrico es brindar una refracción inicial como examen de entrada en el consultorio médico. <br />
@@ -120,8 +108,7 @@ const ESTUDIOS_ARRAY = [
     },
     {
         id: 11,
-        title: "Retinografia",
-        imagen: imageUrl("retinografia.jpg"),
+        titulo: "Retinografia",
         descripcion: (
             <p>
                 Las fotografías oculares son una de las formas ideales para hacer seguimiento de patologías de la retina y a pacientes con glaucoma o sospecha de esta enfermedad.  Su principal utilidad esta en registrar gráficamente los cambios que se puedan presentar en la retina, mácula, en el nervio óptico y en cualquier otra estructura del sistema visual.  En muchas ocasiones estos cambios son muy pequeños y aún si fueran grandes es muy difícil que el oftalmólogo recuerde cual es el estado exacto de cada uno de sus pacientes.  No es un examen diagnostico que arroje resultados, su utilidad esta en el seguimiento. <br />
@@ -140,8 +127,7 @@ const ESTUDIOS_ARRAY = [
     },
     {
         id: 12,
-        title: "Topografía corneal",
-        imagen: imageUrl("tomey.jpg"),
+        titulo: "Topografía corneal",
         descripcion: (
             <p>
                 La topografía corneal es una herramienta computarizada que crea un mapa tridimensional de la superficie curva de la córnea. <br />
@@ -151,8 +137,7 @@ const ESTUDIOS_ARRAY = [
     },
     {
         id: 13,
-        title: "Tonometría",
-        imagen: imageUrl("tonometro.jpg"),
+        titulo: "Tonometría",
         descripcion: (
             <p>
                 Permite medir la presión intraocular (PIO) sin que exista ningún contacto con el ojo del paciente. <br />
@@ -162,8 +147,7 @@ const ESTUDIOS_ARRAY = [
     },
     {
         id: 14,
-        title: "UBM",
-        imagen: imageUrl("ubm.jpg"),
+        titulo: "UBM",
         descripcion: (
             <p>
                 La UBM (ultrabiomicroscopía) es una ecografía de alta resolución de la parte anterior del ojo, permite hacer una evaluación de las estructuras del segmento anterior del ojo a través de imágenes de alta resolución obtenidas por ultrasonido. <br /> <strong>¿EN QUE CASOS SE REQUIERE?</strong> <br />

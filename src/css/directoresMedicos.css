@@ -55,7 +55,6 @@
     position: relative;
     z-index: 1;
     width: 100%;
-    width: 350px;
     height: 400px;
     box-sizing: border-box;
     border-radius: 25px;
@@ -203,9 +202,32 @@
 }
 
 
-@media (max-width: 992px){
+@media (max-width: 1150px){
     .directoresMedicos__cards{
         grid-template-columns: repeat(2, minmax(0, 1fr));
+        margin: 0 16px;
+        padding: 0 16px 24px;
+        gap: 16px;
+    }
+
+    .directoresMedicos .card{
+        width: 100%;
+    }
+
+    .directoresMedicos .card-image{
+        height: 240px;
+    }
+
+    .directoresMedicos__cards .card{
+        height: auto;
+    }
+
+    .directoresMedicos .card-name{
+        font-size: 16px;
+    }
+
+    .directoresMedicos .card-description{
+        font-size: 13px;
     }
 }
 
@@ -219,7 +241,14 @@
 @media (max-width: 576px){
     .directoresMedicos__cards{
         grid-template-columns: minmax(0, 1fr);
-        padding-left: 44px;
-        padding-right: 44px;
+        padding-left: 16px;
+        padding-right: 16px;
+        margin: 0 auto;
+        justify-items: center;
+    }
+
+    .directoresMedicos .card{
+        width: 100%;
+        max-width: 360px;
     }
 }
