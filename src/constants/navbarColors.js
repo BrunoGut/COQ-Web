@@ -7,7 +7,7 @@ export const NAVBAR_MOBILE_COLORS = {
   '/':                    '#f0f0f0',   // HeroVideo – fondo mobile
   '/nosotros':            '#929cb2',   // QuienesSomos – banner
   '/guardia':             '#929cb2',   // GuardiaComponent – banner
-  '/estudios':            'rgba(0,0,0,0.55)', // BannerComponent – overlay sobre imagen
+  '/estudios':            '#929cb2', // BannerComponent – overlay sobre imagen
   '/cirugias':            'rgba(0,0,0,0.55)', // BannerComponent – overlay sobre imagen
   '/estetica':            'rgba(0,0,0,0.55)', // BannerComponent – overlay sobre imagen
   '/coberturas':          '#929cb2',   // CoberturasComponent – banner

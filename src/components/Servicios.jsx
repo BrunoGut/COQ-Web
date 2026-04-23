@@ -9,7 +9,7 @@ const SERVICIOS_ITEMS = [
   { label: "Estudios", href: "/estudios" },
   { label: "Oftalmopediatría", href: "/oftalmopediatria" },
   { label: "Cirugías", href: "/cirugias" },
-  { label: "Especialidades", href: "/servicios" },
+  { label: "Especialidades", href: "/que-tratamos" },
 ];
 
 export default function Servicios() {
