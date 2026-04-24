@@ -3,7 +3,7 @@ import "../css/ingresoResidenciaComponent.css";
 function IngresoResidenciaComponent() {
   return (
     <>
-      <section className="ingresoResidencia__banner" aria-label="Ingreso 2026">
+      <section id="ingreso-residencia" className="ingresoResidencia__banner" aria-label="Ingreso 2026">
         <div className="ingresoResidencia__banner-contenido">
           <h2 className="ingresoResidencia__banner-titulo">Ingreso <br /> 2026</h2>
         </div>

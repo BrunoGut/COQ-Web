@@ -79,6 +79,18 @@ export default function Navbar() {
     setIsOpen(false);
   };
 
+  const handleHashLink = (e, href) => {
+    const [path, hash] = href.split("#");
+    const currentPath = location.pathname === "/" ? "/" : location.pathname;
+    const targetPath = path === "" ? "/" : path;
+    if (hash && currentPath === targetPath) {
+      e.preventDefault();
+      const el = document.getElementById(hash);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+      setIsOpen(false);
+    }
+  };
+
   const handleLogoClick = (e) => {
     e.preventDefault();
     closeAll();
@@ -195,7 +207,10 @@ export default function Navbar() {
                       <Link
                         className="nav-link navbar__link"
                         to={link.href}
-                        onClick={() => setIsOpen(false)}
+                        onClick={(e) => {
+                          handleHashLink(e, link.href);
+                          setIsOpen(false);
+                        }}
                       >
                         {link.label}
                       </Link>
@@ -233,7 +248,7 @@ export default function Navbar() {
                           <Link
                             key={sublink.href}
                             to={sublink.href}
-                            onClick={closeAll}
+                            onClick={(e) => { handleHashLink(e, sublink.href); closeAll(); }}
                             className="dropdown-item navbar__dropdownItem"
                             /*
                                 SI QUIERO ACTIVAR EL ESTILO ACTIVE EN LOS SUBENLACES, DESCOMENTAR ESTO Y COMENTAR LA CLASE DE ARRIBA

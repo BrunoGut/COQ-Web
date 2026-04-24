@@ -8,18 +8,7 @@ function CoberturasComponent() {
   const deferredSearch = useDeferredValue(search); //retarda el valor de búsqueda para optimizar el rendimiento
   const [query, setQuery] = useState("");
   const [isFading, setIsFading] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedCobertura, setSelectedCobertura] = useState(null);
 
-  const openModal = (cobertura) => {
-    selectedCobertura(cobertura);
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-    setSelectedCobertura(null);
-  };
 
   useEffect(() => {
     const nextQuery = normalize(deferredSearch);
@@ -80,8 +69,6 @@ function CoberturasComponent() {
               role="button"
               tabIndex={0}
               aria-haspopup="dialog"
-              onClick={() => openModal(item)}
-              onKeyDown={(event) => handleItemKeyDown(event, item)}
             >
               <h3 className="coberturas__itemTitle">{item.title}</h3>
             </li>

@@ -5,9 +5,9 @@ import flechaImg from "../images/servicios/flecha.png";
 
 const SERVICIOS_ITEMS = [
   { label: "Guardia", href: "/guardia" },
-  { label: "Estética", href: "/estetica" },
+  //{ label: "Estética", href: "/estetica" },
   { label: "Estudios", href: "/estudios" },
-  { label: "Oftalmopediatría", href: "/oftalmopediatria" },
+  //{ label: "Oftalmopediatría", href: "/oftalmopediatria" },
   { label: "Cirugías", href: "/cirugias" },
   { label: "Especialidades", href: "/que-tratamos" },
 ];

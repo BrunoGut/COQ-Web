@@ -1,9 +1,8 @@
-import videoHero2 from "../videos/videoHero.mp4";
+import videoHero2 from "../videos/videoHeroOptimizado.mp4";
 import heroPoster from "../images/banner-video.png";
 import "../css/heroVideo.css";
 import { Link } from "react-router-dom";
 import { useCallback, useState } from "react";
-import bannerHome from "../images/bannerHome.jpeg";
 
 export default function HeroVideo() {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);

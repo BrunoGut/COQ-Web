@@ -16,7 +16,6 @@
     width: 60px;
     height: 60px;
     background-color: #008430;
-    border: 1px solid #ffffff;
     padding: 0;
     display: flex;
     align-items: center;
@@ -79,7 +78,6 @@
     width: 60px;
     height: 60px;
     background-color: #003c77;
-    border: 1px solid #ffffff;
     padding: 0;
     display: flex;
     align-items: center;
@@ -128,7 +126,6 @@
     width: 60px;
     height: 60px;
     background-color: #8c0000;
-    border: 1px solid #ffffff;
     padding: 0;
     display: flex;
     align-items: center;
@@ -174,13 +171,11 @@
     border-radius: 50%;
     width: 60px;
     height: 60px;
-    background-color: #003c77;
-    border-color: #ffffff;
+    background-color: #8d9ec1;
 }
 
 .boton-volver-inicio:hover{
-    background-color: #007bff;
-    border-color: #000000;
+    background-color: #003c77;
 }
 
 .boton-volver-inicio .bi-arrow-up{

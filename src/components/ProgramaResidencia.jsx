@@ -5,7 +5,7 @@ import caoImg from "../images/residencia/cao_img.png";
 function ProgramaResidencia() {
   return (
     <>
-      <section className="programaResidencia__banner" aria-label="Programa de residencia">
+      <section id="programa-residencias" className="programaResidencia__banner" aria-label="Programa de residencia">
         <div className="programaResidencia__banner-contenido">
           <h2 className="programaResidencia__banner-titulo">Programa de Residencia</h2>
           <h4 className="programaResidencia__banner-subtitulo">Excelencia académica y práctica clínica de alta complejidad</h4>
@@ -28,7 +28,7 @@ function ProgramaResidencia() {
               y fiscalizado por la Escuela Superior de Enseñanza <br /> Médica del Colegio de Médicos de la Provincia de Buenos Aires (Distrito II).
             </p>
             <p className="programaResidencia__texto-centro programaResidencia__texto-centro--destacado">
-              Adherimos estrictamente a los lineamientos de formación de:
+              Nuestra institución está afiliada a:
             </p>
 
             <div className="programaResidencia__cao-img" aria-label="Consejo Argentino de Oftalmología">

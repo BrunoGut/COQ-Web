@@ -1,96 +1,77 @@
-import React, { useDeferredValue, useEffect, useState } from 'react'
-import CIRUGIAS from './data/CirugiasArray'
-import '../css/cirugiasComponent.css'
-import Modal from './Modal'
+import React, { useDeferredValue, useEffect, useState } from "react";
+import CIRUGIAS from "./data/CirugiasArray";
+import "../css/cirugiasComponent.css";
 
-const normalize = (value) => value.trim().toLowerCase() // Normaliza el texto para búsquedas
+const normalize = (value) => value.trim().toLowerCase(); // Normaliza el texto para búsquedas
 
 function CirugiasComponent() {
-    const [search, setSearch] = useState('')
-    const deferredSearch = useDeferredValue(search) //retarda el valor de búsqueda para optimizar el rendimiento
-    const [query, setQuery] = useState('')
-    const [isFading, setIsFading] = useState(false)
-    const [isModalOpen, setIsModalOpen] = useState(false)
-    const [selectedCirugia, setSelectedCirugia] = useState(null)
+  const [search, setSearch] = useState("");
+  const deferredSearch = useDeferredValue(search); //retarda el valor de búsqueda para optimizar el rendimiento
+  const [query, setQuery] = useState("");
+  const [isFading, setIsFading] = useState(false);
 
-    const openModal = (cirugia) => {
-        setSelectedCirugia(cirugia)
-        setIsModalOpen(true)
-    }
+  useEffect(() => {
+    const nextQuery = normalize(deferredSearch);
+    if (nextQuery === query) return;
 
-    const closeModal = () => {
-        setIsModalOpen(false)
-        setSelectedCirugia(null)
-    }
+    setIsFading(true);
+    const timeoutId = setTimeout(() => {
+      setQuery(nextQuery);
+      setIsFading(false);
+    }, 100);
 
-    useEffect(() => {
-        const nextQuery = normalize(deferredSearch)
-        if (nextQuery === query) return
+    return () => clearTimeout(timeoutId);
+  }, [deferredSearch, query]);
 
-        setIsFading(true)
-        const timeoutId = setTimeout(() => {
-            setQuery(nextQuery)
-            setIsFading(false)
-        }, 100)
+  const cirugiasFiltradas = query
+    ? CIRUGIAS.filter((item) => item.title.toLowerCase().includes(query))
+    : CIRUGIAS;
 
-        return () => clearTimeout(timeoutId)
-    }, [deferredSearch, query])
-
-    const cirugiasFiltradas = query
-        ? CIRUGIAS.filter((item) => item.title.toLowerCase().includes(query))
-        : CIRUGIAS
-
-    const handleItemKeyDown = (event, item) => {
-        if (event.key === 'Enter' || event.key === ' ') {
-            event.preventDefault()
-            openModal(item)
-        }
-    }
-    
   return (
-    <section className="cirugias">        
+    <>
+      <section className="cirugias__banner" aria-label="Cirugias">
+        <div className="cirugias__banner-contenido">
+          <h2 className="cirugias__banner-titulo">Cirugías</h2>
+          <h4 className="cirugias__banner-subtitulo">
+            Contamos con un quirófano equipado para realizar cirugías
+            oftalmológicas de alta complejidad
+          </h4>
+        </div>
+      </section>
+
+      <section className="cirugias" id="cirugias-medicas">
         <div className="cirugias__search" role="search">
-            <span className="cirugias__searchIcon" aria-hidden="true">Q</span>
-            <input
-                className="cirugias__searchInput"
-                type="text"
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-                placeholder="Buscar en el listado"
-                aria-label="Buscar cirugías"
-            />
+          <span className="cirugias__searchIcon" aria-hidden="true">
+            Q
+          </span>
+          <input
+            type="text"
+            className="cirugias__searchInput"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Buscar en el listado"
+            aria-label="Buscar cirugías"
+          />
         </div>
 
-        <ul className={`cirugias__grid${isFading ? ' cirugias__grid--fading' : ''}`}>
-            {cirugiasFiltradas.map((item) => (
-                <li
-                    className="cirugias__item"
-                    key={item.id}
-                    role="button"
-                    tabIndex={0}
-                    aria-haspopup="dialog"
-                    onClick={() => openModal(item)}
-                    onKeyDown={(event) => handleItemKeyDown(event, item)}
-                >
-                    {item.title}
-                </li>
-            ))}
+        <ul
+          className={`cirugias__grid${isFading ? " cirugias__grid--fading" : ""}`}
+        >
+          {cirugiasFiltradas.map((item) => (
+            <li
+              className="cirugias__item"
+              key={item.id}
+              role="button"
+              tabIndex={0}
+              aria-haspopup="dialog"
+            >
+              <h3 className="cirugias__itemTitle">{item.title}</h3>
+            </li>
+          ))}
         </ul>
-
-        {/*<Modal isOpen={isModalOpen} closeModal={closeModal}>
-            <div className="cirugiaModal__content">
-                <h2 className="cirugiaModal__title">Solicitar turno para esta cirugía</h2>
-                <p className="cirugiaModal__name">{selectedCirugia?.title}</p>
-                <a href="https://wa.me/541138721437" target="_blank" rel="noopener noreferrer">
-                <button className="boton-cirugia" type='button'>
-                <i className="bi bi-whatsapp" aria-hidden="true" />
-                <span>CLICK ACÁ</span>
-            </button>
-            </a>
-            </div>
-        </Modal>*/}
-    </section>
-  )
+      </section>
+    </>
+  );
 }
 
-export default CirugiasComponent
+export default CirugiasComponent;

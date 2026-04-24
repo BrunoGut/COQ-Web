@@ -28,12 +28,12 @@ export default function BotonWhatsApp() {
           </a>
         </div>
 
-        <div className="guardia-flotante">
+        {/*<div className="guardia-flotante">
           <Link className="boton-guardia-flotante" to="/guardia">
             <i className="bi bi-hospital" aria-hidden="true" />
             <span className="boton-flotante-texto">Guardia</span>
           </Link>
-        </div>
+        </div>*/}
 
         <div className="volver-inicio">
           <button

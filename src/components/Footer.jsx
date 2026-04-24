@@ -6,6 +6,17 @@ export default function Footer() {
   const navigate = useNavigate();
   const location = useLocation();
 
+  const handleHashLink = (e, href) => {
+    const [path, hash] = href.split("#");
+    const currentPath = location.pathname === "/" ? "/" : location.pathname;
+    const targetPath = path === "" ? "/" : path;
+    if (hash && currentPath === targetPath) {
+      e.preventDefault();
+      const el = document.getElementById(hash);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const handleLogoClick = (event) => {
     event.preventDefault();
 
@@ -37,10 +48,11 @@ export default function Footer() {
             <div className="footer-col">
               <div className="footer-title">Nosotros</div>
               <ul className="footer-links list-unstyled mb-0">
-                <li><Link to="/nosotros#quienes-somos">Nuestra historia</Link></li>
-                <li><Link to="/nosotros#donde-estamos">Ubicación</Link></li>
+                <li><Link to="/nosotros#quienes-somos" onClick={(e) => handleHashLink(e, "/nosotros#quienes-somos")}>Nuestra historia</Link></li>
+                <li><Link to="/nosotros#donde-estamos" onClick={(e) => handleHashLink(e, "/nosotros#donde-estamos")}>Ubicación</Link></li>
                 <li><Link to="/staff-medico">Cuerpo médico</Link></li>
-                <li><Link to="/residencia/#programaResidencia">Programa de residencias</Link></li>
+                <li><Link to="/residencia#programa-residencias" onClick={(e) => handleHashLink(e, "/residencia#programa-residencias")}>Programa de residencias</Link></li>
+                <li><Link to="/residencia#ingreso-residencia" onClick={(e) => handleHashLink(e, "/residencia#ingreso-residencia")}>Ingreso a residencia</Link></li>
                 <li><Link to="/prensa">Prensa</Link></li>
               </ul>
             </div>
