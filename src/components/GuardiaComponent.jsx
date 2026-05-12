@@ -9,6 +9,7 @@ import "../css/guardiaComponent.css";
 import GUARDIA from "./data/GuardiaArray";
 
 export default function GuardiaComponent() {
+  const [modalOpen, setModalOpen] = useState(false);
   return (
     <>
       <section className="guardia">
@@ -43,6 +44,14 @@ export default function GuardiaComponent() {
           Para controles generales y recetas de anteojos, por favor solicite un turno en nuestros consultorios.
         </p>
       </div>
+      <div className="principales__urgencias">
+        <button
+              className="principales__urgencias-boton"
+              onClick={() => setModalOpen(true)}
+            >
+              Principales urgencias
+            </button>
+      </div>
       </section>
 
       <section className="guardia__mapa-section">
@@ -67,6 +76,24 @@ export default function GuardiaComponent() {
           </div>
         </div>
       </section>
+
+      <Modal isOpen={modalOpen} closeModal={() => setModalOpen(false)} title="Principales Urgencias Oftalmológicas">
+        <div className="ingresoResidencia__modal-contenido">
+          {GUARDIA.map((item) => (
+            <div key={item.id} style={{ marginBottom: "1rem" }}>
+              <h4 style={{ marginBottom: "0.5rem", fontSize: "22px", color: "#343232" }}>{item.title}</h4>
+              {item.descripcion}
+              {item.sections.map((section, i) => (
+                <div key={i} style={{ marginTop: "0.75rem" }}>
+                  <strong>{section.titulo}</strong>
+                  {section.texto}
+                </div>
+              ))}
+            </div>
+          ))}
+          <button className="ingresoResidencia__modal-btn-cerrar" onClick={() => setModalOpen(false)}>Cerrar</button>
+        </div>
+      </Modal>
     </>
   );
 }

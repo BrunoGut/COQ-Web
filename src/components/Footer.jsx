@@ -51,8 +51,6 @@ export default function Footer() {
                 <li><Link to="/nosotros#quienes-somos" onClick={(e) => handleHashLink(e, "/nosotros#quienes-somos")}>Nuestra historia</Link></li>
                 <li><Link to="/nosotros#donde-estamos" onClick={(e) => handleHashLink(e, "/nosotros#donde-estamos")}>Ubicación</Link></li>
                 <li><Link to="/staff-medico">Cuerpo médico</Link></li>
-                <li><Link to="/residencia#programa-residencias" onClick={(e) => handleHashLink(e, "/residencia#programa-residencias")}>Programa de residencias</Link></li>
-                <li><Link to="/residencia#ingreso-residencia" onClick={(e) => handleHashLink(e, "/residencia#ingreso-residencia")}>Ingreso a residencia</Link></li>
                 <li><Link to="/prensa">Prensa</Link></li>
               </ul>
             </div>
@@ -68,21 +66,30 @@ export default function Footer() {
             </div>
 
             <div className="footer-col">
-              <div className="footer-title">Seguinos</div>
-              <div className="footer-social" aria-label="Redes sociales">
-                <a className="social-link" href="https://www.youtube.com/@centrodeojosquilmes586" aria-label="YouTube">
-                  <i className="bi bi-youtube" aria-hidden="true" />
-                </a>
-                <a className="social-link" href="https://www.instagram.com/centrodeojosquilmes/" aria-label="Instagram">
-                  <i className="bi bi-instagram" aria-hidden="true" />
-                </a>
-                <a className="social-link" href="https://www.facebook.com/centrodeojos.quilmes/" aria-label="Facebook">
-                  <i className="bi bi-facebook" aria-hidden="true" />
-                </a>
-                <a className="social-link" href="https://www.linkedin.com/company/centro-de-ojos-quilmes/" aria-label="Linkedin">
-                  <i className="bi bi-linkedin" aria-hidden="true" />
-                </a>
-              </div>
+              <div className="footer-title">Residencia</div>
+              <ul className="footer-links list-unstyled mb-0">
+                <li><Link to="/residencia#programa-residencias" onClick={(e) => handleHashLink(e, "/residencia#programa-residencias")}>Programa de residencia</Link></li>
+                <li><Link to="/residencia#ingreso-residencia" onClick={(e) => handleHashLink(e, "/residencia#ingreso-residencia")}>Ingreso a residencia</Link></li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div className="footer-col footer-col--social">
+            <div className="footer-title">Seguinos</div>
+            <div className="footer-social" aria-label="Redes sociales">
+              <a className="social-link" href="https://www.youtube.com/@centrodeojosquilmes586" aria-label="YouTube">
+                <i className="bi bi-youtube" aria-hidden="true" />
+              </a>
+              <a className="social-link" href="https://www.instagram.com/centrodeojosquilmes/" aria-label="Instagram">
+                <i className="bi bi-instagram" aria-hidden="true" />
+              </a>
+              <a className="social-link" href="https://www.facebook.com/centrodeojos.quilmes/" aria-label="Facebook">
+                <i className="bi bi-facebook" aria-hidden="true" />
+              </a>
+              <a className="social-link" href="https://www.linkedin.com/company/centro-de-ojos-quilmes/" aria-label="Linkedin">
+                <i className="bi bi-linkedin" aria-hidden="true" />
+              </a>
             </div>
           </div>
 

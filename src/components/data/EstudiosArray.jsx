@@ -4,7 +4,10 @@ const ESTUDIOS_ARRAY = [
         titulo: "Aberrometría",
         descripcion: (
             <p>
-                Permite realizar una valoración exhaustiva del defecto refractivo del paciente, identificando alteraciones complejas denominadas aberraciones de alto orden que los exámenes convencionales no logran especificar. Mediante un mapa de colores detallado, el estudio representa las deformaciones que afectan la imagen en la retina, permitiendo al profesional comprender con precisión cómo ve el individuo en distintas condiciones de luminosidad. Su aplicación es fundamental para tratar ojos con córneas dañadas o deformadas por cirugías previas, así como para identificar las causas objetivas de síntomas como la visión de halos y el deslumbramiento, garantizando una solución personalizada para mejorar la calidad visual.
+                Esta técnica diagnóstica realiza una completísima valoración del defecto refractivo de un paciente, incluyendo esas alteraciones llamadas aberraciones de alto orden, que anteriormente se conocían como astigmatismo irregular y no se especificaban. <br />
+                Nos permite representar en un mapa de colores, las deformaciones que alteran la imagen retiniana y, considerando la interrelación entre la apertura pupilar y esas aberraciones, hacernos una idea precisa de la capacidad de un individuo de desenvolverse en distintas condiciones de luminosidad. <br />
+                Tiene su mejor aplicación en el tratamiento de ojos con córneas deformes o dañados por cirugía previa. <br />
+                También nos ayuda a identificar las causas objetivas de quejas como visión de halos, deslumbramiento, etc.
             </p>
         )
     },
@@ -22,7 +25,10 @@ const ESTUDIOS_ARRAY = [
         titulo: "Campo Visual Computarizado",
         descripcion: (
             <p>
-                Mide la amplitud de la visión y detecta la presencia de puntos ciegos mediante el análisis del espacio que el ojo es capaz de percibir mientras mantiene la mirada fija en un punto central. Su uso es vital para el seguimiento del glaucoma y de diversas patologías de la retina, pero también resulta clave para identificar lesiones en la vía óptica relacionadas con afecciones sistémicas como tumores, problemas vasculares, diabetes o hipertensión.
+                El campo visual se define como al espacio en el que un objeto puede ser visto mientras la mirada de la persona estudiada permanece fija hacia un punto situado de frente. <br />
+                La campimetría o perimetría se utiliza principalmente para realizar el control evolutivo del glaucoma y de otras enfermedades de la retina, como la retinosis pigmentaria. También se emplea para el estudio de las lesiones de la vía óptica,  ya que  valorando las perdidas del campo visual (escotomas), puede localizarse el lugar de la lesión que las provoca. <br />
+                La campimetría es una técnica que además puede aportar información muy valiosa no sólo sobre enfermedades que pueden afectar únicamente a los ojos como el glaucoma, sino también sobre otras enfermedades que pueden manifestarse como un defecto del campo visual. Entre ellas destacan enfermedades degenerativas, tumores cerebrales, problemas vasculares, hipertensión arterial, diabetes, etc..). <br />
+                Realización de la campimetría dinámica:  el paciente permanece sentado situado frente al campímetro. Se examinarán los dos ojos de forma independiente para lo cual el paciente deberá cerrar uno de sus ojos mientras que el examinador le pedirá que le indique cuándo ve y cuándo deja de ver un haz luminoso que se irá desplazando a lo largo del campo visual del ojo estudiado. Posteriormente se repetirá la misma maniobra con el ojo contralateral.
             </p>
         )
     },
@@ -58,7 +64,9 @@ const ESTUDIOS_ARRAY = [
         titulo: "Microscopía especular",
         descripcion: (
             <p>
-                Es un estudio no invasivo y sin contacto que permite analizar en detalle el endotelio corneal, evaluando el número, forma y tamaño de sus células para conocer la reserva fisiológica del ojo. Es un requisito indispensable antes de cirugías de cataratas o implantes de lentes fáquicas, ya que una córnea transparente no siempre garantiza un endotelio sano, y este análisis asegura que el ojo sea apto para el procedimiento.
+                La microscopía especular nos permite realizar el estudio del endotelio corneal. Puesto que la distribución celular es prácticamente uniforme, mediante la microscopía se puede conocer el número, la forma y el tamaño de la población endotelial. <br />
+                La microscopía especular nos da una imagen refleja de la interfase óptica que hay entre el endotelio corneal y el humor acuoso, aunque también puede usarse para obtener imágenes del epitelio y del estroma corneal, así como del cristalino. <br />
+                Para realizarla, no se precisa contacto. El centrado del ojo se realiza con luz de fijación y es recomendable que el paciente parpadee varias veces antes de la toma de la imagen para humedecer la superficie ocular y mejorar su brillo. Es obligatorio realizar la microscopía especular como una ayuda diagnóstica no invasiva para conocer el estado y la reserva fisiológica de la capa celular endotelial, debido a que una córnea transparente no es garantía de un endotelio corneal normal. Así pues, la realizamos de forma sistemática a nuestros pacientes antes de la cirugía de la catarata y de la cirugía del implante de lentes fáquicas.
             </p>
         )
     },
@@ -76,7 +84,26 @@ const ESTUDIOS_ARRAY = [
         titulo: "Pentacam",
         descripcion: (
             <p>
-                Este equipo utiliza una cámara rotatoria de 360º para crear una imagen tridimensional completa de la parte anterior del ojo de forma rápida y sin contacto. Se destaca especialmente en la detección y seguimiento del queratocono, el cálculo preciso de lentes intraoculares para cirugía de cataratas y el control pre y postoperatorio de cirugías refractivas, analizando desde la curvatura corneal hasta la densidad del cristalino.
+                Este equipo utiliza una cámara rotatoria de 360º para crear una imagen tridimensional completa de la parte anterior del ojo de forma rápida y sin contacto. <br />
+                <br />
+                <span className="destacado__estudios">Con el Pentacam se realiza: </span> <br /> <br />
+                <ul>
+                    <li>Topografía de córnea anterior y posterior con mapas de elevación</li>
+                    <li>Paquimetría corneal</li>
+                    <li>Análisis de cámara 3D</li>
+                    <li>Densidad del cristalino o lente intraocular</li>
+                    <li>Aberrometría corneal</li>
+                    <li>Tomografía</li>
+                    <li>Análisis de ectasia corneal</li>
+                    <li>Cálculo de Lente intraocular para pacientes que se han realizado cirugías refractivas</li>
+                </ul>
+                <span className="destacado__estudios">Este estudio se requiere para: </span> <br /> <br />
+                <ul>
+                    <li>Diagnóstico y seguimiento de los defectos refractivos (miopía, hipermetropía, astigmatismo)</li>
+                    <li>Control preoperatorio y post operatorio de Cirugía refractiva, Catarata  o de implante de anillos intraestromales</li>
+                    <li>Cálculo de lente intraocular</li>
+                    <li>Diagnóstico y seguimiento del queratocono y demás ectasias corneales</li>
+                </ul>
             </p>
         )
     },
@@ -85,7 +112,8 @@ const ESTUDIOS_ARRAY = [
         titulo: "Refractometría Pediátrica",
         descripcion: (
             <p>
-                Diseñada específicamente para bebés y niños que no colaboran con los exámenes tradicionales, esta tecnología permite medir ambos ojos simultáneamente a un metro de distancia en solo un segundo. Proporciona una refracción inicial valiosa que sirve como punto de partida para el profesional, ahorrando tiempo crítico en la consulta y facilitando el diagnóstico temprano de miopía, astigmatismo y otros defectos visuales infantiles.
+                La refractometría pediátrica se realiza en  infantes, niños y pacientes que no colaboran se miden ambos ojos simultáneamente a un metro de distancia en un segundo.  El propósito de una medición con el autorrefractor pediátrico es brindar una refracción inicial como examen de entrada en el consultorio médico. <br />
+                En combinación con otras evaluaciones iniciales, un profesional en salud visual puede determinar cómo orientar su consulta. Si es necesaria una retinoscopía ciclopléjica, la refracción inicial suministra un punto de partida valioso para mediciones de miopía, astigmatismo y ejes, ahorrando de este modo un precioso tiempo de tratamiento.
             </p>
         )
     },
@@ -122,6 +150,18 @@ const ESTUDIOS_ARRAY = [
         descripcion: (
             <p>
                 La UBM es una ecografía de alta resolución especializada en el segmento anterior del ojo, que utiliza ultrasonido para observar estructuras que no son visibles a través del microscopio tradicional. Es imprescindible para diagnosticar quistes detrás del iris, analizar ángulos en casos de glaucoma, verificar la posición de lentes implantados y evaluar lesiones postraumáticas, incluso cuando los medios oculares han perdido su transparencia.
+                <br /> <br />
+                <span className="destacado__estudios2">¿En qué casos se requiere?</span> <br /> <br />
+                Las imágenes obtenidas serán imprescindibles en el diagnóstico de: <br /> <br />
+                <ul>
+                    <li>Patologías subiridianas como quistes</li>
+                    <li>Determinación de la profundidad de la cámara anterior</li>
+                    <li>Análisis de ángulos iridocorneales</li>
+                    <li>Seguimiento de cirugía antiglaucomatosa</li>
+                    <li>Observación del correcto posicionamiento de lentes fáquicos</li>
+                    <li>Determinación de profundidad de lesiones corneales</li>
+                    <li>Observación de lesiones postraumáticas de segmento anterior, determinación de grosores corneales y todas aquellas situaciones de segmento anterior que no sean visibles a través del microscopio por falta de transparencia de medios.</li>
+                </ul>
             </p>
         )
     }

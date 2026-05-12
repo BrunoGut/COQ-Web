@@ -59,7 +59,7 @@ function unlockBodyScroll() {
   bodyScrollLockSnapshot = null;
 }
 
-export default function Modal({ isOpen, closeModal, children, containerClassName }) {
+export default function Modal({ isOpen, closeModal, children, containerClassName, title }) {
   const [shouldRender, setShouldRender] = useState(isOpen);
   const [isClosing, setIsClosing] = useState(false);
   const [isOpening, setIsOpening] = useState(false);
@@ -109,9 +109,12 @@ export default function Modal({ isOpen, closeModal, children, containerClassName
         className={`container__modal${containerClassName ? ` ${containerClassName}` : ""}`}
         onClick={(e) => e.stopPropagation()}
       >
-        <button className="modal__close" onClick={closeModal} aria-label="Cerrar">
-          <i className="bi bi-x" aria-hidden="true"></i>
-        </button>
+        <div className="modal__header">
+          {title && <h3 className="modal__title">{title}</h3>}
+          <button className="modal__close" onClick={closeModal} aria-label="Cerrar">
+            <i className="bi bi-x" aria-hidden="true"></i>
+          </button>
+        </div>
 
         <div className="modal__body">{children}</div>
       </div>

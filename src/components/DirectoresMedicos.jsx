@@ -1,5 +1,4 @@
 import React from "react";
-import SectionHeading from "./SectionHeading.jsx";
 import "../css/directoresMedicos.css";
 import DIRECTORES_MEDICOS from "./data/DirectoresMedicos.jsx";
 

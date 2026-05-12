@@ -5,11 +5,6 @@ const MEDICOS_PLANTA = [
         especialidad: "Superficie ocular e infectología"
     },
     {
-        id: 2,
-        nombre: "Castro Tomas",
-        especialidad: "Clínica oftalmológica"
-    },
-    {
         id: 3,
         nombre: "Colantoni Andres",
         especialidad: "Clínica oftalmológica"
@@ -81,12 +76,12 @@ const MEDICOS_PLANTA = [
     },
     {
         id: 17,
-        nombre: "Julio Molina",
+        nombre: "Molina Julio",
         especialidad: "Clínica oftalmológica"
     },
     {
         id: 18,
-        nombre: "Lucas Aguirre",
+        nombre: "Aguirre Lucas",
         especialidad: "Clínica oftalmológica"
     }
 ]

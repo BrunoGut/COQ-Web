@@ -185,7 +185,7 @@ function PrensaComponent() {
                 controls
                 preload="metadata"
                 playsInline
-                style={{ width: "100%", borderRadius: "12px" }}
+                style={{ width: "100%" }}
               >
                 <source src={videoSrc} type="video/mp4" />
               </video>

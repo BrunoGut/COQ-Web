@@ -1,6 +1,9 @@
 import "../css/ingresoResidenciaComponent.css";
+import { useState } from "react";
+import Modal from "./Modal";
 
 function IngresoResidenciaComponent() {
+  const [modalOpen, setModalOpen] = useState(false);
   return (
     <>
       <section id="ingreso-residencia" className="ingresoResidencia__banner" aria-label="Ingreso 2026">
@@ -63,11 +66,32 @@ function IngresoResidenciaComponent() {
 
             <div className="ingresoResidencia__cronograma">
               <h4 className="ingresoResidencia__requisito-titulo">Cronograma</h4>
-              <p className="ingresoResidencia__requisito-texto">Fechas de examen y entrevistas a confirmar</p>
+              <p className="ingresoResidencia__requisito-texto"><span className="texto__subrayado">Cierre de inscripción</span>: a confirmar</p>
+              <p className="ingresoResidencia__requisito-texto"><span className="texto__subrayado">Examen</span>: del <span className="texto__destacado">29/06/2026</span> al <span className="texto__destacado">10/07/2026</span></p>
+              <p className="ingresoResidencia__requisito-texto"><span className="texto__subrayado">Entrevistas</span>: a confirmar</p>
+              <p className="ingresoResidencia__requisito-texto"><span className="texto__subrayado">Inicio de residencia</span>: a confirmar</p>
             </div>
+
+            <button
+              className="ingresoResidencia__btn-inscripcion"
+              onClick={() => setModalOpen(true)}
+            >
+              Inscripción
+            </button>
           </article>
         </div>
       </section>
+
+      <Modal isOpen={modalOpen} closeModal={() => setModalOpen(false)} title="Inscripción al Examen 2026">
+        <div className="ingresoResidencia__modal-contenido">
+          <ul className="ingresoResidencia__modal-lista">
+            <li>Enviar un mail a <a href="mailto:residencia@centrodeojosquilmes.com.ar" className="ingresoResidencia__modal-link">residencia@centrodeojosquilmes.com.ar</a></li>
+            <li>Cuerpo del mensaje poner nombre, apellido y DNI y un Nro. de Celular</li>
+            <li>Adjuntar CV completo (formato .doc, .docx o .pdf), Copia de DNI (formato jpg o pdf), y Matrícula Nacional (en el caso de Argentinos se puede adjuntar constancia de trámite)</li>
+          </ul>
+          <button className="ingresoResidencia__modal-btn-cerrar" onClick={() => setModalOpen(false)}>Cerrar</button>
+        </div>
+      </Modal>
     </>
   );
 }
