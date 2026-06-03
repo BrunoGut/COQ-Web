@@ -30,6 +30,15 @@ const PATOLOGIAS = [
     tratamiento: "Se corrigen mediante el uso de anteojos, lentes de contacto o cirugía refractiva láser, dependiendo de la edad y la salud visual de cada paciente.",
   },
   {
+    id: 4,
+    label: "Retina",
+    href: "#retina",
+    titulo: "Retina",
+    descripcion: "La retina es el tejido sensible a la luz que recubre la parte posterior del ojo. Los rayos de luz se enfocan en la retina a través de la córnea, la pupila y el cristalino. La retina convierte los rayos de luz en impulsos eléctricos que viajan a través del nervio óptico hacia el cerebro, donde se interpretan como las imágenes que vemos. Tener una retina saludable e intacta es clave para tener una visión clara.",
+    sintomas: "Los síntomas de los problemas de retina pueden incluir visión borrosa, pérdida de visión periférica, destellos de luz, aparición de manchas o sombras en el campo visual, y en casos graves, pérdida total de la visión.",
+    tratamiento: "El tratamiento de los problemas de retina depende de la condición específica, pero puede incluir medicamentos, terapia con láser, cirugía o inyecciones intravítreas para preservar o mejorar la visión.",
+  },
+  {
     id: 5,
     label: "Estrabismo",
     href: "#estrabismo",
@@ -41,13 +50,12 @@ const PATOLOGIAS = [
   },
   {
     id: 6,
-    label: "Glaucoma",
-    href: "#glaucoma",
-    titulo: "Glaucoma",
-    descripcion: "Es una enfermedad que daña progresivamente el nervio óptico, que es el encargado de enviar las imágenes al cerebro.",
-    causa: "Generalmente ocurre por un aumento de la presión interna del ojo debido a una falla en el drenaje de sus líquidos naturales.",
-    sintomas: "Es una afección \"silenciosa\" que no duele; la pérdida de visión suele comenzar por los costados y solo se nota en etapas avanzadas.",
-    tratamiento: "El daño no se revierte, pero se controla para evitar que avance mediante gotas diarias, láser o microcirugías.",
+    label: "Estética",
+    href: "#estetica",
+    titulo: "Estética",
+    descripcion: "La estética ocular es una subespecialidad de la oftalmología dedicada a mejorar la apariencia de la mirada y rejuvenecer el área periocular (párpados, cejas y órbita). Combina procedimientos quirúrgicos (como la blefaroplastia) y no quirúrgicos para corregir el exceso de piel, bolsas, arrugas y alteraciones funcionales, preservando siempre la salud visual.",
+    sintomas: "Los pacientes suelen buscar mejorar la apariencia de sus ojos, reducir signos de envejecimiento o corregir deformidades congénitas o adquiridas en el área periocular.",
+    tratamiento: "Los tratamientos pueden incluir cirugía de párpados (blefaroplastia), lifting de cejas, toxina botulínica para arrugas, y procedimientos láser para mejorar la textura de la piel, siempre con un enfoque en la seguridad y la función visual.",
   },
   {
     id: 7,
@@ -68,33 +76,6 @@ const PATOLOGIAS = [
     causa: "Se producen por cambios en el humor vítreo (el gel interno del ojo) que, al envejecer, forma pequeños grumos que proyectan sombras en la retina.",
     sintomas: "Se ven manchas oscuras que se notan más al mirar superficies claras, como una pared blanca, el cielo o una hoja de papel.",
     tratamiento: "En la mayoría de los casos no requieren tratamiento, salvo que aparezcan de forma brusca o acompañadas de destellos de luz.",
-  },
-  {
-    id: 9,
-    label: "Maculopatía",
-    href: "#maculopatia",
-    titulo: "Maculopatía",
-    descripcion: "Conjunto de procedimientos diseñados para corregir defectos visuales y reducir la dependencia de anteojos.",
-    causa: "Se aplica cuando existen errores de enfoque como la miopía, la hipermetropía o el astigmatismo.",
-    sintomas: "El paciente nota un parpadeo excesivo que no puede controlar, sensibilidad a la luz y dificultad para mantener los ojos abiertos.",
-    tratamiento: [
-      <ul>
-        <li>Es un conjunto de procedimientos diseñados para corregir defectos visuales y reducir la dependencia de anteojos.</li>
-        <li>Causas: Se aplica cuando existen errores de enfoque como la miopía, la hipermetropía o el astigmatismo.</li>
-        <li>Síntomas: Visión desenfocada o cansancio visual al intentar compensar el defecto de forma natural.</li>
-        <li>Tratamiento: Dependiendo de cada caso, se utiliza tecnología láser (Excimer) o el implante de lentes intraoculares para devolver la nitidez.</li>
-      </ul>
-    ]
-  },
-  {
-    id: 10,
-    label: "Miodesopsias",
-    href: "#miodesopsias",
-    titulo: "Miodesopsias",
-    descripcion: "Aparición de pequeñas manchas, puntos o hilos flotantes que se desplazan por el campo visual siguiendo el movimiento del ojo.",
-    causa: "Se producen por cambios en el humor vítreo (el gel interno del ojo) que, al envejecer, forma pequeños grumos que proyectan sombras en la retina.",
-    sintomas: "Se ven manchas oscuras que se notan más al mirar superficies claras, como una pared blanca, el cielo o una hoja de papel.",
-    tratamiento: "Uso de lentes correctivos, cirugía refractiva o lentes de contacto.",
   },
   {
     id: 9,
@@ -125,7 +106,18 @@ const PATOLOGIAS = [
     causa: "Las causas varían según la condición tratada, incluyendo factores genéticos, infecciones, traumatismos o enfermedades sistémicas.",
     sintomas: "Los síntomas pueden incluir visión borrosa, estrabismo, lagrimeo excesivo, sensibilidad a la luz o problemas de desarrollo visual.",
     tratamiento: "Depende de la condición tratada, pero puede incluir el uso de lentes correctivos, terapia visual, cirugía o tratamiento de enfermedades subyacentes.",
-  },  
+  },
+  {
+    id: 12,
+    label: "Ojo seco",
+    href: "#ojo-seco",
+    titulo: "Ojo seco",
+    descripcion: "Es una enfermedad que no permite a los ojos producir suficientes lágrimas, o existe una deficiencia en la calidad y/o cantidad de lágrimas producidas por el ojo." +
+    "Estos signos y síntomas se hacen más evidentes cuando hay viento, ventiladores o aire acondicionado porque la lágrima se evapora más rápido.",
+    causa: "Puede ser causado por envejecimiento, cambios hormonales, uso prolongado de pantallas, ciertos medicamentos o enfermedades autoinmunes.",
+    sintomas: "Sensación de ardor, picazón, enrojecimiento, sensación de cuerpo extraño, visión borrosa y sensibilidad a la luz.",
+    tratamiento: "Incluye el uso de lágrimas artificiales, cambios en el estilo de vida para reducir la exposición a factores agravantes, y en casos más severos, medicamentos o procedimientos para mejorar la producción de lágrimas o reducir su evaporación.",
+  }  
 ];
 
 export default PATOLOGIAS;

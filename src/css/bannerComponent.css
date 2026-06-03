@@ -53,12 +53,12 @@
 
 @media (max-width: 576px) {
 	.banner {
-		min-height: 280px;
+		min-height: 250px;
 	}
 
 	.banner__inner {
 		width: min(1100px, calc(100% - 32px));
-		min-height: 280px;
+		min-height: 250px;
 		padding: 34px 18px;
 	}
 

@@ -204,6 +204,17 @@
 }
 
 @media (max-width: 600px) {
+    .coberturas__banner{
+        height: 250px;
+    }
+
+     .coberturas__banner-subtitulo{
+         padding: 0 12px;
+     }
+
+     .coberturas__inner {
+        width: min(1100px, calc(100% - 32px));
+    }
 	.coberturas {
         padding: 20px 0;
 	}

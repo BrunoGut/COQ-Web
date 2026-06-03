@@ -30,7 +30,7 @@ function FormularioEmail({ flechaImg }) {
 
     try {
       await emailjs.send(
-        "service_vbg87pl",
+        "service_kuynnw1",
         "template_fropgfo",
         {
           title: "Mensaje desde el formulario de contacto",

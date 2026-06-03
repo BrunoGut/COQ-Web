@@ -3,8 +3,8 @@ export const NAV_LINKS = [
     label: 'Nosotros',
     href: '/nosotros',
     submenu: [
-      { label: 'Quienes somos',          href: '/nosotros#quienes-somos'      },
-      { label: 'Donde estamos',          href: '/nosotros#donde-estamos'      },
+      { label: 'Quiénes somos',          href: '/nosotros#quienes-somos'      },
+      { label: 'Dónde estamos',          href: '/nosotros#donde-estamos'      },
       { label: 'Staff médico',           href: '/staff-medico'                },
       { label: 'Prensa',                 href: '/prensa'                      },
     ],

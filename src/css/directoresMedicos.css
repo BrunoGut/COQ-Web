@@ -240,6 +240,16 @@
 }
 
 @media (max-width: 576px){
+    .directoresMedicos__banner {
+    background: #929cb2;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
     .directoresMedicos__cards{
         grid-template-columns: minmax(0, 1fr);
         padding-left: 16px;
@@ -251,5 +261,19 @@
     .directoresMedicos .card{
         width: 100%;
         max-width: 360px;
+    }
+
+    .directoresMedicos .card-image img{
+        height: 95%;
+        width: 70%;
+    }
+
+    .directoresMedicos .card-content{
+        align-items: center;
+        text-align: center;
+    }
+
+    .directoresMedicos .card-description{
+        text-align: center;
     }
 }

@@ -76,7 +76,7 @@ export default function Footer() {
           </div>
 
           <div className="footer-col footer-col--social">
-            <div className="footer-title">Seguinos</div>
+            <div className="footer-title">Seguínos</div>
             <div className="footer-social" aria-label="Redes sociales">
               <a className="social-link" href="https://www.youtube.com/@centrodeojosquilmes586" aria-label="YouTube">
                 <i className="bi bi-youtube" aria-hidden="true" />

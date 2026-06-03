@@ -206,6 +206,10 @@
 
 /* ── Responsive ── */
 @media (max-width: 600px) {
+    .qs__banner {
+        height: 250px;
+    }
+
     .qs__inner {
         max-width: 100%;
     }

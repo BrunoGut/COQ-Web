@@ -5,82 +5,82 @@ const MEDICOS_PLANTA = [
         especialidad: "Superficie ocular e infectología"
     },
     {
-        id: 3,
-        nombre: "Colantoni Andres",
-        especialidad: "Clínica oftalmológica"
-    },
-    {
-        id: 4,
-        nombre: "Prieto Diaz Fernando",
-        especialidad: "ESTRABISMO"
-    },
-    {
-        id: 5,
-        nombre: "Ratti Maximiliano",
-        especialidad: "Oftalmopediatría y estrabismo"
-    },
-    {
-        id: 6,
-        nombre: "Russian Jose",
-        especialidad: "Clínica oftalmológica"
-    },
-    {
-        id: 7,
-        nombre: "Vigo Rodolfo",
-        especialidad: "Oculoplastía y órbita"
-    },
-    {
-        id: 8,
-        nombre: "Bonamino Anabella",
-        especialidad: "Clínica oftalmológica y retina"
-    },
-    {
-        id: 9,
+        id: 2,
         nombre: "Bonavita Constanza",
         especialidad: "Uveítis"
     },
     {
-        id: 10,
-        nombre: "Galetto Leila",
-        especialidad: "Clínica oftalmológica y glaucoma"
+        id: 3,
+        nombre: "Prieto Diaz Fernando",
+        especialidad: "Estrabismo"
     },
     {
-        id: 11,
+        id: 4,
+        nombre: "Ratti Maximiliano",
+        especialidad: "Oftalmopediatría y estrabismo"
+    },
+    {
+        id: 5,
+        nombre: "Vigo Rodolfo",
+        especialidad: "Oculoplastía y órbita"
+    },
+    {
+        id: 6,
         nombre: "Grosvard Clara",
         especialidad: "Baja visión y contactología"
     },
     {
-        id: 12,
+        id: 7,
+        nombre: "Bonamino Anabella",
+        especialidad: "Clínica oftalmológica y retina"
+    },
+    {
+        id: 8,
+        nombre: "Galetto Leila",
+        especialidad: "Clínica oftalmológica y glaucoma"
+    },
+    {
+        id: 9,
         nombre: "Molnar Laura",
         especialidad: "Clínica oftalmológica"
     },
     {
-        id: 13,
+        id: 10,
         nombre: "Greco Lourdes",
         especialidad: "Clínica oftalmológica y superficie ocular"
     },
     {
-        id: 14,
+        id: 11,
         nombre: "Podesta Noelia",
         especialidad: "Clínica oftalmológica y glaucoma"
     },
     {
-        id: 15,
+        id: 12,
         nombre: "Russo Natalia",
         especialidad: "Oftalmopediatría"
     },
     {
-        id: 16,
+        id: 13,
+        nombre: "Russian Jose",
+        especialidad: "Clínica oftalmológica"
+    },
+    {
+        id: 14,
+        nombre: "Colantoni Andres",
+        especialidad: "Clínica oftalmológica"
+    },
+    {
+        id: 15,
         nombre: "Schuster Melina",
         especialidad: "Clínica oftalmológica"
     },
     {
-        id: 17,
+        id: 16,
         nombre: "Molina Julio",
         especialidad: "Clínica oftalmológica"
     },
     {
-        id: 18,
+        id: 17,
         nombre: "Aguirre Lucas",
         especialidad: "Clínica oftalmológica"
     }

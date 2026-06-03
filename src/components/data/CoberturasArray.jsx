@@ -1,139 +1,196 @@
 const COBERTURAS = [
     {
         id: 1,
-        title: "AMFA"
-    },
-    {
-        id: 2,
-        title: "ANDAR"
-    },
-    {
-        id: 3,
-        title: "APM Agente de Prepaga Médica"
-    },
-    {
-        id: 4,
         title: "APRES"
     },
     {
-        id: 5,
+        id: 2,
         title: "APSOT"
     },
     {
-        id: 6,
-        title: "Bristol Medicine"
+        id: 3,
+        title: "ASOCIACION MUTUAL SANCOR SALUD"
     },
     {
-        id: 7,
+        id: 4,
+        title: "BRISTOL MEDICINE"
+    },
+    {
+        id: 5,
         title: "CASA"
     },
     {
-        id: 8,
+        id: 6,
         title: "CEMIC"
     },
     {
+        id: 7,
+        title: "CÍRCULO MÉDICO ESTEBAN ECHEVERRÍA"
+    },
+    {
+        id: 8,
+        title: "CÍRCULO MÉDICO LOMAS DE ZAMORA"
+    },
+    {
         id: 9,
-        title: "COMEI"
+        title: "CIRUJANOS DEL SUR"
     },
     {
         id: 10,
-        title: "Empleados Escribanos Pcia. Bs. As."
+        title: "COLEGIO DE ESCRIBANOS"
     },
     {
         id: 11,
-        title: "Escribanos Pcia. Bs. As."
+        title: "COMEI"
     },
     {
         id: 12,
-        title: "GALENO"
+        title: "CONFERENCIA EPISCOPAL ARGENTINA"
     },
     {
         id: 13,
-        title: "Hospital Británico"
+        title: "ESCRIBANOS DE CAPITAL FEDERAL"
     },
     {
         id: 14,
-        title: "IOMA"
+        title: "GALENO ARGENTINA"
     },
     {
         id: 15,
-        title: "Jerárquico Salud"
+        title: "HOSPITAL BRITANICO DE BUENOS AIRES"
     },
     {
         id: 16,
-        title: "Luis Pasteur"
+        title: "INSTITUTO DE OBRA SOCIAL DE LA FUERZA AÉREA"
     },
     {
         id: 17,
-        title: "Medicus"
+        title: "IOMA"
     },
     {
         id: 18,
-        title: "Medife"
+        title: "JERÁRQUICOS SALUD"
     },
     {
         id: 19,
-        title: "OMINT"
+        title: "LUIS PASTEUR"
     },
     {
         id: 20,
-        title: "OPDEA"
+        title: "MEDICUS"
     },
     {
         id: 21,
-        title: "OSDE Binario"
+        title: "MEDIFE"
     },
     {
         id: 22,
-        title: "OSDIPP"
-    },{
+        title: "MEPLIFE SALUD"
+    },
+    {
         id: 23,
-        title: "OSFALTyF"
+        title: "OBRA SOCIAL AGENTE PROP. MEDICA"
     },
     {
         id: 24,
-        title: "OSMECON Lomas"
+        title: "OBRA SOCIAL DE PATRONES DE CABOTAJE DE RÍO"
     },
     {
         id: 25,
-        title: "OSOCNA Comisarios Navales"
+        title: "OBRA SOCIAL VIAJANTES REP. ARG."
     },
     {
         id: 26,
-        title: "OSPTV Personal de TV"
+        title: "OBRA SOCIAL ACERO PARANÁ"
     },
     {
         id: 27,
-        title: "Patrones de Cabotaje de Río"
+        title: "OBRA SOCIAL DE COMISARIOS NAVALES"
     },
     {
         id: 28,
-        title: "Poder Judicial"
+        title: "OBRA SOCIAL DEL PERSONAL DE TELEVISIÓN"
     },
     {
         id: 29,
-        title: "Programas Médicos"
+        title: "OBRA SOCIAL DEL PERSONAL GRÁFICO"
     },
     {
         id: 30,
-        title: "SADAIC"
+        title: "OMINT"
     },
     {
         id: 31,
-        title: "Su Salud"
+        title: "OPDEA"
     },
     {
         id: 32,
-        title: "Swiss Medical"
+        title: "OSADEF"
     },
     {
         id: 33,
-        title: "Union Personal"
+        title: "OSDE BINARIO"
     },
     {
         id: 34,
-        title: "Williams Hope"
-    }
+        title: "OSDIPP"
+    },
+    {
+        id: 35,
+        title: "OSFATLyF"
+    },
+    {
+        id: 36,
+        title: "OSUOMRA"
+    },
+    {
+        id: 37,
+        title: "PERSONAL DE ESCRIBANÍAS DE LA PROV. DE BS. AS."
+    },
+    {
+        id: 38,
+        title: "PODER JUDICIAL"
+    },
+    {
+        id: 39,
+        title: "SADAIC"
+    },
+    {
+        id: 40,
+        title: "SALUD OCUPACIONAL SUR"
+    },
+    {
+        id: 41,
+        title: "SU MEDICINA ASISTENCIAL"
+    },
+    {
+        id: 42,
+        title: "SWISS MEDICAL"
+    },
+    {
+        id: 43,
+        title: "TRATEL"
+    },
+    {
+        id: 44,
+        title: "UCMQ"
+    },
+    {
+        id: 45,
+        title: "EMECA"
+    },
+    {
+        id: 46,
+        title: "SUME"
+    },
+    {
+        id: 47,
+        title: "UNIÓN PERSONAL"
+    },
+    {
+        id: 48,
+        title: "WILLIAMS HOPE"
+    },
 ]
 
 export default COBERTURAS

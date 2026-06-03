@@ -189,6 +189,10 @@
 
 /* responsive */
 @media (max-width: 600px) {
+    .guardia__banner {
+        height: 250px;
+    }
+
     .guardia__horarios {
         flex-direction: column;
         gap: 20px;

@@ -429,6 +429,10 @@
         width: 100%;
     }
 
+    .tratamientos__banner{
+        height: 250px;
+    }
+
     .tratamientos__detail{
         padding: 0 5px;
     }

@@ -172,10 +172,12 @@
     width: 60px;
     height: 60px;
     background-color: #8d9ec1;
+    border: none !important;
 }
 
 .boton-volver-inicio:hover{
     background-color: #003c77;
+    border: none !important;
 }
 
 .boton-volver-inicio .bi-arrow-up{

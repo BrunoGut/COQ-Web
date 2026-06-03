@@ -157,6 +157,9 @@
 }
 
 @media (max-width: 600px) {
+    .cirugias__banner {
+        height: 250px;
+    }
 
     .cirugias__banner-subtitulo{
         padding: 0 12px;

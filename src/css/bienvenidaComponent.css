@@ -227,7 +227,7 @@
 
 @media (max-width: 480px) {
   .bienvenida__banner {
-    min-height: 320px;
+    min-height: 250px;
   }
 
   .bienvenida__card-titulo {
