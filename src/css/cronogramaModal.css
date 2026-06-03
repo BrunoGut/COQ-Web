@@ -1,0 +1,71 @@
+.cronogramaModal__contenido {
+    padding: 0;
+}
+
+.cronogramaModal__lista {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.cronogramaModal__item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 14px 0;
+    border-bottom: 1px solid #e8edf5;
+}
+
+.cronogramaModal__item:last-of-type {
+    margin-bottom: 20px;
+}
+
+.cronogramaModal__etiqueta {
+    font-size: 13px;
+    font-weight: 600;
+    color: #253965;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.cronogramaModal__etiqueta-sub {
+    font-weight: 400;
+    font-size: 12px;
+    color: #6b7db3;
+    text-transform: none;
+    letter-spacing: 0;
+    margin-left: 4px;
+}
+
+.cronogramaModal__valor {
+    font-size: 16px;
+    color: #4c4c4c;
+    line-height: 1.5;
+}
+
+.cronogramaModal__valor--destacado {
+    color: #253965;
+    font-weight: 600;
+}
+
+.cronogramaModal__btn-cerrar {
+    display: block;
+    margin: 32px auto 0;
+    background-color: transparent;
+    border: 1px solid #9aaedb;
+    color: #8ea4d5;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 8px 32px;
+    cursor: pointer;
+    letter-spacing: 0.04em;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.cronogramaModal__btn-cerrar:hover {
+    color: #6b7db3;
+    border-color: #6b7db3;
+}

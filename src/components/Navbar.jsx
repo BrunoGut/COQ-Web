@@ -2,6 +2,7 @@ import logoCoq from "../images/logo-coq.png";
 import logoBlanco from "../images/logo-blanco.png";
 import { useEffect, useRef, useState } from "react";
 import "../css/navbar.css";
+import CronogramaModal from "./CronogramaModal";
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { NAV_LINKS } from "../constants/navLinks";
 import {
@@ -64,6 +65,11 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [navHeight, setNavHeight] = useState(0);
+  const [cronogramaModalOpen, setCronogramaModalOpen] = useState(false);
+
+  const MODAL_HANDLERS = {
+    cronograma: () => setCronogramaModalOpen(true),
+  };
 
   const openDropdown = (label) => {
     clearTimeout(closeTimer.current);
@@ -133,6 +139,7 @@ export default function Navbar() {
     : (NAVBAR_MOBILE_COLORS[location.pathname] ?? NAVBAR_MOBILE_COLOR_DEFAULT);
 
   return (
+    <>
     <nav
       ref={navRef}
       className="navbar navbar-expand-lg navbar--coq"
@@ -244,21 +251,34 @@ export default function Navbar() {
                         }
                         onMouseLeave={() => isDesktop() && scheduleClose()}
                       >
-                        {link.submenu.map((sublink) => (
-                          <Link
-                            key={sublink.href}
-                            to={sublink.href}
-                            onClick={(e) => { handleHashLink(e, sublink.href); closeAll(); }}
-                            className="dropdown-item navbar__dropdownItem"
-                            /*
-                                SI QUIERO ACTIVAR EL ESTILO ACTIVE EN LOS SUBENLACES, DESCOMENTAR ESTO Y COMENTAR LA CLASE DE ARRIBA
-                              className={({ isActive }) =>
-                              `dropdown-item navbar__dropdownItem${isActive ? ' active' : ''}`
-                            }*/
-                          >
-                            {sublink.label}
-                          </Link>
-                        ))}
+                        {link.submenu.map((sublink) =>
+                          sublink.modal ? (
+                            <button
+                              key={sublink.label}
+                              className="dropdown-item navbar__dropdownItem navbar__dropdownItem--modal"
+                              onClick={() => {
+                                closeAll();
+                                MODAL_HANDLERS[sublink.modal]?.();
+                              }}
+                            >
+                              {sublink.label}
+                            </button>
+                          ) : (
+                            <Link
+                              key={sublink.href}
+                              to={sublink.href}
+                              onClick={(e) => { handleHashLink(e, sublink.href); closeAll(); }}
+                              className="dropdown-item navbar__dropdownItem"
+                              /*
+                                  SI QUIERO ACTIVAR EL ESTILO ACTIVE EN LOS SUBENLACES, DESCOMENTAR ESTO Y COMENTAR LA CLASE DE ARRIBA
+                                className={({ isActive }) =>
+                                `dropdown-item navbar__dropdownItem${isActive ? ' active' : ''}`
+                              }*/
+                            >
+                              {sublink.label}
+                            </Link>
+                          )
+                        )}
                       </div>
                     )}
                   </li>
@@ -307,5 +327,11 @@ export default function Navbar() {
         </div>
       </div>
     </nav>
+
+    <CronogramaModal
+      isOpen={cronogramaModalOpen}
+      onClose={() => setCronogramaModalOpen(false)}
+    />
+    </>
   );
 }

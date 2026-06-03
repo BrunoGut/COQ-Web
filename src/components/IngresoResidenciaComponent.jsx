@@ -86,8 +86,8 @@ function IngresoResidenciaComponent() {
         <div className="ingresoResidencia__modal-contenido">
           <ul className="ingresoResidencia__modal-lista">
             <li>Enviar un mail a <a href="mailto:residencia@centrodeojosquilmes.com.ar" className="ingresoResidencia__modal-link">residencia@centrodeojosquilmes.com.ar</a></li>
-            <li>Cuerpo del mensaje poner nombre, apellido y DNI y un Nro. de Celular</li>
-            <li>Adjuntar CV completo (formato .doc, .docx o .pdf), Copia de DNI (formato jpg o pdf), y Matrícula Nacional (en el caso de Argentinos se puede adjuntar constancia de trámite)</li>
+            <li>En el cuerpo del mensaje poner nombre, apellido, DNI y un número de celular.</li>
+            <li>Adjuntar CV completo (formato .doc, .docx o .pdf), copia del DNI (formato jpg o pdf), y Matrícula Nacional (en el caso de Argentinos se puede adjuntar constancia de trámite).</li>
           </ul>
           <button className="ingresoResidencia__modal-btn-cerrar" onClick={() => setModalOpen(false)}>Cerrar</button>
         </div>
