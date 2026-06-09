@@ -11,6 +11,9 @@ import img9 from "../../images/prensa/img9.jpg"
 import img10 from "../../images/prensa/img10.avif"
 import img11 from "../../images/prensa/img11.avif"
 import img12 from "../../images/prensa/img12.jpg"
+import img13 from "../../images/prensa/img13.avif"
+import img14 from "../../images/prensa/img14.webp"
+import img16 from "../../images/prensa/img16.jpg"
 
 const PRENSA = [
     {
@@ -108,6 +111,38 @@ const PRENSA = [
         kind: "article",
         href: "https://tn.com.ar/salud/noticias/2019/11/13/trauma-ocular-las-lesiones-en-los-ojos-pueden-perjudicar-la-vision-e-incluso-causar-ceguera/",
         descripcion: "El Dr. Gaston Gomez Caride, director médico del Centro de Ojos Quilmes, explica qué es el trauma ocular, las causas comunes de lesiones en los ojos y cómo prevenirlas para proteger la visión y evitar complicaciones graves."
+    },
+    {
+        id: 13,
+        titulo: "Premiaron en Italia a Roberto Albertazzi, un oftalmólogo quilmeño por una técnica quirúrgica revolucionaria",
+        imageSrc: img13,
+        kind: "article",
+        href: "https://www.pagina12.com.ar/2026/05/30/premiaron-en-italia-a-un-oftalmologo-quilmeno-por-una-tecnica-quirurgica-revolucionaria/",
+        descripcion: "El Dr. Roberto Albertazzi, director médico del Centro de Ojos Quilmes, fue premiado en Italia por desarrollar una técnica quirúrgica revolucionaria que mejora los resultados en pacientes con queratocono."
+    },
+    {
+        id: 14,
+        titulo: "Roberto Albertazzi, el oftalmólogo quilmeño que fue premiado en Italia por una técnica innovadora",
+        imageSrc: img14,
+        kind: "article",
+        href: "https://hechoenquilmes.com/2026/06/01/roberto-albertazzi-el-medico-quilmeno-que-fue-premiado-en-italia-por-una-tecnica-innovadora/",
+        descripcion: "El Dr. Roberto Albertazzi, director médico del Centro de Ojos Quilmes, fue premiado en Italia por desarrollar una técnica quirúrgica revolucionaria que mejora los resultados en pacientes con queratocono."
+    },
+    {
+        id: 15,
+        titulo: "Roberto Albertazzi, el oftalmólogo quilmeño que fue distinguido en Italia por una innovadora técnica quirúrgica desarrollada en la ciudad",
+        imageSrc: img14,
+        kind: "article",
+        href: "https://www.cronica.com.ar/fmq/noticias-locales/un-medico-quilmeno-fue-distinguido-en-italia-por-una-innovadora-tecnica-quirurgica-desarrollada-en-la-ciudad/",
+        descripcion: "El Dr. Roberto Albertazzi, director médico del Centro de Ojos Quilmes, fue premiado en Italia por desarrollar una técnica quirúrgica revolucionaria que mejora los resultados en pacientes con queratocono."
+    },
+    {
+        id: 16,
+        titulo: "Maratón de cirugías: en 24 horas operaron gratis de cataratas a 383 personas",
+        imageSrc: img16,
+        kind: "article",
+        href: "https://www.clarin.com/zonales/maraton-cirugias-24-horas-operaron-gratis-cataratas-383-personas_0_7hr8mN86iY.html",
+        descripcion: "El Dr. Gerardo Valvecchia, director médico del Centro de Ojos Quilmes, lideró una maratón de cirugías en la que se operaron gratis de cataratas a 383 personas en 24 horas."
     },
 ]
 

@@ -73,6 +73,40 @@ export default function Footer() {
               </ul>
             </div>
 
+            <div className="footer-col">
+              <div className="footer-title">Contacto</div>
+              <ul className="footer-links footer-contact-list list-unstyled mb-0">
+                <li>
+                  <a
+                    className="footer-contact-item"
+                    href="https://maps.google.com/?q=Humberto+Primo+298,+Quilmes"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i className="bi bi-geo-alt-fill footer-contact-icon" aria-hidden="true" />
+                    <span>Humberto Primo 298, Quilmes</span>
+                  </a>
+                </li>
+                <li>
+                  <a className="footer-contact-item" href="tel:+541122062650">
+                    <i className="bi bi-telephone-fill footer-contact-icon" aria-hidden="true" />
+                    <span>+54 11 2206-2650</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="footer-contact-item"
+                    href="https://wa.me/5491138721437"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i className="bi bi-whatsapp footer-contact-icon" aria-hidden="true" />
+                    <span>+54 11 3872-1437</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
           </div>
 
           <div className="footer-col footer-col--social">

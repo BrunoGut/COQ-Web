@@ -24,16 +24,9 @@ export default function BotonWhatsApp() {
         <div className="telefono-flotante">
           <a className="boton-telefono-flotante" href="tel:+541122062650">
             <i className="bi bi-telephone" aria-hidden="true" />
-            <span className="boton-flotante-texto">+54 11 22062650</span>
+            <span className="boton-flotante-texto">+54 11 2206-2650</span>
           </a>
         </div>
-
-        {/*<div className="guardia-flotante">
-          <Link className="boton-guardia-flotante" to="/guardia">
-            <i className="bi bi-hospital" aria-hidden="true" />
-            <span className="boton-flotante-texto">Guardia</span>
-          </Link>
-        </div>*/}
 
         <div className="volver-inicio">
           <button
