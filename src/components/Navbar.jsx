@@ -114,8 +114,12 @@ export default function Navbar() {
   };
 
   useEffect(() => {
-    const measure = () =>
-      navRef.current && setNavHeight(navRef.current.offsetHeight);
+    const measure = () => {
+      if (!navRef.current) return;
+      const h = navRef.current.offsetHeight;
+      setNavHeight(h);
+      document.documentElement.style.setProperty("--navbar-height", h + "px");
+    };
     measure();
     window.addEventListener("resize", measure);
     return () => window.removeEventListener("resize", measure);

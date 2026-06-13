@@ -6,8 +6,7 @@ export const NAV_LINKS = [
       { label: 'Quiénes somos',          href: '/nosotros#quienes-somos'      },
       { label: 'Dónde estamos',          href: '/nosotros#donde-estamos'      },
       { label: 'Staff médico',           href: '/staff-medico'                },
-      { label: 'Prensa',                 href: '/prensa'                      },
-      {/*{ label: 'COQ Shorts',             href: '/coq-shorts'                  }*/}
+      { label: 'Prensa',                 href: '/prensa'                      }
     ],
   },
   {

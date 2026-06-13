@@ -6,7 +6,7 @@
 .guardia__banner {
     background: #929cb2;
     width: 100%;
-    height: 400px;
+    height: 250px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,7 +18,7 @@
 
 .guardia__banner-titulo {
     font-size: 40px;
-    font-weight: 600;
+    font-weight: 500;
     color: #fff;
     margin: 0 0 8px;
 }

@@ -394,7 +394,7 @@
   }
 
   .navbar--coq .navbar__dropdown.is-open {
-    height: 210px;
+    height: 240px;
     max-height: 350px;
     opacity: 1 !important;
   }

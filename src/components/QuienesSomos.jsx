@@ -35,15 +35,6 @@ function MapResizer() {
 export default function QuienesSomos() {
   return (
     <>
-      {/* Banner */}
-      <section className="qs__banner" aria-label="Quiénes somos">
-        <div className="qs__banner-contenido">
-          <h2 className="qs__banner-titulo">Nuestra historia</h2>
-          <h4 className="qs__banner-subtitulo">Desde 1980, transformando la salud visual</h4>
-        </div>
-      </section>
-
-      {/* Contenido */}
       <section className="qs__info" id="quienes-somos">
         <div className="qs__inner">
 
@@ -67,7 +58,6 @@ export default function QuienesSomos() {
             </p>
           </div>
 
-          {/* Estadísticas */}
           <div className="qs__stats">
             <div className="qs__stat">
               <span className="qs__stat-numero">+12.000</span>
@@ -104,7 +94,6 @@ export default function QuienesSomos() {
         </div>
       </section>
 
-      {/* Tarjeta de mapa */}
       <section className="qs__mapa-section" id="donde-estamos">
         <div className="qs__mapa-card">
           <div className="qs__mapa-grid">

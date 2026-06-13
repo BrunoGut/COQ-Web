@@ -5,15 +5,6 @@ import DIRECTORES_MEDICOS from "./data/DirectoresMedicos.jsx";
 function DirectoresMedicos() {
   return (
     <>
-      {/* Banner */}
-      <section className="directoresMedicos__banner" aria-label="Cuerpo médico">
-        <div className="directoresMedicos__banner-contenido">
-          <h2 className="directoresMedicos__banner-titulo">Cuerpo médico</h2>
-          <h4 className="directoresMedicos__banner-subtitulo">Excelencia Médica y Especialización</h4>
-        </div>
-      </section>
-
-      {/* Contenido */}
       <section className="directoresMedicos">
 
       <div className="guardia__info">

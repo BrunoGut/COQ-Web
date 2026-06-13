@@ -6,12 +6,6 @@ function IngresoResidenciaComponent() {
   const [modalOpen, setModalOpen] = useState(false);
   return (
     <>
-      <section id="ingreso-residencia" className="ingresoResidencia__banner" aria-label="Ingreso 2026">
-        <div className="ingresoResidencia__banner-contenido">
-          <h2 className="ingresoResidencia__banner-titulo">Ingreso <br /> 2026</h2>
-        </div>
-      </section>
-
       <section className="ingresoResidencia__contenido" aria-labelledby="ingreso-uba">
         <div className="ingresoResidencia__container">
           <article className="ingresoResidencia__bloque ingresoResidencia__bloque--secundario" aria-labelledby="ingreso-cm">

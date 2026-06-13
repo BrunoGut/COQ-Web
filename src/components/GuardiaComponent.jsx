@@ -13,13 +13,6 @@ export default function GuardiaComponent() {
   return (
     <>
       <section className="guardia">
-      <div className="guardia__banner" aria-label="Atención de guardia">
-        <div className="guardia__contenido">
-          <h2 className="guardia__banner-titulo">Guardia oftalmológica</h2>
-          <h4 className="guardia__banner-subtitulo">Servicio de guardia para urgencias</h4>
-        </div>
-      </div>
-
       <div className="guardia__info">
         <h3 className="guardia__horarios-titulo">Horarios de atención</h3>
         <div className="guardia__horarios">

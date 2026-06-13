@@ -19,7 +19,7 @@ body {
 
 @media (min-width: 992px) {
   body {
-    padding-top: 70px;
+    padding-top: var(--navbar-height, 70px);
   }
 }
 

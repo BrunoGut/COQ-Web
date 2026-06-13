@@ -5,13 +5,6 @@ import caoImg from "../images/residencia/cao_img.png";
 function ProgramaResidencia() {
   return (
     <>
-      <section id="programa-residencias" className="programaResidencia__banner" aria-label="Programa de residencia">
-        <div className="programaResidencia__banner-contenido">
-          <h2 className="programaResidencia__banner-titulo">Programa de Residencia</h2>
-          <h4 className="programaResidencia__banner-subtitulo">Excelencia académica y práctica clínica de alta complejidad</h4>
-        </div>
-      </section>
-
       <section className="programaResidencia__info" aria-labelledby="programa-residencia-info">
         <div className="programaResidencia__info-container">
           <p className="programaResidencia__intro" id="programa-residencia-info">

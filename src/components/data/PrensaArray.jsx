@@ -13,11 +13,13 @@ import img11 from "../../images/prensa/img11.avif"
 import img12 from "../../images/prensa/img12.jpg"
 import img13 from "../../images/prensa/img13.avif"
 import img14 from "../../images/prensa/img14.webp"
+import img15 from "../../images/prensa/img15.jpg"
+import video15 from "../../images/prensa/EntrevistaRobertoAlbertazzi.mp4"
 import img16 from "../../images/prensa/img16.jpg"
 
 const PRENSA = [
     {
-        id: 1,
+        id: 16,
         titulo: "Campaña Ceguera Salta 2018",
         imageSrc: img1,
         kind: "video",
@@ -25,7 +27,7 @@ const PRENSA = [
         descripcion: "El Centro de Ojos Quilmes llevó a cabo la Campaña Ceguera Salta 2018, una iniciativa solidaria que brindó atención oftalmológica gratuita a más de 500 personas en la provincia de Salta. La campaña incluyó exámenes de la vista, entrega de anteojos y cirugías gratuitas para aquellos que lo necesitaban, con el objetivo de prevenir la ceguera y mejorar la calidad de vida de los habitantes de la región."
     },
     {
-        id: 2,
+        id: 15,
         titulo: "Claves para evitar las conjuntivitis en verano",
         imageSrc: img2,
         kind: "article",
@@ -33,7 +35,7 @@ const PRENSA = [
         descripcion: "La Dra. Florencia Valvecchia, médica oftalmóloga del Centro de Ojos Quilmes, explica cómo prevenir la conjuntivitis, una afección frecuente en verano."
     },
     {
-        id: 3,
+        id: 14,
         titulo: "Enfermedad de ojo vago. Haran controles gratis a chicos de 4 a 14 años",
         imageSrc: img3,
         kind: "article",
@@ -41,7 +43,7 @@ const PRENSA = [
         descripcion: "El Centro de Ojos Quilmes realizará controles gratuitos para detectar la enfermedad del ojo vago, una afección que afecta a niños y puede causar pérdida de visión si no se trata a tiempo."
     },
     {
-        id: 4,
+        id: 13,
         titulo: "Lo que no sabías de la blefaritis o caspa en las pestañas",
         imageSrc: img4,
         kind: "article",
@@ -49,7 +51,7 @@ const PRENSA = [
         descripcion: "La Dra. Florencia Valvecchia, médica oftalmóloga del Centro de Ojos Quilmes, explica qué es la blefaritis, una afección que causa inflamación en los párpados y puede afectar la salud ocular si no se trata adecuadamente."
     },
     {
-        id: 5,
+        id: 12,
         titulo: "La Argentina transmitirá en vivo 12 cirugías oculares extremas para capacitar cirujanos de todo el mundo",
         imageSrc: img5,
         kind: "article",
@@ -57,7 +59,7 @@ const PRENSA = [
         descripcion: "El Dr. Gerardo Valvecchia, director médico del Centro de Ojos Quilmes, liderará la transmisión en vivo de 12 cirugías oculares extremas para capacitar a cirujanos de todo el mundo. Esta iniciativa busca compartir conocimientos y técnicas avanzadas en el campo de la oftalmología."
     },
     {
-        id: 6,
+        id: 11,
         titulo: "Glaucoma: cómo es la cirugía láser que evita pérdida de visión",
         imageSrc: img6,
         kind: "article",
@@ -65,7 +67,7 @@ const PRENSA = [
         descripcion: "La Dra. Celina Logioco, directora médica del Centro de Ojos Quilmes, explica cómo es la cirugía láser para tratar el glaucoma, una enfermedad que puede causar pérdida de visión si no se trata a tiempo. Esta técnica innovadora ofrece una opción efectiva y segura para los pacientes con glaucoma."
     },
     {
-        id: 7,
+        id: 10,
         titulo: "Hilos flotantes y luces de colores. Esas imagenes que vemos, pero no podemos tocar",
         imageSrc: img7,
         kind: "article",
@@ -89,7 +91,7 @@ const PRENSA = [
         descripcion: "El Dr. Roberto Albertazzi, director médico del Centro de Ojos Quilmes, explica la importancia de proteger los ojos de los rayos UV, especialmente durante el verano, para prevenir daños oculares a largo plazo."
     },
     {
-        id: 10,
+        id: 7,
         titulo: "Conoce la enfermedad de ojos en forma de cono",
         imageSrc: img10,
         kind: "article",
@@ -97,7 +99,7 @@ const PRENSA = [
         descripcion: "El Dr. Roberto Albertazzi, director médico del Centro de Ojos Quilmes, explica qué es el queratocono, una enfermedad que afecta la forma de la córnea y puede causar visión borrosa."
     },
     {
-        id: 11,
+        id: 6,
         titulo: "La salvaron con la maniobra de Heimlich en un restaurante de Berazategui",
         imageSrc: img11,
         kind: "article",
@@ -105,7 +107,7 @@ const PRENSA = [
         descripcion: "Enfermeras del Centro de Ojos Quilmes salvaron a una mujer que se estaba ahogando con un trozo de carne en un restaurante de Berazategui, utilizando la maniobra de Heimlich. Este acto heroico destaca la importancia de conocer técnicas de primeros auxilios para salvar vidas en situaciones de emergencia."
     },
     {
-        id: 12,
+        id: 5,
         titulo: "Trauma ocular: las lesiones en los ojos pueden perjudicar la visión e incluso causar ceguera",
         imageSrc: img12,
         kind: "article",
@@ -113,7 +115,7 @@ const PRENSA = [
         descripcion: "El Dr. Gaston Gomez Caride, director médico del Centro de Ojos Quilmes, explica qué es el trauma ocular, las causas comunes de lesiones en los ojos y cómo prevenirlas para proteger la visión y evitar complicaciones graves."
     },
     {
-        id: 13,
+        id: 2,
         titulo: "Premiaron en Italia a Roberto Albertazzi, un oftalmólogo quilmeño por una técnica quirúrgica revolucionaria",
         imageSrc: img13,
         kind: "article",
@@ -121,15 +123,7 @@ const PRENSA = [
         descripcion: "El Dr. Roberto Albertazzi, director médico del Centro de Ojos Quilmes, fue premiado en Italia por desarrollar una técnica quirúrgica revolucionaria que mejora los resultados en pacientes con queratocono."
     },
     {
-        id: 14,
-        titulo: "Roberto Albertazzi, el oftalmólogo quilmeño que fue premiado en Italia por una técnica innovadora",
-        imageSrc: img14,
-        kind: "article",
-        href: "https://hechoenquilmes.com/2026/06/01/roberto-albertazzi-el-medico-quilmeno-que-fue-premiado-en-italia-por-una-tecnica-innovadora/",
-        descripcion: "El Dr. Roberto Albertazzi, director médico del Centro de Ojos Quilmes, fue premiado en Italia por desarrollar una técnica quirúrgica revolucionaria que mejora los resultados en pacientes con queratocono."
-    },
-    {
-        id: 15,
+        id: 3,
         titulo: "Roberto Albertazzi, el oftalmólogo quilmeño que fue distinguido en Italia por una innovadora técnica quirúrgica desarrollada en la ciudad",
         imageSrc: img14,
         kind: "article",
@@ -137,7 +131,15 @@ const PRENSA = [
         descripcion: "El Dr. Roberto Albertazzi, director médico del Centro de Ojos Quilmes, fue premiado en Italia por desarrollar una técnica quirúrgica revolucionaria que mejora los resultados en pacientes con queratocono."
     },
     {
-        id: 16,
+        id: 1,
+        titulo: "Entrevista al Dr. Roberto Albertazzi por su premio en Italia",
+        imageSrc: img14,
+        kind: "video",
+        video: video15,
+        descripcion: "El Dr. Roberto Albertazzi, director médico del Centro de Ojos Quilmes, fue entrevistado sobre su reciente premio en Italia por desarrollar una técnica quirúrgica revolucionaria para el tratamiento del queratocono. En la entrevista, el Dr. Albertazzi comparte detalles sobre su innovación y su impacto en la oftalmología."
+    },
+    {
+        id: 4,
         titulo: "Maratón de cirugías: en 24 horas operaron gratis de cataratas a 383 personas",
         imageSrc: img16,
         kind: "article",
