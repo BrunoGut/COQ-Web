@@ -1,16 +1,33 @@
 /* ── Banner ── */
 .programaResidencia__banner {
-    background: #929cb2;
+    background-image: url('../images/banner-residencia1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     width: 100%;
-    height: 250px;
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    position: relative;
+}
+
+.programaResidencia__banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
 .programaResidencia__banner-contenido {
     text-align: center;
+    position: relative;
+    z-index: 2;
 }
 
 .programaResidencia__banner-titulo {
@@ -18,6 +35,7 @@
     font-weight: 500;
     color: #fff;
     margin: 0 0 8px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .programaResidencia__banner-subtitulo {
@@ -25,6 +43,7 @@
     font-weight: 300;
     color: #fff;
     margin: 0;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .programaResidencia__info {

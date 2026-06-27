@@ -25,7 +25,7 @@ export const NAV_LINKS = [
     submenu: [
       { label: 'Programa de residencia', href: '/residencia#programa-residencias' },
       { label: 'Ingreso a residencia',   href: '/residencia#ingreso-residencia'  },
-      { label: 'Cronograma',           modal: 'cronograma'  },
+      { label: 'Cronograma 2026',           modal: 'cronograma'  },
     ],
   },
 ]

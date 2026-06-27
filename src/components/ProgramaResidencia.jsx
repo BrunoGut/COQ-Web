@@ -72,17 +72,15 @@ function ProgramaResidencia() {
                 </p>
               </div>
 
-              <div className="programaResidencia__item">
+              {/*<div className="programaResidencia__item">
                 <h4 className="programaResidencia__item-titulo">Carga horaria</h4>
-                <p className="programaResidencia__item-texto">Lunes a viernes (8h) y sábados (4h)</p>
-              </div>
+                <p className="programaResidencia__item-texto"></p>
+              </div>*/}
 
-              <div className="programaResidencia__item programaResidencia__item--sin-borde">
+              {/*<div className="programaResidencia__item programaResidencia__item--sin-borde">
                 <h4 className="programaResidencia__item-titulo">Sistema de Guardias</h4>
-                <p className="programaResidencia__item-texto">1er año: 6 guardias mensuales</p>
-                <p className="programaResidencia__item-texto">2do año: 4 guardias mensuales</p>
-                <p className="programaResidencia__item-texto">3er año: 2 guardias mensuales</p>
-              </div>
+                <p className="programaResidencia__item-texto"></p>
+              </div>*/}
             </article>
           </div>
 

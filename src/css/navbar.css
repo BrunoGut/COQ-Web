@@ -118,8 +118,7 @@
   background: #ececec !important;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   z-index: 1050;
-  height: 350px;
-  height: 350px;
+  height: 300px;
 
   opacity: 0;
   visibility: hidden;

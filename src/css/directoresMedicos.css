@@ -1,16 +1,33 @@
 /* ── Banner ── */
 .directoresMedicos__banner {
-    background: #929cb2;
+    background-image: url('../images/prensa/banner-prensa.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     width: 100%;
-    height: 250px;
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    position: relative;
+}
+
+.directoresMedicos__banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
 .directoresMedicos__banner-contenido {
     text-align: center;
+    position: relative;
+    z-index: 2;
 }
 
 .directoresMedicos__banner-titulo {
@@ -18,6 +35,7 @@
     font-weight: 500;
     color: #fff;
     margin: 0 0 8px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .directoresMedicos__banner-subtitulo {
@@ -25,6 +43,7 @@
     font-weight: 300;
     color: #fff;
     margin: 0;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 /* ── Sección ── */
@@ -38,6 +57,7 @@
     font-weight: 700;
     color: #333;
     letter-spacing: 0.01em;
+    margin-bottom: 20px;
 }
 
 .directoresMedicos__cards{
@@ -86,8 +106,8 @@
 }
 
 .directoresMedicos .card-image img{
-    height: 90%;
-    width: 90%;
+    height: 100%;
+    width: 95%;
     object-fit: cover;
     object-position: center top;
     display: block;
@@ -241,8 +261,6 @@
 
 @media (max-width: 576px){
     .directoresMedicos__banner {
-    background: #929cb2;
-    width: 100%;
     height: 250px;
     display: flex;
     align-items: center;
@@ -264,8 +282,8 @@
     }
 
     .directoresMedicos .card-image img{
-        height: 95%;
-        width: 70%;
+        height: 100%;
+        width: 95%;
     }
 
     .directoresMedicos .card-content{

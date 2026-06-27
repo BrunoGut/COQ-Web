@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { COQ_SHORTS } from "./data/CoqShortsArray";
+
+const SORTED_SHORTS = [...COQ_SHORTS].sort((a, b) => b.id - a.id);
 import {
   BsChevronUp,
   BsChevronDown,
@@ -20,10 +22,15 @@ function CoqShorts() {
   const [showText, setShowText] = useState(true);
   const [isPlaying, setIsPlaying] = useState(true);
   const [showFeedback, setShowFeedback] = useState(false);
+  const [showAll, setShowAll] = useState(false);
   const videoRef = useRef(null);
   const feedbackTimerRef = useRef(null);
 
-  const selectedShort = selectedIndex !== null ? COQ_SHORTS[selectedIndex] : null;
+  const INITIAL_VISIBLE = 12;
+  const visibleShorts = showAll ? SORTED_SHORTS : SORTED_SHORTS.slice(0, INITIAL_VISIBLE);
+  const hasMore = SORTED_SHORTS.length > INITIAL_VISIBLE;
+
+  const selectedShort = selectedIndex !== null ? SORTED_SHORTS[selectedIndex] : null;
 
   // Al cambiar de video, resetear estado de reproducción
   useEffect(() => {
@@ -50,12 +57,12 @@ function CoqShorts() {
 
   const nextShort = () =>
     setSelectedIndex((prev) =>
-      prev === COQ_SHORTS.length - 1 ? 0 : prev + 1
+      prev === SORTED_SHORTS.length - 1 ? 0 : prev + 1
     );
 
   const prevShort = () =>
     setSelectedIndex((prev) =>
-      prev === 0 ? COQ_SHORTS.length - 1 : prev - 1
+      prev === 0 ? SORTED_SHORTS.length - 1 : prev - 1
     );
 
   const togglePlay = () => {
@@ -97,22 +104,39 @@ function CoqShorts() {
 
       <section className="coqShorts__section">
         <div className="coq-shorts-list">
-          {COQ_SHORTS.map((short, index) => (
-            <article
-              className="coq-short-card"
-              key={short.id}
-              onClick={() => openShort(index)}
-            >
-              <img src={short.imageURL} alt={short.title} />
-              <div className="coq-short-overlay">
-                <h3>{short.title}</h3>
-                <div className="coq-short-play">
-                  <span>▶</span>
+          {SORTED_SHORTS.map((short, index) => {
+            if (!showAll && index >= INITIAL_VISIBLE) return null;
+            const isRevealed = showAll && index >= INITIAL_VISIBLE;
+            return (
+              <article
+                className={`coq-short-card${isRevealed ? " coq-short-card--animate" : ""}`}
+                style={isRevealed ? { animationDelay: `${(index - INITIAL_VISIBLE) * 0.05}s` } : {}}
+                key={short.id}
+                onClick={() => openShort(index)}
+              >
+                <img src={short.imageURL} alt={short.title} />
+                <div className="coq-short-overlay">
+                  <h3>{short.title}</h3>
+                  <div className="coq-short-play">
+                    <span>▶</span>
+                  </div>
                 </div>
-              </div>
-            </article>
-          ))}
+              </article>
+            );
+          })}
         </div>
+
+        {hasMore && (
+          <div className="coqShorts__verMas">
+            <button
+              type="button"
+              className="coqShorts__verMasBtn"
+              onClick={() => setShowAll((prev) => !prev)}
+            >
+              {showAll ? "Ver menos" : "Ver más"}
+            </button>
+          </div>
+        )}
 
         {selectedShort && (
           <div className="coq-short-modal">

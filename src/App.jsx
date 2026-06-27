@@ -38,6 +38,7 @@ function App() {
            <Route path="/paciente/que-tratamos" element={<PacienteQueTratamos />}></Route>
            <Route path="/guardia" element={<Guardia />}></Route>
            <Route path="/estudios" element={<Estudios />}></Route>
+           <Route path="/estudios/:slug" element={<Estudios />}></Route>
            <Route path="/cirugias" element={<Cirugias />}></Route>
            <Route path="/turnos-online" element={<Turnos />}></Route>
            <Route path="/oftalmopediatria" element={<Oftalmopediatria />}></Route>

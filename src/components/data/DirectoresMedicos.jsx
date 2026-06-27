@@ -1,12 +1,12 @@
-import danielPerroneImg from "../../images/staffMedico/daniel-perrone.png";
-import gastonGomezCarideImg from "../../images/staffMedico/gaston-gomez-caride.png";
-import gerardoValvecchiaImg from "../../images/staffMedico/gerardo-valvecchia.png";
-import lucianoDanielPerroneImg from "../../images/staffMedico/luciano-daniel-perrone.png";
-import robertoAlbertazziImg from "../../images/staffMedico/roberto-albertazzi.png";
-import celinaLogiocoImg from "../../images/staffMedico/celina-logioco.png";
-import mercedesDaSilvaImg from "../../images/staffMedico/mercedes-da-silva.png";
-import virginiaZanutighImg from "../../images/staffMedico/virginia-zanutigh.png";
-import francoPerroneImg from "../../images/staffMedico/franco-perrone.png";
+import danielPerroneImg from "../../images/staffMedico/daniel-perrone.jpeg";
+import gastonGomezCarideImg from "../../images/staffMedico/gaston-gomez-caride.jpeg";
+import gerardoValvecchiaImg from "../../images/staffMedico/gerardo-valvecchia.jpeg";
+import lucianoDanielPerroneImg from "../../images/staffMedico/luciano-daniel-perrone.jpeg";
+import robertoAlbertazziImg from "../../images/staffMedico/roberto-albertazzi.jpeg";
+import celinaLogiocoImg from "../../images/staffMedico/celina-logioco.jpeg";
+import mercedesDaSilvaImg from "../../images/staffMedico/mercedes-da-silva.jpeg";
+import virginiaZanutighImg from "../../images/staffMedico/virginia-zanutigh.jpeg";
+import francoPerroneImg from "../../images/staffMedico/franco-perrone.jpeg";
 
 const DIRECTORES_MEDICOS = [
     {
@@ -34,7 +34,7 @@ const DIRECTORES_MEDICOS = [
         id: 4,
         imagen: celinaLogiocoImg,
         nombre: "Dra. Logioco Celina",
-        descripcion: "Médica Oftalmóloga Especialista jerarquizada en Glaucoma, Maculopatía y Retinopatía Diabética.",
+        descripcion: "Médica Oftalmóloga Especialista jerarquizada en Glaucoma, Maculopatía y Retinopatía Diabética. Ex Presidente y Miembro Titular de la Asociación Argentina de Glaucoma.",
         linkedin: "https://www.linkedin.com/company/centro-de-ojos-quilmes/"
     },
     {
@@ -55,21 +55,21 @@ const DIRECTORES_MEDICOS = [
         id: 7,
         imagen: lucianoDanielPerroneImg,
         nombre: "Dr. Perrone Luciano Daniel",
-        descripcion: "Médico Oftalmólogo Especialista jerarquizado en Catarata, Córnea y Cirugía Refractiva.",
+        descripcion: "Médico Oftalmólogo Especialista jerarquizado en Catarata, Transplante de Córnea y Cirugía Refractiva.",
         linkedin: "https://www.linkedin.com/in/dr-luciano-d-perrone-78236b16b/"
     },
     {
         id: 8,
         imagen: gerardoValvecchiaImg,
         nombre: "Dr. Valvecchia Gerardo",
-        descripcion: "Médico Oftalmólogo Especialista jerarquizado en Catarata, Alta Miopía y Transplante de Córnea.",
+        descripcion: "Médico Oftalmólogo Especialista jerarquizado en Catarata y Alta Miopía.",
         linkedin: "https://www.linkedin.com/in/gerardo-valvecchia-6536a088/"
     },
     {
         id: 9,
         imagen: virginiaZanutighImg,
         nombre: "Dra. Zanutigh Virginia E.",
-        descripcion: "Médica Oftalmóloga Especialista jerarquizada y Consultora en Glaucoma. Presidente y Miembro Titular de la Asociación Argentina de Glaucoma.",
+        descripcion: "Médica Oftalmóloga Especialista jerarquizada y Consultora en Glaucoma. Ex Presidente y Miembro Titular de la Asociación Argentina de Glaucoma.",
         linkedin: "https://www.linkedin.com/in/dra-zanutigh-virginia-36468334/"
     }
 ]

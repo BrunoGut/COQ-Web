@@ -4,21 +4,21 @@
  * debajo de la navbar en esa página.
  */
 export const NAVBAR_MOBILE_COLORS = {
-  '/':                    '#f0f0f0',   // HeroVideo – fondo mobile
-  '/nosotros':            '#929cb2',   // QuienesSomos – banner
-  '/guardia':             '#929cb2',   // GuardiaComponent – banner
-  '/estudios':            '#929cb2', // BannerComponent
-  '/cirugias':            '#929cb2', // BannerComponent
-  '/estetica':            'rgba(0,0,0,0.55)', // BannerComponent – overlay sobre imagen
-  '/coberturas':          '#929cb2',   // CoberturasComponent – banner
-  '/staff-medico':        '#929cb2',   // DirectoresMedicos – banner
-  '/residencia':          '#929cb2',   // ProgramaResidencia – banner
-  '/prensa':              '#929cb2',   // PrensaComponent – banner
-  '/que-tratamos':        '#929cb2',   // Tratamientos – banner
-  '/paciente/que-tratamos': '#929cb2', // Tratamientos – banner
-  '/servicios':           '#2d4270',   // Servicios – banner oscuro azul
+  '/':                    '#ffffff',   // HeroVideo – fondo mobile
+  '/nosotros':            '#ffffff',   // QuienesSomos – banner
+  '/guardia':             '#ffffff',   // GuardiaComponent – banner
+  '/estudios':            '#ffffff', // BannerComponent
+  '/cirugias':            '#ffffff', // BannerComponent
+  '/estetica':            '#ffffff', // BannerComponent – overlay sobre imagen
+  '/coberturas':          '#ffffff',   // CoberturasComponent – banner
+  '/staff-medico':        '#ffffff',   // DirectoresMedicos – banner
+  '/residencia':          '#ffffff',   // ProgramaResidencia – banner
+  '/prensa':              '#ffffff',   // PrensaComponent – banner
+  '/que-tratamos':        '#ffffff',   // Tratamientos – banner
+  '/paciente/que-tratamos': '#ffffff', // Tratamientos – banner
+  '/servicios':           '#ffffff',   // Servicios – banner oscuro azul
   '/turnos-online':       '#ffffff',   // ConsultasVirtuales – fondo blanco
-  '/oftalmopediatria':    '#f0f0f0',   // OftalmoComponent – fondo gris claro
+  '/oftalmopediatria':    '#ffffff',   // OftalmoComponent – fondo gris claro
   '/contacto':            '#ffffff',   // Contacto – fondo blanco
 }
 

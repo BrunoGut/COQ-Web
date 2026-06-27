@@ -2,27 +2,31 @@ const ESTUDIOS_ARRAY = [
     {
         id: 1,
         titulo: "Aberrometría",
+        slug: "aberrometria",
         descripcion: (
             <p>
                 Esta técnica diagnóstica realiza una completísima valoración del defecto refractivo de un paciente, incluyendo esas alteraciones llamadas aberraciones de alto orden, que anteriormente se conocían como astigmatismo irregular y no se especificaban. <br />
                 Nos permite representar en un mapa de colores, las deformaciones que alteran la imagen retiniana y, considerando la interrelación entre la apertura pupilar y esas aberraciones, hacernos una idea precisa de la capacidad de un individuo de desenvolverse en distintas condiciones de luminosidad. <br />
                 Tiene su mejor aplicación en el tratamiento de ojos con córneas deformes o dañados por cirugía previa. <br />
-                También nos ayuda a identificar las causas objetivas de quejas como visión de halos, deslumbramiento, etc.
+                También nos ayuda a identificar las causas objetivas de quejas como visión de halos, deslumbramiento, etc. <br />
+                Es clave en la cirugía refractiva y en la personalización de tratamientos oculares.
             </p>
         )
     },
     {
         id: 2,
         titulo: "Autorefractometría",
+        slug: "autorefractometria",
         descripcion: (
             <p>
-                Mide con precisión y en forma automática el vicio de refracción: miopía, hipermetropía, astigmatismo que poseen los ojos.
+                La autorefractometría es un examen oftalmológico computarizado, rápido e indoloro, que mide de forma objetiva el error refractivo del ojo. Permite calcular con gran precisión las dioptrías necesarias para corregir defectos visuales como la miopía, la hipermetropía y el astigmatismo.
             </p>
         )
     },
     {
         id: 3,
         titulo: "Campo Visual Computarizado",
+        slug: "campo-visual-computarizado",
         descripcion: (
             <p>
                 El campo visual se define como al espacio en el que un objeto puede ser visto mientras la mirada de la persona estudiada permanece fija hacia un punto situado de frente. <br />
@@ -34,7 +38,8 @@ const ESTUDIOS_ARRAY = [
     },
     {
         id: 4,
-        titulo: "Retinografía Daytona (Optomap)",
+        titulo: "Retinografía de Campo Amplio (Daytona)",
+        slug: "retinografia-de-campo-amplio",
         descripcion: (
             <p>
                 Este sistema de última generación permite capturar una imagen de alta resolución de hasta 200º de la retina en menos de medio segundo y sin necesidad de contacto. Su tecnología de campo ultra amplio es fundamental para evaluar la salud de la retina periférica de forma rápida y sencilla, mejorando la detección temprana de patologías que otros sistemas podrían pasar por alto y facilitando una toma de decisiones clínicas más precisa y eficiente.
@@ -43,16 +48,8 @@ const ESTUDIOS_ARRAY = [
     },
     {
         id: 5,
-        titulo: "Interferometría Laser",
-        descripcion: (
-            <p>
-                Mide el potencial visual, sirve para detectar disminuciones de la agudeza visual por patologías oculares, también para definir expectativas de resultados quirúrgicos.
-            </p>
-        )
-    },
-    {
-        id: 6,
         titulo: "Keratograph",
+        slug: "keratograph",
         descripcion: (
             <p>
                 Topógrafo corneal que posee una cámara de alta densidad y un sistema de iluminación que permite estudiar la superficie ocular y la dinámica palpebral. Su principal uso es diagnosticar el ojo seco y vigilar su tratamiento.
@@ -60,8 +57,9 @@ const ESTUDIOS_ARRAY = [
         )
     },
     {
-        id: 7,
+        id: 6,
         titulo: "Microscopía especular",
+        slug: "microscopia-especular",
         descripcion: (
             <p>
                 La microscopía especular nos permite realizar el estudio del endotelio corneal. Puesto que la distribución celular es prácticamente uniforme, mediante la microscopía se puede conocer el número, la forma y el tamaño de la población endotelial. <br />
@@ -71,17 +69,26 @@ const ESTUDIOS_ARRAY = [
         )
     },
     {
-        id: 8,
+        id: 7,
         titulo: "Tomografía de coherencia óptica (OCT)",
+        slug: "oct",
         descripcion: (
             <p>
-                La OCT es una técnica de diagnóstico avanzada y totalmente indolora que permite obtener cortes histológicos de la retina en vivo, funcionando como una "ecografía de luz" de alta precisión. Es vital para el control y seguimiento de patologías de la mácula, del nervio óptico y del glaucoma, permitiendo analizar la relación de la retina con el vítreo y la coroides sin necesidad de tocar el ojo del paciente.
+                La Tomografía de Coherencia Óptica (OCT) es una prueba de diagnóstico por imagen rápida, indolora y no invasiva. Utiliza luz infrarroja para obtener cortes transversales de alta resolución de la retina y el nervio óptico en vivo, permitiendo un diagnóstico temprano de patologías oculares. <br />
+                La OCT es fundamental en el estudio, diagnóstico y seguimiento de las siguientes afecciones:
+                <ul>
+                    <li><span className="destacado__estudios">Glaucoma:</span> Mide con gran precisión el grosor de las fibras del nervio óptico y detecta daños antes de que se presenten síntomas o cambios en el campo visual.</li>
+                    <li><span className="destacado__estudios">Retina y Mácula:</span> Permite visualizar en detalle la mácula para identificar DMAE (Degeneración Macular Asociada a la Edad), edemas maculares o agujeros maculares.</li>
+                    <li><span className="destacado__estudios">Retinopatía diabética:</span> Esencial para detectar el engrosamiento retiniano y controlar la evolución del edema macular.</li>
+                    <li><span className="destacado__estudios">Seguimiento quirúrgico:</span> Vital para monitorear la evolución tras operaciones de retina, cataratas o evaluar la respuesta a tratamientos (como inyecciones intravítreas).</li>
+                </ul>
             </p>
         )
     },
     {
-        id: 9,
+        id: 8,
         titulo: "Pentacam",
+        slug: "pentacam",
         descripcion: (
             <p>
                 Este equipo utiliza una cámara rotatoria de 360º para crear una imagen tridimensional completa de la parte anterior del ojo de forma rápida y sin contacto. <br />
@@ -108,8 +115,9 @@ const ESTUDIOS_ARRAY = [
         )
     },
     {
-        id: 10,
+        id: 9,
         titulo: "Refractometría Pediátrica",
+        slug: "refractometria-pediatrica",
         descripcion: (
             <p>
                 La refractometría pediátrica se realiza en  infantes, niños y pacientes que no colaboran se miden ambos ojos simultáneamente a un metro de distancia en un segundo.  El propósito de una medición con el autorrefractor pediátrico es brindar una refracción inicial como examen de entrada en el consultorio médico. <br />
@@ -118,26 +126,37 @@ const ESTUDIOS_ARRAY = [
         )
     },
     {
-        id: 11,
-        titulo: "Retinografía convencional",
+        id: 10,
+        titulo: "Retinografía",
+        slug: "retinografia",
         descripcion: (
             <p>
-                Esta prueba consiste en un registro fotográfico detallado que permite al oftalmólogo monitorear la evolución de patologías en la retina, la mácula y el nervio óptico a lo largo del tiempo. Su mayor utilidad reside en el seguimiento de pacientes con glaucoma, diabetes o degeneración macular, funcionando como una memoria gráfica exacta que permite detectar cambios mínimos que podrían pasar desapercibidos en un examen visual de rutina.
+                La retinografía es una prueba oftalmológica rápida, indolora y no invasiva que consiste en tomar fotografías de alta resolución del fondo del ojo (la retina, la mácula y el nervio óptico). Es fundamental para diagnosticar y monitorear  el avance de enfermedades como el glaucoma, la degeneración macular, el desprendimiento de retina y los daños causados por la diabetes (retinopatía diabética) o hipertensión.
+            </p>
+        )
+    },
+    {
+        id: 11,
+        titulo: "Topografía corneal",
+        slug: "topografia-corneal",
+        descripcion: (
+            <p>
+                La topografía corneal detecta deformidades, curvaturas irregulares y el grosor de la córnea mediante un mapa tridimensional. Esencial en oftalmología, permite diagnosticar a tiempo enfermedades como el queratocono, astigmatismos complejos y planificar con exactitud cirugías refractivas como el LASIK. <br /><br />
+                ¿Qué detecta y evalúa exactamente?<br />
+                <ul>
+                    <li><span className="destacado__estudios">Queratocono y otras ectasias:</span> Identifica el adelgazamiento y la deformación progresiva de la córnea.</li>
+                    <li><span className="destacado__estudios">Astigmatismo irregular:</span> Detecta curvaturas asimétricas que no pueden corregirse fácilmente con gafas convencionales.</li>
+                    <li><span className="destacado__estudios">Candidatura a cirugía refractiva:</span> Evalúa si el paciente es apto para operarse de miopía, hipermetropía o astigmatismo.</li>
+                    <li><span className="destacado__estudios">Planificación de cataratas:</span> Obtiene los parámetros necesarios para calcular la lente intraocular que se implantará.</li>
+                    <li><span className="destacado__estudios">Adaptación de lentes de contacto:</span> Permite diseñar lentes de contacto a medida, especialmente en casos de córneas irregulares</li>
+                </ul>
             </p>
         )
     },
     {
         id: 12,
-        titulo: "Topografía corneal",
-        descripcion: (
-            <p>
-                Es una herramienta computarizada que genera un mapa tridimensional preciso de la superficie de la córnea para analizar su curvatura y regularidad. Su gran ventaja es la capacidad de detectar irregularidades invisibles en exámenes convencionales, siendo fundamental para el diagnóstico de ectasias, la adaptación de lentes de contacto especiales y la planificación de cirugías refractivas.
-            </p>
-        )
-    },
-    {
-        id: 13,
         titulo: "Tonometría",
+        slug: "tonometria",
         descripcion: (
             <p>
                 Permite medir la presión intraocular (PIO) sin que exista ningún contacto con el ojo del paciente. Es un método muy rápido y fiable y se reducen al mínimo las molestias para el paciente.
@@ -145,26 +164,54 @@ const ESTUDIOS_ARRAY = [
         )
     },
     {
-        id: 14,
+        id: 13,
         titulo: "UBM",
+        slug: "ubm",
         descripcion: (
             <p>
-                La UBM es una ecografía de alta resolución especializada en el segmento anterior del ojo, que utiliza ultrasonido para observar estructuras que no son visibles a través del microscopio tradicional. Es imprescindible para diagnosticar quistes detrás del iris, analizar ángulos en casos de glaucoma, verificar la posición de lentes implantados y evaluar lesiones postraumáticas, incluso cuando los medios oculares han perdido su transparencia.
+                El UBM (Biomicroscopía Ultrasónica o Ultrabiomicroscopía) es un examen ecográfico oftalmológico de alta resolución. Permite obtener imágenes detalladas y precisas de las estructuras internas de la parte anterior del ojo (córnea, iris, cristalino, cuerpo ciliar y el ángulo iridocorneal). <br />
+                Es un procedimiento ambulatorio e indoloro que dura aproximadamente 15 minutos.
                 <br /> <br />
-                <span className="destacado__estudios2">¿En qué casos se requiere?</span> <br /> <br />
-                Las imágenes obtenidas serán imprescindibles en el diagnóstico de: <br /> <br />
+                <span className="destacado__estudios2">¿Para qué se utiliza?</span> <br /> <br />
                 <ul>
-                    <li>Patologías subiridianas como quistes</li>
-                    <li>Determinación de la profundidad de la cámara anterior</li>
-                    <li>Análisis de ángulos iridocorneales</li>
-                    <li>Seguimiento de cirugía antiglaucomatosa</li>
-                    <li>Observación del correcto posicionamiento de lentes fáquicos</li>
-                    <li>Determinación de profundidad de lesiones corneales</li>
-                    <li>Observación de lesiones postraumáticas de segmento anterior, determinación de grosores corneales y todas aquellas situaciones de segmento anterior que no sean visibles a través del microscopio por falta de transparencia de medios.</li>
+                    <li><span className="destacado__estudios">Diagnóstico de Glaucoma:</span> Permite evaluar el ángulo iridocorneal para detectar ángulos estrechos o bloqueos.</li>
+                    <li><span className="destacado__estudios">Estudio de tumores y quistes:</span> Ayuda a visualizar masas, quistes o tumores ocultos por detrás del iris (área retroiridiana).</li>
+                    <li><span className="destacado__estudios">Seguimiento postoperatorio:</span> Es clave para verificar la posición de lentes intraoculares, lentes fáquicos y cirugías de cataratas o glaucoma.</li>
+                    <li><span className="destacado__estudios">Evaluación de traumatismos:</span> Sirve para examinar lesiones cuando hay opacidades corneales o hemorragias que impiden la visión directa.</li>
                 </ul>
             </p>
         )
-    }
+    },
+    {
+        id: 14,
+        titulo: "Prueba de agua",
+        slug: "prueba-de-agua",
+        descripcion: (
+            <p>
+                La prueba de agua (o prueba de sobrecarga hídrica) en oftalmología es un examen de estrés para evaluar el sistema de drenaje del humor acuoso. Consiste en medir la presión intraocular (PIO) tras ingerir rápidamente una gran cantidad de agua (600 a 800 ml), ayudando a detectar fluctuaciones y el riesgo de glaucoma.
+            </p>
+        )
+    },
+    {
+        id: 15,
+        titulo: "Paquimetría",
+        slug: "paquimetria",
+        descripcion: (
+            <p>
+                La paquimetría es una prueba oftalmológica rápida e indolora que mide el espesor de la córnea. Es clave para el diagnóstico temprano del glaucoma y el queratocono, y es un requisito obligatorio antes de someterse a cirugías refractivas (como LASIK o PRK) para evaluar la viabilidad de la intervención.
+            </p>
+        )
+    },
+    {
+        id: 16,
+        titulo: "Interferometría láser",
+        slug: "interferometria-laser",
+        descripcion: (
+            <p>
+                La interferometría láser es una técnica diagnóstica no invasiva que utiliza ondas de luz para medir estructuras internas del ojo con precisión microscópica. Se usa principalmente en biometría ocular (cálculo de lentes intraoculares), en la evaluación de la agudeza visual potencial previo a cirugías y en el análisis del ojo seco.
+            </p>
+        )
+    },
 ]
 
 export default ESTUDIOS_ARRAY;

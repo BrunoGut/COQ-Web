@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import ESTUDIOS_ARRAY from "./data/EstudiosArray";
 import flechaImg from "../images/patologias/flecha.png";
-import "../css/tratamientos.css";
 import "../css/estudiosComponent.css";
 
 const estudiosOrdenados = [...ESTUDIOS_ARRAY].sort((a, b) =>
@@ -11,9 +11,8 @@ const estudiosOrdenados = [...ESTUDIOS_ARRAY].sort((a, b) =>
 const MOBILE_BREAKPOINT = 992;
 
 export default function Estudios() {
-  const [estudioSeleccionadoId, setEstudioSeleccionadoId] = useState(
-    () => estudiosOrdenados[0]?.id ?? null
-  );
+  const { slug } = useParams();
+  const navigate = useNavigate();
 
   const [isSidebarOpen, setIsSidebarOpen] = useState(
     window.innerWidth >= MOBILE_BREAKPOINT
@@ -22,6 +21,12 @@ export default function Estudios() {
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "auto" });
   }, []);
+
+  useEffect(() => {
+    if (!slug && estudiosOrdenados.length > 0) {
+      navigate(`/estudios/${estudiosOrdenados[0].slug}`, { replace: true });
+    }
+  }, [slug, navigate]);
 
   useEffect(() => {
     const onResize = () => {
@@ -34,8 +39,8 @@ export default function Estudios() {
   }, []);
 
   const estudioSeleccionado = useMemo(
-    () => ESTUDIOS_ARRAY.find((e) => e.id === estudioSeleccionadoId) ?? null,
-    [estudioSeleccionadoId]
+    () => ESTUDIOS_ARRAY.find((e) => e.slug === slug) ?? null,
+    [slug]
   );
 
   return (
@@ -68,14 +73,14 @@ export default function Estudios() {
               <div id="estudiosList" className="tratamientos__sidebarContent">
                 <ul className="tratamientos__list" role="list">
                   {estudiosOrdenados.map((estudio) => {
-                    const isActive = estudio.id === estudioSeleccionadoId;
+                    const isActive = estudio.slug === slug;
                     return (
                       <li key={estudio.id} className="tratamientos__listItem" role="listitem">
                         <button
                           type="button"
                           className={`tratamientos__listButton${isActive ? " is-active" : ""}`}
                           onClick={() => {
-                            setEstudioSeleccionadoId(estudio.id);
+                            navigate(`/estudios/${estudio.slug}`);
                             if (window.innerWidth < MOBILE_BREAKPOINT) {
                               setIsSidebarOpen(false);
                             }
