@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useDeferredValue } from "react";
-import COBERTURAS from "./data/CoberturasArray";
+import COBERTURAS from "./data/CoberturasArray.js";
 import "../css/coberturasComponent.css";
 const normalize = (value) => value.trim().toLowerCase(); // Normaliza el texto para búsquedas
 

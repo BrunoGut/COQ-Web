@@ -1,6 +1,32 @@
 .guardia {
-    background: #f9f9f9;
+    background: #ffffff;
     padding: 0;
+}
+
+/* ── Hero layout ── */
+.guardia__hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.guardia__hero-izquierda {
+    background: #fff;
+    padding: 56px 0 0 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.guardia__hero-imagen {
+    width: 100%;
+    overflow: hidden;
+}
+
+.guardia__hero-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+    border-radius: 16px 0 0 16px;
 }
 
 .guardia__banner {
@@ -34,34 +60,50 @@
 }
 
 .guardia__banner-titulo {
-    font-size: 40px;
-    font-weight: 500;
-    color: #fff;
+    font-size: 65px;
+    font-weight: 400;
+    color: #313131;
     margin: 0 0 8px;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    letter-spacing: -2px;
 }
 
 .guardia__banner-subtitulo {
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 300;
-    color: #fff;
+    color: #313131;
     margin: 0;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    letter-spacing: -1px;
 }
 
 /* ── Info / Horarios ── */
 .guardia__info {
     background: #fff;
-    padding: 48px 24px 0;
+    padding: 60px 24px 0;
     text-align: center;
+}
+
+.titulo-subrayado{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+
+}
+
+.separador-horarios {
+    width: 300px;
+    height: 2px;
+    background-color: #313131;
+    margin-bottom: 40px;
 }
 
 .guardia__horarios-titulo {
     font-size: 1.5rem;
     font-weight: 700;
     color: #333;
-    margin: 0 0 65px;
     letter-spacing: 0.01em;
+    padding: 0;
+    margin: 0;
 }
 
 .guardia__horarios {

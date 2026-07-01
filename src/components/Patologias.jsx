@@ -8,7 +8,7 @@ import ExampleCarouselImage from "./ExampleCarouselImage.jsx";
 import SectionHeading from "./SectionHeading.jsx";
 
 import { Link } from "react-router-dom";
-import PATOLOGIAS from './data/PatologiasArray';
+import PATOLOGIAS from './data/PatologiasArray.js';
 
 
 

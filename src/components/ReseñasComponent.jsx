@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../css/reseñasComponent.css';
-import RESEÑAS from './data/ReseñasArray';
+import RESEÑAS from './data/ReseñasArray.js';
 import quotesImg from '../images/reseñas/quotes.png';
 
 function ReseñasComponent() {

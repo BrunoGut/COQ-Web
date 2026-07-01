@@ -1,6 +1,6 @@
 import React from "react";
 import "../css/directoresMedicos.css";
-import DIRECTORES_MEDICOS from "./data/DirectoresMedicos.jsx";
+import DIRECTORES_MEDICOS from "./data/DirectoresMedicos.js";
 
 function DirectoresMedicos() {
   return (

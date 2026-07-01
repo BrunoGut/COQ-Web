@@ -1,5 +1,5 @@
 import React, { useDeferredValue, useEffect, useState } from "react";
-import CIRUGIAS from "./data/CirugiasArray";
+import CIRUGIAS from "./data/CirugiasArray.js";
 import "../css/cirugiasComponent.css";
 
 const normalize = (value) => value.trim().toLowerCase(); // Normaliza el texto para búsquedas

@@ -1,7 +1,7 @@
 import "../css/tratamientos.css";
 import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "react-router-dom";
-import PATOLOGIAS from "./data/PatologiasArray";
+import PATOLOGIAS from "./data/PatologiasArray.js";
 import flechaImg from "../images/patologias/flecha.png";
 
 const SECCIONES_SIMPLES = [

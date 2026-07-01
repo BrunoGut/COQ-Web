@@ -1,7 +1,7 @@
 import React from "react";
 import SectionHeading from "./SectionHeading";
 import "../css/medicosPlanta.css";
-import MEDICOS_PLANTA from "./data/MedicosPlantaData.jsx";
+import MEDICOS_PLANTA from "./data/MedicosPlantaData.js";
 
 function MedicosPlanta() {
   return (
