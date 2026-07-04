@@ -1,6 +1,7 @@
 import GuardiaComponent from "../components/GuardiaComponent";
 import guardiaImg from "../images/banner-guardia3.png";
 import "../css/guardiaComponent.css";
+import guardiaImgMobile from "../images/banner-guardia-mobile.png";
 
 export default function Guardia() {
   return (
@@ -13,7 +14,13 @@ export default function Guardia() {
           </h4>
         </div>
         <div className="guardia__hero-imagen">
-          <img src={guardiaImg} alt="Guardia oftalmológica" className="guardia__hero-img" />
+          <picture>
+            <source 
+              media="(max-width: 600px)"
+              srcSet={guardiaImgMobile}
+            />
+            <img src={guardiaImg} alt="Guardia oftalmológica" className="guardia__hero-img" />
+          </picture>
         </div>
       </section>
       <GuardiaComponent />

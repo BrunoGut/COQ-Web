@@ -13,6 +13,37 @@
     position: relative;
 }
 
+#ingreso-residencia{
+    scroll-margin-top: 70px;
+}
+
+.ingresoResidencia__hero {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    height: 350px;
+}
+
+.ingresoResidencia__hero-izquierda{
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px
+}
+
+.ingresoResidencia__hero-imagen{
+    width: 100%;
+    overflow: hidden;
+}
+
+.ingresoResidencia__hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 16px 0 0 16px;
+}
+
 .ingresoResidencia__banner::after {
     content: '';
     position: absolute;
@@ -30,12 +61,11 @@
     z-index: 2;
 }
 
-.ingresoResidencia__banner-titulo {
-    font-size: 60px;
+.ingresoResidencia__banner-titulo{
+    font-size: 65px;
     font-weight: 400;
-    color: #fff;
-    margin: 0 0 8px;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    color: #313131;
+    letter-spacing: -2px;
 }
 
 .ingresoResidencia__contenido {
@@ -179,7 +209,41 @@
 }
 
 
-@media (max-width: 900px) {
+@media (max-width: 992px) {
+    .ingresoResidencia__hero {
+    grid-template-columns: 1fr;
+    height: auto;
+    min-height: auto;
+  }
+
+  .ingresoResidencia__hero-imagen {
+    order: 1;
+    width: 100%;
+    height: 350px;
+  }
+
+  .ingresoResidencia__hero-izquierda {
+    order: 2;
+    padding: 40px 0 0 0;
+    text-align: center;
+    align-items: center;
+  }
+
+  .ingresoResidencia__hero-img {
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ingresoResidencia__banner-titulo {
+    font-size: 45px;
+  }
+
+  .ingresoResidencia__banner-subtitulo {
+    font-size: 28px;
+  }
+
     .ingresoResidencia__banner {
         height: 320px;
         padding: 0 32px;
@@ -194,7 +258,7 @@
     }
 
     .ingresoResidencia__contenido {
-        padding: 56px 20px 72px;
+        padding: 10px 20px 72px;
     }
 
     .ingresoResidencia__descripcion {
@@ -225,8 +289,42 @@
 }
 
 @media (max-width: 640px) {
+    .ingresoResidencia__hero {
+    grid-template-columns: 1fr;
+    height: auto;
+    min-height: auto;
+  }
+
+  .ingresoResidencia__hero-imagen {
+    order: 1;
+    width: 100%;
+    height: 350px;
+  }
+
+  .ingresoResidencia__hero-izquierda {
+    order: 2;
+    padding: 40px 0 0 0;
+    text-align: center;
+    align-items: center;
+  }
+
+  .ingresoResidencia__hero-img {
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ingresoResidencia__banner-titulo {
+    font-size: 50px;
+  }
+
+  .ingresoResidencia__banner-subtitulo {
+    font-size: 30px;
+  }
+
     .ingresoResidencia__contenido {
-    padding: 37px 24px 30px;
+    padding: 0 24px 30px;
 }
 
     .ingresoResidencia__banner {
@@ -237,10 +335,6 @@
 
     .ingresoResidencia__banner-contenido {
         text-align: center;
-    }
-
-    .ingresoResidencia__banner-titulo {
-        font-size: 44px;
     }
 
     .ingresoResidencia__titulo {

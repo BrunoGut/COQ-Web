@@ -8,7 +8,7 @@ function CronogramaModal({ isOpen, onClose }) {
         <ul className="cronogramaModal__lista">
           <li className="cronogramaModal__item">
             <span className="cronogramaModal__etiqueta">Inscripción</span>
-            <span className="cronogramaModal__valor">01/06/2026 — 01/07/2026</span>
+            <span className="cronogramaModal__valor">Inscripción cerrada</span>
           </li>
           <li className="cronogramaModal__item">
             <span className="cronogramaModal__etiqueta">

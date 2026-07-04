@@ -13,6 +13,33 @@
   position: relative;
 }
 
+.prensa__hero {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    height: 350px;
+}
+
+.prensa__hero-izquierda{
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px
+}
+
+.prensa__hero-imagen{
+    width: 100%;
+    overflow: hidden;
+}
+
+.prensa__hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 16px 0 0 16px;
+}
+
 .prensa__banner::after {
   content: '';
   position: absolute;
@@ -30,25 +57,23 @@
   z-index: 2;
 }
 
-.prensa__banner-titulo {
-  font-size: 40px;
-  font-weight: 500;
-  color: #fff;
-  margin: 0 0 8px;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+.prensa__banner-titulo{
+    font-size: 65px;
+    font-weight: 400;
+    color: #313131;
+    letter-spacing: -2px;
 }
 
-.prensa__banner-subtitulo {
-  font-size: 20px;
-  font-weight: 300;
-  color: #fff;
-  margin: 0;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+.prensa__banner-subtitulo{
+    font-size: 30px;
+    font-weight: 300;
+    color: #313131;
+    margin-top: 8px;
 }
 
 .prensa {
   background: #ffffff;
-  padding: 32px 0 72px;
+  padding: 15px 0 72px;
 }
 
 .prensa__inner {
@@ -269,9 +294,47 @@
   color: #003c77;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .prensa {
-    padding: 24px 0 56px;
+    padding: 0px 0 56px;
+  }
+
+  .coqShorts__section{
+    padding: 30px 12px 0px;
+  }
+
+  .prensa__hero {
+    grid-template-columns: 1fr;
+    height: auto;
+    min-height: auto;
+  }
+
+  .prensa__hero-imagen {
+    order: 1;
+    width: 100%;
+    height: 350px;
+  }
+
+  .prensa__hero-izquierda {
+    order: 2;
+    padding: 40px 0 0 0;
+    text-align: center;
+    align-items: center;
+  }
+
+  .prensa__hero-img {
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .prensa__banner-titulo {
+    font-size: 50px;
+  }
+
+  .prensa__banner-subtitulo {
+    font-size: 28px;
   }
 
   .prensa__content {
@@ -306,10 +369,10 @@
 
 @media (max-width: 520px) {
   .prensa{
-    padding: 0 0 56px;
+    padding: 0 0 56px !important;
   }
   .coqShorts__section{
-    padding: 30px 12px 0px;
+    padding: 30px 12px 0px !important;
   }
   .prensa__banner {
     height: 250px;

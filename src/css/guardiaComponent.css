@@ -249,6 +249,42 @@
 }
 
 /* responsive */
+@media (max-width: 992px) {
+    .guardia__hero {
+    grid-template-columns: 1fr;
+    height: auto;
+    min-height: auto;
+  }
+
+  .guardia__hero-imagen {
+    order: 1;
+    width: 100%;
+    height: 350px;
+  }
+
+  .guardia__hero-izquierda {
+    order: 2;
+    padding: 40px 0 0 0;
+    text-align: center;
+    align-items: center;
+  }
+
+  .guardia__hero-img {
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+    .guardia__banner-titulo {
+    font-size: 45px;
+    }
+
+    .guardia__banner-subtitulo {
+    font-size: 28px;
+    }
+}
+
 @media (max-width: 600px) {
     .guardia__banner {
         height: 300px;

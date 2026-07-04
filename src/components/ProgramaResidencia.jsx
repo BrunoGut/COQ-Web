@@ -5,7 +5,8 @@ import caoImg from "../images/residencia/cao_img.png";
 function ProgramaResidencia() {
   return (
     <>
-      <section className="programaResidencia__info" aria-labelledby="programa-residencia-info">
+      <section className="programaResidencia__info"
+        aria-labelledby="programa-residencia-info">
         <div className="programaResidencia__info-container">
           <p className="programaResidencia__intro" id="programa-residencia-info">
             El Programa de Residencia del Centro de Ojos Quilmes es un <strong>pilar fundamental </strong><br />
