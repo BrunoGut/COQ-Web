@@ -8,42 +8,51 @@ import markerShadow from "leaflet/dist/images/marker-shadow.png";
 import "../css/guardiaComponent.css";
 import GUARDIA from "./data/GuardiaArray";
 
+export function GuardiaInfo() {
+  return (
+    <div className="guardia__info">
+      <div className="titulo-subrayado">
+        <h3 className="guardia__horarios-titulo">Horarios de atención</h3>
+        <div className="separador-horarios" />
+      </div>
+      <div className="guardia__horarios">
+        <div className="guardia__horario-item">
+          <span className="guardia__horario-dia">Lunes a viernes</span>
+          <span className="guardia__horario-hora">De 08:00h a 19:30h</span>
+        </div>
+        <div className="guardia__horario-divider" />
+        <div className="guardia__horario-item">
+          <span className="guardia__horario-dia">Sábados</span>
+          <span className="guardia__horario-hora">De 08:00h a 17:30h</span>
+        </div>
+        <div className="guardia__horario-divider" />
+        <div className="guardia__horario-item">
+          <span className="guardia__horario-dia">Domingos y feriados</span>
+          <span className="guardia__horario-hora">De 10:00h a 13:00h</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function GuardiaAviso() {
+  return (
+    <p className="guardia__aviso">
+      <strong>
+        Nuestro servicio de Guardia está destinado exclusivamente a urgencias
+        oftalmológicas.
+      </strong>{" "}
+      Para controles generales y recetas de anteojos, por favor solicite un
+      turno en nuestros consultorios.
+    </p>
+  );
+}
+
 export default function GuardiaComponent() {
   const [modalOpen, setModalOpen] = useState(false);
   return (
     <>
       <section className="guardia">
-        <div className="guardia__info">
-          <div className="titulo-subrayado">
-            <h3 className="guardia__horarios-titulo">Horarios de atención</h3>
-            <div className="separador-horarios" />
-          </div>
-          <div className="guardia__horarios">
-            <div className="guardia__horario-item">
-              <span className="guardia__horario-dia">Lunes a viernes</span>
-              <span className="guardia__horario-hora">De 08:00h a 19:30h</span>
-            </div>
-            <div className="guardia__horario-divider" />
-            <div className="guardia__horario-item">
-              <span className="guardia__horario-dia">Sábados</span>
-              <span className="guardia__horario-hora">De 08:00h a 17:30h</span>
-            </div>
-            <div className="guardia__horario-divider" />
-            <div className="guardia__horario-item">
-              <span className="guardia__horario-dia">Domingos y feriados</span>
-              <span className="guardia__horario-hora">De 10:00h a 13:00h</span>
-            </div>
-          </div>
-
-          <p className="guardia__aviso">
-            <strong>
-              Nuestro servicio de Guardia está destinado exclusivamente a
-              urgencias oftalmológicas.
-            </strong>{" "}
-            Para controles generales y recetas de anteojos, por favor solicite
-            un turno en nuestros consultorios.
-          </p>
-        </div>
         <div className="principales__urgencias">
           <button
             className="principales__urgencias-boton"

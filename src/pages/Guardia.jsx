@@ -1,4 +1,7 @@
-import GuardiaComponent from "../components/GuardiaComponent";
+import GuardiaComponent, {
+  GuardiaAviso,
+  GuardiaInfo,
+} from "../components/GuardiaComponent";
 import guardiaImg from "../images/banner-guardia3.png";
 import "../css/guardiaComponent.css";
 import guardiaImgMobile from "../images/banner-guardia-mobile.png";
@@ -12,6 +15,7 @@ export default function Guardia() {
           <h4 className="guardia__banner-subtitulo">
             Servicio de guardia para urgencias
           </h4>
+          <GuardiaInfo />
         </div>
         <div className="guardia__hero-imagen">
           <picture>
@@ -23,6 +27,7 @@ export default function Guardia() {
           </picture>
         </div>
       </section>
+      <GuardiaAviso />
       <GuardiaComponent />
     </>
   );

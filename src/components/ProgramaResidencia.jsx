@@ -53,6 +53,7 @@ function ProgramaResidencia() {
               <div className="programaResidencia__item">
                 <h4 className="programaResidencia__item-titulo">Duración</h4>
                 <p className="programaResidencia__item-texto">3 años de formación intensiva</p>
+                <p className="programaResidencia__item-texto">+1 año de fellowship rotatorio</p>
               </div>
 
               <div className="programaResidencia__item programaResidencia__item--sin-borde">

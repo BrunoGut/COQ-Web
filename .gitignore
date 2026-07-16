@@ -23,3 +23,7 @@ dist-ssr
 *.sln
 *.sw?
 src/images/prensa/EntrevistaRobertoAlbertazzi.mp4
+
+# skills/instrucciones
+.github/*
+.agents/*

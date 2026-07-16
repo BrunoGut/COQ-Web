@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import emailjs from "@emailjs/browser";
 import "../css/formularioEmail.css";
 
 function FormularioEmail({ flechaImg }) {
@@ -10,7 +9,9 @@ function FormularioEmail({ flechaImg }) {
     reset,
     formState: { errors, touchedFields, isSubmitted },
   } = useForm({ mode: "onTouched" });
+
   const [toast, setToast] = useState(null);
+  const [isSending, setIsSending] = useState(false);
 
   const fieldState = (name) => {
     const touched = touchedFields[name] || isSubmitted;
@@ -26,21 +27,31 @@ function FormularioEmail({ flechaImg }) {
   };
 
   const onSubmit = async (data) => {
-    var fecha = new Date().toLocaleString();
+    setIsSending(true);
 
     try {
-      await emailjs.send(
-        "service_kuynnw1",
-        "template_fropgfo",
-        {
-          title: "Mensaje desde el formulario de contacto",
-          name: data.nombre,
-          time: fecha,
-          message: data.mensaje,
-          user_email: data.email,
+      const apiUrl = import.meta.env.VITE_CONTACT_API_URL;
+
+      const response = await fetch(`${apiUrl}/api/contact/mail`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
         },
-        "jJCUdOuooyOlwJAEX",
-      );
+        body: JSON.stringify({
+          nombre: data.nombre,
+          email: data.email,
+          mensaje: data.mensaje,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(
+          result.message || "Error al enviar el mensaje, por favor intente nuevamente",
+        );
+      }
 
       showToast("success", "Mensaje enviado correctamente");
       reset();
@@ -50,6 +61,8 @@ function FormularioEmail({ flechaImg }) {
         "Error al enviar el mensaje, por favor intente nuevamente",
       );
       console.error("Error al enviar el mensaje:", error);
+    } finally {
+      setIsSending(false);
     }
   };
 
@@ -58,7 +71,11 @@ function FormularioEmail({ flechaImg }) {
       {toast && (
         <div className={`formulario__toast formulario__toast--${toast.type}`}>
           <i
-            className={`bi ${toast.type === "success" ? "bi-check-circle-fill" : "bi-exclamation-triangle-fill"}`}
+            className={`bi ${
+              toast.type === "success"
+                ? "bi-check-circle-fill"
+                : "bi-exclamation-triangle-fill"
+            }`}
             aria-hidden="true"
           />
           <span>{toast.message}</span>
@@ -80,6 +97,7 @@ function FormularioEmail({ flechaImg }) {
             2206 2650
           </a>
         </div>
+
         <div className="contacto__item">
           <i className="bi bi-whatsapp contacto__icon" aria-hidden="true" />
           <h3 className="contacto__label">WhatsApp</h3>
@@ -92,6 +110,7 @@ function FormularioEmail({ flechaImg }) {
             +54 11 3872-1437
           </a>
         </div>
+
         <div className="contacto__item">
           <i className="bi bi-envelope contacto__icon" aria-hidden="true" />
           <h3 className="contacto__label">Correo electrónico</h3>
@@ -106,10 +125,13 @@ function FormularioEmail({ flechaImg }) {
 
       <div className="info__grid__contacto">
         <div className="info__div">
-            <h2 className="info__text__contacto__h2">Si tenés alguna duda completá el formulario</h2>
-            <p>
-                Nuestro equipo te responderá a la brevedad para brindarte la atención que necesitás.
-            </p>
+          <h2 className="info__text__contacto__h2">
+            Si tenés alguna duda completá el formulario
+          </h2>
+          <p>
+            Nuestro equipo te responderá a la brevedad para brindarte la
+            atención que necesitás.
+          </p>
         </div>
       </div>
 
@@ -172,8 +194,8 @@ function FormularioEmail({ flechaImg }) {
           )}
         </div>
 
-        <button type="submit">
-          <span>Enviar</span>
+        <button type="submit" disabled={isSending}>
+          <span>{isSending ? "Enviando..." : "Enviar"}</span>
           {flechaImg ? (
             <img
               className="formulario__submitIcon"
