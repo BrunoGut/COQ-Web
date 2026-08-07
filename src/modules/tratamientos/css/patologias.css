@@ -1,0 +1,35 @@
+/* --- Banner Estudios --- */
+.estudios__banner {
+    background-image: url('../../../assets/images/banner-prensa.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.estudios__banner-contenido {
+    text-align: center;
+    position: relative;
+}
+
+.estudios__banner-titulo {
+    font-size: 40px;
+    font-weight: 500;
+    color: #fff;
+    margin: 0 0 8px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.estudios__banner-subtitulo {
+    font-size: 20px;
+    font-weight: 300;
+    color: #fff;
+    margin: 0;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}

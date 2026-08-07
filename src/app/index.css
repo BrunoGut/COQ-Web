@@ -1,0 +1,120 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: var(--navbar-height, 70px);
+  }
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: 'Nunito', sans-serif;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Tratamiento compartido de banners en mobile. */
+@media (max-width: 640px) {
+  body :is(
+    .nosotros__hero-imagen,
+    .prensa__hero-imagen,
+    .coberturas__hero-imagen,
+    .estudios__hero-imagen,
+    .guardia__hero-imagen,
+    .tratamientos__hero-imagen,
+    .staffMedico__hero-imagen,
+    .programaResidencia__hero-imagen,
+    .ingresoResidencia__hero-imagen,
+  ) {
+    padding: 15px;
+  }
+
+  body :is(
+    .nosotros__hero-imagen,
+    .prensa__hero-imagen,
+    .coberturas__hero-imagen,
+    .estudios__hero-imagen,
+    .guardia__hero-imagen,
+    .tratamientos__hero-imagen,
+    .staffMedico__hero-imagen,
+    .programaResidencia__hero-imagen,
+    .ingresoResidencia__hero-imagen
+  ) > picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  body :is(
+    .nosotros__hero-img,
+    .prensa__hero-img,
+    .coberturas__hero-img,
+    .estudios__hero-img,
+    .guardia__hero-img,
+    .tratamientos__hero-img,
+    .staffMedico__hero-img,
+    .programaResidencia__hero-img,
+    .ingresoResidencia__hero-img
+  ) {
+    border-radius: 0 0 16px 16px;
+  }
+
+  body :is(.cirugias__banner) {
+    padding: 15px;
+    border-radius: 0 0 16px 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  body .banner {
+    min-height: 250px;
+    padding: 15px;
+    border-radius: 0 0 16px 16px;
+  }
+
+  body .banner__img,
+  body .banner__overlay {
+    inset: 15px;
+    width: auto;
+    height: auto;
+    border-radius: 0 0 16px 16px;
+  }
+
+  body .banner__inner {
+    min-height: 220px;
+  }
+}

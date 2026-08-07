@@ -1,0 +1,194 @@
+.rankingColegio {
+  background: #fff;
+  padding: 56px 24px 72px;
+}
+
+.rankingColegio__hero {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0;
+  min-height: 160px;
+}
+
+.rankingColegio__banner-titulo {
+  font-size: 55px;
+  font-weight: 400;
+  color: #313131;
+  letter-spacing: -2px;
+  margin: 0;
+}
+
+.rankingColegio__container {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+/* ── Animación expand/collapse ── */
+.rankingColegio__tabla-anim {
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+/* ── Tabla ── */
+.rankingColegio__tabla-wrapper {
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid #e0e6f0;
+}
+
+.rankingColegio__tabla {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  color: #4c4c4c;
+}
+
+.rankingColegio__tabla thead tr {
+  background: #003c77;
+}
+
+.rankingColegio__tabla th {
+  padding: 13px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.rankingColegio__tabla td {
+  padding: 10px 18px;
+  border-bottom: 1px solid #ebebeb;
+  white-space: nowrap;
+}
+
+.rankingColegio__tabla tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.rankingColegio__tabla tbody tr:nth-child(even) {
+  background: #f7f9fd;
+}
+
+.rankingColegio__tabla tbody tr:hover {
+  background: #eef2fb;
+}
+
+/* ── Acciones ── */
+.rankingColegio__acciones {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 36px;
+  flex-wrap: wrap;
+}
+
+.rankingColegio__btn-ver {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 1.1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease;
+  color: #fff;
+  border: 2px solid #003c77;
+  border-radius: 50px;
+  background: #8d9ec1;
+  border-color: #8d9ec1;
+}
+
+.rankingColegio__btn-ver:hover {
+  background: #002a57;
+  border-color: #002a57;
+  color: #fff;
+}
+
+.rankingColegio__btn-descargar {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 1.1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease;
+  color: #fff;
+  border: 2px solid #003c77;
+  border-radius: 50px;
+  background: #003c77;
+  border-color: #002a57;
+}
+
+.rankingColegio__btn-descargar:hover {
+  background: #002a57;
+  border-color: #002a57;
+  color: #fff;
+}
+
+/* ── Loading ── */
+.rankingColegio__loading {
+  text-align: center;
+  color: #888;
+  padding: 48px 0;
+  font-size: 17px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 992px) {
+  .rankingColegio {
+    background: #fff;
+    padding: 25px 24px 72px;
+  }
+
+  .rankingColegio__hero {
+    padding: 0 32px;
+  }
+
+  .rankingColegio__banner-titulo {
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 640px) {
+  .rankingColegio {
+    padding: 30px 16px 56px;
+  }
+
+  .rankingColegio__hero {
+    padding: 32px 16px 0 16px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .rankingColegio__banner-titulo {
+    font-size: 36px;
+    letter-spacing: -1px;
+  }
+
+  .rankingColegio__tabla th,
+  .rankingColegio__tabla td {
+    padding: 9px 12px;
+    font-size: 13px;
+  }
+
+  .rankingColegio__btn-ver {
+    font-size: 18px;
+  }
+
+  .rankingColegio__btn-descargar {
+    font-size: 15px;
+    padding: 10px 24px;
+  }
+}

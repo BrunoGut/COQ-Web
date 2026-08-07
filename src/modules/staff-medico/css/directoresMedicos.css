@@ -1,0 +1,421 @@
+/* ── Banner ── */
+.directoresMedicos__banner {
+  background-image: url("../../../assets/images/banner-staff-medico.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.staffMedico__hero {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  height: 350px;
+}
+
+.staffMedico__hero-izquierda {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+}
+
+.staffMedico__hero-imagen {
+  width: 100%;
+  overflow: hidden;
+}
+
+.staffMedico__hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 16px 0 0 16px;
+}
+
+.directoresMedicos__banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.directoresMedicos__banner-contenido {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.staffMedico__banner-titulo {
+  font-size: 65px;
+  font-weight: 400;
+  color: #313131;
+  letter-spacing: -2px;
+}
+
+.staffMedico__banner-subtitulo {
+  font-size: 30px;
+  font-weight: 300;
+  color: #313131;
+  margin-top: 8px;
+}
+
+/* ── Sección ── */
+.directoresMedicos {
+  background: #ffffff;
+  width: 100%;
+}
+
+.directores__horarios-titulo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  letter-spacing: 0.01em;
+  margin-bottom: 20px;
+}
+
+.directoresMedicos__cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+  padding: 0 56px 24px;
+  margin: 0 50px;
+}
+
+/* Cards */
+
+.directoresMedicos .card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 400px;
+  box-sizing: border-box;
+  border-radius: 25px;
+  overflow: hidden;
+  transition: none !important;
+  background-color: #e3e6eb;
+}
+
+.directoresMedicos .card:hover {
+  transform: none !important;
+}
+
+.directoresMedicos .card-image {
+  position: relative;
+  height: 320px;
+  width: calc(100% - 20px);
+  background: #e3e6eb;
+  padding: 0;
+  margin: 10px 10px 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  overflow: hidden;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.directoresMedicos .card-image img {
+  height: 100%;
+  width: 95%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  border-radius: 16px;
+}
+
+.directoresMedicos .card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 16px 18px 18px;
+  text-align: center;
+}
+
+.directoresMedicos .card-name {
+  margin: 10px 0 6px;
+  font-size: 19px;
+  font-weight: 600;
+  color: #363636;
+  text-align: justify;
+}
+
+.directoresMedicos .card-description {
+  margin: 0;
+  font-size: 16px;
+  color: #1a1a1a;
+  text-align: justify;
+  line-height: 1.5;
+  max-width: 32ch;
+  display: -webkit-box;
+  line-clamp: inherit;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.directoresMedicos .card-description p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.directoresMedicos .card-button {
+  width: 240px;
+  height: 50px;
+  margin-top: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.directoresMedicos .card-button:hover {
+  background: transparent !important;
+  border-color: transparent !important;
+  color: inherit !important;
+}
+
+.directoresMedicos .card-button a {
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: #fff;
+  background: #0a66c2;
+  padding: 0 1.1rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.directoresMedicos .card-button a i {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.directoresMedicos .card-button a span {
+  line-height: 1;
+}
+
+.directoresMedicos .card-button a:hover {
+  background: #084e9c;
+  color: #fff;
+  border-color: transparent;
+}
+
+.directoresMedicos__cards .card {
+  height: 495px;
+  display: flex;
+  flex-direction: column;
+}
+
+.directoresMedicos__cards .card .card-content {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.directoresMedicos__cards .card .card-button {
+  margin-top: auto;
+}
+
+@media (max-width: 1150px) {
+  .staffMedico__hero {
+    grid-template-columns: 1fr;
+    height: auto;
+    min-height: auto;
+  }
+
+  .staffMedico__hero-imagen {
+    order: 1;
+    width: 100%;
+    height: 350px;
+    padding: 15px;
+  }
+
+  .staffMedico__hero-izquierda {
+    order: 2;
+    padding: 40px 0 0 0;
+    text-align: center;
+    align-items: center;
+  }
+
+  .staffMedico__hero-img {
+    border-radius: 0 0 16px 16px !important;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .staffMedico__banner-titulo {
+    font-size: 45px;
+  }
+
+  .staffMedico__banner-subtitulo {
+    font-size: 28px;
+  }
+
+  .directoresMedicos__cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin: 0 16px;
+    padding: 0 16px 24px;
+    gap: 16px;
+  }
+
+  .directoresMedicos .card {
+    width: 100%;
+  }
+
+  .directoresMedicos .card-image {
+    height: 240px;
+  }
+
+  .directoresMedicos__cards .card {
+    height: auto;
+  }
+
+  .directoresMedicos .card-name {
+    font-size: 16px;
+  }
+
+  .directoresMedicos .card-description {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .staffMedico__hero {
+    grid-template-columns: 1fr;
+    height: auto;
+    min-height: auto;
+  }
+
+  .staffMedico__hero-imagen {
+    order: 1;
+    width: 100%;
+    height: 350px;
+    padding: 15px;
+  }
+
+  .staffMedico__hero-izquierda {
+    order: 2;
+    padding: 40px 0 0 0;
+    text-align: center;
+    align-items: center;
+  }
+
+  .staffMedico__hero-img {
+    border-radius: 0 0 16px 16px !important;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .staffMedico__banner-titulo {
+    font-size: 45px;
+  }
+
+  .staffMedico__banner-subtitulo {
+    font-size: 28px;
+  }
+
+  .directoresMedicos__cards {
+    padding-left: 44px;
+    padding-right: 44px;
+  }
+}
+
+@media (max-width: 576px) {
+  .staffMedico__hero {
+    grid-template-columns: 1fr;
+    height: auto;
+    min-height: auto;
+  }
+
+  .staffMedico__hero-imagen {
+    order: 1;
+    width: 100%;
+    height: 350px;
+    padding: 15px;
+  }
+
+  .staffMedico__hero-izquierda {
+    order: 2;
+    padding: 40px 0 0 0;
+    text-align: center;
+    align-items: center;
+  }
+
+  .staffMedico__hero-img {
+    border-radius: 0 0 16px 16px !important;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .staffMedico__banner-titulo {
+    font-size: 45px;
+  }
+
+  .staffMedico__banner-subtitulo {
+    font-size: 28px;
+  }
+
+  .directoresMedicos__cards {
+    grid-template-columns: minmax(0, 1fr);
+    padding-left: 16px;
+    padding-right: 16px;
+    margin: 0 auto;
+    justify-items: center;
+  }
+
+  .directoresMedicos .card {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .directoresMedicos .card-image img {
+    height: 100%;
+    width: 95%;
+  }
+
+  .directoresMedicos .card-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .directoresMedicos .card-description {
+    text-align: center;
+  }
+}

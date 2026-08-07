@@ -1,0 +1,552 @@
+/* ── Banner ───────────────────────────────────────────────────── */
+.coqShorts__banner {
+  padding-top: 120px;
+  background: #fff;
+  width: 100%;
+  height: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.coqShorts__banner-contenido {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.diferenciado-azul{
+    margin: 0;
+    font-size: clamp(2.8rem, 5vw, 3.2rem);
+    font-weight: 500;
+    line-height: 0.98;
+    color: #193896;
+}
+
+.diferenciado-negro-shorts{
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 400;
+    line-height: 0.98;
+    color: #333437;
+}
+
+.coqShorts__banner-titulo {
+  display: inline-flex;
+  align-items: center;
+  font-size: 40px;
+  font-weight: 600;
+  color: #000;
+  margin: 0 0 10px;
+}
+
+.coqShorts__banner-icono {
+  font-size: clamp(2.8rem, 4.5vw, 3.2rem);
+  color: #193896;
+  flex-shrink: 0;
+}
+
+.coqShorts__banner-subtitulo {
+  font-size: 18px;
+  font-weight: 300;
+  color: #fff;
+  margin: 0;
+}
+
+/* ── Section ─────────────────────────────────────────────────── */
+.coqShorts__section {
+  padding: 60px 20px 0;
+  background: #fff;
+  scroll-margin-top: 85px;
+}
+
+.coqShorts__sectionHeader {
+  max-width: 1100px;
+  margin: 0 auto 34px;
+  text-align: center;
+}
+
+.coqShorts__sectionTitle {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 400;
+  line-height: 1.1;
+  color: #333437;
+}
+
+.coqShorts__sectionSubtitle {
+  margin: 10px 0 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #6e6f73;
+}
+
+/* ── Ocultar botones flotantes con modal abierto ─────────────── */
+body.coq-modal-open .botones-flotantes {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+/* ── Cards Grid ──────────────────────────────────────────────── */
+.coq-shorts-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.coqShorts__verMas {
+  display: flex;
+  justify-content: center;
+  margin: 32px auto 0;
+  max-width: 1100px;
+}
+
+.coqShorts__verMasBtn {
+  padding: 12px 36px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #003C77;
+  background: transparent;
+  border: 2px solid #003C77;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+
+.coqShorts__verMasBtn:hover {
+  background: #8D9EC1;
+  color: #ffffff;
+  border: 2px solid #8D9EC1;
+}
+
+@keyframes coqFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.coq-short-card--animate {
+  animation: coqFadeInUp 0.45s ease both;
+}
+
+.coq-short-card {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 9 / 16;
+  cursor: pointer;
+  text-align: left;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.14);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  background: #2d4270;
+}
+
+.coq-short-card:hover {
+  box-shadow: 0 14px 36px rgba(0, 60, 119, 0.28);
+}
+
+.coq-short-card:focus-visible {
+  outline: 3px solid #003c77;
+  outline-offset: 3px;
+}
+
+.coq-short-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.coq-short-card:hover img {
+  transform: scale(1.05);
+}
+
+/* ── Card Overlay ───────────────────────────────────────────── */
+.coq-short-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 30, 60, 0.88) 0%,
+    rgba(0, 30, 60, 0.25) 45%,
+    transparent 70%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 16px 12px;
+  gap: 10px;
+  transition: background 0.3s ease;
+}
+
+.coq-short-overlay h3 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  line-height: 1.3;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+}
+
+.coq-short-play {
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  transition: background 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+}
+
+.coq-short-card:hover .coq-short-play {
+  background: #003c77;
+  border-color: #003c77;
+  transform: scale(1.1);
+}
+
+.coq-short-play span {
+  font-size: 14px;
+  color: #fff;
+  margin-left: 3px;
+  line-height: 1;
+}
+
+/* ── Modal Overlay ───────────────────────────────────────────── */
+.coq-short-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.93);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: coqFadeIn 0.22s ease;
+}
+
+@keyframes coqFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── Modal Body (video + sidebar) ────────────────────────────── */
+.coq-modal-body {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+/* ── Close Button ────────────────────────────────────────────── */
+.coq-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition: background 0.2s ease, border-color 0.2s ease;
+  z-index: 10;
+  letter-spacing: 0.3px;
+}
+
+.coq-close-btn:hover {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: transparent;
+}
+
+/* ── Video Wrapper ───────────────────────────────────────────── */
+.coq-video-wrapper {
+  position: relative;
+  flex-shrink: 0;
+  height: min(calc(100vh - 100px), 600px);
+  aspect-ratio: 9 / 16;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.65);
+  cursor: pointer;
+}
+
+.coq-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.coq-video-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 40px 18px 22px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.82) 0%, transparent 100%);
+  color: #fff;
+  pointer-events: none;
+  animation: coqFadeIn 0.3s ease;
+}
+
+/* ── Play/Pause Feedback Icon ────────────────────────────────── */
+.coq-feedback-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 72px;
+  height: 72px;
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  color: #fff;
+  pointer-events: none;
+  animation: coqFeedbackPop 0.8s ease forwards;
+}
+
+@keyframes coqFeedbackPop {
+  0%   { opacity: 0; transform: translate(-50%, -50%) scale(0.6); }
+  20%  { opacity: 1; transform: translate(-50%, -50%) scale(1.15); }
+  55%  { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(1); }
+}
+
+.coq-video-text h3 {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  line-height: 1.3;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.coq-video-text p {
+  font-size: 13px;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.45;
+  opacity: 0.85;
+}
+
+/* ── Sidebar (TikTok-style) ──────────────────────────────────── */
+.coq-sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  padding-bottom: 6px;
+}
+
+.coq-sidebar-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 0;
+  width: 56px;
+  min-height: 52px;
+  flex-shrink: 0;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.coq-sidebar-btn svg {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  filter: drop-shadow(0 1px 5px rgba(0, 0, 0, 0.7));
+  transition: transform 0.2s ease;
+}
+
+.coq-sidebar-btn span {
+  display: block;
+  width: 56px;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.coq-sidebar-btn:hover {
+  color: #7aa8e0;
+  transform: scale(1.12);
+  border-color: transparent;
+}
+
+.coq-sidebar-btn:hover svg {
+  transform: scale(1.08);
+}
+
+.texto-shorts {
+  font-size: 14px;
+  font-weight: 500 !important;
+  color: #fff;
+  margin: 0;
+  line-height: 1.45;
+  opacity: 0.85;
+}
+
+/* ── Responsive ──────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .coq-shorts-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .coqShorts__banner {
+    padding-top: 80px;
+    height: 0px;
+  }
+
+  .coqShorts__banner-titulo {
+    font-size: 30px;
+  }
+
+  .coqShorts__banner-subtitulo {
+    font-size: 15px;
+  }
+
+  .coqShorts__section {
+    padding: 40px 16px 50px;
+  }
+
+  .coqShorts__sectionHeader {
+    margin-bottom: 26px;
+  }
+
+  .coqShorts__sectionTitle {
+    font-size: 1.8rem;
+  }
+
+  .coqShorts__sectionSubtitle {
+    margin-top: 8px;
+    font-size: 0.92rem;
+  }
+
+  .coq-shorts-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .coq-modal-body {
+    gap: 12px;
+  }
+
+  .coq-video-wrapper {
+    height: min(calc(100vh - 90px), 500px);
+  }
+
+  .coq-sidebar {
+    gap: 18px;
+  }
+
+  .coq-sidebar-btn svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .coq-close-btn {
+    top: 14px;
+    right: 14px;
+    padding: 7px 14px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .coqShorts__banner {
+    padding-top: 60px;
+    height: 0px;
+  }
+
+  .coqShorts__banner-titulo {
+    font-size: 24px;
+  }
+
+  .coqShorts__section {
+    padding: 30px 12px 40px;
+  }
+
+  .coqShorts__sectionHeader {
+    margin-bottom: 22px;
+  }
+
+  .coqShorts__sectionTitle {
+    font-size: 1.65rem;
+  }
+
+  .coq-shorts-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .coq-short-overlay h3 {
+    font-size: 11px;
+  }
+
+  .coq-short-play {
+    width: 36px;
+    height: 36px;
+  }
+
+  .coq-short-play span {
+    font-size: 12px;
+  }
+
+  .coq-video-wrapper {
+    height: min(calc(100vh - 80px), 420px);
+  }
+
+  .coq-sidebar {
+    gap: 16px;
+  }
+
+  .coq-sidebar-btn svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .coq-sidebar-btn span {
+    font-size: 10px;
+  }
+
+  .coq-feedback-icon {
+    width: 58px;
+    height: 58px;
+    font-size: 22px;
+  }
+}
